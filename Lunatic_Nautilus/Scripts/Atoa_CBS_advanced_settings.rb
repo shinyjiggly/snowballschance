@@ -638,7 +638,7 @@ module Atoa
   Weapon_Settings[3] = ["ADVJUMP/90"] #Bare Fists
   Weapon_Settings[4] = [] #Rapier
   Weapon_Settings[5] = [] #BETA STICK
-  Weapon_Settings[6] = [] #Knife
+  Weapon_Settings[6] = ["HITS/69"] #Knife
   Weapon_Settings[7] = [] #Basic Axe
   Weapon_Settings[8] = [] #Antlers
   Weapon_Settings[9] = [] #Pistol
@@ -647,7 +647,7 @@ module Atoa
   Weapon_Settings[12] = []#Simple Mace
   Weapon_Settings[13] = []#Tamer's Whip
   Weapon_Settings[14] = []#Claws
-  Weapon_Settings[15] = ["COMBO/2"] #Knives
+  Weapon_Settings[15] = ["COMBO/69"] #Knives
   Weapon_Settings[16] = ["DMGVARIANCE/0"]
   Weapon_Settings[17] = ["STARTTHROW/101-Attack13,0,122,123,124,125,300,-20,0,0,0",
                          "MOVETYPE/NOMOVE"]
