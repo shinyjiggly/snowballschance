@@ -121,7 +121,7 @@ class Game_Battler
   #--------------------------------------------------------------------------
   # * Get Charisma(CHA) #new!!
   #--------------------------------------------------------------------------
-  def int
+  def cha
     n = [[base_cha + @cha_plus, 1].max, 999].min
     for i in @states
       n *= $data_states[i].cha_rate / 100.0

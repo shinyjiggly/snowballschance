@@ -176,6 +176,7 @@ class Transition
       when 7 then transpose
       when 8 then shutter
       when 9 then drop_off
+      when 10 then downward_spiral
       end
     else
       case type
@@ -189,6 +190,7 @@ class Transition
       when 7 then transpose(*args)
       when 8 then shutter(*args)
       when 9 then drop_off(*args)
+      when 10 then downward_spiral(*args)
       end
     end
   end
@@ -645,6 +647,23 @@ class Transition
     hor = nil
   end
 end
+  #--------------------------------------------------------------------------
+  # * Downward Spiral
+  #     FRAMES: Total number of frames the transition takes to fall away completely.
+  #     ROTATION SPEED: Defines how fast the screen rotates in degrees.
+  #--------------------------------------------------------------------------
+ def downward_spiral(frames = 40, rotation_speed = 15)
+    # Calculate the zoom to subtract each frame.
+    zoom, opacity = 1.0 / frames, 128.0 / frames
+    frames.times do
+      # Begin processing.
+      @sprite.zoom_x -= zoom
+      @sprite.zoom_y -= zoom
+      @sprite.opacity -= opacity
+      @sprite.angle += rotation_speed
+      Graphics.update
+    end
+  end
 #==============================================================================
 # ** Game_Temp
 #------------------------------------------------------------------------------
