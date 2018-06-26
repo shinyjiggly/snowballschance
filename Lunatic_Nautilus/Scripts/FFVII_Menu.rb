@@ -30,7 +30,7 @@ class Scene_Menu
      s4 = "Status"
      s5 = "Save"
      s6 = "End Game"
-     s7= "diary"
+     s7=  "Cooking" #"diary"
      #s7 = "Next Day ==>" #new!!
      
    #if ship is not docked (2) and ship can be used (3)
@@ -183,11 +183,11 @@ class Scene_Menu
            $game_system.se_play($data_system.decision_se)
            # Switch to end game screen
            $scene = Scene_End.new
-        when 6   # use diary
+        when 6   # use cooking
            # Play decision SE
            $game_system.se_play($data_system.decision_se)
            # exit back to map
-           $scene = Scene_Diary.new
+           $scene = Scene_Cooking.new #Scene_Diary.new
         end
         return
      end
