@@ -130,6 +130,7 @@ def main
    @window_2.dispose
    @window_3.dispose
    @window_4.dispose
+   @window_5.dispose
   end
 
 def update

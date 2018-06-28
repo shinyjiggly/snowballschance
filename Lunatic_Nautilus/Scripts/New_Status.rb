@@ -266,6 +266,10 @@ end
 #==============================================================================
 
 class Window_Status < Window_Base
+  
+    def draw_actor_facegraphic(actor, x, y)
+    bitmap = RPG::Cache.picture(actor.name + "_face")
+    end
   #--------------------------------------------------------------------------
   # * Refresh
   #--------------------------------------------------------------------------
@@ -273,7 +277,8 @@ class Window_Status < Window_Base
   def refresh
     unless $atoa_script['Atoa Multi Slot'] or $atoa_script['Atoa Two Hands']
       self.contents.clear
-      draw_actor_graphic(@actor, 40, 112)
+      draw_actor_face_graphic(@actor,40,110)
+      #draw_actor_graphic(@actor, 40, 112)
       draw_actor_name(@actor, 4, 0)
       draw_actor_class(@actor, 4 + 144, 0)
       draw_actor_level(@actor, 96, 32)

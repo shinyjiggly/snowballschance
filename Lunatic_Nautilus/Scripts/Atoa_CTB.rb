@@ -51,10 +51,10 @@ module Atoa
   # when 'Ctb_Order_Style' equal 1 or 2.
   # The dimensions of the window are adjusted according to the dimension of
   # this image. It must be on the 'Faces' folder
-  Defatult_Ctb_Img = 'default_ctb_turn'
+  Defatult_Ctb_Img = 'default_face'
 
   # File name extensions for the order images
-  Ctb_Img_Ext = '_ctb_turn'
+  Ctb_Img_Ext = '_face'#'_ctb_turn'
   
   # If 'Ctb_Order_Style' equal 1 or 2, you will need the images for the battlers
   # they must be placed on the Faces folder and must have the name equal the
@@ -729,14 +729,14 @@ class Window_Ctb < Window_Base
       h = 122 + (18 * Show_Ctb_Turn)
 
     when 1
-      w = RPG::Cache.faces(Defatult_Ctb_Img).width + 32
-      h = [((RPG::Cache.faces(Defatult_Ctb_Img).height + Ctb_Image_Distance) * Show_Ctb_Turn) + 32, 480].min
+      w = RPG::Cache.picture(Defatult_Ctb_Img).width + 32
+      h = [((RPG::Cache.picture(Defatult_Ctb_Img).height + Ctb_Image_Distance) * Show_Ctb_Turn) + 32, 480].min
     when 2
-      w = [((RPG::Cache.faces(Defatult_Ctb_Img).width + Ctb_Image_Distance) * Show_Ctb_Turn) + 32, 640].min
-      h = RPG::Cache.faces(Defatult_Ctb_Img).height + 32
+      w = [((RPG::Cache.picture(Defatult_Ctb_Img).width + Ctb_Image_Distance) * Show_Ctb_Turn) + 32, 640].min
+      h = RPG::Cache.picture(Defatult_Ctb_Img).height + 32
     when 4
-      w = [((RPG::Cache.faces(Defatult_Ctb_Img).width + Ctb_Image_Distance) * Show_Ctb_Turn) + 32, 640].min
-      h = RPG::Cache.faces(Defatult_Ctb_Img).height + 32   
+      w = [((RPG::Cache.picture(Defatult_Ctb_Img).width + Ctb_Image_Distance) * Show_Ctb_Turn) + 32, 640].min
+      h = RPG::Cache.picture(Defatult_Ctb_Img).height + 32   
     end
     super(@ctb_settings[0], @ctb_settings[1], w, h)
     self.contents = Bitmap.new(self.width - 32, self.height - 32)
@@ -783,17 +783,17 @@ class Window_Ctb < Window_Base
   #--------------------------------------------------------------------------
   # * Set window images bitmaps
   #--------------------------------------------------------------------------
-  def set_bitimaps
-    for battler in $game_party.actors + $game_troop.enemies
+    def set_bitimaps
+    for battler in $game_party.actors #+ $game_troop.enemies
       next if @images[battler] != nil or @images.keys.include?(battler)
-      begin; img = RPG::Cache.faces(battler.battler_name + Ctb_Img_Ext)
-      rescue; img = RPG::Cache.faces(Defatult_Ctb_Img); end
+      begin; img = RPG::Cache.picture(battler.name + Ctb_Img_Ext)
+      rescue; img = RPG::Cache.picture(Defatult_Ctb_Img); end
       @images[battler] = [img, false]
     end
     for battler in @images.keys
       next if @images[battler].nil?
       next if battler.actor? and $game_party.actors.include?(battler)
-      next if !battler.actor? and $game_troop.enemies.include?(battler)
+      #next if !battler.actor? and $game_troop.enemies.include?(battler)
       @images[battler][0].dispose
       @images[battler] = nil
       @images.delete(battler)
@@ -929,17 +929,17 @@ class Window_Ctb < Window_Base
   def draw_ctb_turn(x, y, img, rect, opacity, cast, battler, index)
     self.contents.blt(x, y, img, rect, 155 + opacity * 10)
     if index == 0
-      begin; bit = RPG::Cache.faces('Active' + Ctb_Img_Ext); rescue; end
+      begin; bit = RPG::Cache.picture('Active' + Ctb_Img_Ext); rescue; end
     elsif cast
-      begin; bit = RPG::Cache.faces('Cast' + Ctb_Img_Ext); rescue; end
+      begin; bit = RPG::Cache.picture('Cast' + Ctb_Img_Ext); rescue; end
     elsif [2,3].include?(battler.restriction)
-      begin; bit = RPG::Cache.faces('Conf' + Ctb_Img_Ext); rescue; end
+      begin; bit = RPG::Cache.picture('Conf' + Ctb_Img_Ext); rescue; end
     elsif battler.restriction == 4 and not battler.dead?
-      begin; bit = RPG::Cache.faces('Stop' + Ctb_Img_Ext); rescue; end
+      begin; bit = RPG::Cache.picture('Stop' + Ctb_Img_Ext); rescue; end
     elsif battler.states.size > 0
       for state in battler.states
         begin
-          bit = RPG::Cache.faces($data_states[state].name + Ctb_Img_Ext)
+          bit = RPG::Cache.picture($data_states[state].name + Ctb_Img_Ext)
           break if bit != nil
         rescue; end
       end

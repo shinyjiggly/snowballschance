@@ -4,7 +4,7 @@
 #==============================================================================
 # This script adds an window with the names of the enemies
 #==============================================================================
-
+=begin
 module Atoa
   
   # Enemy_Name_Window_Settings = [Position X, Position Y, width, height, opacity, transparent border]
@@ -209,3 +209,4 @@ class Scene_Battle
     return alive
   end
 end
+=end

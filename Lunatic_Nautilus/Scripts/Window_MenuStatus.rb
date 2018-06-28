@@ -20,6 +20,7 @@ class Window_MenuStatus < Window_Selectable
   #--------------------------------------------------------------------------
   def refresh
     self.contents.clear
+    
     @item_max = $game_party.actors.size
     for i in 0...$game_party.actors.size
       x = 64
