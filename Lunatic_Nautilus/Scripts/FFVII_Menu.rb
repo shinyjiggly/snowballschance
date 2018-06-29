@@ -23,6 +23,8 @@ class Scene_Menu
   # * Main Processing
   #--------------------------------------------------------------------------
   def main
+    @background = Plane.new #background initialization
+    @background.bitmap = RPG::Cache.panorama("plaidpattern",0)
      # Make command window
      s1 = $data_system.words.item
      s2 = $data_system.words.skill
@@ -98,12 +100,15 @@ class Scene_Menu
      @command_window.dispose
      @playtime_window.dispose
      @status_window.dispose
+     @background.dispose
      #@location_window.dispose
   end
   #--------------------------------------------------------------------------
   # * Frame Update
   #--------------------------------------------------------------------------
   def update
+      @background.oy -= 1
+      @background.ox -= 1
      # Update windows
      @command_window.update
      @playtime_window.update
