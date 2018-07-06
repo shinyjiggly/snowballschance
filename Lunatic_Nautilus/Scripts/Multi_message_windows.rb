@@ -727,7 +727,7 @@ class Game_Message
     # exit if distance from speaker is too great
     @dist_exit = false
     # distance player can be before window closes
-    @dist_max = 4
+    @dist_max = 500
     
     # allow message windows to float off screen instead of flipping
     @allow_offscreen = false
@@ -915,6 +915,9 @@ class Window_Message < Window_Selectable
     self.contents = Bitmap.new(width - 32, height - 32)
     self.visible = false
     self.z = 9000 + msgindex * 5 # permits messages to overlap legibly
+    @counter = 2
+    #how many frames long is your fire animation
+    @fireframes = 3
     @fade_in = false
     @fade_out = false
     @contents_showing = false
@@ -1002,7 +1005,7 @@ class Window_Message < Window_Selectable
  @name_box_text_color= 4        #Choose the Text Color of the Name Box
  @name_box_skin = "mainskin"       #Choose the WindowSkin for the Name Box
  
-    
+
     
     # Close a Window if distance from speaker is too great
     @dist_exit = $game_system.message.dist_exit
@@ -1265,6 +1268,8 @@ class Window_Message < Window_Selectable
       
       # show a picture!
       @text.gsub!(/\\[Qq]\[([\w]+)\]/) { "\026[#{$1}]" } 
+      #render fire
+      @text.gsub!(/\\[Ff][Ii]/) { "\027" }
       
       # self close message
       @text.gsub!(/\\[!]/) { "\006" }
@@ -1551,7 +1556,7 @@ class Window_Message < Window_Selectable
   #--------------------------------------------------------------------------
   # * Reposition Window
   #-------------------------------------------------------------------------- 
-  def reposition
+  def reposition 
     if $game_temp.in_battle
       if "abcdefghij".include?(@float_id) # must be between a and d
         @float_id = @float_id[0] - 97 # a = 0, b = 1, c = 2, d = 3
@@ -2249,7 +2254,18 @@ class Window_Message < Window_Selectable
           @x += bitmap.width + 4
           #@y += bitmap.height
           next
-        end     
+        end
+          #fire display \fi
+        if c == "\027" 
+          bitmap = RPG::Cache.picture("nyoomdf")
+          rect = Rect.new(0, 0, bitmap.width/@fireframes, bitmap.height)
+          #fire counter
+          @counter += 1
+          @counter = @counter % @fireframes*4
+          rect.x =( @counter / @fireframes) * rect.width
+          contents.blt(4+@x, 32*@y, bitmap, rect)
+          next
+        end    
         
         # if \F* (Foot Forward Animation On "Other" Foot)
         if c == "\022" and @float_id
@@ -2369,7 +2385,6 @@ class Window_Message < Window_Selectable
             terminate_message
             # 115 Breaks Event Processing
             $game_system.map_interpreter.command_115
-            
             # If there is someone speaking        
             if @float_id
               # Player
