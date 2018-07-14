@@ -63,7 +63,7 @@ root: !ruby/object:RPG::System
     pitch: 100
   battle_end_me: !ruby/object:RPG::AudioFile
     volume: 100
-    name: boss
+    name: winner
     pitch: 100
   start_map_id: 3
   shop_se: !ruby/object:RPG::AudioFile
@@ -195,7 +195,7 @@ root: !ruby/object:RPG::System
   - Piercing
   - Slashing
   - Bludgeoning
-  start_y: 6
+  start_y: 8
   battler_hue: 0
   load_se: !ruby/object:RPG::AudioFile
     volume: 80
@@ -214,9 +214,9 @@ root: !ruby/object:RPG::System
   - !ruby/object:RPG::System::TestBattler
     actor_id: 3
     armor4_id: 0
-    weapon_id: 1
+    weapon_id: 0
     level: 3
-    armor3_id: 1
+    armor3_id: 0
     armor2_id: 0
     armor1_id: 0
   - !ruby/object:RPG::System::TestBattler
@@ -239,6 +239,8 @@ root: !ruby/object:RPG::System
   party_members:
   - 12
   - 6
+  - 3
+  - 2
   actor_collapse_se: !ruby/object:RPG::AudioFile
     volume: 80
     name: unavailable
@@ -253,4 +255,4 @@ root: !ruby/object:RPG::System
     name: saved
     pitch: 100
   battle_transition: battletransition
-  start_x: 14
+  start_x: 11

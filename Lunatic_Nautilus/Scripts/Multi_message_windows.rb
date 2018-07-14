@@ -2004,14 +2004,31 @@ class Window_Message < Window_Selectable
         # Note to Self - Reorganize based on actual Letter Sounds, not so Random
         if ['l','m','n','q','u','w','2'].include?(c)
           pitch = @sound_pitch - sound_pitch_range
+          #print(sound + "_aa")
+          if FileTest.exist?( "Audio/SE/" + $game_system.message.sound_audio + "_aa.wav" )
+            sound = sound + "_aa"
+            #print(sound)
+            end
         elsif ['a','f','h','j','k','o','r','x','1','4','7','8'].include?(c)
           pitch = @sound_pitch - sound_pitch_range / 2
+          if FileTest.exist?( "Audio/SE/" + $game_system.message.sound_audio + "_ee.wav" )
+            sound = sound + "_ee"
+            end
         elsif ['b','c','d','e','g','p','t','v','z','0','3','6'].to_a.include?(c)
           pitch = @sound_pitch
+          if FileTest.exist?( "Audio/SE/" + $game_system.message.sound_audio + "_ii.wav" )
+            sound = sound + "_ii"
+            end
         elsif ['s','7'].to_a.include?(c)
           pitch = @sound_pitch + sound_pitch_range / 2
+          if FileTest.exist?( "Audio/SE/" + $game_system.message.sound_audio + "_oo.wav" )
+            sound = sound + "_oo"
+            end
         elsif ['i','y','5','9'].to_a.include?(c)
           pitch = @sound_pitch + sound_pitch_range
+          if FileTest.exist?( "Audio/SE/" + $game_system.message.sound_audio + "_uu.wav" )
+            sound = sound + "_uu"
+            end
         else
           pitch = rand(@sound_pitch_range * 2) + @sound_pitch
         end

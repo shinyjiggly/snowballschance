@@ -15,13 +15,13 @@ def refresh
     y = i * 116
     actor = $game_party.actors[i]
     draw_actor_facegraphic(actor, x - 65, y + 52)
-    draw_actor_name(actor, x + 60, y + 8) #22
-    draw_actor_class(actor, x + 234, y + 8 )
-    draw_actor_level(actor, x + 60, y + 22)
-    draw_actor_state(actor, x + 138, y + 22)
-    draw_actor_exp(actor, x + 60, y + 51)
-    draw_actor_hp(actor, x + 236, y + 30)
-    draw_actor_sp(actor, x + 236, y + 51)
+    draw_actor_name(actor, x + 60, y + 8)
+    draw_actor_class(actor, x + 60, y + 30)
+    #draw_actor_level(actor, x + 60, y + 22)
+    #draw_actor_exp(actor, x + 60, y + 51)
+    draw_actor_state(actor, x + 235, y + 8 )
+    draw_actor_hp(actor, x + 180, y + 25)
+    draw_actor_sp(actor, x + 180, y + 46)
     end
   end
   end

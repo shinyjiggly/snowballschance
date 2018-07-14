@@ -73,6 +73,10 @@ module Atoa
   # Use agility difference between battler to set advantaged
   Agi_Check_For_Advantage = true
   
+  Battle_Screen_Dimensions = []
+  Battle_Screen_Dimensions[0]= 640
+  Battle_Screen_Dimensions[1]= 480
+  
   #=============================================================================
     
   # Equipamentos que alteram a taxa de efeitos de vantagem

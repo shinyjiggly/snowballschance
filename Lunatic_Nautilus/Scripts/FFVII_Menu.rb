@@ -69,10 +69,12 @@ class Scene_Menu
      @playtime_window.y = 310
      @playtime_window.z = 201
      # Make location window
-     #@location_window = Window_location.new
-     #@location_window.x = 445
-     #@location_window.y = 423
-     #@location_window.z = 202
+=begin
+     @location_window = Window_location.new
+     @location_window.x = 445
+     @location_window.y = 423
+     @location_window.z = 202
+=end
      # Make status window
      @status_window = Window_MenuStatus.new
      @status_window.x = 2
@@ -250,16 +252,16 @@ class Window_location < Window_Base
   #--------------------------------------------------------------------------
   # * Object Initialization
   #--------------------------------------------------------------------------
-=begin
+#=begin
   def initialize
      super(0, 0, 320,60)
      self.contents = Bitmap.new(width - 32, height - 32)
-     self.contents.font.name = "Tahoma"
-     self.contents.font.size = 22
+     #self.contents.font.name = "Tahoma"
+     #self.contents.font.size = 22
      self.contents.font.color = text_color(0)
-     self.contents.draw_text(0, 0, 60, 30, $game_map.name.to_s)
+     self.contents.draw_text(0, 0, 120, 30, $game_map.name.to_s)
    end
-=end
+#=end
 
 end
 

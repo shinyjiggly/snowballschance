@@ -2,7 +2,7 @@
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
-    name: puzzle_a
+    name: puzzletrail
     pitch: 100
   events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
@@ -11,12 +11,22 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 24
-          - 24
+          - 5
+          - 5
           - 0
           - 6
           - -1
-          - 5
+          - 0
+          indent: 0
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 6
+          - 0
+          - 6
+          - -1
+          - 1
           indent: 0
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -29,9 +39,9 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
-          - 24
+          - 6
           - 0
-          - 1
+          - 0
           - 0
           indent: 1
           code: 111
@@ -60,15 +70,6 @@ root: !ruby/object:RPG::Map
           - 0
           - 6
           - -1
-          - 0
-          indent: 2
-          code: 122
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 24
-          - 24
-          - 0
-          - 0
           - 0
           indent: 2
           code: 122
@@ -108,9 +109,9 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
-          - 24
+          - 6
           - 0
-          - 2
+          - 14
           - 0
           indent: 1
           code: 111
@@ -522,7 +523,7 @@ root: !ruby/object:RPG::Map
     - 545
     - 545
     - 0
-    - 0
+    - 647
     - 472
     - 473
     - 474
@@ -754,7 +755,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 544
     - 0
-    - 0
+    - 655
     - 0
     - 0
     - 0
@@ -823,19 +824,19 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 643
+    - 644
     - 0
     - 0
     - 449
     - 450
     - 451
     - 452
-    - 392
-    - 392
-    - 392
-    - 392
-    - 392
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -843,8 +844,8 @@ root: !ruby/object:RPG::Map
     - 442
     - 0
     - 0
-    - 0
-    - 0
+    - 651
+    - 652
     - 0
     - 456
     - 457
@@ -852,19 +853,19 @@ root: !ruby/object:RPG::Map
     - 459
     - 460
     - 0
+    - 656
     - 0
     - 0
-    - 0
-    - 0
-    - 0
+    - 643
+    - 644
     - 0
     - 0
     - 449
     - 450
     - 442
     - 443
-    - 0
-    - 0
+    - 659
+    - 660
     - 0
     - 464
     - 465
@@ -875,8 +876,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 651
+    - 652
     - 0
     - 456
     - 457
@@ -895,8 +896,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 659
+    - 660
     - 441
     - 442
     - 443
@@ -974,7 +975,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
+    - 656
     - 0
     - 0
     - 0
@@ -988,13 +989,13 @@ root: !ruby/object:RPG::Map
     - 467
     - 468
     - 0
+    - 648
     - 0
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
+    - 643
+    - 644
     - 0
     - 0
     - 0
@@ -1013,8 +1014,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 651
+    - 652
     - 0
     - 0
     - 0
@@ -1033,8 +1034,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 659
+    - 660
     - 441
     - 442
     - 443
@@ -1072,8 +1073,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 643
+    - 644
     - 456
     - 457
     - 458
@@ -1092,25 +1093,15 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 651
+    - 652
     - 464
     - 465
     - 466
     - 467
     - 468
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 384
-    - 384
-    - 384
-    - 384
-    - 384
+    - 643
+    - 644
     - 0
     - 0
     - 0
@@ -1121,6 +1112,16 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 0
+    - 659
+    - 660
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 651
+    - 652
   autoplay_bgs: false
   height: 15
   encounter_step: 30
