@@ -11,7 +11,7 @@
 # 
 # Don't use with others 'Victory Windows' script.
 #==============================================================================
-
+=begin
 class Window_Base < Window
 
   #------------------------------------------------------
@@ -249,3 +249,4 @@ class Scene_Battle
     @result_window.refresh(actor_last_level)
   end
 end
+=end
