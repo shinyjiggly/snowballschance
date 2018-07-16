@@ -740,7 +740,7 @@ class Game_Message
 
     # Sounds While Speaking Related
     @sound = true                       # Enables or Disables Text Sounds  
-    @sound_audio = 'midlow'          # Audio SE (in DB) to play
+    @sound_audio = 'coda'          # Audio SE (in DB) to play
     @sound_volume = 80                     # Text Sound Volume
     @sound_pitch = 100                      # Text Sound Pitch
     @sound_pitch_range = 10                # How Much to vary the Pitch
