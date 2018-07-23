@@ -19,7 +19,7 @@ module Squad
   # Here are two generic values controlling party size and the switch 
   # that hides/shows the squad.
   #
-    SQUAD_PARTY_SIZE            = 10     # Size of party allowed   
+    SQUAD_PARTY_SIZE            = 5     # Size of party allowed   
     SQUAD_SWITCH_ID             = 23     # Switch that turns squad off (hides)
     SQUAD_UPDATE_RATE           = 9     # (0-9) Rate of Speed/Freq update
     SQUAD_ALL_DEAD              = true  # If using squad-based all-dead variant
@@ -48,9 +48,9 @@ module Squad
   # ==============
   # This defines actor hotkeys which control party movement functions.
   #
-    KEY_CYCLE_FORWARD     = Input::L    # Default (Q key)
-    KEY_CYCLE_BACKWARD    = Input::R    # Default (W key)
-    KEY_LEADER_WAIT       = Input::X    # Default (A key)
+    KEY_CYCLE_FORWARD     = nil #Input::L    # Default (Q key)
+    KEY_CYCLE_BACKWARD    = nil #Input::R    # Default (W key)
+    KEY_LEADER_WAIT       = nil #Input::X    # Default (A key)
     KEY_PARTY_GATHER      = nil #Input::Y    # Default (S key)
     
   
@@ -60,8 +60,8 @@ module Squad
   # This controls if the party members that stray too far from the party leader
   # may use a technique to get back to the game player.
   # 
-    REGROUP_TIMER   = 1     # Seconds that pass before testing (nil to disable)
-    REGROUP_RANGE   = 5     # Tile distance before running (nil to disable)
+    REGROUP_TIMER   = 2     # Seconds that pass before testing (nil to disable)
+    REGROUP_RANGE   = 7     # Tile distance before running (nil to disable)
     REGROUP_PATH    = false  # If true, uses Pathfinding*. Else members 'flash'
 
     
@@ -70,9 +70,10 @@ module Squad
   # Controls how the party follows the lead actor utilizing 'squad' mechanics
   # rather than the classic caterpillar, single-file system.
   # 
-    MOVE_STYLE      = 1   # Styles: 0=Default, 1=Party, 2=Class, 3=Distance
-    #MOVE_ACTOR[1]   = 1   # (If move style is 3) Actor 7 may stay 6 tiles away
-    #MOVE_ACTOR[2]   = 3   # (If move style is 3) Actor 7 may stay 6 tiles away
-    #MOVE_ACTOR[3]   = 5   # (If move style is 3) Actor 7 may stay 6 tiles away
+    MOVE_STYLE      = 3   # Styles: 0=Default, 1=Party, 2=Class, 3=Distance
+    MOVE_ACTOR[2]   = 3   # (If move style is 3) Actor 7 may stay 6 tiles away
+    MOVE_ACTOR[3]   = 2   # (If move style is 3) Actor 7 may stay 6 tiles away
+    MOVE_ACTOR[6]   = 2   # (If move style is 3) Actor 7 may stay 6 tiles away
+    MOVE_ACTOR[4]   = 5 
   
 end
