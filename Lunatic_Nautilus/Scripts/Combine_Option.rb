@@ -100,7 +100,7 @@ class Window_ItemCombine < Window_Selectable
       self.contents = nil
     end
     @data = []
-    # Add item
+    # Add items from inventory, going through every item in database order
     for i in 1...$data_items.size
       if $game_party.item_number(i) > 0
         @data.push($data_items[i])
@@ -146,11 +146,11 @@ class Window_ItemCombine < Window_Selectable
       # Set disabled color if not combinable
       self.contents.font.color = disabled_color
       # Check items on list
-      if item.is_a?(RPG::Item)
-        for items in COMBINE.keys
-          if COMBINE[items].include?(@first_item)
-            if COMBINE[items].include?(item.id)
-              if @first_item == item.id
+      if item.is_a?(RPG::Item)# if it's an item
+        for items in COMBINE.keys #check the items in the combine keys
+          if COMBINE[items].include?(@first_item) #if the first item in the array is available
+            if COMBINE[items].include?(item.id) 
+              if @first_item == item.id #checks if the first item is the item id
                 if COMBINE[items][0] == COMBINE[items][1]
                   if $game_party.item_number(item.id) != 1
                     self.contents.font.color = normal_color

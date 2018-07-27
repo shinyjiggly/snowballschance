@@ -61,7 +61,7 @@ module Atoa
   Extra_Equips_ID = {5 => [38,39]}
   
   # Name of the equips shown in the equip and status window
-  Equip_Names = ['Tool','Outfit','Accessory']
+  Equip_Names = ["Tool","Outfit","Today's Meal"]
   # The order here is the order that the names are shown in the menu, set
   # them according to the values set in 'Equip_Kinds'.
   # if you change the value of the kinds with script calls, remember to change

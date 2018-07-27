@@ -194,7 +194,7 @@ class Scene_Menu
            # Play decision SE
            $game_system.se_play($data_system.decision_se)
            # exit back to map
-           $scene = Scene_Cooking.new #Scene_Diary.new
+           $scene = Scene_Craft.new #Scene_Cooking.new #Scene_Diary.new
         end
         return
      end
