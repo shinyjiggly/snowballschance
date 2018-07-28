@@ -89,6 +89,14 @@ module Craft_Items
  21 => [[2, 0, 1], [3, 0, 1],[4, 0, 1],[5, 0, 1]],
  22 => [[1, 0, 1]],
  23 => [[3, 0, 1]],
+ 25 => [[3, 0, 1]],
+ 26 => [[3, 0, 1]],
+ 27 => [[3, 0, 1]],
+ 28 => [[3, 0, 1]],
+ 29 => [[3, 0, 1]],
+ 30 => [[3, 0, 1]],
+ 31 => [[3, 0, 1]],
+ 32 => [[3, 0, 1]],
  24 => [[4, 0, 1]]
  }
  #---------------------------------------------
@@ -189,16 +197,19 @@ class Game_Party
        case ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][1]
        when 0
          item = ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][0]
+         #every time there is an item change it is called, and is 1
          if @items.keys.include?(item) and @items[item] >= ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][2]
            @counter += 1
          end
        when 1
          item = ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][0]
+         #doesn't come up often
          if @weapons.keys.include?(item) and @weapons[item] >= ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][2]
            @counter += 1
          end
        when 2
          item = ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][0]
+         #uncommon
          if @armors.keys.include?(item) and @armors[item] >= ci::Craft_Item_Comp[ci::Craft_Item_Comp.keys[i]][j][2]
            @counter += 1
          end
@@ -222,10 +233,12 @@ class Game_Party
    
    for i in 0...ci::Craft_Weapon_Comp.keys.size
      @counter = 0
+     #item is usually 1 right after an item does a thing here
      for j in 0...ci::Craft_Weapon_Comp[ci::Craft_Weapon_Comp.keys[i]].size
        case ci::Craft_Weapon_Comp[ci::Craft_Weapon_Comp.keys[i]][j][1]
        when 0
          item = ci::Craft_Weapon_Comp[ci::Craft_Weapon_Comp.keys[i]][j][0]
+         #item is sometimes 2, sometimes 1
          if @items.keys.include?(item) and @items[item] >= ci::Craft_Weapon_Comp[ci::Craft_Weapon_Comp.keys[i]][j][2]
            @counter += 1
          end
@@ -257,12 +270,14 @@ class Game_Party
      end
    end
    
-   for i in 0...ci::Craft_Armor_Comp.keys.size
+   for i in 0...ci::Craft_Armor_Comp.keys.size #note: this stuff is always active
      @counter = 0
+     
      for j in 0...ci::Craft_Armor_Comp[ci::Craft_Armor_Comp.keys[i]].size
        case ci::Craft_Armor_Comp[ci::Craft_Armor_Comp.keys[i]][j][1]
        when 0
          item = ci::Craft_Armor_Comp[ci::Craft_Armor_Comp.keys[i]][j][0]
+         #gives the item id
          if @items.keys.include?(item) and @items[item] >= ci::Craft_Armor_Comp[ci::Craft_Armor_Comp.keys[i]][j][2]
            @counter += 1
          end
@@ -278,16 +293,20 @@ class Game_Party
          end
        end
        if @counter == ci::Craft_Armor_Comp[ci::Craft_Armor_Comp.keys[i]].size
+         #before error, gives entire laundry list of a lot of numbers per item
          unless @armor_recipe_availible.include?(ci::Craft_Armor_Comp.keys[i])
+           #prints numbers only when item obtained
            if ci::Armor_Event_Triggered.include?(ci::Craft_Armor_Comp.keys[i])
              if @event_armor.include?(ci::Craft_Armor_Comp.keys[i])
                @armor_recipe_availible.push(ci::Craft_Armor_Comp.keys[i])
                @armor_recipes_made[ci::Craft_Armor_Comp.keys[i]] = 0
+               #doesn't even do the thing
                return
              end
            else
              @armor_recipe_availible.push(ci::Craft_Armor_Comp.keys[i])
              @armor_recipes_made[ci::Craft_Armor_Comp.keys[i]] = 0
+             #error happens before this can be called, printing of numbers only happens when item is gotten
            end
          end
        end
@@ -346,6 +365,7 @@ class Window_Craft_List < Window_Selectable
    if self.contents != nil
      self.contents.dispose
      self.contents = nil
+     
    end
    @data = []
    for i in 0...$game_party.item_recipe_availible.size
@@ -357,7 +377,9 @@ class Window_Craft_List < Window_Selectable
    for i in 0...$game_party.armor_recipe_availible.size
      @data.push($data_armors[$game_party.armor_recipe_availible[i]])
    end
+   
    @item_max = @data.size
+   
    if @item_max > 0
      self.contents = Bitmap.new(width - 32, row_max * 32 + 32)
      self.contents.font.name = $defaultfonttype  # "Items" window font
@@ -370,12 +392,15 @@ class Window_Craft_List < Window_Selectable
  
  def draw_item(index)
    item = @data[index]
+   #gives an actual database entry here instead of just a number
    self.contents.font.color = system_color
    self.contents.draw_text(0, 0, 120, 32, "Name:")
    self.contents.draw_text(0, 0, 224, 32, "On hand:", 2)
    self.contents.font.color = normal_color
    x = 4
    y = index * 32
+
+   
    case item
    when RPG::Item
      if $game_party.item_recipes_made[item.id] > 0
@@ -401,15 +426,33 @@ class Window_Craft_List < Window_Selectable
    end
  end
  
- def update_cursor_rect
-   if @index < 0
-     self.cursor_rect.empty
-   else
-     x = 0
-     y = index * 32 + 32
-     self.cursor_rect.set(x, y, (self.width - 32), 32)
-   end
- end
+def update_cursor_rect
+    # If cursor position is less than 0
+    if @index < 0
+      self.cursor_rect.empty
+      return
+    end
+    # Get current row
+    row = @index / @column_max
+    # If current row is before top row
+    if row < self.top_row
+      # Scroll so that current row becomes top row
+      self.top_row = row
+    end
+    # If current row is more to back than back row
+    if row > self.top_row + (self.page_row_max - 2)
+      # Scroll so that current row becomes back row
+      self.top_row = row - (self.page_row_max - 2)
+    end
+    # Calculate cursor width
+    cursor_width = self.width / @column_max - 32
+    # Calculate cursor coordinates
+    x = @index % @column_max * (cursor_width + 32)
+    y = @index / @column_max * 32 - self.oy
+    # Update cursor rectangle
+    self.cursor_rect.set(x, y+32, cursor_width, 32)
+  end
+ 
 end
 #=============================================
 #  END Window_Craft_List
@@ -439,7 +482,7 @@ class Window_Craft_Desc < Window_Base
      self.contents.draw_text(280, 96, 120, 32, "On hand:")
      self.contents.font.color = normal_color
      @items = []
-     bitmap = RPG::Cache.icon(item.icon_name)
+     bitmap = RPG::Cache.icon(item.icon_name) #icon
      opacity = self.contents.font.color == normal_color ? 255 : 128
      self.contents.blt(0, 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
      case item
@@ -470,7 +513,7 @@ class Window_Craft_Desc < Window_Base
      end
      case item
      when RPG::Item
-       #p ci::Craft_Item_Comp[item.id]
+       p ci::Craft_Item_Comp[item.id] #what is this
        for i in 0...ci::Craft_Item_Comp[item.id].size
          item2 = ci::Craft_Item_Comp[item.id][i][0]
          case ci::Craft_Item_Comp[item.id][i][1]
@@ -517,7 +560,7 @@ class Window_Craft_Desc < Window_Base
          else
            self.contents.font.color = disabled_color
          end
-         bitmap = RPG::Cache.icon(@items[i][0].icon_name)
+         bitmap = RPG::Cache.icon(@items[i][0].icon_name) #icon
          opacity = self.contents.font.color == normal_color ? 255 : 128
          self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
          self.contents.draw_text(x + 28, y, 200, 32, @items[i][0].name)
@@ -529,7 +572,7 @@ class Window_Craft_Desc < Window_Base
          else
            self.contents.font.color = disabled_color
          end
-         bitmap = RPG::Cache.icon(@items[i][0].icon_name)
+         bitmap = RPG::Cache.icon(@items[i][0].icon_name) #icon
          opacity = self.contents.font.color == normal_color ? 255 : 128
          self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
          self.contents.draw_text(x + 28, y, 200, 32, @items[i][0].name)
@@ -541,7 +584,7 @@ class Window_Craft_Desc < Window_Base
          else
            self.contents.font.color = disabled_color
          end
-         bitmap = RPG::Cache.icon(@items[i][0].icon_name)
+         bitmap = RPG::Cache.icon(@items[i][0].icon_name) #icon
          opacity = self.contents.font.color == normal_color ? 255 : 128
          self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
          self.contents.draw_text(x + 28, y, 200, 32, @items[i][0].name)
