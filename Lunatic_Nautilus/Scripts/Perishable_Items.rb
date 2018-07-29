@@ -24,7 +24,7 @@
 # the item screen and replaced with it's rotten replacement. You can have your 
 # rotten equivalent do anything that a normal item would do, so go nuts!
 #==============================================================================
-
+=begin
 class Game_Party
   attr_accessor    :perishablelist
   
@@ -105,3 +105,4 @@ class Window_Item < Window_Selectable
     return false
   end
 end
+=end

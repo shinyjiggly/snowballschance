@@ -29,6 +29,8 @@ module Crafting
   # false - draw full windows
   RESIZE_MENU = true
   # Create array to hold recipe data
+  #RECIPE[index] = [recipe_id, [product_type, product_id],
+                 #[material_1_type, material_1_id, material_1_qty], ...]
   RECIPE = []
   # Create recipes below
   # High Potion
@@ -53,7 +55,7 @@ class Window_Prompt < Window_Command
   #     item    : item that will be created
   #--------------------------------------------------------------------------
   def initialize
-    super(200, ['Create', 'Cancel'])
+    super(200, ["Let's cook this", 'On second thought...'])
     self.x += 16
     self.y += 80
     self.z += 100
@@ -77,7 +79,7 @@ class Window_Materials < Window_Selectable
   #--------------------------------------------------------------------------
   # * Current Item
   #--------------------------------------------------------------------------
-  def item
+  def cur_item #item
     return @data[self.index]
   end
   #--------------------------------------------------------------------------
@@ -147,26 +149,26 @@ class Window_Materials < Window_Selectable
   # * Draw Ingredients
   #-------------------------------------------------------------------------
   def draw_item(index)
-    item = @data[index]
+    cur_item = @data[index]
     x = 4
     y = index * 32 + 32
     # get number of items held
-    case item
+    case cur_item
     when RPG::Item
-      number = $game_party.item_number(item.id)
+      number = $game_party.item_number(cur_item.id)
     when RPG::Weapon
-      number = $game_party.weapon_number(item.id)
+      number = $game_party.weapon_number(cur_item.id)
     when RPG::Armor
-      number = $game_party.armor_number(item.id)
+      number = $game_party.armor_number(cur_item.id)
     end
     self.contents.font.color = number >= @qty_req[index] ? 
                                normal_color : disabled_color
     rect = Rect.new(x, y, self.width - 32, 32)
     self.contents.fill_rect(rect, Color.new(0, 0, 0, 0))
-    bitmap = RPG::Cache.icon(item.icon_name)
+    bitmap = RPG::Cache.icon(cur_item.icon_name)
     opacity = self.contents.font.color == normal_color ? 255 : 128
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
-    self.contents.draw_text(x + 28, y, 212, 32, item.name)
+    self.contents.draw_text(x + 28, y, 212, 32, cur_item.name)
     self.contents.draw_text(x + 200, y, 24, 32, @qty_req[index].to_s, 2)
     self.contents.draw_text(x + 224, y, 16, 32, '/', 1)
     self.contents.draw_text(x + 248, y, 24, 32, number.to_s, 2)
@@ -204,7 +206,7 @@ class Window_Materials < Window_Selectable
   # * Help Text Update
   #--------------------------------------------------------------------------
   def update_help
-    @help_window.set_text(self.item == nil ? "" : self.item.description)
+    @help_window.set_text(self.cur_item == nil ? "" : self.cur_item.description)
   end
 end
 
@@ -339,19 +341,19 @@ class Window_Recipe < Window_Selectable
   #--------------------------------------------------------------------------
   def update_help
     if self.recipe == nil
-      item = nil
+      cur_item = nil
       @help_window.set_text('')
     else
       case self.recipe[1][0]
       when 0 # item
-        item = $data_items[self.recipe[1][1]]
+        cur_item = $data_items[self.recipe[1][1]]
       when 1 # weapon
-        item = $data_weapons[self.recipe[1][1]]
+        cur_item = $data_weapons[self.recipe[1][1]]
       when 2 # armor
-        item = $data_armors[self.recipe[1][1]]
+        cur_item = $data_armors[self.recipe[1][1]]
       end
-      bitmap = RPG::Cache.icon(item.icon_name)
-      @help_window.set_text('Creates       ' + item.name)
+      bitmap = RPG::Cache.icon(cur_item.icon_name)
+      @help_window.set_text('Creates       ' + cur_item.name)
       @help_window.contents.blt(78, 4, bitmap, Rect.new(0, 0, 24, 24))
     end
   end
@@ -367,7 +369,9 @@ class Scene_Crafting
   #--------------------------------------------------------------------------
   def main
     # Draw map in background
-    map = Spriteset_Map.new if Crafting::RESIZE_MENU
+   @background = Plane.new #background initialization
+   @background.bitmap = RPG::Cache.panorama("plaidpattern",0)
+    #map = Spriteset_Map.new if Crafting::RESIZE_MENU
     # Create Windows
     @recipe_window = Window_Recipe.new
     @index = 0
@@ -393,7 +397,8 @@ class Scene_Crafting
       end
     end
     # Dispose windows
-    map.dispose if Crafting::RESIZE_MENU
+    @background.dispose
+    #map.dispose if Crafting::RESIZE_MENU
     @recipe_window.dispose
     @material_window.dispose
     @help_window.dispose
@@ -402,6 +407,8 @@ class Scene_Crafting
   # * Update Frame
   #--------------------------------------------------------------------------
   def update
+   @background.ox -= 1 #move the background here
+   @background.oy -= 1
     # Update current window
     @help_window.update
     if @recipe_window.active

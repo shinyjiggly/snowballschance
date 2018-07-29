@@ -88,7 +88,6 @@ class Window_Item < Window_Selectable
     y = index / 2 * 32
     rect = Rect.new(x, y, self.width / @column_max - 32, 32)
     self.contents.fill_rect(rect, Color.new(0, 0, 0, 0))
-    print item
     bitmap = RPG::Cache.icon(item.icon_name)
     opacity = self.contents.font.color == normal_color ? 255 : 128
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)

@@ -411,6 +411,7 @@
             * example: \P[C2] for 2nd Cat Actor, or 3rd Actor in Caterpillar
             * n excludes Player
   - \P = position message over current event (default for floating messages)
+  - \xy[x,y] = position message at specific x,y coordinates (PLANNED)
   - \^ = message appears directly over its event
   - \v = message appears directly below its event
   - \< = message appears directly to the left of its event

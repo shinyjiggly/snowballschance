@@ -819,6 +819,8 @@ class Game_Map
   #         * 0 = Determines if all directions are impassable (for jumping)
   #--------------------------------------------------------------------------
   def ally_passable?(x, y, d, self_event = nil)
+    new_x = x + (d == 6 ? 1 : d == 4 ? -1 : 0)
+    new_y = y + (d == 2 ? 1 : d == 8 ? -1 : 0)
     # Change direction (0,2,4,6,8,10) to obstacle bit (0,1,2,4,8,0)
     bit = (1 << (d / 2 - 1)) & 0x0f
     # Loop all allies
@@ -1318,8 +1320,8 @@ class Game_Ally < Game_Character
   #     y : y-coordinate
   #--------------------------------------------------------------------------
   def check_event_trigger_touch(x, y)
-    # Exit false (this command only really works player vs event)
-    return false
+     #Exit false #(this command only really works player vs event)
+    return false 
   end
 end
 
