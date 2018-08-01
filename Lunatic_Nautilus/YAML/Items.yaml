@@ -207,7 +207,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: eee
+  name: River water
   minus_state_set: []
   icon_name: fireicon
   recover_hp_rate: 0
@@ -215,7 +215,8 @@ root:
   mdef_f: 0
   price: 0
   occasion: 0
-  plus_state_set: []
+  plus_state_set:
+  - 3
   recover_sp: 0
   parameter_points: 0
   menu_se: !ruby/object:RPG::AudioFile
@@ -230,13 +231,13 @@ root:
   animation2_id: 0
   hit: 100
   id: 8
-  description: ''
+  description: Make sure to boil before consuming!
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: fff
+  name: Snow
   minus_state_set: []
   icon_name: planticon
   recover_hp_rate: 0
@@ -253,19 +254,20 @@ root:
     pitch: 100
   pdef_f: 0
   scope: 0
-  element_set: []
+  element_set:
+  - 5
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 9
-  description: ''
+  description: brrrr, this is cold!
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: ggg
+  name: Green mushroom
   minus_state_set: []
   icon_name: planticon
   recover_hp_rate: 0
@@ -273,7 +275,8 @@ root:
   mdef_f: 0
   price: 0
   occasion: 0
-  plus_state_set: []
+  plus_state_set:
+  - 3
   recover_sp: 0
   parameter_points: 0
   menu_se: !ruby/object:RPG::AudioFile
@@ -288,8 +291,8 @@ root:
   animation2_id: 0
   hit: 100
   id: 10
-  description: ''
-  recover_hp: 0
+  description: Something seems sketchy about this shroom...
+  recover_hp: 4
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
@@ -700,7 +703,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: false
   animation1_id: 0
-  name: salt
+  name: Hot spices
   minus_state_set: []
   icon_name: darkicon
   recover_hp_rate: 0
@@ -723,13 +726,13 @@ root:
   animation2_id: 0
   hit: 100
   id: 25
-  description: it's good for flavor...
+  description: Makes it spicy
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
-  consumable: false
+  consumable: true
   animation1_id: 0
-  name: frying batter
+  name: Yellow mushroom
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 0
@@ -752,8 +755,8 @@ root:
   animation2_id: 0
   hit: 100
   id: 26
-  description: required for fried recipes
-  recover_hp: 0
+  description: Surprisingly hardy enough to handle winter cold.
+  recover_hp: 4
   variance: 0
 - !ruby/object:RPG::Item
   consumable: false
@@ -787,7 +790,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: false
   animation1_id: 0
-  name: rich sauce
+  name: "------------"
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 0
