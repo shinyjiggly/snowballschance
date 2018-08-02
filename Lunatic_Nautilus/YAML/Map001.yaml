@@ -11,14 +11,103 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Cleaver]\\P[0]One day,\\. "
+          - "\\P[0]Give an X value:"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - I'll be the one steering.
+          - 5
+          - 2
+          indent: 0
+          code: 103
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\P[0]Give an Y value:"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 2
+          indent: 0
+          code: 103
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\P[0]Give an Map ID:"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 7
+          - 2
+          indent: 0
+          code: 103
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - You'd like to go to map \V[7],
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - specifically at (\V[5],\V[6])?
           indent: 0
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 0
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Alright, here we goooo!
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 17
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 7
+          - 5
+          - 6
+          - 0
+          - 1
+          indent: 1
+          code: 201
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 404
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -2596,8 +2685,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: true
       name: EV029
-      y: 20
-      x: 14
+      y: 21
+      x: 4
       id: 29
     30: !ruby/object:RPG::Event
       pages:
@@ -2738,6 +2827,11 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - se_thunder(100, pitch)
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_system.autoscroll_x_speed = 4"
           indent: 0
           code: 655
         - !ruby/object:RPG::EventCommand
@@ -3200,11 +3294,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3229,11 +3323,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3258,11 +3352,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3287,11 +3381,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3316,11 +3410,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3345,11 +3439,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3374,11 +3468,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
@@ -3403,11 +3497,11 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
-    - 96
-    - 96
-    - 96
-    - 96
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 120
     - 402
     - 402
