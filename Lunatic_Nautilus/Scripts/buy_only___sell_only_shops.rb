@@ -102,6 +102,8 @@ class Scene_Shop
   # * Main Processing
   #--------------------------------------------------------------------------
   def main
+    @background = Plane.new #background initialization
+    @background.bitmap = RPG::Cache.panorama("plaidpattern",0)
     @help_window = Window_Help.new
     @command_window = Window_ShopCommand.new
     @gold_window = Window_Gold.new
@@ -158,12 +160,16 @@ class Scene_Shop
     @sell_window.dispose
     @number_window.dispose
     @status_window.dispose
+    @background.dispose
     $game_temp.shop_type = 0
   end
   #--------------------------------------------------------------------------
   # * Frame Update
   #--------------------------------------------------------------------------
   def update
+    @background.oy -= 1
+    @background.ox -= 1
+    
     @help_window.update
     @command_window.update
     @gold_window.update
