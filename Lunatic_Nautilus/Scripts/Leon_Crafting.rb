@@ -71,7 +71,7 @@ module Craft_Items
  #  Craft_Item_Comp = {item_id => [[item.id, item.type, # needed], etc...]
  #---------------------------------------------
  Craft_Item_Comp = {
- 2 => [[1, 0, 2]]
+ 30 => [[21, 0, 1]] #cooked meat
  }
  #---------------------------------------------
  #  Recipes for Weapons
@@ -89,14 +89,6 @@ module Craft_Items
  21 => [[2, 0, 1], [3, 0, 1],[4, 0, 1],[5, 0, 1]],
  22 => [[1, 0, 1]],
  23 => [[3, 0, 1]],
- 25 => [[3, 0, 1]],
- 26 => [[3, 0, 1]],
- 27 => [[3, 0, 1]],
- 28 => [[3, 0, 1]],
- 29 => [[3, 0, 1]],
- 30 => [[3, 0, 1]],
- 31 => [[3, 0, 1]],
- 32 => [[3, 0, 1]],
  24 => [[4, 0, 1]]
  }
  #---------------------------------------------
@@ -351,6 +343,8 @@ class Window_Craft_List < Window_Selectable
    self.contents.font.name = $defaultfonttype
    self.contents.font.size = $defaultfontsize
    self.index = 0
+   $game_system.bgm_memorize
+   Audio.bgm_play("Audio/BGM/cooking.it")
    refresh
  end
  
@@ -384,6 +378,11 @@ class Window_Craft_List < Window_Selectable
      self.contents = Bitmap.new(width - 32, row_max * 32 + 32)
      self.contents.font.name = $defaultfonttype  # "Items" window font
      self.contents.font.size = $defaultfontsize
+    #gives an actual database entry here instead of just a number
+   self.contents.font.color = system_color
+   self.contents.draw_text(0, 0, 120, 32, "Name:")
+   self.contents.draw_text(0, 0, 224, 32, "On hand:", 2)
+   self.contents.font.color = normal_color
      for i in 0...@item_max
        draw_item(i)
      end
@@ -392,11 +391,7 @@ class Window_Craft_List < Window_Selectable
  
  def draw_item(index)
    item = @data[index]
-   #gives an actual database entry here instead of just a number
-   self.contents.font.color = system_color
-   self.contents.draw_text(0, 0, 120, 32, "Name:")
-   self.contents.draw_text(0, 0, 224, 32, "On hand:", 2)
-   self.contents.font.color = normal_color
+
    x = 4
    y = index * 32
 
@@ -491,8 +486,8 @@ class Window_Craft_Desc < Window_Base
          self.contents.draw_text(28, 0, 200, 32, item.name)
          self.contents.draw_text(10, 32, 352, 32, item.description)
        else
-         self.contents.draw_text(28, 0, 200, 32, "New Snack")
-         self.contents.draw_text(10, 32, 352, 32, "This might be good to eat in a pinch...")
+         self.contents.draw_text(28, 0, 200, 32, "New Snack/component")
+         self.contents.draw_text(10, 32, 352, 32, "This might be good to eat in a pinch, or not.")
        end
      when RPG::Weapon
        if $game_party.weapon_recipes_made[item.id] > 0
@@ -513,7 +508,7 @@ class Window_Craft_Desc < Window_Base
      end
      case item
      when RPG::Item
-       p ci::Craft_Item_Comp[item.id] #what is this
+       #p ci::Craft_Item_Comp[item.id] #what is this
        for i in 0...ci::Craft_Item_Comp[item.id].size
          item2 = ci::Craft_Item_Comp[item.id][i][0]
          case ci::Craft_Item_Comp[item.id][i][1]
@@ -641,6 +636,7 @@ class Scene_Craft
    if Input.trigger?(Input::B)
      $game_system.se_play($data_system.cancel_se)
      $scene = Scene_Map.new
+     $game_system.bgm_restore
    end
    if Input.trigger?(Input::C)
      @counter = 0

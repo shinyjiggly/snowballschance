@@ -24,6 +24,7 @@ EX. RECIPE[0] = [1, [0, 25], [0, 15, 5], [0, 12, 2], [0, 5, 1]]
 that recipe would be found as the first item in the database, would create
 item # 25 in the item database, and requires 5 item#15, 2 item#12 and 1 item#5
 =end
+=begin
 module Crafting
   # Menu style, true - draw map and resize windows to fit contents
   # false - draw full windows
@@ -33,8 +34,8 @@ module Crafting
                  #[material_1_type, material_1_id, material_1_qty], ...]
   RECIPE = []
   # Create recipes below
-  # High Potion
-  RECIPE[0] = [2, [0, 2], [0, 3, 2], [0, 2, 1]]               
+  # cooked meat
+  RECIPE[0] = [30, [0, 30], [0, 21, 1]]               
   # Full Potion
   RECIPE[1] = [34, [0, 3], [0, 2, 1], [0, 28, 1]]               
   # High Perfume
@@ -557,3 +558,4 @@ class Scene_Crafting
     @recipe_window.active = true
   end
 end
+=end
