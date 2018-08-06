@@ -58,7 +58,26 @@
 #      below, the item_types are: 0-item, 1-weapon, 2-armor
 #
 #========================================
+=begin
+food component list:
+8 river water
+9 snow
+10 green mushroom
+21 raw meat
+22 raw fish
+23 frozen veggies
+24 veggie bullion
+25 chili powder
+26 yellow mushroom
+27 noodles
 
+29 boiled water
+30 cooked meat
+31 cooked fish
+32 sautee'd shrooms
+33 poison sautee
+34 cooked veggies
+=end
 
 #========================================
 #  module Craft_Items
@@ -70,8 +89,28 @@ module Craft_Items
  #  Recipes for Items
  #  Craft_Item_Comp = {item_id => [[item.id, item.type, # needed], etc...]
  #---------------------------------------------
- Craft_Item_Comp = {
- 30 => [[21, 0, 1]] #cooked meat
+ Craft_Item_Comp = { #boiled
+ 29 => [[8, 0, 1]], #river water 
+ #NOTE: DOES NOT YET ALLOW FOR MULTIPLE METHODS OF THE SAME RESULT
+ 29 => [[9, 0, 1]] ,#snow #tldr: both of these don't work, only the last one
+ 30 => [[21, 0, 1]] ,#cooked meat
+ 31 => [[22, 0, 1]] ,#cooked fish
+ 32 => [[26, 0, 1]] ,#sautee'd shrooms
+ 33 => [[10, 0, 1]] ,#poison sautee
+ 34 => [[23, 0, 1]], #cooked veggies
+ 
+ 37 => [[30, 0, 1], [25, 0, 1]] ,#spicy meat
+ 38 => [[30, 0, 1], [29, 0, 1]] ,#meaty broth
+ 39 => [[30, 0, 1], [29, 0, 1],[25, 0, 1]],#hot meaty broth
+ 40 => [[32, 0, 1], [29, 0, 1]], #shroom broth
+ 41 => [[32, 0, 1], [29, 0, 1], [25, 0, 1]], #hot shroom broth
+ 42 => [[34, 0, 1], [29, 0, 1], [25, 0, 1]], #hot veggie broth 
+ 43 => [[34, 0, 1], [29, 0, 1]], #veggie broth 
+ 44 => [[31, 0, 1], [29, 0, 1]], #fish broth 
+ 45 => [[31, 0, 1], [29, 0, 1], [25, 0, 1]], #hot fish broth 
+ 46 => [[31, 0, 1], [25, 0, 1]], #hot fish
+ 47 => [[9, 0, 1], [25, 0, 1]], #hot snow??? 
+ 48 => [[32, 0, 1], [25, 0, 1]] #hot shrooms
  }
  #---------------------------------------------
  #  Recipes for Weapons
