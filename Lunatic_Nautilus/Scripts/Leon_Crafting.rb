@@ -60,9 +60,12 @@
 #========================================
 =begin
 food component list:
-8 river water
+5 wood
+6 skipping stone
+8 fresh water
 9 snow
 10 green mushroom
+
 21 raw meat
 22 raw fish
 23 frozen veggies
@@ -90,9 +93,8 @@ module Craft_Items
  #  Craft_Item_Comp = {item_id => [[item.id, item.type, # needed], etc...]
  #---------------------------------------------
  Craft_Item_Comp = { #boiled
- 29 => [[8, 0, 1]], #river water 
- #NOTE: DOES NOT YET ALLOW FOR MULTIPLE METHODS OF THE SAME RESULT
- 29 => [[9, 0, 1]] ,#snow #tldr: both of these don't work, only the last one
+ 8 => [[9, 0, 1]], #fresh water 
+ 29 => [[8, 0, 1]] , #boiled water 
  30 => [[21, 0, 1]] ,#cooked meat
  31 => [[22, 0, 1]] ,#cooked fish
  32 => [[26, 0, 1]] ,#sautee'd shrooms
@@ -117,18 +119,32 @@ module Craft_Items
  #  Craft_Weapon_Comp = {weapon_id => [[item.id, item.type, # needed], etc...]
  #---------------------------------------------
  Craft_Weapon_Comp = {
- 1 => [[1, 0, 1], [2, 0, 1]]
+ 18 => [[5, 0, 1], [10, 0, 1]], #poison stick
+ 19 => [[5, 0, 1], [25, 0, 1]] #hot stick
  }
  #---------------------------------------------
  #  Recipes for Armors
  #  Craft_Armor_Comp = {Armor_id => [[item.id, item.type, # needed], etc...]
  #---------------------------------------------
  Craft_Armor_Comp = {
- 20 => [[4, 0, 2]],
- 21 => [[2, 0, 1], [3, 0, 1],[4, 0, 1],[5, 0, 1]],
- 22 => [[1, 0, 1]],
- 23 => [[3, 0, 1]],
- 24 => [[4, 0, 1]]
+ 20 => [[4, 0, 2]], #heelies
+ 21 => [[38, 0, 1], [27, 0, 1]], #meaty noodle soup
+ 22 => [[40, 0, 1], [27, 0, 1]], #shroom noodle soup
+ 23 => [[41, 0, 1], [27, 0, 1]], #shroom noodle soup SP
+ 24 => [[39, 0, 1], [27, 0, 1]], #meaty noodle soup SP
+ 25 => [[43, 0, 1], [27, 0, 1]], #veggie noodle soup
+ 26 => [[42, 0, 1], [27, 0, 1]], #veggie noodle soup SP
+ 27 => [[44, 0, 1], [27, 0, 1]], #fishy noodle soup
+ 28 => [[45, 0, 1], [27, 0, 1]], #fishy noodle soup SP
+ 
+ 29 => [[12, 0, 1]], #calzone
+ 30 => [[30, 0, 1], [32, 0, 1]],#meat n shrooms
+ 31 => [[34, 0, 1], [32, 0, 1]],#veggie medley
+ 32 => [[31, 0, 1], [32, 0, 1]],#fish n shrooms
+ 33 => [[12, 0, 1], [25, 0, 1]],#spicy calzone
+ 34 => [[30, 0, 1], [32, 0, 1], [25, 0, 1]],#meat n shrooms SP
+ 35 => [[34, 0, 1], [32, 0, 1], [25, 0, 1]],#veggie medley SP
+ 32 => [[31, 0, 1], [32, 0, 1], [25, 0, 1]] #fish n shrooms SP
  }
  #---------------------------------------------
  #  Tells which item recipes are evented.

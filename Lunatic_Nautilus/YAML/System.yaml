@@ -23,8 +23,8 @@ root: !ruby/object:RPG::System
   - special event
   - day of the week
   - bus stop selected
-  - "[f]specialty level"
-  - "[f]up-able stat"
+  - terrain in front
+  - ''
   - random number
   - saved key
   - "[A] STR"
@@ -65,7 +65,7 @@ root: !ruby/object:RPG::System
     volume: 100
     name: winner
     pitch: 100
-  start_map_id: 3
+  start_map_id: 33
   shop_se: !ruby/object:RPG::AudioFile
     volume: 80
     name: buying
@@ -105,7 +105,7 @@ root: !ruby/object:RPG::System
   - can slide
   - bus cutscene
   - bus going left
-  - ''
+  - general cutscene
   - ''
   - ''
   - ''
@@ -116,7 +116,7 @@ root: !ruby/object:RPG::System
   - can die on the map
   - ''
   - ''
-  - ''
+  - squad hide
   - ''
   - ''
   - ''
@@ -195,7 +195,7 @@ root: !ruby/object:RPG::System
   - Piercing
   - Slashing
   - Bludgeoning
-  start_y: 7
+  start_y: 6
   battler_hue: 0
   load_se: !ruby/object:RPG::AudioFile
     volume: 80
@@ -240,7 +240,6 @@ root: !ruby/object:RPG::System
   - 12
   - 6
   - 3
-  - 2
   actor_collapse_se: !ruby/object:RPG::AudioFile
     volume: 80
     name: unavailable
@@ -255,4 +254,4 @@ root: !ruby/object:RPG::System
     name: saved
     pitch: 100
   battle_transition: battletransition
-  start_x: 12
+  start_x: 17

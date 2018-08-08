@@ -58,12 +58,12 @@ class Window_ShopCommand < Window_Selectable
       end
     end
     if $game_temp.shop_type == 1
-      self.contents.draw_text(4, 0, 324, 32, "You can only buy at this shop.")
+      self.contents.draw_text(4, 0, 324, 32, "----")
       self.index = -1
       update_cursor_rect
     end
     if $game_temp.shop_type == 2
-      self.contents.draw_text(4, 0, 324, 32, "You can only sell at this shop.")
+      self.contents.draw_text(4, 0, 324, 32, "----")
       self.index = -1
       update_cursor_rect
     end
