@@ -57,6 +57,7 @@
 #     7 - Transpose (by Blizzard)
 #     8 - Shutter
 #     9 - Drop Off
+#     10- downward Spiral
 #
 #   For Scripters:
 #
@@ -137,7 +138,7 @@ class Transition
   #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   # * CONFIG BEGIN
   #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-  BATTLE_EFFECT = [2,3,6,7,8,9] # randomly choose from any of those
+  BATTLE_EFFECT = [10]#[2,3,6,7,8,9] # randomly choose from any of those
   SHOP_EFFECT = 0
   NAME_EFFECT = nil # uses default effect set in $game_temp.transition_type
   MENU_EFFECT = -1
