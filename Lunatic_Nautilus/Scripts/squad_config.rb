@@ -51,7 +51,7 @@ module Squad
     KEY_CYCLE_FORWARD     = nil #Input::L    # Default (Q key)
     KEY_CYCLE_BACKWARD    = nil #Input::R    # Default (W key)
     KEY_LEADER_WAIT       = nil #Input::X    # Default (A key)
-    KEY_PARTY_GATHER      = Input::CTRL   # Default (S key)
+    KEY_PARTY_GATHER      = Input::R  # (W key)
     
   
   

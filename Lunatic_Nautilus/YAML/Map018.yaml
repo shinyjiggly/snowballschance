@@ -550,6 +550,13 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 402
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 1
+          - 1
+          indent: 1
+          code: 121
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
           code: 0
@@ -1015,6 +1022,11 @@ root: !ruby/object:RPG::Map
       pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - s
+          indent: 0
+          code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
           - 0
@@ -1719,6 +1731,11 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 117
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - put ice-o-meter here too
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
           code: 0
@@ -1743,19 +1760,19 @@ root: !ruby/object:RPG::Map
           repeat: true
         trigger: 4
         step_anime: false
-        move_frequency: 3
+        move_frequency: 6
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
           character_name: ''
           pattern: 0
-          tile_id: 0
+          tile_id: 398
           direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
-        move_speed: 3
-        through: false
+        move_speed: 6
+        through: true
       name: EV019
       y: 12
       x: 0

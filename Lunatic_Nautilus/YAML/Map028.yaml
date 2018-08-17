@@ -11,6 +11,32 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 2
+          - A
+          - 1
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\c[4]Coda: \\c[0]Try not to fall off the bridge."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - A
+          - 0
+          indent: 1
+          code: 123
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 13
           indent: 0
           code: 117
@@ -537,7 +563,7 @@ root: !ruby/object:RPG::Map
     - 390
     - 390
     - 390
-    - 574
+    - 390
     - 545
     - 545
     - 545
@@ -558,7 +584,7 @@ root: !ruby/object:RPG::Map
     - 390
     - 390
     - 390
-    - 574
+    - 390
     - 545
     - 545
     - 545
@@ -579,7 +605,7 @@ root: !ruby/object:RPG::Map
     - 390
     - 390
     - 390
-    - 574
+    - 390
     - 545
     - 545
     - 545
@@ -600,7 +626,7 @@ root: !ruby/object:RPG::Map
     - 390
     - 390
     - 390
-    - 574
+    - 390
     - 545
     - 545
     - 545
@@ -816,9 +842,9 @@ root: !ruby/object:RPG::Map
     - 228
     - 0
     - 0
-    - 544
-    - 472
-    - 473
+    - 552
+    - 553
+    - 574
     - 474
     - 475
     - 476
@@ -836,9 +862,9 @@ root: !ruby/object:RPG::Map
     - 216
     - 0
     - 0
-    - 552
+    - 0
     - 480
-    - 481
+    - 544
     - 482
     - 483
     - 484
@@ -857,10 +883,10 @@ root: !ruby/object:RPG::Map
     - 228
     - 0
     - 0
+    - 0
     - 552
-    - 0
-    - 0
-    - 0
+    - 553
+    - 574
     - 0
     - 0
     - 0
@@ -878,18 +904,18 @@ root: !ruby/object:RPG::Map
     - 228
     - 0
     - 0
-    - 552
     - 0
-    - 472
+    - 0
+    - 544
     - 473
     - 474
     - 475
     - 0
     - 538
-    - 0
-    - 0
-    - 0
-    - 0
+    - 465
+    - 466
+    - 467
+    - 468
     - 0
     - 0
     - 656
@@ -899,17 +925,17 @@ root: !ruby/object:RPG::Map
     - 0
     - 130
     - 132
-    - 552
-    - 480
+    - 0
+    - 544
     - 481
     - 482
     - 483
     - 442
-    - 464
-    - 465
-    - 466
-    - 467
-    - 468
+    - 472
+    - 473
+    - 474
+    - 475
+    - 476
     - 0
     - 0
     - 0
@@ -925,11 +951,11 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 450
-    - 472
-    - 473
-    - 474
-    - 475
-    - 476
+    - 480
+    - 481
+    - 482
+    - 483
+    - 484
     - 0
     - 0
     - 0
@@ -945,11 +971,11 @@ root: !ruby/object:RPG::Map
     - 544
     - 0
     - 458
-    - 480
-    - 481
-    - 482
-    - 483
-    - 484
+    - 0
+    - 0
+    - 0
+    - 0
+    - 640
     - 0
     - 0
     - 556
@@ -1022,7 +1048,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 448
+    - 0
     - 449
     - 0
     - 449
@@ -1117,33 +1143,13 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 472
+    - 473
     - 0
     - 0
     - 449
     - 450
     - 451
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 456
-    - 457
-    - 458
-    - 459
     - 0
     - 0
     - 441
@@ -1157,13 +1163,13 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 480
+    - 481
     - 0
-    - 0
-    - 0
-    - 464
-    - 465
-    - 466
-    - 467
+    - 456
+    - 457
+    - 458
+    - 459
     - 0
     - 0
     - 449
@@ -1180,11 +1186,11 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 464
+    - 465
+    - 466
+    - 467
     - 0
-    - 0
-    - 0
-    - 0
-    - 537
     - 456
     - 457
     - 458
@@ -1200,7 +1206,27 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 472
     - 0
+    - 0
+    - 0
+    - 537
+    - 464
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 480
     - 0
     - 0
     - 0

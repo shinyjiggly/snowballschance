@@ -14,6 +14,7 @@ self.size = 20 # Size
 
 $defaultfonttype = self.name
 $defaultfontsize = self.size
+
 end
 
 end

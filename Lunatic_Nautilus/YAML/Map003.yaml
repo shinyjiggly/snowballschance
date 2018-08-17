@@ -2,7 +2,7 @@
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 65
-    name: daysreflection
+    name: slowsuspense
     pitch: 100
   events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
@@ -658,9 +658,34 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - aaaaaaaaaabbbbbbbbbbaaaaaaaaaabbbbbbbbbbaaa
+          - "\\ani[17]aaaaaaaaaabbbbbbb"
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - bbbaaaaaaaaaabbbbbbbbbbaaa
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\ani[18]aaaaaaaaaabbbbbbb"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - bbbaaaaaaaaaabbbbbbbbbbaaa
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\ani[14]aaaaaaaaaabbbbbbb"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - bbbaaaaaaaaaabbbbbbbbbbaaa
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\c[2]Yoan:\\c[0] \\p[4]this is \\Ba thing\\B and a \\I thingie"
@@ -812,6 +837,14 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 27
+          - 0
+          - 0
+          - 12
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 21
           - 0
           - 0
@@ -824,6 +857,30 @@ root: !ruby/object:RPG::Map
           - 0
           - 0
           - 7
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 0
+          - 0
+          - 2
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 0
+          - 0
+          - 5
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 16
+          - 0
+          - 0
+          - 1
           indent: 0
           code: 126
         - !ruby/object:RPG::EventCommand
@@ -1991,7 +2048,7 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Fiora]\\P[11]So I guess we're both "
+          - "\\P[11]\\A[Fiora]So I guess we're both "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2001,7 +2058,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Coda]\\P[0]It appears so..."
+          - "\\A[Coda]\\P[0]It appears so..."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -3732,14 +3789,27 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - " \\c[2]Topaz:\\c[0]\\P[23] When are we going to climb "
+          - "\\f[coda_face]\\p[0]uhhhh..."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - that mountain?
+          - "\\c[2]Topaz:\\c[0]\\P[23] I dare you to eat The Sun. "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Right here, right now.
           indent: 0
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 11
+          - 0
+          - 0
+          - 1
+          indent: 0
+          code: 126
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -3774,7 +3844,7 @@ root: !ruby/object:RPG::Map
           tile_id: 0
           direction: 2
           blend_type: 0
-          character_hue: 0
+          character_hue: 60
         walk_anime: true
         move_speed: 3
         through: false
@@ -4343,11 +4413,11 @@ root: !ruby/object:RPG::Map
     - 387
     - 387
     - 387
-    - 460
-    - 460
-    - 460
-    - 460
-    - 460
+    - 387
+    - 387
+    - 387
+    - 387
+    - 387
     - 387
     - 387
     - 387
@@ -5081,8 +5151,8 @@ root: !ruby/object:RPG::Map
     - 408
     - 0
     - 48
-    - 72
-    - 0
+    - 50
+    - 84
     - 0
     - 0
     - 0
@@ -5119,10 +5189,10 @@ root: !ruby/object:RPG::Map
     - 0
     - 408
     - 408
-    - 52
-    - 86
-    - 0
-    - 0
+    - 48
+    - 48
+    - 50
+    - 84
     - 0
     - 0
     - 0
@@ -5158,10 +5228,10 @@ root: !ruby/object:RPG::Map
     - 0
     - 416
     - 408
+    - 48
+    - 48
+    - 48
     - 72
-    - 0
-    - 0
-    - 0
     - 0
     - 0
     - 0
@@ -5197,10 +5267,10 @@ root: !ruby/object:RPG::Map
     - 413
     - 0
     - 408
+    - 48
+    - 48
+    - 48
     - 72
-    - 0
-    - 0
-    - 0
     - 0
     - 0
     - 0
@@ -5236,10 +5306,10 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 416
-    - 50
-    - 84
-    - 0
-    - 0
+    - 48
+    - 48
+    - 48
+    - 72
     - 0
     - 421
     - 0
@@ -5276,9 +5346,9 @@ root: !ruby/object:RPG::Map
     - 225
     - 225
     - 48
+    - 48
+    - 48
     - 72
-    - 0
-    - 0
     - 0
     - 414
     - 415
@@ -5289,8 +5359,8 @@ root: !ruby/object:RPG::Map
     - 68
     - 68
     - 68
-    - 68
     - 84
+    - 0
     - 0
     - 0
     - 0
@@ -5315,10 +5385,10 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 48
+    - 48
+    - 48
     - 50
-    - 68
     - 84
-    - 0
     - 0
     - 0
     - 0
@@ -5328,9 +5398,9 @@ root: !ruby/object:RPG::Map
     - 48
     - 48
     - 48
-    - 48
-    - 50
-    - 84
+    - 72
+    - 0
+    - 0
     - 0
     - 0
     - 232
@@ -5356,8 +5426,8 @@ root: !ruby/object:RPG::Map
     - 48
     - 48
     - 48
+    - 48
     - 50
-    - 68
     - 68
     - 68
     - 68
@@ -5367,13 +5437,13 @@ root: !ruby/object:RPG::Map
     - 48
     - 48
     - 48
-    - 48
-    - 48
     - 50
-    - 68
-    - 68
-    - 68
-    - 68
+    - 84
+    - 0
+    - 0
+    - 0
+    - 0
+    - 82
     - 68
     - 68
     - 68
@@ -5407,12 +5477,12 @@ root: !ruby/object:RPG::Map
     - 48
     - 48
     - 48
-    - 48
-    - 48
-    - 48
-    - 48
-    - 48
-    - 48
+    - 72
+    - 0
+    - 0
+    - 82
+    - 68
+    - 49
     - 48
     - 48
     - 48
@@ -5446,10 +5516,10 @@ root: !ruby/object:RPG::Map
     - 48
     - 48
     - 48
-    - 48
-    - 48
-    - 48
-    - 48
+    - 50
+    - 68
+    - 68
+    - 49
     - 48
     - 48
     - 48
@@ -5470,8 +5540,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 100
+    - 134
     - 0
     - 0
     - 0
@@ -5509,7 +5579,7 @@ root: !ruby/object:RPG::Map
     - 240
     - 240
     - 240
-    - 0
+    - 134
     - 0
     - 0
     - 0
@@ -6055,7 +6125,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
+    - 132
     - 0
     - 0
     - 0
@@ -6094,7 +6164,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 274
     - 260
-    - 0
+    - 120
     - 0
     - 0
     - 0
@@ -6133,6 +6203,7 @@ root: !ruby/object:RPG::Map
     - 260
     - 241
     - 240
+    - 120
     - 0
     - 0
     - 0
@@ -6152,8 +6223,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 68
-    - 49
+    - 64
     - 50
     - 68
     - 68
@@ -6172,8 +6242,8 @@ root: !ruby/object:RPG::Map
     - 240
     - 240
     - 240
-    - 0
-    - 0
+    - 98
+    - 132
     - 0
     - 0
     - 0
@@ -6185,8 +6255,8 @@ root: !ruby/object:RPG::Map
     - 116
     - 116
     - 116
-    - 116
     - 132
+    - 0
     - 0
     - 0
     - 0
@@ -6211,9 +6281,9 @@ root: !ruby/object:RPG::Map
     - 240
     - 240
     - 240
-    - 116
+    - 96
+    - 98
     - 132
-    - 0
     - 0
     - 0
     - 130
@@ -6224,14 +6294,14 @@ root: !ruby/object:RPG::Map
     - 96
     - 96
     - 96
-    - 96
     - 98
-    - 116
-    - 116
-    - 116
-    - 116
-    - 116
-    - 116
+    - 132
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 130
     - 132
     - 0
     - 0
