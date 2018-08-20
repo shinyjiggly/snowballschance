@@ -498,7 +498,7 @@
   * \f[face_image] = display faceset image
                    image must be placed in folder pictures and the size
                    is 80x80
-  * \a[name]       = display message name
+  * \Na[name]       = display message name
   
   =============================================================================
    Global (specified below or by Call Script and persist until changed)
@@ -713,6 +713,18 @@ class Game_Message
     @font_name = "PlopDump"
     @font_size = 20
     @font_color = nil
+    
+    #name box stuff
+ @name_box_x_offset = 0       #Choose the X axis offset of the name bos. default= 0
+ @name_box_y_offset = -10    #Choose the Y axis offset of the name bos. default= -10
+ @name_box_width = 10           #Choose the width of the Name Box. default= 8  
+ @name_box_height = 28        #Choose the height of the Name Box. default= 26
+ @name_font_type = "PlopDump" #Choose the Font Name (Case Sensitive) for Name Box
+ @name_font_size = 20            #Choose the deafault Font Size for Name Box text
+ @name_box_text_color= 4        #Choose the Text Color of the Name Box
+ @name_box_skin = "mainskin"       #Choose the WindowSkin for the Name Box
+ 
+
 
     # pause on these characters ,.?!
     # pause for delay number of frames if this is true, toggle with \A in Text
@@ -794,7 +806,13 @@ class Game_Message
   attr_accessor :sound_vary_pitch           # Whether to Vary the Pitch or not
   attr_accessor :sound_frequency            # Plays a sound this many letters
   #Name box (NEW!!)
-
+  attr_accessor :name_box_skin
+  attr_accessor :name_box_x_offset
+  attr_accessor :name_box_y_offset 
+  attr_accessor :name_box_width
+  attr_accessor :name_box_height
+  attr_accessor :name_font_size
+  attr_accessor :name_box_text_color
   
   
 
@@ -997,18 +1015,6 @@ class Window_Message < Window_Selectable
     # allows a specific window to be flagged if choices are displayed
     @choice_window = nil
     
-    
- @name_box_x_offset = 0       #Choose the X axis offset of the name bos. default= 0
- @name_box_y_offset = -10    #Choose the Y axis offset of the name bos. default= -10
- @name_box_width = 10           #Choose the width of the Name Box. default= 8  
- @name_box_height = 28        #Choose the height of the Name Box. default= 26
- @name_font_type = "PlopDump" #Choose the Font Name (Case Sensitive) for Name Box
- @name_font_size = 20            #Choose the deafault Font Size for Name Box text
- @name_box_text_color= 4        #Choose the Text Color of the Name Box
- @name_box_skin = "mainskin"       #Choose the WindowSkin for the Name Box
- 
-
-    
     # Close a Window if distance from speaker is too great
     @dist_exit = $game_system.message.dist_exit
     # Maximum Distance player can be away from speaker before closing
@@ -1171,7 +1177,7 @@ class Window_Message < Window_Selectable
       @text.gsub!(/\\[Gg][\-]/) { "\024" } # Gold Window at Bottom
       @text.gsub!(/\\[Gg]/) { "\002" }  # Gold Window Auto, based on Player Loc
 
-=begin      
+#=begin      
         #Dubealex's Choose Name Box Text Color (NEW)
    @text.gsub!(/\\[Zz]\[([0-9]+)\]/) do
    $Game_Message.name_box_text_color=$1.to_i
@@ -1180,7 +1186,7 @@ class Window_Message < Window_Selectable
    #End new command
    
   name_window_set = false
-  if (/\\[Nn]ame\[(.+?)\]/.match(@now_text)) != nil
+  if (/\\[Nn]ame\[(.+?)\]/.match(@text)) != nil
     
     name_window_set = true
     name_text = $1
@@ -1188,14 +1194,15 @@ class Window_Message < Window_Selectable
   end
 
     if name_window_set
-    color=$message.name_box_text_color
-    off_x =  $message.name_box_x_offset
-    off_y =  $message.name_box_y_offset
+    color= $game_system.message.name_box_text_color
+    off_x =  $game_system.message.name_box_x_offset
+    off_y =  $game_system.message.name_box_y_offset
     space = 2
     x = self.x + off_x - space / 2
     y = self.y + off_y - space / 2
-    w = self.contents.text_size(name_text).width + $message.name_box_width + space
-    h = $message.name_box_height + space
+    w = self.contents.text_size(name_text).width + 10 + space
+    #$message.name_box_width + space
+    h = 28 + space #$message.name_box_height + space
     @name_window_frame = Window_Frame.new(x, y, w, h)
     @name_window_frame.z = self.z + 1
     x = self.x + off_x + 4
@@ -1203,7 +1210,7 @@ class Window_Message < Window_Selectable
     @name_window_text  = Air_Text.new(x, y, name_text, color)
     @name_window_text.z = self.z + 2
   end
-=end      
+#=end      
       # display icon of item, weapon, armor or skill
       @text.gsub!(/\\[Ii]\[([IiWwAaSs][0-9]+)\]/) { "\013[#{$1}]" }
       # display name of enemy, item, weapon, armor or skill
@@ -1274,9 +1281,11 @@ class Window_Message < Window_Selectable
       #render fire
       @text.gsub!(/\\[Ff][Ii]/) { "\027" }
       
-      #display name (number is for ally, anything else for everything else)
-      @text.gsub!(/\\[Nn]ame\[([0-9]+),([0-9]+)\]/) { "\029[#{$1},#{$2}]" }
-      @text.gsub!(/\\[Nn]ame\[(.+?)(?:(\d+))?\]/) { "\030[#{$1}]" }
+      @text.gsub!(/\\[Ff]\[(.+?)(?:,(\d+))?\]/) { "\028[#{$1}]" }
+      @text.gsub!(/\\[Nn][Aa]\[([0-9]+),([0-9]+)\]/) { "\029[#{$1},#{$2}]" }
+      #display name 
+      #@text.gsub!(/\\[Nn]a\[(.+?)(?:(\d+))?\]/) { "\030[#{$1}]" } 
+      @text.gsub!(/\\[Nn][Aa]\[([\w]+)\]/) { "\030[#{$1}]" } 
       
       # self close message
       @text.gsub!(/\\[!]/) { "\006" }
@@ -2302,23 +2311,24 @@ class Window_Message < Window_Selectable
       return 0
     end
     
-        if c == "\029" || c == "\030"
+    if c == "\029" || c == "\030" #if case 29 or 30
       if c == "\029" 
-        @text.sub!(/\[([0-9]+),([0-9]+)\]/, '')
-        name = $game_actors[$1.to_i].name.dup
+        @text.sub!(/\[([0-9]+),([0-9]+)\]/, '') #replace [number,number] with ''
+        name = $game_actors[$1.to_i].name.dup #put the actor name in the name var
         face = case $1.to_i
         when 1 then sprintf("Coda-%02d", $2.to_i)
         when 2 then sprintf("Topaz-%02d", $2.to_i)
         when 3 then sprintf("Vern-%02d", $2.to_i)
         when 4 then sprintf("Frie-%02d", $2.to_i)
-        when 5 then sprintf("Bear-%02d", $2.to_i)
+        when 5 then sprintf("Arctos-%02d", $2.to_i)
         end
-      elsif @c == "\030"
-        @text.sub!(/\[(.+?)(?:(\d+))?\]/, '')
+      elsif c == "\030"
+        @text.sub!(/\[(.+?)(?:(\d+))?\]/,'')
         name = $1.to_s
       end
       create_name_sprite(name) if name != ''
       create_face_sprite(face) 
+      
     end
         
         # if \F* (Foot Forward Animation On "Other" Foot)
@@ -2769,9 +2779,11 @@ class Window_Message < Window_Selectable
   #--------------------------------------------------------------------------
   # * Alias Listing
   #--------------------------------------------------------------------------
+
   alias drg128_term terminate_message unless method_defined?(:drg128_term)
   alias drg128_upd update unless method_defined?(:drg128_upd)
   alias drg128_rep reposition unless method_defined?(:drg128_rep)
+
   #--------------------------------------------------------------------------
   # * Create Face_Sprite
   #--------------------------------------------------------------------------
@@ -2802,19 +2814,21 @@ class Window_Message < Window_Selectable
     terminate_name_sprite
     bitmap = Bitmap.new(name.length*10, 32)
     bitmap.font = self.contents.font
-    bitmap.font.size += 4
-    bitmap.font.color = normal_color
+    #bitmap.font.size += 4
+    bitmap.font.color = check_color("#FFBB00") #name_color
       (0...2).each {|i|
-        bitmap.draw_text(-i, i, name.length*10, 32, name)
-        bitmap.draw_text(i, -i, name.length*10, 32, name)
-        bitmap.draw_text(-i, -i, name.length*10, 32, name)
-        bitmap.draw_text(i, i, name.length*10, 32, name)  }
+        #bitmap.draw_text(-i, i, name.length*10, 32, name)
+        #bitmap.draw_text(i, -i, name.length*10, 32, name)
+       # bitmap.draw_text(-i, -i, name.length*10, 32, name)
+        bitmap.draw_text(i, i, name.length*10, 32, name)  
+        }
     bitmap.font.color = self.contents.font.color
       (0...1).each {|i|
-        bitmap.draw_text(-i, i, name.length*10, 32, name)
-        bitmap.draw_text(i, -i, name.length*10, 32, name)
+        #bitmap.draw_text(-i, i, name.length*10, 32, name)
+        #bitmap.draw_text(i, -i, name.length*10, 32, name)
         bitmap.draw_text(-i, -i, name.length*10, 32, name)
-        bitmap.draw_text(i, i, name.length*10, 32, name)   }
+        #bitmap.draw_text(i, i, name.length*10, 32, name)   
+        }
     @name_sprite = Sprite.new
     @name_sprite.bitmap = bitmap
     name_sprite_position
@@ -2855,6 +2869,7 @@ class Window_Message < Window_Selectable
   def terminate_name_sprite()
     eval('@name_sprite.dispose; @name_sprite = nil')if @name_sprite
   end
+
   #--------------------------------------------------------------------------
   # * Terminate Message
   #--------------------------------------------------------------------------
@@ -2864,6 +2879,7 @@ class Window_Message < Window_Selectable
     terminate_name_sprite 
     drg128_term
   end
+=begin
   #--------------------------------------------------------------------------
   # * Update Frame
   #--------------------------------------------------------------------------
@@ -2872,7 +2888,8 @@ class Window_Message < Window_Selectable
     $game_temp.in_battle = $scene.is_a?(Scene_Battle)
     drg128_upd
     $game_temp.in_battle = temp
-  end
+  end  
+=end
   #--------------------------------------------------------------------------
   # * Reposition Window
   #-------------------------------------------------------------------------- 
@@ -2880,162 +2897,6 @@ class Window_Message < Window_Selectable
     drg128_rep
     face_position
     name_sprite_position
-  end
-  #--------------------------------------------------------------------------
-  # * Alias Listing
-  #--------------------------------------------------------------------------
-  alias upd_mess_log update unless method_defined?(:upd_mess_log)
-  alias dis_mess_log dispose unless method_defined?(:dis_mess_log)
-  #--------------------------------------------------------------------------
-  # * Create Message Log
-  #--------------------------------------------------------------------------
-  def create_message_log(win = MESSAGE_LOG_WINDOWSKIN)
-    log_opacity = MESSAGE_LOG_OPACITY
-    @message_log_sprite = [@message_log = Sprite.new,
-                          @message_log_text = Sprite.new]
-    @message_log.bitmap = Bitmap.new(600,460)
-    @message_log_text.bitmap = @message_log.bitmap.dup
-    @message_log.bitmap.clear
-    @message_log_text.bitmap.clear
-    @message_log.x, @message_log.y = 20, 10
-    @message_log.z = self.z * 2
-    @message_log.opacity = 200
-    @message_log_text.opacity = 255
-    @message_log_text.z = @message_log.z + 10
-    draw_window(@message_log.bitmap.width, @message_log.bitmap.height, win)
-    frame, mess = @frame.bitmap, @message_log.bitmap
-    cls = [Color.new(0,0,0,0), Color.new(255,255,255,255)]
-    @message_log.bitmap.blt(0,0,frame,frame.rect, log_opacity)
-    @message_log_height = 0
-    $multiple_message_windows['saved'].reverse.each_with_index do |i,s|
-      next if s < @message_log_index
-      @message_log_height +=(i.height+20)
-      v = mess.height - @message_log_height
-      @message_log_text.bitmap.blt(20 ,v ,i, i.rect)
-      @message_log.bitmap.fill_rect( Rect.new(30,v-15,mess.width-60,2),cls[0])
-    end
-    @message_log.bitmap.blt(0,0,frame, Rect.new(0,0,frame.width,50),log_opacity)
-    @message_log.bitmap.fill_rect( Rect.new(10,40, mess.width-20,2), cls[1])
-    @message_log_text.bitmap.fill_rect( Rect.new(0,0,frame.width,55), cls[0])
-    @message_log.bitmap.font.name = MESSAGE_LOG_FONT.flatten
-    @message_log.bitmap.font.size = [MESSAGE_LOG_FONT[-1].to_i, 12].max
-    @message_log.bitmap.draw_text(10,0,mess.width,  45,MESSAGE_LOG_TEXT)
-    [@frame].each {|i| i.dispose}
-  end
-  #--------------------------------------------------------------------------
-  # * Update Frame
-  #--------------------------------------------------------------------------
-  def update
-    message_log_input if $game_system.message.message_log
-    upd_mess_log unless @message_log
-  end
-  #--------------------------------------------------------------------------
-  # * message_log_input
-  #--------------------------------------------------------------------------
-  def message_log_input
-    if (saved_image = $multiple_message_windows['saved']) && 
-      !saved_image.empty? && !@message_log && @msgindex == 0 
-      if input_message_log(sc = mouse_scroll) || @force_message_log == 1
-        @message_log_move = [$game_system.message.move_during,
-                            $game_temp.message_window_showing]
-        $game_temp.message_window_showing = true
-        $game_system.message.move_during = false
-        $game_system.se_play($data_system.decision_se)
-        @message_log_index = @force_message_log = 0
-        return create_message_log
-      end
-    elsif @message_log && @msgindex == 0 
-      if cansel_mesage_log
-        $game_system.message.move_during = @message_log_move[0]
-        $game_temp.message_window_showing = @message_log_move[1]
-        $game_system.se_play($data_system.cancel_se)
-        @message_log_sprite.compact.each {|i| i.dispose}
-        @message_log = nil
-      elsif elmessage_log(sc = mouse_scroll)
-        @message_log_index = [(s=@message_log_index)+1,saved_image.size-1].min
-        $game_system.se_play($data_system.cursor_se) if s != @message_log_index
-        @message_log_sprite.compact.each {|i| i.dispose}
-        create_message_log
-      elsif ermessage_log(sc)
-        @message_log_index = [(s=@message_log_index)-1,0].max
-        $game_system.se_play($data_system.cursor_se) if s != @message_log_index
-        @message_log_sprite.compact.each {|i| i.dispose}
-        create_message_log
-      end
-    end
-  end
-  #--------------------------------------------------------------------------
-  # * Forcefully Show Message Log
-  #--------------------------------------------------------------------------
-  def show_message_log
-    @force_message_log = 1
-  end
-  #--------------------------------------------------------------------------
-  # * input_message_log
-  #--------------------------------------------------------------------------
-  def input_message_log(sc = 0)
-    return true if Input.trigger?(Input::F8) 
-    return true if sc > 0
-    return false
-  end
-  #--------------------------------------------------------------------------
-  # * Cancel Message Log
-  #--------------------------------------------------------------------------
-  def cansel_mesage_log
-    begin
-      return true if Input.trigger?(Input::F8)
-      return true if Input.trigger?(Input::B)
-      if $mouse_controller || $BlizzABS
-        return true if Input.trigger?(Input::Key['Mouse Right'])
-      elsif (($imported ||= {})[:drg_custom_input] || 0) >= 2.00
-        return true if Mouse.press?(Mouse::SECONDARY)
-      end
-    rescue
-      false
-    end
-    return false
-  end
-  #--------------------------------------------------------------------------
-  # * elmessage_log
-  #--------------------------------------------------------------------------
-  def elmessage_log(sc = 0)
-    return true if Input.trigger?(Input::L)
-    return true if Input.repeat?(Input::UP)
-    return true if sc > 0
-    return false
-  end
-  #--------------------------------------------------------------------------
-  # * ermessage_log
-  #--------------------------------------------------------------------------
-  def ermessage_log(sc = 0)
-    return true if Input.trigger?(Input::R)
-    return true if Input.repeat?(Input::DOWN)
-    return true if sc < 0
-    return false
-  end
-  #--------------------------------------------------------------------------
-  # * mouse_scroll
-  #--------------------------------------------------------------------------
-  def mouse_scroll
-    @scroll_count = (@scroll_count || 0) + 1
-    return 0 if @scroll_count < 5
-    @scroll_count = 0
-    if Input.respond_to?(:scroll?) 
-      return 1  if Input.scroll_up?
-      return -1 if Input.scroll_down?
-    end
-    if (($imported ||= {})[:drg_custom_input] || 0) >= 2.00
-      return 1  if Mouse.scroll_up?
-      return -1 if Mouse.scroll_down?
-    end
-    return 0
-  end
-  #--------------------------------------------------------------------------
-  # * Dispose
-  #--------------------------------------------------------------------------
-  def dispose
-    dis_mess_log
-    @message_log_sprite.compact.each {|i| i.dispose} if @message_log_sprite
   end
   #--------------------------------------------------------------------------
   # * Alias Listing
@@ -3085,25 +2946,10 @@ class Window_Message < Window_Selectable
     term_face_por
     eval '@portrait.dispose;  @portrait = nil' if @portrait
   end
-  #--------------------------------------------------------------------------
-  # * Alias Listing
-  #--------------------------------------------------------------------------
-  alias drg3x4dkc2dy_repbcod replace_basic_code
-  #--------------------------------------------------------------------------
-  # * Replace Basic Code
-  #--------------------------------------------------------------------------
-  def replace_basic_code
-    @text.gsub!(/\\[Ii][Ff]\[(.*?),(.*?)\]/) do 
-      cond, result = "#$1", "#$2"
-      message_eval(cond.gsub!("(!","[").gsub!("!)","]")) ? result : ""
-    end
-    @text.gsub!(/\\[Uu][Nn][Ll][Ee][Ss][Ss]\[(.*?),(.*?)\]/) do 
-      cond, result = "#$1", "#$2"
-      message_eval(cond.gsub!("(!","[").gsub!("!)","]")) ?  "" : result
-    end
-    drg3x4dkc2dy_repbcod
-  end
+
 end
+
+
 #==============================================================================
 # ** Game_Character 
 #------------------------------------------------------------------------------
@@ -3126,7 +2972,7 @@ class Game_Character
   #--------------------------------------------------------------------------
   def last_real_xy() [@real_x, @real_y] end
 
-#end new
+end #new
 #------------------------------------------------------------------------------
 
 class Game_Character
@@ -3150,7 +2996,7 @@ class Game_Character
     @last_real_y = @real_y
     wachunga_game_char_update
   end
-  
+ 
   def within_range?(range = 4, id = @event_id)
     e = $game_map.events[id]
     radius = (Math.hypot((e.x - $game_player.x), (e.y - $game_player.y))).abs
@@ -4157,7 +4003,7 @@ class Window_Frame < Window_Base
 
 def initialize(x, y, width, height)
 super(x, y, width, height)
-self.windowskin = RPG::Cache.windowskin($ams.name_box_skin)
+self.windowskin = RPG::Cache.windowskin($game_system.message.name_box_skin)
 self.contents = nil
 end
 #--------------------------------------------------------------------------
@@ -4216,7 +4062,33 @@ end
       mmw_sdk_patch_update(*args)
     end
   end
-  
+
+#=========================================
+# ▼ Class Air_Text Begins 
+#=========================================
+class Air_Text < Window_Base
+
+def initialize(x, y, designate_text, color=0)
+ 
+super(x-16, y-16, 32 + designate_text.size * 12, 56)
+self.opacity      = 0
+self.back_opacity = 0
+self.contents = Bitmap.new(self.width - 32, self.height - 32)
+w = self.contents.width
+h = self.contents.height
+self.contents.font.name = $defaultfonttype
+self.contents.font.size = $defaultfontsize
+self.contents.font.color = text_color(color)
+self.contents.draw_text(0, 0, w, h, designate_text)
+end
+
+#--------------------------------------------------------------------------
+
+def dispose
+self.contents.clear
+super
+end
+end 
   #=============================================================================
   # ** Game_Player
   #-----------------------------------------------------------------------------

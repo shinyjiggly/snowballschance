@@ -183,6 +183,11 @@ root: !ruby/object:RPG::Map
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 24
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[0]\\c[4]Coda: \\c[0]Alright everyone. While we're on "
           indent: 1
           code: 101
@@ -196,6 +201,11 @@ root: !ruby/object:RPG::Map
           - Stay close and don't get into any trouble, got it?
           indent: 1
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\c[4]Topaz: \\c[0]*grumble grumble*..."
+          indent: 1
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - A
@@ -235,7 +245,7 @@ root: !ruby/object:RPG::Map
           repeat: true
         trigger: 4
         step_anime: false
-        move_frequency: 3
+        move_frequency: 6
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
@@ -246,10 +256,10 @@ root: !ruby/object:RPG::Map
           blend_type: 0
           character_hue: 0
         walk_anime: true
-        move_speed: 3
-        through: false
+        move_speed: 6
+        through: true
       name: EV001
-      y: 0
+      y: 8
       x: 0
       id: 1
   tileset_id: 7

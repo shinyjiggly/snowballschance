@@ -2069,7 +2069,7 @@ root:
   switch_id: 1
   id: 13
 - !ruby/object:RPG::CommonEvent
-  name: water splash 1
+  name: water splash topaz
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -2424,7 +2424,7 @@ root:
   switch_id: 1
   id: 14
 - !ruby/object:RPG::CommonEvent
-  name: water splash 2
+  name: water splash vern
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -2779,7 +2779,7 @@ root:
   switch_id: 1
   id: 15
 - !ruby/object:RPG::CommonEvent
-  name: water splash 3
+  name: water splash frie
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -3828,8 +3828,28 @@ root:
   switch_id: 1
   id: 23
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: z-target Topaz
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].x="
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[1].x"
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].y="
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[1].y"
+    indent: 0
+    code: 655
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -3838,8 +3858,28 @@ root:
   switch_id: 1
   id: 24
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: z-target Vern
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].x="
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[2].x"
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].y="
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[2].y"
+    indent: 0
+    code: 655
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -3848,8 +3888,28 @@ root:
   switch_id: 1
   id: 25
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: z-target Frie
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].x="
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[3].x"
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].y="
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[3].y"
+    indent: 0
+    code: 655
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -3858,8 +3918,28 @@ root:
   switch_id: 1
   id: 26
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: z-target Arctos
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].x="
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[4].x"
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].y="
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_system.allies[4].y"
+    indent: 0
+    code: 655
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

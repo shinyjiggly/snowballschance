@@ -1147,7 +1147,7 @@ class Window_Message < Window_Selectable
       char_x = @float_id[0]
       char_y = @float_id[1]
     elsif $game_temp.in_battle 
-      if 'abcd'.include?(@float_id) # must be between a and d
+      if 'abcde'.include?(@float_id) # must be between a and d
         @float_id = @float_id[0] - 97 # a = 0, b = 1, c = 2, d = 3
         return if $scene.spriteset.actor_sprites[@float_id] == nil
         sprite = $scene.spriteset.actor_sprites[@float_id]
@@ -1156,10 +1156,21 @@ class Window_Message < Window_Selectable
         return if $scene.spriteset.enemy_sprites[@float_id] == nil
         sprite = $scene.spriteset.enemy_sprites[@float_id]
       end
+            if sprite.frame_height != nil #ATOA COMPATIBLE!!!!
+        char_height = sprite.frame_height
+        char_width = sprite.frame_width
+        char_x = sprite.x
+        char_y = sprite.y - char_height/2
+      else
+        return
+      end
+  
+=begin  
       char_height = sprite.height
       char_width = sprite.width
       char_x = sprite.x
       char_y = sprite.y - char_height/2
+=end    
     else # not in battle...
       char = (@float_id == 0 ? $game_player : $game_map.events[@float_id])
       if char == nil
@@ -1642,7 +1653,7 @@ class Window_Message < Window_Selectable
       create_face_sprite(face) if face != ''   
       return 0
     end
-    if @c == "\015" || @c == "\016"
+    if @c == "\015" || @c == "\016" #name show
       if @c == "\015" 
         @text.sub!(/\[([0-9]+),([0-9]+)\]/, '')
         name = $game_actors[$1.to_i].name.dup
@@ -2906,10 +2917,10 @@ class Interpreter
     # index of window for the message
     @msgindex = 0
     $game_temp.message_text, $game_temp.message_proc = [],[] 
-    if @list.size > 1
+    #if @list.size > 1
       templist = @list.pop
       @list << RPG::EventCommand.new(106,0,[1]) << templist
-    end
+    #end
     # whether multiple messages are displaying
     @multi_message = false
   end

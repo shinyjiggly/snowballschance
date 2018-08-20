@@ -10,52 +10,6 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page
         list:
         - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 0
-        move_type: 0
-        direction_fix: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          switch2_valid: false
-          self_switch_ch: A
-          switch1_id: 1
-          switch1_valid: false
-          variable_value: 0
-          self_switch_valid: false
-          variable_id: 1
-          variable_valid: false
-          switch2_id: 1
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            parameters: []
-            code: 0
-          skippable: false
-          repeat: true
-        trigger: 0
-        step_anime: false
-        move_frequency: 3
-        always_on_top: true
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          opacity: 255
-          character_name: ''
-          pattern: 0
-          tile_id: 441
-          direction: 2
-          blend_type: 0
-          character_hue: 0
-        walk_anime: false
-        move_speed: 3
-        through: false
-      name: EV001
-      y: 9
-      x: 11
-      id: 1
-    2: !ruby/object:RPG::Event
-      pages:
-      - !ruby/object:RPG::Event::Page
-        list:
-        - !ruby/object:RPG::EventCommand
           parameters:
           - 13
           indent: 0
@@ -374,57 +328,82 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\c[4]Coda: \\c[0]This mountain was once prized "
+          - 25
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Vern]Whoa, look at all the wood!"
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'for its lumber, so much that a large corperation set up '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - a logging operation years ago.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\c[4]Coda: \\c[0]About 5 years ago they dropped "
+          - "\\p[0]\\na[Coda]Yep. we're gonna be seeing a lot of "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'their branch based in Cozio for a cheaper source. It''s '
+          - 'that '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - been disasterous all around.
+          - down here at the base.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\c[4]Coda: \\c[0]The locals still try to collect the "
+          - "\\p[0]\\na[Coda]You know, this area used to have a "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'wood from these parts to stay afloat, but most don''t '
+          - booming logging industry.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - have a way of gaining a profit.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\c[4]Coda: \\c[0]That being said, all the wood out "
+          - "\\p[0]\\na[Coda]It stoped being profitable for the "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - here is totally fair game to take, for now.
+          - 'coorperation that ran the show so they packed up '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - for cheaper pastures.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Topaz]...Typical."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]One upside though is that we won't get "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'in trouble for taking any of the wood out here. '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\c[6]We will need some to build a fire later on."
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -476,7 +455,7 @@ root: !ruby/object:RPG::Map
           repeat: true
         trigger: 4
         step_anime: false
-        move_frequency: 3
+        move_frequency: 6
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
@@ -487,12 +466,12 @@ root: !ruby/object:RPG::Map
           blend_type: 0
           character_hue: 0
         walk_anime: true
-        move_speed: 3
-        through: false
-      name: EV002
+        move_speed: 6
+        through: true
+      name: EV001
       y: 0
-      x: 0
-      id: 2
+      x: 19
+      id: 1
     3: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
