@@ -1630,6 +1630,48 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 0
+    - 14
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 15
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 15
+    - 0
+    indent: 2
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.replace_tile(4,3,-1,true)"
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 1
     indent: 0
     code: 106
@@ -3342,8 +3384,15 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[0]It's water. What do?"
+    - 4
+    - 2
+    - 0
     indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[0]It's water. What do?"
+    indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -3351,13 +3400,13 @@ root:
       - Freeze Water
       - Nothing
     - 3
-    indent: 2
+    indent: 3
     code: 102
   - !ruby/object:RPG::EventCommand
     parameters:
     - 0
     - Collect Water
-    indent: 2
+    indent: 3
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -3365,154 +3414,64 @@ root:
     - 0
     - 0
     - 1
-    indent: 3
+    indent: 4
     code: 126
   - !ruby/object:RPG::EventCommand
     parameters: []
-    indent: 3
+    indent: 4
     code: 0
   - !ruby/object:RPG::EventCommand
     parameters:
     - 1
     - Freeze Water
-    indent: 2
+    indent: 3
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
     - -1
     - 10
-    indent: 3
+    indent: 4
     code: 207
   - !ruby/object:RPG::EventCommand
     parameters:
-    - if $game_player.direction == 4
-    indent: 3
-    code: 355
+    - !ruby/object:Color
+      red: 204.0
+      green: 255.0
+      blue: 255.0
+      alpha: 255.0
+    - 10
+    indent: 4
+    code: 224
   - !ruby/object:RPG::EventCommand
     parameters:
-    - event.x=$game_player.x
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.y=$game_player.y
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - end
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - if $game_player.direction == 2
-    indent: 3
-    code: 355
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.x=$game_player.x+1
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.y=$game_player.y+2
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - end
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - if $game_player.direction == 8
-    indent: 3
-    code: 355
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.x=$game_player.x+1
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.y=$game_player.y-1
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - end
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - if $game_player.direction == 6
-    indent: 3
-    code: 355
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.x=$game_player.x+2
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - event.y=$game_player.y
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - end
-    indent: 3
-    code: 655
-  - !ruby/object:RPG::EventCommand
-    parameters:
+    - 14
+    - 14
     - 0
-    - !ruby/object:RPG::MoveRoute
-      list:
-      - &60 !ruby/object:RPG::MoveCommand
-        parameters:
-        - sparklex2
-        - 0
-        - 4
-        - 0
-        code: 41
-      - &61 !ruby/object:RPG::MoveCommand
-        parameters: []
-        code: 37
-      - &62 !ruby/object:RPG::MoveCommand
-        parameters: []
-        code: 12
-      - !ruby/object:RPG::MoveCommand
-        parameters: []
-        code: 0
-      skippable: false
-      repeat: false
-    indent: 3
-    code: 209
+    indent: 4
+    code: 121
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *60
-    indent: 3
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *61
-    indent: 3
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *62
-    indent: 3
-    code: 509
+    - chance water to ice,all layers, yes, it's an autotile
+    indent: 4
+    code: 108
   - !ruby/object:RPG::EventCommand
     parameters: []
-    indent: 3
+    indent: 4
     code: 0
   - !ruby/object:RPG::EventCommand
     parameters:
     - 2
     - Nothing
-    indent: 2
+    indent: 3
     code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 404
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 3
@@ -3520,7 +3479,59 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Collect Water?
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - 'Yes'
+      - 'No'
+    - 2
+    indent: 3
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 'Yes'
+    indent: 3
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 0
+    - 0
+    - 1
+    indent: 4
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 'No'
+    indent: 3
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
     code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
@@ -3605,86 +3616,86 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &63 !ruby/object:RPG::MoveCommand
+      - &60 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 16
-      - &64 !ruby/object:RPG::MoveCommand
+      - &61 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 35
+      - &62 !ruby/object:RPG::MoveCommand
+        parameters:
+        - codasp1x2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - &63 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 1
+        code: 15
+      - &64 !ruby/object:RPG::MoveCommand
+        parameters:
+        - codasp1x2
+        - 0
+        - 2
+        - 1
+        code: 41
       - &65 !ruby/object:RPG::MoveCommand
         parameters:
-        - codasp1x2
-        - 0
-        - 2
-        - 0
-        code: 41
+        - 1
+        code: 15
       - &66 !ruby/object:RPG::MoveCommand
         parameters:
-        - 1
-        code: 15
+        - codasp1x2
+        - 0
+        - 2
+        - 0
+        code: 41
       - &67 !ruby/object:RPG::MoveCommand
         parameters:
-        - codasp1x2
-        - 0
-        - 2
         - 1
-        code: 41
+        code: 15
       - &68 !ruby/object:RPG::MoveCommand
         parameters:
+        - codasp1x2
+        - 0
+        - 2
         - 1
-        code: 15
+        code: 41
       - &69 !ruby/object:RPG::MoveCommand
         parameters:
-        - codasp1x2
-        - 0
-        - 2
-        - 0
-        code: 41
+        - 1
+        code: 15
       - &70 !ruby/object:RPG::MoveCommand
         parameters:
-        - 1
-        code: 15
+        - codasp1x2
+        - 0
+        - 2
+        - 0
+        code: 41
       - &71 !ruby/object:RPG::MoveCommand
         parameters:
-        - codasp1x2
-        - 0
-        - 2
         - 1
-        code: 41
+        code: 15
       - &72 !ruby/object:RPG::MoveCommand
         parameters:
+        - codasp1x2
+        - 0
+        - 2
         - 1
-        code: 15
+        code: 41
       - &73 !ruby/object:RPG::MoveCommand
         parameters:
-        - codasp1x2
-        - 0
-        - 2
-        - 0
-        code: 41
+        - 1
+        code: 15
       - &74 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 1
-        code: 15
-      - &75 !ruby/object:RPG::MoveCommand
-        parameters:
-        - codasp1x2
-        - 0
-        - 2
-        - 1
-        code: 41
-      - &76 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 1
-        code: 15
-      - &77 !ruby/object:RPG::MoveCommand
         parameters:
         - snowballschancex2
         - 0
         - 2
         - 0
         code: 41
-      - &78 !ruby/object:RPG::MoveCommand
+      - &75 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 36
       - !ruby/object:RPG::MoveCommand
@@ -3694,6 +3705,21 @@ root:
       repeat: false
     indent: 4
     code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *60
+    indent: 4
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *61
+    indent: 4
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *62
+    indent: 4
+    code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
     - *63
@@ -3757,21 +3783,6 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - *75
-    indent: 4
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *76
-    indent: 4
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *77
-    indent: 4
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *78
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand

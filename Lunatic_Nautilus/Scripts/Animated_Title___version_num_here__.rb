@@ -119,7 +119,7 @@ class Scene_Title
   # only one. 
   
   
-  TEXT = ["frostlands 1.4", 8, 460, 'PlopDump', 18]
+  TEXT = ["frostlands 1.9", 8, 460, 'PlopDump', 18]
   # ['STRING', X, Y, FONTNAME, FONTSIZE]
   # Have text be displayed on the images such as the version number, etc.
    TEXT_COLOR = Color.new(50, 62, 77, 255)

@@ -94,6 +94,7 @@ module Craft_Items
  #---------------------------------------------
  Craft_Item_Comp = { #boiled
  8 => [[9, 0, 1]], #fresh water 
+ 17=> [[11, 0, 1],[9, 0, 1]], #The Sun 
  29 => [[8, 0, 1]] , #boiled water 
  30 => [[21, 0, 1]] ,#cooked meat
  31 => [[22, 0, 1]] ,#cooked fish

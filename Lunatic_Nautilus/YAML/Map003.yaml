@@ -233,22 +233,27 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\P[2] \\c[1]Renzo:\\c[0] This is so cool!"
+          - "\\P[2] \\na[Renzo]This is so cool!"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\P[2] Renzo: We can finish each other's sentences!"
+          - "\\P[2] \\na[Renzo]We can finish each other's "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\+\\v\\P[0] Coda: Finish each other's sentences?"
+          - sentences!
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\+\\v\\P[0] \\na[Coda]Finish each other's sentences?"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\P[2] Renzo: Yeah!"
+          - "\\P[2] \\na[Renzo]Yeah!"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -443,7 +448,7 @@ root: !ruby/object:RPG::Map
           code: 408
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\name[Medi] Do you want to fight all of them, "
+          - "\\p[3]\\na[Medi] Do you want to fight all of them, "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -579,7 +584,7 @@ root: !ruby/object:RPG::Map
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\name[Medi]o-okay."
+          - "\\p[3]\\na[Medi]o-okay."
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -658,37 +663,7 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\ani[17]aaaaaaaaaabbbbbbb"
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - bbbaaaaaaaaaabbbbbbbbbbaaa
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\ani[18]aaaaaaaaaabbbbbbb"
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - bbbaaaaaaaaaabbbbbbbbbbaaa
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\ani[14]aaaaaaaaaabbbbbbb"
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - bbbaaaaaaaaaabbbbbbbbbbaaa
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\c[2]Yoan:\\c[0] \\p[4]this is \\Ba thing\\B and a \\I thingie"
+          - "\\na[Yoan]\\p[4]this is \\Ba thing\\B and a \\I thingie"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -799,7 +774,7 @@ root: !ruby/object:RPG::Map
           code: 655
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\P[0]bwahahahaha!\\."
+          - "\\v\\na[???]\\P[0]bwahahahaha!\\."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1200,7 +1175,7 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Dwight]\\P[7]Buy my wares!"
+          - "\\Na[Dwight]\\P[7]Buy my wares!"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1770,7 +1745,7 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - " \\c[1]Calhoun: \\c[0]\\P[10]CODA!!!\\."
+          - " \\na[Calhoun]\\P[10]CODA!!!\\."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1780,7 +1755,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\c[1]Coda: \\c[0]\\P[0]...\\.did you seriously just use this "
+          - " \\na[Coda]\\P[0]...\\.did you seriously just use this "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1790,7 +1765,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - " \\c[1]Calhoun: \\c[0]\\P[10]YOU GOTTA ENTER "
+          - " \\na[Calhoun]\\P[10]YOU GOTTA ENTER "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1800,7 +1775,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\c[1]Coda: \\c[0]\\P[0]uhhhhh..... okay then."
+          - "\\na[Coda]\\P[0]uhhhhh..... okay then."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2301,7 +2276,7 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Shesi]\\P[13]I can't believe it,\\. "
+          - "\\Na[Shesi]\\P[13]I can't believe it,\\. "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2316,12 +2291,12 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Coda]\\P[0]I am sure you'll get it one day."
+          - "\\Na[Coda]\\P[0]I am sure you'll get it one day."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Shesi]\\P[13]But I need it NOW!"
+          - "\\Na[Shesi]\\P[13]But I need it NOW!"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -3973,6 +3948,159 @@ root: !ruby/object:RPG::Map
       y: 0
       x: 29
       id: 24
+    25: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - s
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV025
+      y: 1
+      x: 32
+      id: 25
+    26: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - s
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV026
+      y: 2
+      x: 34
+      id: 26
+    27: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - s
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV027
+      y: 9
+      x: 37
+      id: 27
   tileset_id: 1
   bgs: !ruby/object:RPG::AudioFile
     volume: 80

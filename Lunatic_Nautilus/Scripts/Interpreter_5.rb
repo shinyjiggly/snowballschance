@@ -34,6 +34,7 @@ class Interpreter
     # If appointment method is [appoint with variables]
     else
       # Set player move destination
+      $game_switches[15] = false
       $game_temp.player_new_map_id = $game_variables[@parameters[1]]
       $game_temp.player_new_x = $game_variables[@parameters[2]]
       $game_temp.player_new_y = $game_variables[@parameters[3]]
