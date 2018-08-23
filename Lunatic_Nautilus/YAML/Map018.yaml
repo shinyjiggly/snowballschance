@@ -604,7 +604,7 @@ root: !ruby/object:RPG::Map
         through: false
       name: EV006
       y: 18
-      x: 14
+      x: 15
       id: 6
     7: !ruby/object:RPG::Event
       pages:
@@ -1828,28 +1828,41 @@ root: !ruby/object:RPG::Map
       y: 20
       x: 2
       id: 20
-    21: !ruby/object:RPG::Event
+    22: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\name[asfsdf]..."
+          - "\\na[frie]Take me with you."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 80
-            name: menacing
-            pitch: 100
+          - 2
+          - 0
+          - 1
           indent: 0
-          code: 250
+          code: 129
         - !ruby/object:RPG::EventCommand
           parameters:
-          - WAIT!
+          - 2
+          - 2
+          - 0
+          - 0
+          - 2
+          indent: 0
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Frie can freeze bodies of water!
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - press S when at the edge to freeze it!
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -1888,10 +1901,50 @@ root: !ruby/object:RPG::Map
         walk_anime: true
         move_speed: 3
         through: false
-      name: EV021
-      y: 16
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 2
+          self_switch_valid: false
+          variable_id: 2
+          variable_valid: true
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV022
+      y: 17
       x: 12
-      id: 21
+      id: 22
   tileset_id: 7
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
@@ -3616,8 +3669,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 178
+    - 180
     - 0
     - 0
     - 0
@@ -3647,11 +3700,11 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 160
+    - 146
+    - 164
+    - 164
+    - 180
     - 0
     - 0
     - 0
@@ -3677,13 +3730,13 @@ root: !ruby/object:RPG::Map
     - 141
     - 0
     - 0
-    - 0
-    - 226
-    - 228
-    - 0
-    - 0
-    - 0
-    - 0
+    - 178
+    - 145
+    - 144
+    - 144
+    - 144
+    - 146
+    - 180
     - 0
     - 0
     - 0
@@ -3708,13 +3761,13 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 232
-    - 230
-    - 0
-    - 0
-    - 0
-    - 0
+    - 184
+    - 172
+    - 172
+    - 172
+    - 172
+    - 172
+    - 182
     - 0
     - 0
     - 0
@@ -4535,6 +4588,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 609
     - 0
     - 0
     - 0
@@ -4564,6 +4618,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 609
     - 0
     - 0
     - 0
@@ -4640,6 +4695,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 608
     - 0
     - 0
     - 0
@@ -4751,10 +4807,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 609
     - 0
     - 0
     - 0
