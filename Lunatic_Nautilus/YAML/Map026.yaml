@@ -16,6 +16,11 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
+          - check player location
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 5
           - 5
           - 0
@@ -244,6 +249,11 @@ root: !ruby/object:RPG::Map
           - 24
           indent: 1
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Diary.add_entry(0, 0)
+          indent: 1
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]Alright everyone. While we're on "
@@ -760,12 +770,12 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 322
+    - 324
     - 0
     - 0
-    - 323
-    - 333
     - 0
-    - 330
+    - 0
     - 544
     - 0
     - 0
@@ -780,12 +790,12 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 328
+    - 326
     - 0
-    - 331
-    - 327
     - 0
-    - 0
-    - 320
+    - 322
+    - 324
     - 544
     - 472
     - 473
@@ -798,14 +808,14 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
     - 322
+    - 308
     - 324
     - 0
     - 0
     - 0
-    - 331
-    - 327
+    - 328
+    - 326
     - 544
     - 480
     - 481
@@ -818,8 +828,8 @@ root: !ruby/object:RPG::Map
     - 474
     - 475
     - 476
-    - 0
     - 328
+    - 316
     - 326
     - 0
     - 0
@@ -937,7 +947,7 @@ root: !ruby/object:RPG::Map
     - 643
     - 644
     - 0
-    - 448
+    - 0
     - 449
     - 450
     - 451

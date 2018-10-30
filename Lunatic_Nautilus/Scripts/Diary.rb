@@ -46,9 +46,9 @@ module Diary
 #                         BEGIN CONFIGURATION
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-  MAP_BACKGROUND = true
+  MAP_BACKGROUND = false
   # Set to true if you would like the map to show behind the window.
-  RETURN_SCENE = Scene_Map
+  RETURN_SCENE = Scene_Menu #Scene_Map
   # The scene that the game returns to when you exit the diary.
   SCENE_ARGUMENTS = []
   # Define any arguments that may need called with scene if need be. Place them
@@ -58,6 +58,7 @@ module Diary
     # Define the names of the "chapters".
     # when CHAPTER then "CHAPTER_NAME"
     return case chapter
+    when 0 then 'Controls'
     when 1 then 'Departure'
     when 2 then 'Foraging'
     end
@@ -68,7 +69,12 @@ module Diary
     # instead of actual text to add an entry.
     # when INDEX then "TEXT"
     return case index
-    when 0 then 'uhhhhhh, something.'
+    when 0 then 'Directional Keys: move forwards in that direction\n
+      S: Collect snow/water/???\n
+      Spacebar: Examine objects, Dash, Get others to speak to you\n
+      PG up/PG dwn: Turn without moving\n
+      Esc: Menu\n
+      F12: Pause'
     when 1 then 'According to all known laws\n
 of aviation,\n
 there is no way a bee\n
@@ -76,8 +82,7 @@ should be able to fly.\n
 Its wings are too small to get\n
 its fat little body off the ground.\n
 The bee, of course, flies anyway'
-    when 2 then 'Marle was sucked into the vortex. I think it had something to do with 
-that pendant that she was wearing...'
+    when 2 then 'aaaaaaaaaaaaaaa '
     when 3 then 'This place is very strange, and everyone talks funny. It\'s all vaguely 
 the same, yet different. Where am I?'
     when 4 then 'Here\'s how you can skip lines.\n\nThat made a line break. Now to see
