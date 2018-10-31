@@ -45,7 +45,7 @@ module TSS
   #Terrains[3] = ['fs_stone_hoof2']
   #Terrains[4] = ['as_na_grassmove2']
   #Terrains[5] = ['fs_water_hard1']
-  Terrains[6] = ['crush'] #puddle
+  Terrains[4] = ['crush'] #puddle
   #===========================================================================
   # If you would like to specifiy a volume and pitch, simply set the
   # terrain as an array.
