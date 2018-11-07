@@ -1802,7 +1802,7 @@ root: !ruby/object:RPG::Map
           switch1_id: 1
           switch1_valid: false
           variable_value: 0
-          self_switch_valid: false
+          self_switch_valid: true
           variable_id: 1
           variable_valid: false
           switch2_id: 1
@@ -1878,14 +1878,9 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Cleaver]\\P[0]Not yet...\\. "
+          - "\\Name[Coda]\\P[0]Uh... let's not go down there."
           indent: 0
           code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - I'll stay out here a bit longer.
-          indent: 0
-          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - -1
@@ -2807,8 +2802,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV030
-      y: 20
-      x: 10
+      y: 18
+      x: 9
       id: 30
     31: !ruby/object:RPG::Event
       pages:
@@ -2874,7 +2869,7 @@ root: !ruby/object:RPG::Map
         through: false
       name: EV031
       y: 17
-      x: 10
+      x: 11
       id: 31
   tileset_id: 2
   bgs: !ruby/object:RPG::AudioFile

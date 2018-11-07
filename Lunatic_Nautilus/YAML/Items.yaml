@@ -91,7 +91,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 10
-  name: Heal-y food 1
+  name: Heal-y food
   minus_state_set: []
   icon_name: spiralshellicon
   recover_hp_rate: 0
@@ -351,7 +351,7 @@ root:
   animation2_id: 0
   hit: 100
   id: 12
-  description: is this... still safe to eat?
+  description: is this... still safe to eat? Contains Meat.
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
@@ -504,7 +504,7 @@ root:
   animation1_id: 0
   name: Raw Boot
   minus_state_set: []
-  icon_name: darkicon
+  icon_name: bootex2
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
@@ -533,7 +533,7 @@ root:
   animation1_id: 0
   name: Earthworm
   minus_state_set: []
-  icon_name: iceicon
+  icon_name: wormx2
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
@@ -591,7 +591,7 @@ root:
   animation1_id: 0
   name: Raw Meat
   minus_state_set: []
-  icon_name: airicon
+  icon_name: rawx2
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
@@ -620,7 +620,7 @@ root:
   animation1_id: 0
   name: Raw Fish
   minus_state_set: []
-  icon_name: airicon
+  icon_name: fish_iconx2
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
@@ -707,7 +707,7 @@ root:
   animation1_id: 0
   name: Chili Powder
   minus_state_set: []
-  icon_name: darkicon
+  icon_name: hotpepperx2
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
@@ -763,7 +763,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Noodles
+  name: Meal Kit
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 0
@@ -786,13 +786,13 @@ root:
   animation2_id: 0
   hit: 100
   id: 27
-  description: Packaged airtight for maximum freshness!
+  description: 100% vegan meal base! (Contains gluten)
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: false
   animation1_id: 0
-  name: "---Basic Food Items----"
+  name: "------"
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 0
@@ -850,7 +850,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Cooked Meat
+  name: "---"
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 0
@@ -879,7 +879,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Cooked Fish
+  name: "---"
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 20
@@ -908,7 +908,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Sautee'd Shrooms
+  name: "---"
   minus_state_set: []
   icon_name: airicon
   recover_hp_rate: 0
@@ -960,15 +960,15 @@ root:
   animation2_id: 0
   hit: 100
   id: 33
-  description: If you ever need to poison somebody.
+  description: If you ever need to poison somebody...
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Cooked Veggies
+  name: Hot Snow
   minus_state_set: []
-  icon_name: planticon
+  icon_name: ''
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
@@ -989,20 +989,20 @@ root:
   animation2_id: 0
   hit: 100
   id: 34
-  description: 'The veil of winter has been lifted, if only for a moment. '
+  description: It burns!!
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: ''
+  name: Solar Armegeddon
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
   price: 0
-  occasion: 0
+  occasion: 1
   plus_state_set: []
   recover_sp: 0
   parameter_points: 0
@@ -1011,20 +1011,22 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 0
-  element_set: []
+  scope: 2
+  element_set:
+  - 1
+  - 16
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 35
-  description: ''
+  description: The power of the sun is not to be trifled with...
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: "-2 ingredient recipes-"
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1053,7 +1055,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Spicy Meat
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1069,20 +1071,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 37
-  description: That's a spicy meatball!
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Meaty Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1098,20 +1100,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 38
-  description: Makes a good meaty base for a soup!
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Hot Meaty Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1127,20 +1129,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 39
-  description: Spicy and meaty...
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Mushroom Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1156,20 +1158,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 40
-  description: You don't even need meat to make this one taste good!
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Hot Shroom Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1185,20 +1187,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 41
-  description: The power of mushrooms and hot peppers...
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Hot Veggie Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1214,20 +1216,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 42
-  description: spicyyyyyyyy
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Veggie Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1243,7 +1245,7 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
@@ -1256,7 +1258,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Fish Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1272,20 +1274,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 44
-  description: "...they make broth out of fish?"
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Hot Fish Broth
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1301,7 +1303,7 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
@@ -1314,7 +1316,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Spicy Fish
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1330,7 +1332,7 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
@@ -1343,7 +1345,7 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Hot Snow
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1359,20 +1361,20 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 47
-  description: It burns!!
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Hot Sautee
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
@@ -1388,7 +1390,7 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 3
+  scope: 0
   element_set: []
   recover_sp_rate: 0
   parameter_type: 0
@@ -1430,46 +1432,14 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Poison Bludgeon
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
   price: 0
-  occasion: 1
-  plus_state_set:
-  - 3
-  recover_sp: 0
-  parameter_points: 0
-  menu_se: !ruby/object:RPG::AudioFile
-    volume: 80
-    name: ''
-    pitch: 100
-  pdef_f: 0
-  scope: 1
-  element_set:
-  - 8
-  - 16
-  recover_sp_rate: 0
-  parameter_type: 0
-  animation2_id: 0
-  hit: 100
-  id: 50
-  description: Poisons the target
-  recover_hp: 0
-  variance: 0
-- !ruby/object:RPG::Item
-  consumable: true
-  animation1_id: 0
-  name: Power Torch
-  minus_state_set: []
-  icon_name: ''
-  recover_hp_rate: 0
-  common_event_id: 0
-  mdef_f: 0
-  price: 0
-  occasion: 1
+  occasion: 0
   plus_state_set: []
   recover_sp: 0
   parameter_points: 0
@@ -1478,10 +1448,37 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 1
-  element_set:
-  - 1
-  - 16
+  scope: 0
+  element_set: []
+  recover_sp_rate: 0
+  parameter_type: 0
+  animation2_id: 0
+  hit: 100
+  id: 50
+  description: ''
+  recover_hp: 0
+  variance: 0
+- !ruby/object:RPG::Item
+  consumable: true
+  animation1_id: 0
+  name: ''
+  minus_state_set: []
+  icon_name: ''
+  recover_hp_rate: 0
+  common_event_id: 0
+  mdef_f: 0
+  price: 0
+  occasion: 0
+  plus_state_set: []
+  recover_sp: 0
+  parameter_points: 0
+  menu_se: !ruby/object:RPG::AudioFile
+    volume: 80
+    name: ''
+    pitch: 100
+  pdef_f: 0
+  scope: 0
+  element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
@@ -1493,14 +1490,14 @@ root:
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Meat Branch
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
   price: 0
-  occasion: 1
+  occasion: 0
   plus_state_set: []
   recover_sp: 0
   parameter_points: 0
@@ -1509,28 +1506,27 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 1
-  element_set:
-  - 16
+  scope: 0
+  element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 52
-  description: Causes wild animals to attack you
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item
   consumable: true
   animation1_id: 0
-  name: Solar Armegeddon
+  name: ''
   minus_state_set: []
   icon_name: ''
   recover_hp_rate: 0
   common_event_id: 0
   mdef_f: 0
   price: 0
-  occasion: 1
+  occasion: 0
   plus_state_set: []
   recover_sp: 0
   parameter_points: 0
@@ -1539,16 +1535,14 @@ root:
     name: ''
     pitch: 100
   pdef_f: 0
-  scope: 2
-  element_set:
-  - 1
-  - 16
+  scope: 0
+  element_set: []
   recover_sp_rate: 0
   parameter_type: 0
   animation2_id: 0
   hit: 100
   id: 53
-  description: The power of the sun is not to be trifled with...
+  description: ''
   recover_hp: 0
   variance: 0
 - !ruby/object:RPG::Item

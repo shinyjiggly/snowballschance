@@ -149,7 +149,7 @@ class RPG::Sprite < ::Sprite
           @_damage_color = [250,200,9]  
         elsif value.numeric? and value == 69 #nice
           @_damage_color = [255,50,255]  
-          Audio.se_play("Audio/SE/nice3", 100, 0)
+          #Audio.se_play("Audio/SE/nice3", 100, 0) #too loud @ _@
           battler.animation_id = 11 #fire
         elsif value.numeric? and value > 50 #pink
           @_damage_color = [255,128,128]  

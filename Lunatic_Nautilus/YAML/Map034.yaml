@@ -566,7 +566,7 @@ root: !ruby/object:RPG::Map
           parameters:
           - 1
           - 0
-          - 4
+          - 6
           - 5
           - 0
           indent: 1
@@ -719,7 +719,7 @@ root: !ruby/object:RPG::Map
               code: 15
             - &11 !ruby/object:RPG::MoveCommand
               parameters:
-              - 3
+              - 1
               - 0
               code: 14
             - &12 !ruby/object:RPG::MoveCommand
@@ -1003,9 +1003,9 @@ root: !ruby/object:RPG::Map
             list:
             - &29 !ruby/object:RPG::MoveCommand
               parameters:
-              - vern_fishingx2
+              - ''
               - 0
-              - 8
+              - 2
               - 0
               code: 41
             - !ruby/object:RPG::MoveCommand
@@ -1123,6 +1123,96 @@ root: !ruby/object:RPG::Map
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &35 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 6
+              code: 29
+            - &36 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 37
+            - &37 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 16
+            - &38 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 35
+            - &39 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 2
+            - &40 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 2
+            - &41 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 2
+            - &42 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 4
+              code: 15
+            - &43 !ruby/object:RPG::MoveCommand
+              parameters:
+              - fishingresultsx2
+              - 0
+              - 2
+              - 0
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 2
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *35
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *36
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *37
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *38
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *39
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *40
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *41
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *42
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *43
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 15
           indent: 2
           code: 106
@@ -1182,18 +1272,18 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute
             list:
-            - &35 !ruby/object:RPG::MoveCommand
+            - &44 !ruby/object:RPG::MoveCommand
               parameters:
               - vern_fishingx2
               - 0
               - 4
               - 1
               code: 41
-            - &36 !ruby/object:RPG::MoveCommand
+            - &45 !ruby/object:RPG::MoveCommand
               parameters:
               - 4
               code: 15
-            - &37 !ruby/object:RPG::MoveCommand
+            - &46 !ruby/object:RPG::MoveCommand
               parameters:
               - vern_fishingx2
               - 0
@@ -1209,17 +1299,107 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *35
+          - *44
           indent: 3
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *36
+          - *45
           indent: 3
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *37
+          - *46
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &47 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 6
+              code: 29
+            - &48 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 37
+            - &49 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 16
+            - &50 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 35
+            - &51 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 2
+            - &52 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 2
+            - &53 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 2
+            - &54 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 4
+              code: 15
+            - &55 !ruby/object:RPG::MoveCommand
+              parameters:
+              - fishingresultsx2
+              - 0
+              - 2
+              - 1
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 3
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *47
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *48
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *49
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *50
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *51
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *52
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *53
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *54
+          indent: 3
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *55
           indent: 3
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -1237,6 +1417,30 @@ root: !ruby/object:RPG::Map
           - 10
           indent: 3
           code: 224
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &56 !ruby/object:RPG::MoveCommand
+              parameters:
+              - fishingresultsx2
+              - 0
+              - 2
+              - 1
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 3
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *56
+          indent: 3
+          code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "...a boot."
@@ -1299,13 +1503,16 @@ root: !ruby/object:RPG::Map
           - 1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &38 !ruby/object:RPG::MoveCommand
+            - &57 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 37
-            - &39 !ruby/object:RPG::MoveCommand
+            - &58 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 3
-            - &40 !ruby/object:RPG::MoveCommand
+            - &59 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 16
+            - &60 !ruby/object:RPG::MoveCommand
               parameters:
               - hotfishx2
               - 0
@@ -1321,17 +1528,22 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *38
+          - *57
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *39
+          - *58
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *40
+          - *59
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *60
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -1350,29 +1562,29 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute
             list:
-            - &41 !ruby/object:RPG::MoveCommand
+            - &61 !ruby/object:RPG::MoveCommand
               parameters:
               - vern_fishingx2
               - 0
               - 4
               - 1
               code: 41
-            - &42 !ruby/object:RPG::MoveCommand
+            - &62 !ruby/object:RPG::MoveCommand
               parameters:
               - 4
               code: 15
-            - &43 !ruby/object:RPG::MoveCommand
+            - &63 !ruby/object:RPG::MoveCommand
               parameters:
               - vern_fishingx2
               - 0
               - 6
               - 0
               code: 41
-            - &44 !ruby/object:RPG::MoveCommand
+            - &64 !ruby/object:RPG::MoveCommand
               parameters:
               - 4
               code: 15
-            - &45 !ruby/object:RPG::MoveCommand
+            - &65 !ruby/object:RPG::MoveCommand
               parameters:
               - vern_fishingx2
               - 0
@@ -1388,27 +1600,27 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *41
+          - *61
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *42
+          - *62
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *43
+          - *63
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *44
+          - *64
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *45
+          - *65
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -1441,15 +1653,32 @@ root: !ruby/object:RPG::Map
           code: 241
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 5
+          indent: 5
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &46 !ruby/object:RPG::MoveCommand
+            - &66 !ruby/object:RPG::MoveCommand
               parameters:
-              - hotfishx2
               - 0
-              - 4
               - 0
+              code: 14
+            - &67 !ruby/object:RPG::MoveCommand
+              parameters:
+              - !ruby/object:RPG::AudioFile
+                volume: 80
+                name: boingthing
+                pitch: 90
+              code: 44
+            - &68 !ruby/object:RPG::MoveCommand
+              parameters:
+              - fishingresultsx2
+              - 0
+              - 2
+              - 2
               code: 41
             - !ruby/object:RPG::MoveCommand
               parameters: []
@@ -1460,9 +1689,89 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *46
+          - *66
           indent: 5
           code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *67
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *68
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          indent: 5
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 36
+          indent: 5
+          code: 207
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &69 !ruby/object:RPG::MoveCommand
+              parameters:
+              - fishingresultsx2
+              - 0
+              - 2
+              - 3
+              code: 41
+            - &70 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 4
+              code: 15
+            - &71 !ruby/object:RPG::MoveCommand
+              parameters:
+              - fishingresultsx2
+              - 0
+              - 2
+              - 2
+              code: 41
+            - &72 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 4
+              code: 15
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: true
+          indent: 5
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *69
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *70
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *71
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *72
+          indent: 5
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 5
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - insert dialogue here
@@ -1478,7 +1787,7 @@ root: !ruby/object:RPG::Map
           - 1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &47 !ruby/object:RPG::MoveCommand
+            - &73 !ruby/object:RPG::MoveCommand
               parameters:
               - ''
               - 0
@@ -1494,7 +1803,7 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *47
+          - *73
           indent: 5
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -1558,17 +1867,17 @@ root: !ruby/object:RPG::Map
           - 0
           - !ruby/object:RPG::MoveRoute
             list:
-            - &48 !ruby/object:RPG::MoveCommand
+            - &74 !ruby/object:RPG::MoveCommand
               parameters:
               - sparklex2
               - 0
               - 4
               - 0
               code: 41
-            - &49 !ruby/object:RPG::MoveCommand
+            - &75 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 33
-            - &50 !ruby/object:RPG::MoveCommand
+            - &76 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 35
             - !ruby/object:RPG::MoveCommand
@@ -1580,17 +1889,41 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *48
+          - *74
           indent: 1
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *49
+          - *75
           indent: 1
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *50
+          - *76
+          indent: 1
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &77 !ruby/object:RPG::MoveCommand
+              parameters:
+              - ''
+              - 0
+              - 2
+              - 0
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 1
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *77
           indent: 1
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -1750,7 +2083,7 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 0
         move_type: 0
-        direction_fix: false
+        direction_fix: true
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
@@ -1827,6 +2160,142 @@ root: !ruby/object:RPG::Map
       y: 14
       x: 4
       id: 3
+    4: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Collect Worm?"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 0
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 19
+          - 0
+          - 0
+          - 1
+          indent: 1
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - A
+          - 0
+          indent: 1
+          code: 123
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: true
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: kidcoda_bedx2
+          pattern: 0
+          tile_id: 0
+          direction: 4
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: true
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV004
+      y: 6
+      x: 4
+      id: 4
   tileset_id: 7
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
@@ -2543,7 +3012,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 668
+    - 0
     - 527
     - 609
     - 0
@@ -2563,7 +3032,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
+    - 523
     - 0
     - 0
     - 0
