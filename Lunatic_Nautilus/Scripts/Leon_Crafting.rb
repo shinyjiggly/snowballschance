@@ -65,6 +65,7 @@ food component list:
 8 fresh water
 9 snow
 10 green mushroom
+11 The fucking SUN
 
 21 raw meat
 22 raw fish
@@ -72,14 +73,10 @@ food component list:
 24 veggie bullion
 25 chili powder
 26 yellow mushroom
-27 noodles
+27 meal kit
 
 29 boiled water
-30 cooked meat
-31 cooked fish
-32 sautee'd shrooms
-33 poison sautee
-34 cooked veggies
+
 =end
 
 #========================================
@@ -91,29 +88,14 @@ module Craft_Items
  #---------------------------------------------
  #  Recipes for Items
  #  Craft_Item_Comp = {item_id => [[item.id, item.type, # needed], etc...]
+ # Remember: item 5 is wood. Wood is needed to make boiled water.
  #---------------------------------------------
  Craft_Item_Comp = { #boiled
- 8 => [[9, 0, 1]], #fresh water 
- 17=> [[11, 0, 1],[9, 0, 1]], #The Sun 
- 29 => [[8, 0, 1]] , #boiled water 
- 30 => [[21, 0, 1]] ,#cooked meat
- 31 => [[22, 0, 1]] ,#cooked fish
- 32 => [[26, 0, 1]] ,#sautee'd shrooms
- 33 => [[10, 0, 1]] ,#poison sautee
- 34 => [[23, 0, 1]], #cooked veggies
- 
- 37 => [[30, 0, 1], [25, 0, 1]] ,#spicy meat
- 38 => [[30, 0, 1], [29, 0, 1]] ,#meaty broth
- 39 => [[30, 0, 1], [29, 0, 1],[25, 0, 1]],#hot meaty broth
- 40 => [[32, 0, 1], [29, 0, 1]], #shroom broth
- 41 => [[32, 0, 1], [29, 0, 1], [25, 0, 1]], #hot shroom broth
- 42 => [[34, 0, 1], [29, 0, 1], [25, 0, 1]], #hot veggie broth 
- 43 => [[34, 0, 1], [29, 0, 1]], #veggie broth 
- 44 => [[31, 0, 1], [29, 0, 1]], #fish broth 
- 45 => [[31, 0, 1], [29, 0, 1], [25, 0, 1]], #hot fish broth 
- 46 => [[31, 0, 1], [25, 0, 1]], #hot fish
- 47 => [[9, 0, 1], [25, 0, 1]], #hot snow??? 
- 48 => [[32, 0, 1], [25, 0, 1]] #hot shrooms
+ 8 => [[9, 0, 1]], #snow becomes fresh water 
+ 17=> [[11, 0, 1],[9, 0, 1]], #The Sun + snow = pain
+ 29 => [[8, 0, 1]] , #fresh water becomes boiled water 
+
+ 47 => [[9, 0, 1], [25, 0, 1]], #snow + chili powder = hot snow??? 
  }
  #---------------------------------------------
  #  Recipes for Weapons
@@ -126,26 +108,32 @@ module Craft_Items
  #---------------------------------------------
  #  Recipes for Armors
  #  Craft_Armor_Comp = {Armor_id => [[item.id, item.type, # needed], etc...]
+ # remember: item 27 is the meal kit! item 29 is boiled water!
+ # these two are needed for all meals!
  #---------------------------------------------
  Craft_Armor_Comp = {
- 20 => [[4, 0, 2]], #heelies
- 21 => [[38, 0, 1], [27, 0, 1]], #meaty noodle soup
- 22 => [[40, 0, 1], [27, 0, 1]], #shroom noodle soup
- 23 => [[41, 0, 1], [27, 0, 1]], #shroom noodle soup SP
- 24 => [[39, 0, 1], [27, 0, 1]], #meaty noodle soup SP
- 25 => [[43, 0, 1], [27, 0, 1]], #veggie noodle soup
- 26 => [[42, 0, 1], [27, 0, 1]], #veggie noodle soup SP
- 27 => [[44, 0, 1], [27, 0, 1]], #fishy noodle soup
- 28 => [[45, 0, 1], [27, 0, 1]], #fishy noodle soup SP
+ #basic
+ 16 => [[27, 0, 1],[29, 0, 1]], #plain meal
+ 17 => [[21, 0, 1], [27, 0, 1],[29, 0, 1]], #meaty meal
+ 18 => [[26, 0, 1], [27, 0, 1],[29, 0, 1]], #shroom meal
+ 19 => [[22, 0, 1], [27, 0, 1],[29, 0, 1]], #fishy dish
+ 20 => [[25, 0, 1], [27, 0, 1],[29, 0, 1]], #hot vegan dish
+ 21 => [[19, 0, 1], [27, 0, 1],[29, 0, 1]], #worm bake
  
- 29 => [[12, 0, 1]], #calzone
- 30 => [[30, 0, 1], [32, 0, 1]],#meat n shrooms
- 31 => [[34, 0, 1], [32, 0, 1]],#veggie medley
- 32 => [[31, 0, 1], [32, 0, 1]],#fish n shrooms
- 33 => [[12, 0, 1], [25, 0, 1]],#spicy calzone
- 34 => [[30, 0, 1], [32, 0, 1], [25, 0, 1]],#meat n shrooms SP
- 35 => [[34, 0, 1], [32, 0, 1], [25, 0, 1]],#veggie medley SP
- 32 => [[31, 0, 1], [32, 0, 1], [25, 0, 1]] #fish n shrooms SP
+ 29 => [[25, 0, 1]], #calzone
+ 
+ #shroom boosted dishes
+ 23 => [[26, 0, 1],[21, 0, 1], [27, 0, 1],[29, 0, 1]], #meaty meal+
+ 24 => [[26, 0, 1],[22, 0, 1], [27, 0, 1],[29, 0, 1]], #fishy dish+
+ 26 => [[26, 0, 1],[25, 0, 1], [27, 0, 1],[29, 0, 1]], #hot vegan dish+
+ 27 => [[26, 0, 1],[19, 0, 1], [27, 0, 1],[29, 0, 1]], #worm bake+
+ 
+  #shroom poisoned dishes
+ 29 => [[10, 0, 1],[21, 0, 1], [27, 0, 1],[29, 0, 1]], #poison meaty meal
+ 30 => [[10, 0, 1],[22, 0, 1], [27, 0, 1],[29, 0, 1]], #poison fishy dish
+ 31 => [[10, 0, 1], [27, 0, 1],[29, 0, 1]], #poison shroom meal
+ 32 => [[10, 0, 1],[25, 0, 1], [27, 0, 1],[29, 0, 1]], #poison hot vegan dish
+ 33 => [[10, 0, 1],[19, 0, 1], [27, 0, 1],[29, 0, 1]], #poison worm bake
  }
  #---------------------------------------------
  #  Tells which item recipes are evented.

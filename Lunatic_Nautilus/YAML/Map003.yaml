@@ -354,6 +354,147 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "\\p[3]\\na[Medi] Let me give you some cooking supplies."
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 9
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 19
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 11
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 21
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 22
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 25
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 26
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 27
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: medi_walkingx2
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 10
           - 0
           - 0
@@ -627,7 +768,7 @@ root: !ruby/object:RPG::Map
           switch1_id: 1
           switch1_valid: false
           variable_value: 0
-          self_switch_valid: false
+          self_switch_valid: true
           variable_id: 1
           variable_valid: false
           switch2_id: 1
@@ -654,8 +795,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV003
-      y: 3
-      x: 18
+      y: 6
+      x: 14
       id: 3
     4: !ruby/object:RPG::Event
       pages:
@@ -1175,57 +1316,19 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Na[Dwight]\\P[7]Buy my wares!"
+          - "\\Na[Dwight]\\P[7]Sometimes I wonder how many "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 0
-          - 5
+          - of us are going to get a chance in the spotlight.
           indent: 0
-          code: 302
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 0
-          - 6
+          - "\\Na[Coda]\\P[0]Just be paitient, you'll get your day."
           indent: 0
-          code: 605
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 8
-          indent: 0
-          code: 605
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 9
-          indent: 0
-          code: 605
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 10
-          indent: 0
-          code: 605
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 12
-          indent: 0
-          code: 605
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 13
-          indent: 0
-          code: 605
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 14
-          indent: 0
-          code: 605
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -1644,7 +1747,7 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - " \\c[2]Fang: \\c[0]\\P[9]...\\.\\fi This better fucking work."
+          - " \\na[Fang]\\P[9]...\\.\\fi This better fucking work."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2023,11 +2126,6 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\P[11]\\na[Fiora]...Somebody needs to fix this..."
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - "\\P[11]\\na[Fiora]So I guess we're both "
           indent: 0
           code: 101
@@ -2038,9 +2136,24 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - blabla \na[Coda]\P[0]It appears so...
+          - "\\na[Coda]\\P[0]It appears so..."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - I hear you managed to get through yours?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\P[11]\\na[Fiora]...yeah. "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - I can only hope for the best with your journey.
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -2154,35 +2267,29 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Pompilia]\\P[12]Check out my new Agility! "
+          - "\\Name[Pompilia]\\P[12]So, have you heard from Fiora "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Thanks Nyx!
+          - 'lately? I haven''t seen her since we had that talk at '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Coda]\\P[0]Why do I get the feeling your agility "
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - isn't as new as it was the first time you said that...
+          - her place.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Pompilia]\\P[12]Gimme a number."
+          - blabla \na[Coda]\P[0]uh, she's literally right over there.
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 3
-          - 2
+          - "\\Name[Pompilia]\\P[12]...I knew that."
           indent: 0
-          code: 103
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -2291,14 +2398,24 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Na[Coda]\\P[0]I am sure you'll get it one day."
+          - "\\Na[Coda]\\P[0]Wait, are you talking about Finn? "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Na[Shesi]\\P[13]But I need it NOW!"
+          - He's a pretty cool dude, isn't he?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\Na[Shesi]\\P[13]Well yeah, but that doesn't pay "
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - the bills!
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -3062,8 +3179,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV016
-      y: 4
-      x: 6
+      y: 1
+      x: 10
       id: 16
     17: !ruby/object:RPG::Event
       pages:
@@ -3118,6 +3235,56 @@ root: !ruby/object:RPG::Map
       id: 17
     18: !ruby/object:RPG::Event
       pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\Name[Coda]\\P[0]Let's cook!"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$scene=Scene_Craft.new"
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: wheelx2
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
       - !ruby/object:RPG::Event::Page
         list:
         - !ruby/object:RPG::EventCommand
@@ -3196,7 +3363,7 @@ root: !ruby/object:RPG::Map
           switch1_id: 1
           switch1_valid: false
           variable_value: 0
-          self_switch_valid: false
+          self_switch_valid: true
           variable_id: 1
           variable_valid: false
           switch2_id: 1
@@ -3247,46 +3414,14 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 12
-          - "$game_party.actors[0].cha > 20"
+          - "\\Name[Coda]\\P[0]where we're going, "
           indent: 0
-          code: 111
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\Name[Coda]\\P[0]Step aside,\\. "
-          indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - I've got it handled already.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
+          - we won't need a charisma stat.
           indent: 0
-          code: 411
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\Name[Coda]\\P[0]..........\\."
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "(I can't just tell her straight up it's broken...)"
-          indent: 1
           code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 412
         - !ruby/object:RPG::EventCommand
           parameters:
           - fix the fucking charisma stat
