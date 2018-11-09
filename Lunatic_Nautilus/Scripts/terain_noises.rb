@@ -42,10 +42,7 @@ module TSS
   #Terrains[0] = ['001-System01', '002-System02', '003-System03']
   #Terrains[1] = ['fs_wood_hard1'] #water
   Terrains[2] = ['shwee'] #ice
-  #Terrains[3] = ['fs_stone_hoof2']
-  #Terrains[4] = ['as_na_grassmove2']
-  #Terrains[5] = ['fs_water_hard1']
-  Terrains[4] = ['crush'] #puddle
+
   #===========================================================================
   # If you would like to specifiy a volume and pitch, simply set the
   # terrain as an array.
@@ -56,6 +53,7 @@ module TSS
   # You can also define multiple sound effects with pitch and volume.
   #===========================================================================
   #Terrains[7] = [["sound", 80, 10], "sound2", ["sound3", 50, 0]]
+  #Terrains[4] = ["crush", 50, 50] #puddle TOO LOUD
   
   #===========================================================================
   # With tilesets, you can set specific sounds for each tileset so you don't

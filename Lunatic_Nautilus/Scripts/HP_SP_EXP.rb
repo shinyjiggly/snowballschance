@@ -7,8 +7,7 @@
 # Remove this Add-On if you wish to use custom HP/SP/EXP bars
 # This Add-On must be always bellow 'ACBS | Battle Windows'
 # if you are using it
-#note: the edits are unfinished and currently only affect the hp bar.
-#they will be applied to the sp bar eventually.
+
 #==============================================================================
 
 module Atoa
@@ -56,7 +55,8 @@ class Window_Base < Window
   the_setup = true
   if the_setup == true
     def draw_actor_hp(actor, x, y, width = 144) 
-	#is defining the same thing differently even a good idea? it doesn't particularly strike me as being so. idk.
+	#is defining the same thing differently even a good idea? 
+  #it doesn't particularly strike me as being so. idk.
       bar_x = HP_Pos_Adjust[0] + x
       bar_y = HP_Pos_Adjust[1] + y + (Font.default_size * 2 /3)
       @skin = RPG::Cache.windowskin(HP_Meter)
@@ -92,7 +92,8 @@ class Window_Base < Window
       src_rect2 = Rect.new(@line * @width , 0 , @width , @height * @amount / 100) #the action rectangle
       self.contents.blt(bar_x, bar_y , @skin, src_rect2) #bacon lettuce tomato 
       #x coord, y coord, bitmap, rectangle
-      #important note: this thing drains the bar the wrong way, even when I've attempted to flip the bar.
+      #important note: this thing drains the bar the wrong way, 
+      #even when I've attempted to flip the bar.
 	  #that winds up only flipping the graphics
       draw_actor_hp_bar(actor, x, y, width) 
     end

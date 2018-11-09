@@ -1,6 +1,7 @@
 #==============================================================================
 # ¡ Sprite_Shadow (Sprite_Ombre )
-# Based on Genzai Kawakami's shadows, dynamisme&features by Rataime, extra features Boushy
+# Based on Genzai Kawakami's shadows, dynamisme&features by Rataime, 
+# extra features Boushy
 #==============================================================================
 # just type "s" in a comment on the event's page to be the light source
 CATERPILLAR_COMPATIBLE = false
