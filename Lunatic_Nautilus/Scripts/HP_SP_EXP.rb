@@ -54,7 +54,7 @@ class Window_Base < Window
   alias draw_actor_hp_bar draw_actor_hp
   the_setup = true
   if the_setup == true
-    def draw_actor_hp(actor, x, y, width = 144) 
+    def draw_actor_hp(actor, x, y, width = 144) #144
 	#is defining the same thing differently even a good idea? 
   #it doesn't particularly strike me as being so. idk.
       bar_x = HP_Pos_Adjust[0] + x
@@ -122,7 +122,7 @@ class Window_Base < Window
       #parens thing makes sure it's in the right spot on the menu
       bar_y = SP_Pos_Adjust[1] + y 
       @skin = RPG::Cache.windowskin(MP_Meter)#the windowskin used
-      @width  = @skin.width / 3 #splits it into 3 parts
+      @width  = @skin.width / 3 #splits spritesheet into 3 parts
       @height = @skin.height #basic height
       #these are presumibly used to get a measure for how large to make the bars
       

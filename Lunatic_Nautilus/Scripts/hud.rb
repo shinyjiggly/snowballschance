@@ -1,21 +1,45 @@
 # Your Very Own Hud 
 # by Kiriashi
+# (and then mutilated by lavendersiren)
+# http://www.gdunlimited.net/forums/topic/3598-your-very-own-hud/
 
 class Window_YourHUD < Window_Base
+  attr_accessor :show_bars
   def initialize
-    super(0, 0, 640, 64)
+    super(0, 0, 200, 100)
     self.opacity = 0
-    self.contents = Bitmap.new(640 - 32, 64 - 32)#(640 - 32, 64 - 32)
+    self.contents = Bitmap.new(200 - 32, 100 - 32)
+    @show_bars=false
     refresh
   end
+  
   def refresh
     self.contents.clear
     reset_variables
-    return if !@actor
-    draw_actor_hp(@actor, 0, 0)
-    draw_actor_sp(@actor, 300, 0)
-    #draw_actor_exp(@actor, 500, 0)
+    
+
+    
+  if Input.trigger?(Input::X)
+      if @show_bars == true
+      @show_bars = false
+    else
+      @show_bars = true
+    end
   end
+  
+    if @show_bars==true and $game_switches[8]==false 
+      #general cutscene switch is off
+    return if !@actor
+    #draw_actor_name(@actor, 0, 32) #where the hell do I fit this
+    draw_actor_hp(@actor, 30, 8,width = 144)
+    draw_actor_sp(@actor, 30, 32, width = 144)
+    self.opacity = 128
+else
+   self.opacity = 0
+  end
+  
+end
+
   def reset_variables
     @actor = $game_party.actors[0]
     @old_hp = @actor ? @actor.hp : 0

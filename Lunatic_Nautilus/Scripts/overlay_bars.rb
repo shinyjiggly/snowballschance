@@ -7,7 +7,7 @@
 # (intended to be used with HP/SP/EXP but can work 
 # without it if you just want the numbers)
 #--------------------------
-
+=begin
 class Overlay_Bars < Scene_Map
 
 def initialize
@@ -15,8 +15,10 @@ def initialize
   end
   
 def toggle_bars
-show_bars = !show_bars
+  if Input.trigger?(:X)
+  show_bars = !show_bars
   end
+end
   
 def refresh
     if Input.trigger?(:X)
@@ -35,3 +37,4 @@ def refresh
     end
   end
 end
+=end
