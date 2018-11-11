@@ -71,17 +71,18 @@ module Diary
     return case index
     when 0 then 'Directional Keys: move forwards in that direction\n
       S: Collect snow/water/???\n
+      A: Toggle the HUD \n
       Spacebar: Examine objects, Dash, Get others to speak to you\n
       PG up/PG dwn: Turn without moving\n
       Esc: Menu\n
       F12: Pause'
-    when 1 then 'According to all known laws\n
-of aviation,\n
-there is no way a bee\n
-should be able to fly.\n
-Its wings are too small to get\n
-its fat little body off the ground.\n
-The bee, of course, flies anyway'
+    when 1 then 'Directional Keys: move forwards in that direction\n
+      S: Collect snow/water/Freeze water\n
+      A: Toggle the HUD \n
+      Spacebar: Examine objects, Dash, Get others to speak to you\n
+      PG up/PG dwn: Turn without moving\n
+      Esc: Menu\n
+      F12: Pause'
     when 2 then 'aaaaaaaaaaaaaaa '
     when 3 then 'This place is very strange, and everyone talks funny. It\'s all vaguely 
 the same, yet different. Where am I?'

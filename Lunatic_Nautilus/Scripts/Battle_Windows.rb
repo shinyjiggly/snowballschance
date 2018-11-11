@@ -139,7 +139,7 @@ module Atoa
  
   # Extension for Face file name, use if you want the battle faces file names
   # to be different from the normal faces
-  Face_Extension = ''
+  Face_Extension = '_face'
   # The text extension must be add to all faces file names
   # E.g.: Face_Extension = '_bt'
   # 001-Fighter01_bt
@@ -310,7 +310,7 @@ class Window_Base
   def draw_actor_battle_face(actor, x, y, opacity = 255)
     begin
       face_hue = Use_Character_Hue ? actor.character_hue : 0
-      face = RPG::Cache.faces(actor.character_name + Face_Extension, face_hue)
+      face = RPG::Cache.picture(actor.character_name + Face_Extension, face_hue)
       fw = face.width
       fh = face.height
       src_rect = Rect.new(0, 0, fw, fh)

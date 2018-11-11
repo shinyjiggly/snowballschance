@@ -55,8 +55,6 @@ class Window_Base < Window
   the_setup = true
   if the_setup == true
     def draw_actor_hp(actor, x, y, width = 144) #144
-	#is defining the same thing differently even a good idea? 
-  #it doesn't particularly strike me as being so. idk.
       bar_x = HP_Pos_Adjust[0] + x
       bar_y = HP_Pos_Adjust[1] + y + (Font.default_size * 2 /3)
       @skin = RPG::Cache.windowskin(HP_Meter)

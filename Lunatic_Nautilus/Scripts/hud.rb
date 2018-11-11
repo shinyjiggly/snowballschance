@@ -2,14 +2,14 @@
 # by Kiriashi
 # (and then mutilated by lavendersiren)
 # http://www.gdunlimited.net/forums/topic/3598-your-very-own-hud/
+# $game_switches[16] is used to show bars
+#$game_switches[12] is used to denote a cutscene
 
 class Window_YourHUD < Window_Base
-  attr_accessor :show_bars
   def initialize
-    super(0, 0, 200, 100)
+    super(0, 400, 640, 100)
     self.opacity = 0
-    self.contents = Bitmap.new(200 - 32, 100 - 32)
-    @show_bars=false
+    self.contents = Bitmap.new(640 - 32, 100 - 32)
     refresh
   end
   
@@ -18,22 +18,29 @@ class Window_YourHUD < Window_Base
     reset_variables
     
 
-    
-  if Input.trigger?(Input::X)
-      if @show_bars == true
-      @show_bars = false
-    else
-      @show_bars = true
+  if $game_switches[12]==false #if not during a cutscene
+    if Input.trigger?(Input::X)
+      if $game_switches[16] == true
+      $game_switches[16] = false
+      else
+      $game_switches[16] = true
+      end
     end
   end
   
-    if @show_bars==true and $game_switches[8]==false 
-      #general cutscene switch is off
+    if $game_switches[16]==true and $game_switches[12]==false 
+      #if bars are meant to be shown and it isn't a cutscene
     return if !@actor
-    #draw_actor_name(@actor, 0, 32) #where the hell do I fit this
-    draw_actor_hp(@actor, 30, 8,width = 144)
-    draw_actor_sp(@actor, 30, 32, width = 144)
-    self.opacity = 128
+    for i in 0...$game_party.actors.size
+    x = i *150
+    y = 2
+    @actor = $game_party.actors[i]
+    draw_actor_graphic(@actor, 20 , 20)
+    draw_actor_name(@actor, x+30, -8)
+    draw_actor_hp_bar(@actor, x, 15,width = 144)
+    draw_actor_sp_bar(@actor, x, 35, width = 144)
+  end
+  self.opacity = 128
 else
    self.opacity = 0
   end

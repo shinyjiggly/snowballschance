@@ -109,7 +109,7 @@ class Window_Base < Window
     bitmap = RPG::Cache.character(actor.character_name, actor.character_hue)
     cw = bitmap.width / 4
     ch = bitmap.height / 4
-    src_rect = Rect.new(0, 0, cw, ch)
+    src_rect = Rect.new(0, 0, cw, ch/2)#(0, 0, cw, ch)
     self.contents.blt(x - cw / 2, y - ch, bitmap, src_rect)
   end
   #--------------------------------------------------------------------------

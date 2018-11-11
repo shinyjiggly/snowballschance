@@ -50,12 +50,27 @@ class Window_SaveFile < Window_Base
     if @file_exist
       # Draw character
       for i in 0...@characters.size
+        
         bitmap = RPG::Cache.character(@characters[i][0], @characters[i][1])
         cw = bitmap.rect.width / 4
         ch = bitmap.rect.height / 4
         src_rect = Rect.new(0, 0, cw, ch)
         x = 300 - @characters.size * 32 + i * 64 - cw / 2
-        self.contents.blt(x, 68 - ch, bitmap, src_rect)
+        self.contents.blt(x, 96 - ch, bitmap, src_rect)
+        #self.contents.blt(x, 68 - ch, bitmap, src_rect)
+=begin
+#this crap doesn't work because it can't fetch the actor name
+
+  if FileTest.exist?("Graphics/Pictures/"+ @characters[i] + "_face.png")
+    bitmap = RPG::Cache.picture(@characters[i]+ "_face")
+  else
+    bitmap = RPG::Cache.picture("default_face")
+  end
+      cw = bitmap.width
+    ch = bitmap.height
+    src_rect = Rect.new(0, 0, cw, ch)
+    self.contents.blt(x, 8, bitmap, src_rect)
+=end    
       end
       # Draw play time
       hour = @total_sec / 60 / 60
