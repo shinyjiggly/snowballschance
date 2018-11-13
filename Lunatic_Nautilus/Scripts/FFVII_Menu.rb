@@ -30,7 +30,7 @@ class Scene_Menu
      s2 = $data_system.words.skill
      s3 = $data_system.words.equip
      s4 = "Status"
-     s5 = "Save"
+     s5 = "Quicksave"
      s6 = "End Game"
      s7=  "Diary"#"Cooking"
      #s7 = "Next Day ==>" #new!!

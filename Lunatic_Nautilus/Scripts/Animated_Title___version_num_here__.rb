@@ -263,6 +263,11 @@ class Scene_Title
     (1..SAVE_DATA[2]).each {|i|
       filenames.push("#{SAVE_DATA[3]}#{SAVE_DATA[0]}#{i}#{SAVE_DATA[1]}") }
     @continue_enabled = filenames.any? {|filename| File.exist?(filename) }
+    
+          if FileTest.exist?(Scene_File::TEMP_SAVE_NAME)
+            @continue_enabled = true
+          end    
+    
     # Disable 'Continue' if no save files are found.
     if @continue_enabled
       @command_window.index = 1

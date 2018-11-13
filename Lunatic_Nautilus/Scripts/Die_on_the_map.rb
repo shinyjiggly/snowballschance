@@ -37,7 +37,7 @@ class Party_Dead < Window_Base
   
   # ---  OPTIONS  ---
   
-  ALLOW_MAP_DEATH = 20          # Turn this GAME SWITCH to ON or OFF, or true
+  ALLOW_MAP_DEATH = true          # Turn this GAME SWITCH to ON or OFF, or true
   WINDOW_DELAY_IN_FRAMES = 30   # Delay between Death, Window, and Game Over
   OPACITY_CHANGE_PER_FRAME = 35 # Allows Your Party Is Dead Window to Fade
   

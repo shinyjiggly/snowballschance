@@ -33,7 +33,7 @@ class Window_Popup < Window_Base
   def get_text(index)
     return case index
     # Define shortcuts for displaying text
-      when 0 then 'aaaAAAAAAAAAAA'
+      when 0 then 'Quicksave file deleted! Remember to save again!'
       when 1 then 'You did the thing!'
       when 2 then 'Acquired'
     end
