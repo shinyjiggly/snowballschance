@@ -71,7 +71,7 @@ class Game_Party
         $game_system.se_play($data_system.actor_collapse_se) if actor.hp <= 0
         $game_screen.start_flash(Color.new(255,0,0,128), 4) if damage > 0
         $game_screen.start_flash(Color.new(0,0,255,128), 4) if damage < 0
-        $game_temp.gameover = $game_party.all_dead?
+        #$game_temp.gameover = $game_party.all_dead? #edited!
       end
       if actor.sp > 0 and actor.slip_damage?
         damage = 0

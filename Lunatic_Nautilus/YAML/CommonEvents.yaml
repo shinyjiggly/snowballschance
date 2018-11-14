@@ -1377,6 +1377,10 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
     code: 0
   - !ruby/object:RPG::EventCommand
     parameters: []
@@ -1440,6 +1444,10 @@ root:
     - *13
     indent: 2
     code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 115
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
@@ -1509,6 +1517,10 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 3
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
     code: 0
   - !ruby/object:RPG::EventCommand
     parameters: []
@@ -1572,6 +1584,10 @@ root:
     - *17
     indent: 4
     code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 115
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 4
@@ -4493,14 +4509,503 @@ root:
   switch_id: 1
   id: 30
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: coda death
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 12
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_actors[12].dead?"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    - 5
+    - 0
+    - 6
+    - -1
+    - 3
+    indent: 2
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 6
+    - 0
+    - 6
+    - -1
+    - 4
+    indent: 2
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 6
+    - 2
+    - 0
+    - 40
+    indent: 2
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 100
+      name: ''
+      pitch: 100
+    indent: 2
+    code: 241
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: ''
+      pitch: 100
+    indent: 2
+    code: 245
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 12
+    - 0
+    indent: 2
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 1
+    - 1
+    indent: 2
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: coda_fall
+      pitch: 100
+    indent: 2
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &85 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 16
+      - &86 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - &87 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &88 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 1
+        code: 41
+      - &89 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &90 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 2
+        code: 41
+      - &91 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &92 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 3
+        code: 41
+      - &93 !ruby/object:RPG::MoveCommand
+        parameters:
+        - !ruby/object:RPG::AudioFile
+          volume: 80
+          name: tenk
+          pitch: 50
+        code: 44
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *85
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *86
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *87
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *88
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *89
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *90
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *91
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *92
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *93
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:Tone
+      red: -255.0
+      green: -255.0
+      blue: -255.0
+      gray: 0.0
+    - 20
+    indent: 2
+    code: 223
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - coda_dedx2
+    - 1
+    - 1
+    - 5
+    - 6
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 2
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 20
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 20
+    - 0
+    - 0
+    - 285
+    - 277
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 2
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 50
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 353
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_actors[2].dead?"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - FRIE
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 100
+      name: ''
+      pitch: 100
+    indent: 2
+    code: 241
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: ''
+      pitch: 100
+    indent: 2
+    code: 245
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 12
+    - 0
+    indent: 2
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 1
+    - 1
+    indent: 2
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: coda_fall
+      pitch: 80
+    indent: 2
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &94 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 16
+      - &95 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - &96 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &97 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 1
+        code: 41
+      - &98 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &99 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 2
+        code: 41
+      - &100 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &101 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 3
+        code: 41
+      - &102 !ruby/object:RPG::MoveCommand
+        parameters:
+        - !ruby/object:RPG::AudioFile
+          volume: 80
+          name: tenk
+          pitch: 50
+        code: 44
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *94
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *95
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *96
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *97
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *98
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *99
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *100
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *101
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *102
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:Tone
+      red: -255.0
+      green: -255.0
+      blue: -255.0
+      gray: 0.0
+    - 20
+    indent: 2
+    code: 223
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - coda_dedx2
+    - 1
+    - 0
+    - 700
+    - 277
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 2
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 20
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 20
+    - 0
+    - 0
+    - 285
+    - 277
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 2
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 50
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 353
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
     code: 0
-  trigger: 0
-  switch_id: 1
+  trigger: 2
+  switch_id: 2
   id: 31
 - !ruby/object:RPG::CommonEvent
   name: ''

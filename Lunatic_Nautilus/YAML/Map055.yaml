@@ -316,8 +316,8 @@ root: !ruby/object:RPG::Map
           code: 412
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 2
-          - A
+          - 0
+          - 17
           - 1
           indent: 0
           code: 111
@@ -360,6 +360,77 @@ root: !ruby/object:RPG::Map
           indent: 1
           code: 121
         - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 4
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 17
+          - 1
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 4
+          - 12
+          - 5
+          - 1
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 411
+        - !ruby/object:RPG::EventCommand
           parameters:
           - 0
           - 55
@@ -367,12 +438,12 @@ root: !ruby/object:RPG::Map
           - 7
           - 4
           - 1
-          indent: 1
+          indent: 2
           code: 201
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -382,7 +453,7 @@ root: !ruby/object:RPG::Map
             blue: 0.0
             gray: 0.0
           - 10
-          indent: 1
+          indent: 2
           code: 223
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -390,7 +461,7 @@ root: !ruby/object:RPG::Map
             volume: 100
             name: slowsuspense
             pitch: 100
-          indent: 1
+          indent: 2
           code: 241
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -414,32 +485,32 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *1
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *2
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *3
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *4
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -463,27 +534,27 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *5
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *6
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *7
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *8
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -504,22 +575,22 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *9
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *10
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *11
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -540,32 +611,32 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *12
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *13
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *14
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - 20
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]Everyone, shhhh!"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -580,27 +651,27 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *15
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]huhwhat?"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]I think we just found the main course "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - for tonight!
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -615,54 +686,54 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *16
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[5]\\na[Frie]Main course? "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - All I see is that rabbit over there.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]..."
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]Wait, are you planning on killing "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - that rabbit?
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]How else am I gonna get that meat?"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 5
           - 5
           - 5
-          indent: 1
+          indent: 2
           code: 225
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -677,17 +748,17 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *17
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]AHEM!\\.\\. Vern."
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -735,67 +806,67 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *18
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *19
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *20
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *21
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *22
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *23
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *24
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *25
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *26
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]This better be important, Topaz."
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - The target just spotted us.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -813,37 +884,37 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *27
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *28
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]Vern. Stop and think about what "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - you're about to do here.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]Take a good look at your "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'supposed prey, and then back at me. '
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -861,31 +932,31 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *29
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *30
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters: []
-          indent: 1
+          indent: 2
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]Do you see the problem yet?"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 5
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -914,61 +985,61 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *31
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *32
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *33
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *34
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *35
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters: []
-          indent: 1
+          indent: 2
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
           - 5
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]...Nope, no problem here."
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - " Besides, you know what happens when "
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - I don't get my meat.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - Topaz facepalms
-          indent: 1
+          indent: 2
           code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -983,22 +1054,22 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *36
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]...\\.\\.\\."
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - "... Are you \\ithat\\i dense..."
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -1013,31 +1084,31 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *37
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters: []
-          indent: 1
+          indent: 2
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\<\\p[3]\\na[Topaz]Let me put it in simpler terms. Vern. "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - Would you ever eat me?
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - vern blushes
-          indent: 1
+          indent: 2
           code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -1064,41 +1135,41 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *38
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *39
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - *40
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters: []
-          indent: 1
+          indent: 2
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]...Pazzy!\\.\\. "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - I-\.I didn't know you were into that sort of thing!
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -1113,72 +1184,72 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *41
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]............................"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\+\\v\\p[5]\\na[Frie](heheh...)"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]\\bVern. Other animals should not be "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'killed unneccessarily. That rabbit did nothing to harm '
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - you. \b
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]Do not forget that my ancient "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'ancestors were rabbits. I practically have an '
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - obligation to protect them.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]Wait, really?"
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - "(that's pretty cool...)"
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -1193,52 +1264,52 @@ root: !ruby/object:RPG::Map
               code: 0
             skippable: false
             repeat: false
-          indent: 1
+          indent: 2
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
           - *42
-          indent: 1
+          indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[3]\\na[Topaz]Yes. I invite you to do some research "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - next time you visit the library.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[5]\\na[Frie]...I'm not really feeling this. "
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - Let's not go attacking small animals today.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]...Fine. \\.\\."
-          indent: 1
+          indent: 2
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'I expect to get some meat for dinner tonight '
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - somehow.
-          indent: 1
+          indent: 2
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
-          indent: 1
+          indent: 2
           code: 242
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -1248,31 +1319,24 @@ root: !ruby/object:RPG::Map
             blue: -255.0
             gray: 0.0
           - 10
-          indent: 1
+          indent: 2
           code: 223
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 23
           - 23
           - 1
-          indent: 1
-          code: 121
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 12
-          - 12
-          - 1
-          indent: 1
+          indent: 2
           code: 121
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
-          indent: 1
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -1282,18 +1346,34 @@ root: !ruby/object:RPG::Map
             blue: 0.0
             gray: 0.0
           - 10
-          indent: 1
+          indent: 2
           code: 223
         - !ruby/object:RPG::EventCommand
           parameters: []
-          indent: 1
+          indent: 2
           code: 248
         - !ruby/object:RPG::EventCommand
           parameters:
-          - A
+          - 17
+          - 17
           - 0
+          indent: 2
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 12
+          - 1
+          indent: 2
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
           indent: 1
-          code: 123
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
@@ -1311,8 +1391,8 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 1
-          switch1_valid: false
+          switch1_id: 12
+          switch1_valid: true
           variable_value: 0
           self_switch_valid: false
           variable_id: 1
@@ -1474,7 +1554,7 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 12
+          switch1_id: 23
           switch1_valid: true
           variable_value: 0
           self_switch_valid: false
@@ -1520,7 +1600,7 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 12
+          switch1_id: 23
           switch1_valid: true
           variable_value: 0
           self_switch_valid: false
@@ -1566,7 +1646,7 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 12
+          switch1_id: 23
           switch1_valid: true
           variable_value: 0
           self_switch_valid: false

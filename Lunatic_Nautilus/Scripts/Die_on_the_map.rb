@@ -32,7 +32,7 @@
 #  WINDOW_DELAY - How long to wait between Death and Msg, and Msg and Game Over.
 #  
 #
-
+=begin
 class Party_Dead < Window_Base
   
   # ---  OPTIONS  ---
@@ -153,9 +153,11 @@ class Game_Map
     # If Game Switch is ON or it is set to true in the Options
     if allow_map_death?
       # If the whole party died 
-      if $game_party.all_dead? 
+      if $game_party.all_dead? or $game_actors[1].dead?
+        
         # If the Player isnt being prevented from Moving with a Repeating Wait
         if not @died_time
+
           # Fades to Red and maintains the other color values
           tone = $game_screen.tone.clone
           tone.to_s.gsub(/([0-9\.]+)/) {@r = $1.to_f,
@@ -165,7 +167,7 @@ class Game_Map
 
           new_tone = Tone.new(80.0,@r[1],@r[2],@r[3])
           $game_screen.start_tone_change(new_tone, 200)
-          
+
           # Prevent Interpreter from being Triggered by Player
           $game_temp.ignore_interpreter = true
           
@@ -243,3 +245,4 @@ class Game_Temp
     @ignore_interpreter = false
   end
 end
+=end

@@ -140,6 +140,7 @@ class Scene_Title
     $game_map.update
     # Switch to map screen
     $scene = Scene_Map.new
+    $game_switches[2]=true  #EDIT
   end
   #--------------------------------------------------------------------------
   # * Command: Continue

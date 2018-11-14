@@ -119,7 +119,7 @@ class Scene_Title
   # only one. 
   
   
-  TEXT = ["frostlands 1.9", 8, 460, 'PlopDump', 18]
+  TEXT = ["frostlands 2.0", 8, 460, 'PlopDump', 18]
   # ['STRING', X, Y, FONTNAME, FONTSIZE]
   # Have text be displayed on the images such as the version number, etc.
    TEXT_COLOR = Color.new(50, 62, 77, 255)
@@ -373,6 +373,7 @@ class Scene_Load < Scene_File
       if tran_in != nil
         # Create an instance of the map sprite.
         map = Spriteset_Map.new
+        $game_switches[2]=true #Allows Coda to Die
         Graphics.transition(tran_in[1], folder + tran_in[0], tran_in[2])
         Graphics.freeze
         # Dispose sprite.
