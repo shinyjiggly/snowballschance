@@ -11,17 +11,17 @@
 #==============================================================================
 
 module Atoa
-  HP_Meter  = 'HPMeterfancy'  # Name of the HP meter graphic file
+  HP_Meter  = 'hpbarrx2'  # Name of the HP meter graphic file
   HP_Meter2  = 'HPMeter2'  # Name of the vertical HP meter graphic file
-  SP_Meter  = 'SPMeter'  # Name of the SP meter graphic file
+  SP_Meter  = 'spoonmeterx2'  # Name of the SP meter graphic file
   EXP_Meter = 'EXPMeter' # Name of the EXP meter graphic file
   MP_Meter = 'MPMeter'
   
   
   # Bars position adjust
   #                [x, y]
-  HP_Pos_Adjust  = [-28, -20]#[-28, -140]
-  SP_Pos_Adjust  = [-6, -2]
+  HP_Pos_Adjust  = [20, -20]#[-28, -140]
+  SP_Pos_Adjust  = [35, -16]
   EXP_Pos_Adjust = [20, 0]
 end
 
@@ -98,7 +98,7 @@ class Window_Base < Window
     end
   #--------------------------------------------------------------------------
   alias draw_actor_sp_bar draw_actor_sp
-  if the_setup == false
+  if the_setup == true
   def draw_actor_sp(actor, x, y, width = 144)
     bar_x = SP_Pos_Adjust[0] + x
     bar_y = SP_Pos_Adjust[1] + y + (Font.default_size * 2 /3)
