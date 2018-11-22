@@ -47,9 +47,68 @@ class Window_Base < Window
   include Atoa
   #--------------------------------------------------------------------------
   
-  #this is over here because putting it up higher in the script just gave errors.
-  #kinda nooby with ruby here so bear with me.
-  #ideally this should be able to be changed elsewhere or something
+  #--------------------------------------------------------------------------
+  # * Draw HP
+  #     actor : actor
+  #     x     : draw spot x-coordinate
+  #     y     : draw spot y-coordinate
+  #     width : draw spot width
+  #--------------------------------------------------------------------------
+  def draw_actor_hp(actor, x, y, width = 144)
+    # Draw "HP" text string
+    self.contents.font.color = system_color
+    self.contents.draw_text(x, y, 32, 32, $data_system.words.hp)
+    # Calculate if there is draw space for MaxHP
+    if width - 32 >= 108
+      hp_x = x + width - 108
+      flag = true
+    elsif width - 32 >= 48
+      hp_x = x + width - 48
+      flag = false
+    end
+    # Draw HP
+    self.contents.font.color = actor.hp == 0 ? knockout_color :
+      actor.hp <= actor.maxhp / 4 ? crisis_color : normal_color
+    self.contents.draw_text(hp_x, y, 48, 32, actor.hp.to_s, 2)
+    # Draw MaxHP
+    if flag
+      self.contents.font.color = normal_color
+      #self.contents.draw_text(hp_x + 48, y, 12, 32, "/", 1)
+      #self.contents.draw_text(hp_x + 60, y, 48, 32, actor.maxhp.to_s)
+      #(hp_x + 60, y, 48, 32, actor.maxhp.to_s)
+    end
+  end
+  
+    #--------------------------------------------------------------------------
+  # * Draw SP
+  #     actor : actor
+  #     x     : draw spot x-coordinate
+  #     y     : draw spot y-coordinate
+  #     width : draw spot width
+  #--------------------------------------------------------------------------
+  def draw_actor_sp(actor, x, y, width = 144)
+    # Draw "SP" text string
+    self.contents.font.color = system_color
+    self.contents.draw_text(x, y, 32, 32, $data_system.words.sp)
+    # Calculate if there is draw space for MaxHP
+    if width - 32 >= 108
+      sp_x = x + width - 108
+      flag = true
+    elsif width - 32 >= 48
+      sp_x = x + width - 48
+      flag = false
+    end
+    # Draw SP
+    self.contents.font.color = actor.sp == 0 ? knockout_color :
+      actor.sp <= actor.maxsp / 4 ? crisis_color : normal_color
+    self.contents.draw_text(sp_x-16, y, 48, 32, actor.sp.to_s, 2)
+    # Draw MaxSP
+    if flag
+      self.contents.font.color = normal_color
+      #self.contents.draw_text(sp_x + 48, y, 12, 32, "/", 1)
+      #self.contents.draw_text(sp_x + 60, y, 48, 32, actor.maxsp.to_s)
+    end
+  end
   
   alias draw_actor_hp_bar draw_actor_hp
   the_setup = true

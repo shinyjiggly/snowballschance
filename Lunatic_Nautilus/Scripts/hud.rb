@@ -35,8 +35,8 @@ class Window_YourHUD < Window_Base
     x = i *150
     y = 2
     @actor = $game_party.actors[i]
-    draw_actor_graphic(@actor, 20 , 20)
-    draw_actor_name(@actor, x+40, -8)
+    #draw_actor_graphic(@actor, 20 , 20)
+    draw_actor_name(@actor, x+58, -8)
     draw_actor_hp(@actor, x, 15,width = 144)
     draw_actor_sp(@actor, x, 35, width = 144)
   end
