@@ -65,7 +65,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 73
+          - 74
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -73,9 +73,8 @@ root: !ruby/object:RPG::Map
           - 5
           - 5
           - 0
-          - 6
-          - -1
           - 0
+          - 10
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -100,7 +99,7 @@ root: !ruby/object:RPG::Map
           - 5
           - 6
           - 0
-          - 0
+          - 1
           indent: 2
           code: 201
         - !ruby/object:RPG::EventCommand
@@ -108,6 +107,11 @@ root: !ruby/object:RPG::Map
           - Map Clear!
           indent: 2
           code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          indent: 2
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 2
@@ -434,12 +438,12 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]Ugh... all this walking is tiring."
+          - "\\v\\p[0]\\na[Coda]Ugh... all this walking is tiring."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Vern]I'm getting pretty sleapy myself."
+          - "\\v\\p[1]\\na[Vern]I'm getting pretty sleapy myself."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -449,7 +453,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Topaz]You're always sleepy! "
+          - "\\v\\p[1]\\na[Topaz]You're always sleepy! "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -459,7 +463,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]I think we should set up camp soon."
+          - "\\v\\p[0]\\na[Coda]I think we should set up camp soon."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -469,7 +473,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Frie]Hm, camping. Almost quaint to hear "
+          - "\\v\\p[1]\\na[Frie]Hm, camping. Almost quaint to hear "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -484,7 +488,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Topaz]...Hey, do we have everything we "
+          - "\\v\\p[1]\\na[Topaz]...Hey, do we have everything we "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -494,7 +498,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]Uh..."
+          - "\\v\\p[0]\\na[Coda]Uh..."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -559,7 +563,7 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...let me check our supplies first."
+          - "\\v\\p[0]\\na[Coda]...let me check our supplies first."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -667,7 +671,7 @@ root: !ruby/object:RPG::Map
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...alright, let's get going. "
+          - "\\v\\p[0]\\na[Coda]...alright, let's get going. "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -713,12 +717,12 @@ root: !ruby/object:RPG::Map
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...on second thought, I don't think we're "
+          - "\\v\\p[0]\\na[Coda]...on second thought, I don't think "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - quite ready yet.
+          - we're quite ready yet.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -972,6 +976,64 @@ root: !ruby/object:RPG::Map
       y: 8
       x: 7
       id: 3
+    4: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - hi frie
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 0
+          - 1
+          indent: 0
+          code: 129
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: coda_diex2
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV004
+      y: 4
+      x: 3
+      id: 4
   tileset_id: 7
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
