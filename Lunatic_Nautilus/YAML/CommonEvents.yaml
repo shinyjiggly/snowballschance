@@ -10,6 +10,153 @@ root:
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
+    parameters:
+    - you got everything, baby!
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Spicy Dish
+      - Meaty Dish
+      - Fishy Dish
+      - Worm Bake
+    - 5
+    indent: 0
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Spicy Dish
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Spicy
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 1
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Meaty Dish
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MEAT
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 2
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 1
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - Fishy Dish
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Fish
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 3
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 1
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - Worm Bake
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Worms
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 4
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 1
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 403
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 1
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 404
+  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
     code: 0
@@ -5077,8 +5224,931 @@ root:
   switch_id: 2
   id: 31
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: cooking system
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 247
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    indent: 0
+    code: 246
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 100
+      name: cooking
+      pitch: 100
+    indent: 0
+    code: 241
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 9
+    - 9
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 112
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Party Iterator
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    indent: 1
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 5
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - What will you make for Arctos?
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 4
+    - 0
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - What will you make for Frie?
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 3
+    - 0
+    indent: 3
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - What will you make for Vern?
+    indent: 4
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 4
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 2
+    - 0
+    indent: 4
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - What will you make for Topaz?
+    indent: 5
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 5
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 1
+    - 0
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - What will you make for yourself?
+    indent: 6
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 6
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I guess we're done here?
+    indent: 6
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 248
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - DO THE FUCKING THING ALREADY
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 1
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: angrerycat
+      pitch: 100
+    indent: 2
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Nyagh!
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - weak.
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 413
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 0
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Plain dish
+      - Basic dish
+    - 0
+    indent: 0
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Plain dish
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 0
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Basic dish
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - -1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - med dish
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Spicy Dish
+      - Meaty Dish
+      - Fishy Dish
+      - Worm Bake
+    - 5
+    indent: 1
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Spicy Dish
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Spicy
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 25
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 1
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have any Chili Powder!
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - med dish
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Meaty Dish
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MEAT
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 21
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 2
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have any Raw Meat!
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - med dish
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - Fishy Dish
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Fish
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 22
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 3
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have any Raw Fish!
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - med dish
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - Worm Bake
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Worms
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 19
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 4
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have any Earthworms!
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - med dish
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 403
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - mushrooms
+    indent: 0
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 26
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 10
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - both shrooms
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Would you like to add a mushroom?
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Green Mushroom
+      - Yellow Mushroom
+      - None
+    - 0
+    indent: 2
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Green Mushroom
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 1
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Yellow Mushroom
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 2
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - None
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 0
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - yellow, no green
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Would you like to add a mushroom?
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Yellow Mushroom
+      - None
+    - 0
+    indent: 2
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Yellow Mushroom
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 2
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - None
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 0
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 10
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Only Green
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Would you like to add a mushroom?
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Green Mushroom
+      - None
+    - 0
+    indent: 2
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Green Mushroom
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 1
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - None
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 0
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - No shrooms, skip
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'after the values are gathered, '
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - this gives you the dish requested
+    indent: 0
+    code: 408
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Cookcalc.gimmearmor
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Cookcalc.newequip
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 9
+    - 9
+    - 2
+    - 0
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - And now for the next one! \v[9] !
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Party Iterator
+    indent: 0
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - equip the dish to the current party member
+    indent: 0
+    code: 108
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -5087,7 +6157,7 @@ root:
   switch_id: 1
   id: 32
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: food power
   list:
   - !ruby/object:RPG::EventCommand
     parameters: []

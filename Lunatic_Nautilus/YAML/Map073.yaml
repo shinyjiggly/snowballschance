@@ -605,6 +605,26 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 7
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &10 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 16
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 0
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *10
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[7]\\na[Coda]Let's get this food stuff rolling!"
           indent: 0
           code: 101
@@ -615,9 +635,43 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$scene=Scene_Craft.new"
+          - 17
           indent: 0
-          code: 355
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - surprise
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 255
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - draw a better background
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 32
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - alright we cooked everything
+          indent: 0
+          code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
           - 17
@@ -625,32 +679,53 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - A
+          - 7
           - 0
+          - 8
+          - 8
+          - 6
           indent: 0
-          code: 123
+          code: 202
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 12
-          - 12
-          - 1
+          - 2
           indent: 0
-          code: 121
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 1
-          indent: 0
-          code: 208
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 10
-          indent: 0
-          code: 106
+          code: 235
         - !ruby/object:RPG::EventCommand
           parameters:
           - 18
           indent: 0
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - give frie an actual fucking sitting sprite!!
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - give coda a sitting sprite maybe?
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - idk she might get worried about taking
+          indent: 0
+          code: 408
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - that seat instead of frie
+          indent: 0
+          code: 408
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[7]\\na[Coda]So, what do you guys think?"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - now let's talk about our meals and stuff
+          indent: 0
+          code: 108
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -691,6 +766,39 @@ root: !ruby/object:RPG::Map
         through: false
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 17
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - A
+          - 0
+          indent: 0
+          code: 123
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 12
+          - 1
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          indent: 0
+          code: 208
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0

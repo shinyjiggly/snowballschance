@@ -3390,34 +3390,14 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Grandmaw]\\P[19]Oh dearie!\\."
+          - "\\Name[Grandmaw]\\P[19]I'd like to see you cook!"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - What is this accursed CHARISMA stat
+          - 32
           indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - and how ever will we get it working?
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\Name[Coda]\\P[0]where we're going, "
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - we won't need a charisma stat.
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - fix the fucking charisma stat
-          indent: 0
-          code: 108
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -4321,6 +4301,51 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 655
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - a="coda_face"
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - b=1
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - c=100
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - d=100
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - e=255
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - f=1
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_screen.pictures[1].show"
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(a, b,"
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - " x, y, c, d, e,f)"
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
           code: 0
@@ -4454,49 +4479,36 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - a="coda_face"
+          - pick a number between 0-4
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          - 1
+          indent: 0
+          code: 103
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - pick a number between 0-2
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 11
+          - 1
+          indent: 0
+          code: 103
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Cookcalc.gimmearmor
           indent: 0
           code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
-          - b=1
+          - check your inventoiry!
           indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - c=100
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - d=100
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - e=255
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - f=1
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "$game_screen.pictures[1].show"
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "(a, b,"
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - " x, y, c, d, e,f)"
-          indent: 0
-          code: 655
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -4526,7 +4538,7 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: ''
+          character_name: darawayspswordx2
           pattern: 0
           tile_id: 0
           direction: 2
