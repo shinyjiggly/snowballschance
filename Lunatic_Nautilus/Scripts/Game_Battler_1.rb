@@ -117,7 +117,7 @@ class Game_Battler
     n = [[Integer(n), 1].max, 999].min
     return n
   end
-  
+=begin  
   #--------------------------------------------------------------------------
   # * Get Charisma(CHA) #new!!
   #--------------------------------------------------------------------------
@@ -129,7 +129,7 @@ class Game_Battler
     n = [[Integer(n), 1].max, 999].min
     return n
   end
-  
+=end  
   #--------------------------------------------------------------------------
   # * Set Maximum HP
   #     maxhp : new maximum HP
@@ -180,7 +180,7 @@ class Game_Battler
     @int_plus += int - self.int
     @int_plus = [[@int_plus, -999].max, 999].min
   end
-  
+=begin  
   #--------------------------------------------------------------------------
   # * Set Charisma (CHA)
   #     cha : new Charisma (CHA)
@@ -189,6 +189,7 @@ class Game_Battler
     @cha_plus += cha - self.cha
     @cha_plus = [[@cha_plus, -999].max, 999].min
   end
+=end
   #--------------------------------------------------------------------------
   # * Get Hit Rate
   #--------------------------------------------------------------------------

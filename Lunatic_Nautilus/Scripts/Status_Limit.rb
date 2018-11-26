@@ -32,7 +32,7 @@ module Atoa
   Actor_Max_Atk = 999
   Actor_Max_PDef = 999
   Actor_Max_MDef = 999
-  Actor_Max_Cha = 999
+  #Actor_Max_Cha = 999
     
   # Base status Multiplier
   # These values change the base status of the character
@@ -43,7 +43,7 @@ module Atoa
   Actor_Mult_Dex = 1
   Actor_Mult_Agi = 1
   Actor_Mult_Int = 1
-  Actor_Mult_Cha = 1
+  #Actor_Mult_Cha = 1
   #=============================================================================
 end
 
@@ -207,7 +207,7 @@ class Game_Actor < Game_Battler
     return [[n.to_i, 1].max, Actor_Max_Int].min
   end
   
-  
+=begin  
   #--------------------------------------------------------------------------
   # * Get Basic Charisma
   #--------------------------------------------------------------------------
@@ -218,7 +218,7 @@ class Game_Actor < Game_Battler
     #for item in equips.compact do n += item.cha_plus end
     return n.to_i
   end 
-  
+
   #--------------------------------------------------------------------------
   # * Get Charisma
   #--------------------------------------------------------------------------
@@ -227,7 +227,7 @@ class Game_Actor < Game_Battler
     for i in @states do n *= $data_states[i].cha_rate / 100.0 end
     return [[n.to_i, 1].max, Actor_Max_Cha].min
   end
-
+=end
   
   #--------------------------------------------------------------------------
   # * Set Maximum HP
@@ -279,7 +279,7 @@ class Game_Actor < Game_Battler
     @int_plus += int - self.int
     @int_plus = [[@int_plus, -Actor_Max_Int].max, Actor_Max_Int].min
   end
-  
+=begin 
   #--------------------------------------------------------------------------
   # * Set Charisma (CHA)
   #     int : new Charisma (CHA)
@@ -288,7 +288,7 @@ class Game_Actor < Game_Battler
     @cha_plus += cha - self.cha
     @cha_plus = [[@cha_plus, -Actor_Max_Cha].max, Actor_Max_Cha].min
   end
-  
+=end  
   #--------------------------------------------------------------------------
   # * Get Basic Attack Power
   #--------------------------------------------------------------------------

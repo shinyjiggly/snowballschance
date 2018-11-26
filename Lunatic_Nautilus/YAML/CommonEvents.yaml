@@ -2,152 +2,191 @@
 root:
 - 
 - !ruby/object:RPG::CommonEvent
-  name: third recoil
+  name: melt snow
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
-    - hp -= 33
+    - Do you want to melt some snow?
     indent: 0
-    code: 355
+    code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - you got everything, baby!
+    - "[Costs 5 SP]"
     indent: 0
-    code: 108
+    code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
-    - - Spicy Dish
-      - Meaty Dish
-      - Fishy Dish
-      - Worm Bake
-    - 5
+    - - 'Yes'
+      - 'No'
+    - 2
     indent: 0
     code: 102
   - !ruby/object:RPG::EventCommand
     parameters:
     - 0
-    - Spicy Dish
+    - 'Yes'
     indent: 0
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Spicy
-    indent: 1
-    code: 118
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 10
-    - 10
-    - 0
-    - 0
-    - 1
-    indent: 1
-    code: 122
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - mushrooms
-    indent: 1
-    code: 119
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 1
-    code: 0
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 1
-    - Meaty Dish
-    indent: 0
-    code: 402
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - MEAT
-    indent: 1
-    code: 118
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 10
-    - 10
-    - 0
-    - 0
-    - 2
-    indent: 1
-    code: 122
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - mushrooms
-    indent: 1
-    code: 119
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 1
-    code: 0
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 2
-    - Fishy Dish
-    indent: 0
-    code: 402
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - Fish
-    indent: 1
-    code: 118
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 10
-    - 10
-    - 0
-    - 0
-    - 3
-    indent: 1
-    code: 122
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - mushrooms
-    indent: 1
-    code: 119
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 1
-    code: 0
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 3
-    - Worm Bake
-    indent: 0
-    code: 402
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - Worms
-    indent: 1
-    code: 118
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 10
-    - 10
-    - 0
+    - 24
+    - 24
     - 0
     - 4
+    - 12
+    - 3
     indent: 1
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - mushrooms
+    - 1
+    - 24
+    - 0
+    - 5
+    - 1
     indent: 1
-    code: 119
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 9
+    - 1
+    - 0
+    - 1
+    indent: 2
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 0
+    - 0
+    - 1
+    indent: 2
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 5
+    indent: 2
+    code: 312
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have enough spoons!
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Try anyway?
+    indent: 2
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - 'Yes'
+      - 'No'
+    - 2
+    indent: 2
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 'Yes'
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 9
+    - 1
+    - 0
+    - 1
+    indent: 3
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 3
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 0
+    - 0
+    - 1
+    indent: 3
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    - 3
+    - 5
+    indent: 3
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 5
+    indent: 3
+    code: 312
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 1
+    - 24
+    - false
+    indent: 3
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 'No'
+    indent: 2
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
     code: 0
   - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 0
-    code: 403
-  - !ruby/object:RPG::EventCommand
     parameters:
-    - main cooking crap
-    indent: 1
-    code: 119
+    - 1
+    - 'No'
+    indent: 0
+    code: 402
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
@@ -5450,52 +5489,6 @@ root:
     indent: 1
     code: 412
   - !ruby/object:RPG::EventCommand
-    parameters:
-    - DO THE FUCKING THING ALREADY
-    indent: 1
-    code: 101
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 0
-    - 1
-    - 0
-    indent: 1
-    code: 111
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - !ruby/object:RPG::AudioFile
-      volume: 80
-      name: angrerycat
-      pitch: 100
-    indent: 2
-    code: 250
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - Nyagh!
-    indent: 2
-    code: 101
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 2
-    code: 0
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 1
-    code: 411
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - weak.
-    indent: 2
-    code: 101
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 2
-    code: 0
-  - !ruby/object:RPG::EventCommand
-    parameters: []
-    indent: 1
-    code: 412
-  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
     code: 0
@@ -6136,7 +6129,15 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - And now for the next one! \v[9] !
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: saved
+      pitch: 100
+    indent: 0
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Meal made!
     indent: 0
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -6159,6 +6160,1129 @@ root:
 - !ruby/object:RPG::CommonEvent
   name: food power
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 9
+    - 9
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - count the party members
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 112
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Party Iterator
+    indent: 1
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    indent: 1
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 0
+    - 2
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - done with this
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_variables[3]=Cookcalc.multi"
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 5
+    - 0
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 0
+    - 2
+    indent: 3
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - RRRAAAAAGGHH!!
+    indent: 4
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 1
+    - 0
+    indent: 4
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "....Rargh."
+    indent: 5
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 2
+    - 0
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "...."
+    indent: 6
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 3
+    - 0
+    indent: 6
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "*munch munch*"
+    indent: 7
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 4
+    - 1
+    indent: 7
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - OMNOMNOM
+    indent: 8
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 4
+    - 0
+    indent: 3
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 0
+    - 2
+    indent: 4
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "...I'm not eating this."
+    indent: 5
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 0
+    - 14
+    indent: 5
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 1
+    - 0
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "...It's edible, I guess."
+    indent: 6
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 0
+    - 15
+    indent: 6
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 2
+    - 0
+    indent: 6
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - It's alright, I suppose.
+    indent: 7
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 0
+    - 16
+    indent: 7
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 3
+    - 0
+    indent: 7
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Not half bad.
+    indent: 8
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 0
+    - 17
+    indent: 8
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 4
+    - 1
+    indent: 8
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Exactly what I wanted.
+    indent: 9
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 0
+    - 18
+    indent: 9
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 3
+    - 0
+    indent: 4
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 0
+    - 2
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Ugh! This isn't edible!
+    indent: 6
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 0
+    - 14
+    indent: 6
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 1
+    - 0
+    indent: 6
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "...You tried."
+    indent: 7
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 0
+    - 15
+    indent: 7
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 2
+    - 0
+    indent: 7
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Not too shabby.
+    indent: 8
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 0
+    - 16
+    indent: 8
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 3
+    - 0
+    indent: 8
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I'm loving this meat!
+    indent: 9
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 0
+    - 17
+    indent: 9
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 4
+    - 1
+    indent: 9
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Thish ish incrediblw!
+    indent: 10
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Sho fwavorfull!
+    indent: 10
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 0
+    - 18
+    indent: 10
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 2
+    - 0
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 0
+    - 2
+    indent: 6
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "...Need I remind you of my dietary restraints?"
+    indent: 7
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I do not eat such rubbish!
+    indent: 7
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 0
+    - 14
+    indent: 7
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 1
+    - 0
+    indent: 7
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - It's barely passable.
+    indent: 8
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 0
+    - 15
+    indent: 8
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 2
+    - 0
+    indent: 8
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Decent, but could be far better.
+    indent: 9
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 0
+    - 16
+    indent: 9
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 3
+    - 0
+    indent: 9
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I see you are mindful of my tastes.
+    indent: 10
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 0
+    - 17
+    indent: 10
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 4
+    - 1
+    indent: 10
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Absolutely splendid.
+    indent: 11
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 0
+    - 18
+    indent: 11
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 11
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 11
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 9
+    - 0
+    - 1
+    - 0
+    indent: 6
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 0
+    - 2
+    indent: 7
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(ugh... I think I poisoned my food...)"
+    indent: 8
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 0
+    - 14
+    indent: 8
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 1
+    - 0
+    indent: 8
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(ugh... this reminds me of my mom's cooking. "
+    indent: 9
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I HATE my mom's cooking!)
+    indent: 9
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 0
+    - 15
+    indent: 9
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 2
+    - 0
+    indent: 9
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(I can do better than this! I know I can!)"
+    indent: 10
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 0
+    - 16
+    indent: 10
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 3
+    - 0
+    indent: 10
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(Wow, I actually got it right for once.)"
+    indent: 11
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 0
+    - 17
+    indent: 11
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 11
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 3
+    - 0
+    - 4
+    - 1
+    indent: 11
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(Holy crud... did I really make this? It's perfect...)"
+    indent: 12
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 0
+    - 18
+    indent: 12
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 12
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 11
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 12
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 11
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 11
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 10
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 9
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I guess we're done here?
+    indent: 7
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 9
+    - 9
+    - 2
+    - 0
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 413
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
