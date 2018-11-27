@@ -51,7 +51,6 @@ module Atoa
   # 11 = Critical Rate Resist
   # 12 = Critical Damage Resist
   
-  # 13 = Charisma (NEW!!)
 
   # Name of the new status
   Stat_Eva = 'EVAD'
@@ -60,7 +59,6 @@ module Atoa
   Stat_Dmg = 'CRIT-DMG'
   Stat_Res_Crt = 'ANTI-CRIT'
   Stat_Res_Dmg = 'ANTI-CRIT-DMG'
-  Stat_Cha = 'CHA'
   
   # Show map as background of the equip menu?
   Show_Map_Equip_Menu = false
@@ -82,8 +80,7 @@ module Atoa
   #     'dmg' = Critical Damage: Changes the damage dealt by critical hits.
   #     'rcrt' = Critical Rate Resist: Changes the chance of reciving citical hits
   #     'rdmg' = Critical Damage Resist: Changes the damage recived by critical hits.
-  #     'cha' = Charisma: used to make some things work a little better? It's ambiguous.
-  
+
   #NOTE: GO TO CUSTOM DAMAGE TO CHANGE THESE
   
   #Speacial_Status['Weapon'] = {
@@ -355,7 +352,6 @@ class Window_EquipLeft < Window_Selectable
     @last_rcrt = @actor.rcrt
     @last_rdmg = @actor.rdmg
     
-    @last_cha = @actor.cha #new!!
     
     refresh
   end 
@@ -443,9 +439,6 @@ class Window_EquipLeft < Window_Selectable
     when 12
       old_value = @actor.rdmg
       new_value = @new_rdmg
-    when 13 #new!!
-      old_value = @actor.cha
-      new_value = @new_cha
     end
     if new_value != nil
       if old_value == new_value
@@ -479,17 +472,16 @@ class Window_EquipLeft < Window_Selectable
   #     new_dmg  : critical damage after changing equipment
   #     new_rcrt : critical evade after changing equipment
   #     new_rdmg : critical resist after changing equipment
-  #     new_cha  : charisma after changing equipment
   #--------------------------------------------------------------------------
   def set_new_parameters(new_atk = nil, new_pdef  = nil, new_mdef = nil, new_str  = nil,
         new_dex = nil, new_agi = nil, new_int = nil, new_eva = nil, new_hit = nil, 
-        new_crt = nil, new_dmg = nil, new_rcrt = nil, new_rdmg = nil, new_cha = nil)
+        new_crt = nil, new_dmg = nil, new_rcrt = nil, new_rdmg = nil)
         
     if @new_str != new_str or @new_dex != new_dex or @new_agi != new_agi or 
        @new_int != new_int or @new_atk != new_atk or @new_pdef != new_pdef or
        @new_mdef != new_mdef or @new_eva != new_eva or @new_hit != new_hit or
        @new_crt != new_crt or @new_dmg != new_dmg or @new_rcrt != new_rcrt or
-       @new_rdmg != new_rdmg or @new_cha != new_cha
+       @new_rdmg != new_rdmg 
       @last_equip = @new_equip
       @new_atk = new_atk
       @new_pdef = new_pdef
@@ -504,7 +496,6 @@ class Window_EquipLeft < Window_Selectable
       @new_dmg = new_dmg
       @new_rcrt = new_rcrt
       @new_rdmg = new_rdmg
-      @new_cha = new_cha
       refresh
     end
   end
@@ -646,7 +637,6 @@ class Scene_Equip
         new_dmg = @actor.dmg
         new_rcrt = @actor.rcrt
         new_rdmg = @actor.rdmg
-        new_cha = @actor.cha
         @actor.equip(@right_window.index, item1 == nil ? 0 : item1.id)
         if $atoa_script['Atoa Two Hands']
           for equip in re_equip
@@ -656,7 +646,7 @@ class Scene_Equip
         @actor.hp = last_hp
         @actor.sp = last_sp
         @left_window.set_new_parameters(new_atk, new_pdef, new_mdef, new_str, new_dex, 
-            new_agi, new_int, new_eva, new_hit, new_crt, new_dmg, new_rcrt, new_rdmg, new_cha)
+            new_agi, new_int, new_eva, new_hit, new_crt, new_dmg, new_rcrt, new_rdmg)
       end
     end
   end

@@ -278,9 +278,7 @@ module Atoa
   # Name of the attribute that will show damage resistance, used only if
   # Damage_Algorithm_Type > 1. It will replace the Dexterity attribute
   Status_Vitality = "Vitality"
-  
-  # a new stat right here
-  Status_Charisma = "Charisma"
+
   
   # Unnamerd Battlers settingss
   Unarmed_Attack    = 20 # Unnarmed Attack Power

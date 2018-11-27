@@ -130,13 +130,40 @@ class Cookcalc
   }
   
   def self.armornum
-    ingre=$game_variables[10]
-    shroom=$game_variables[11]
-    return ResultHash[[shroom,ingre]]
+    @ingre=$game_variables[10]
+    @shroom=$game_variables[11]
+    return ResultHash[[@shroom,@ingre]]
   end
   
   def self.gimmearmor
   $game_party.gain_armor(Cookcalc.armornum, 1)
+  #remove ingre and remove shroom
+  #convert ingre back to its item
+  #it's a number from 0-4
+
+if @ingre == 0
+  #plain
+elsif @ingre== 1
+  $game_party.lose_item(25, 1) #spicy
+elsif @ingre== 2
+  $game_party.lose_item(21, 1) #meat
+elsif @ingre== 3
+  $game_party.lose_item(22, 1) #fish
+elsif @ingre== 4
+  $game_party.lose_item(19, 1) #worm
+else
+  p "what the hell did you put in your ingredience?"
+  end
+  
+  #remove shroom
+  if @shroom == 1
+  $game_party.lose_item(10, 1) #poison
+elsif @shroom== 2
+  $game_party.lose_item(26, 1) #yellow
+else
+  #do nothing
+  end
+$game_party.lose_item(27, 1) #meal kit is always used
   end
 
   def self.newequip
@@ -167,7 +194,7 @@ class Cookcalc
   
   end
 
-  $game_actors[@bbb].equip(2, Cookcalc.armornum)
+  $game_actors[@bbb].equip(1, Cookcalc.armornum)
 end
 #----------------------------------
   def self.multi
@@ -202,13 +229,12 @@ end
   end
   
   end
-p $data_actors[@bbb].armor1_id
-p $data_actors[@bbb].armor2_id
-p $data_actors[@bbb].armor3_id
-p $game_party.armor_number(2)
 
     actor=$data_actors[@bbb].id
-    meal=$game_party.armor_number(2)
+    meal= $game_actors[@bbb].armor1_id
+    
+    
+    
     
     return FoodPrefhash[[actor,meal]]
 end
