@@ -34,7 +34,7 @@ class Window_Popup < Window_Base
     return case index
     # Define shortcuts for displaying text
       when 0 then 'Quicksave file deleted! Remember to save again!'
-      when 1 then 'You did the thing!'
+      when 1 then 'New Diary Entry!'
       when 2 then 'Acquired'
     end
 #=============================================================================

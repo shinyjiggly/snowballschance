@@ -691,7 +691,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\+\\p[4]\\na[Topaz]I'm vegan!"
+          - "\\+\\p[4]\\na[Topaz]I'm vegan!\\!"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1050,6 +1050,11 @@ root: !ruby/object:RPG::Map
           - "\\p[7]\\na[Coda]...glad to hear the feedback."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - new_page("campfiresong")
+          indent: 0
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
           - "-------------------------"

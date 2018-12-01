@@ -72,17 +72,20 @@ module Diary
     when 0 then 'Directional Keys: move forwards in that direction\n
       S: Collect snow/water/???\n
       A: Toggle the HUD \n
-      Spacebar: Examine objects, Dash, Get others to speak to you\n
+      Spacebar: Examine objects, Get others to speak to you\n
       PG up/PG dwn: Turn without moving\n
       Esc: Menu\n
-      F12: Pause'
+      F12: Pause\n
+      \q[coda_face]'
     when 1 then 'Directional Keys: move forwards in that direction\n
       S: Collect snow/water/Freeze water\n
       A: Toggle the HUD \n
-      Spacebar: Examine objects, Dash, Get others to speak to you\n
+      Spacebar: Examine objects, Get others to speak to you\n
       PG up/PG dwn: Turn without moving\n
       Esc: Menu\n
-      F12: Pause'
+      F12: Pause
+      
+      \q[coda_face]'
     when 2 then 'aaaaaaaaaaaaaaa '
     when 3 then 'This place is very strange, and everyone talks funny. It\'s all vaguely 
 the same, yet different. Where am I?'
@@ -160,7 +163,12 @@ class Bitmap
     # Replace all instances of \v[n] to the game variable's value
     text.gsub!("\v") {"\\v"}
     text.gsub!("\V") {"\\v"}
+    text.gsub!("\Q") {"\\q"}
+    text.gsub!("\q") {"\\q"}
+    #text.gsub!("F12") {"sdkfjogjdogjodjgodjgos"}
     text.gsub!(/\\[Vv]\[([0-9]+)\]/) { $game_variables[$1.to_i] }
+    text.gsub!(/\\[Qq]\[([\w]+)\]/) { "\026[#{$1}]" } 
+    
     # Break up the text into lines
     lines = text.split("\\n")
     result = []
@@ -173,9 +181,22 @@ class Bitmap
       if words.empty?
         result.push(current_text == nil ? "" : current_text)
         next
-      end
+      end #edit
+
       # Evaluate each word and determine when text overflows to a new line
       words.each_index {|i|
+      
+                  if current_text == "\026[#{$1}]" 
+          text.sub!(/\[([\w]+)\]/, "")
+          bitmap = RPG::Cache.picture($1.to_s)
+          rect = Rect.new(0, 0, bitmap.width, bitmap.height)
+          contents.blt(0, 0, bitmap, rect)
+          #contents.blt(4+@x, 32*@y+4, bitmap, rect)
+          @x += bitmap.width + 4
+          #@y += bitmap.height
+          next
+        end
+        
         if self.text_size("#{current_text} #{words[i]}").width > width
           result.push(current_text)
           current_text = words[i]
@@ -198,6 +219,7 @@ class Scene_Diary
   def main
     # Create the windows.
     @sprites = [Window_Help.new, Window_Diary.new]
+    @sprites[1].windowskin = RPG::Cache.windowskin("paperskinx2")#new
     if Diary::MAP_BACKGROUND
       @sprites.push(Spriteset_Map.new)
       @sprites[0].back_opacity = 160
@@ -208,8 +230,10 @@ class Scene_Diary
     @index = @keys.index(Diary.chapter_name(@chapter))
     @index = 0 if @index == nil
     # Set the information for each window.
+   
     @sprites[0].set_text(@names[@index] == nil ? '' : @names[@index], 1)
     @sprites[1].chapter = @keys[@index]
+   
     # Transition Graphics.
     Graphics.transition
     # Main loop.

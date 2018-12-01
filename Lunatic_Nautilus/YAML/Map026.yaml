@@ -258,11 +258,6 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Diary.add_entry(0, 0)
-          indent: 1
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - "\\p[0]\\na[Coda]Alright everyone. While we're on "
           indent: 1
           code: 101
@@ -287,6 +282,11 @@ root: !ruby/object:RPG::Map
           - 0
           indent: 1
           code: 123
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - new_page("trailstart")
+          indent: 1
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1

@@ -1161,11 +1161,6 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Diary.add_entry(0, 1)
-          indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 6
           - 0
           - 0
@@ -1220,6 +1215,11 @@ root: !ruby/object:RPG::Map
           - 10
           indent: 0
           code: 223
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - new_page("frieeeeee")
+          indent: 0
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0

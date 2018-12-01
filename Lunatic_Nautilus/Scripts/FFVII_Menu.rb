@@ -32,17 +32,14 @@ class Scene_Menu
      s4 = "Status"
      s5 = "Quicksave"
      s6 = "End Game"
-     s7=  "Diary"#"Cooking"
-     #s7 = "Next Day ==>" #new!!
+     s7=  "Diary"
      
-   #if ship is not docked (2) and ship can be used (3)
-   #if $game_switches[2] == false and $game_switches[3] == true and $game_map.map_id == 1
-    #change this depending on current ship
-     
+   #if coda is in the party
+   if $game_party.actors[0] == $game_actors[12]
      @command_window = Window_Command.new(160, [s1, s2, s3, s4, s5, s6, s7])
-   #else
-    # @command_window = Window_Command.new(160, [s1, s2, s3, s4, s5, s6])
-   #end
+   else
+     @command_window = Window_Command.new(160, [s1, s2, s3, s4, s5, s6])
+   end
    
      @command_window.index = @menu_index
      @command_window.x = 482
@@ -194,7 +191,9 @@ class Scene_Menu
            # Play decision SE
            $game_system.se_play($data_system.decision_se)
            # exit back to map
-           $scene =   Scene_Diary.new #Scene_Craft.new 
+           $scene = Scene_Map.new
+           $game_temp.common_event_id = 34
+           #Scene_Diary.new #Scene_Craft.new 
         end
         return
      end
