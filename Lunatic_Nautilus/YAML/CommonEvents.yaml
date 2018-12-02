@@ -4723,69 +4723,59 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[2]\\na[Vern]...h-hello."
+    - "\\p[1]\\na[???]Ah, it feels good to "
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[1]\\na[???]Oh dear, you're as red as a beet. "
+    - get some freash air...
+    indent: 1
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[2]\\na[Vern](Oh no, he's hot!)...H-Hello."
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 'I suppose my impeccable physique is rather... '
-    indent: 1
-    code: 401
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - captivating, isn't it?
-    indent: 1
-    code: 401
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - "\\p[2]\\na[Vern]y-yes actually. "
+    - "\\p[1]\\na[???]Hey there, big cat. I take it you're looking "
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - OH WHY ARE YOU SO HOT?
+    - to have some seabass for dinner?
     indent: 1
     code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\v\\p[1]\\na[???]I'm flattered! "
+    - "\\p[2]\\na[Vern]W-well yes, and the "
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 'You are rather lovely in turn. '
+    - rest of the seab too!
     indent: 1
     code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Perhaps we should make an effort to meet again?
-    indent: 1
-    code: 401
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - "\\p[2]\\na[Vern]YES!"
+    - "\\v\\p[1]\\na[???]Well, maybe if you bring flowers and a "
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[1]\\na[???]It's settled then! "
+    - 'tastier worm next time, I''ll give you that feasting you '
+    indent: 1
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - crave.
+    indent: 1
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[???]Until then, see you next time, big boy!"
     indent: 1
     code: 101
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - 'I shall see you another day. '
-    indent: 1
-    code: 401
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - Next time bring flowers. Farewell!
-    indent: 1
-    code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
     - new_page("fishman")
@@ -4865,12 +4855,12 @@ root:
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[1]\\na[???]You may call me... Aqua."
+    - "\\p[1]\\na[???]You may call me... Francis."
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[1]\\na[Aqua]I'm afraid I must be going now. "
+    - "\\p[1]\\na[Francis]I'm afraid I must be going now. "
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -4888,7 +4878,7 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[1]\\na[Aqua]...I ran out of lines."
+    - "\\p[1]\\na[Francis]...I ran out of lines."
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -7776,6 +7766,14 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: paperstack
+      pitch: 100
+    indent: 0
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - "$game_variables[28]=$diary.size"
     indent: 0
     code: 355
@@ -8060,14 +8058,9 @@ root:
     code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
-    - the current number is \v[27]
+    - 'Current page: \v[27]'
     indent: 4
     code: 101
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - the old one is \v[26]!
-    indent: 4
-    code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
     - 27
@@ -8176,6 +8169,14 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: paperstack
+      pitch: 85
+    indent: 5
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 5
     - 10
     - 0
@@ -8243,6 +8244,14 @@ root:
     - 5
     indent: 1
     code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 100
+      name: paperflip
+      pitch: 100
+    indent: 2
+    code: 250
   - !ruby/object:RPG::EventCommand
     parameters:
     - 5

@@ -330,12 +330,12 @@ root: !ruby/object:RPG::Map
           code: 121
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'If you find a Fishing Dock, '
+          - "\\p[0]\\na[Coda]A fishing spot!"
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Vern can use it to go fishing.
+          - Anyone here have a rod?
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -345,62 +345,92 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Vern]Hells yeah, a fishing spot!"
+          - "\\p[1]\\na[Vern]Are you kidding me? I've been carrying "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'If you peeps don''t mind I''d like to do some '
+          - around this Merli-rod ever since I was a boy!
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - fishing for a bit.
+          - 24
           indent: 1
-          code: 401
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]There's plenty of other fishing spots "
+          - "\\p[1]\\na[Topaz]If by fishing you mean murdering "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - higher up on the mountain. You'll get your chance.
+          - 'innocent animals, then no, I do not '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Vern]I guess you're the mountain expert "
+          - have any weapons of that sort.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 25
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Vern]Aw Pazzy, give me some slack here!"
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'around here. I''m not even sure if we got any '
+          - You know I need my meat to survive!
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - bait on hand.
+          - It's nothing personal against you!
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]Bait should be easy to locate if you can "
+          - 24
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Topaz]Fine, as long as you don't "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'find stones sticking out of the ground. '
+          - force me to eat any of it.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]The ones sticking out of the water "
+          - "\\p[0]\\na[Coda]If you want to fish, you're gonna need "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - won't have anything bait-worthy on them though.
+          - 'some bait first. Earthworms should be pretty easy to '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - find near rocks, especially near water.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]Then just go to the spot, throw in the "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - line, and you'll be reely reeling in no time!
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -2205,10 +2235,20 @@ root: !ruby/object:RPG::Map
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "\\p[0]There's two of them!"
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Score!
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 19
           - 0
           - 0
-          - 1
+          - 2
           indent: 1
           code: 126
         - !ruby/object:RPG::EventCommand

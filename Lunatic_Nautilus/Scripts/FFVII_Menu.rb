@@ -31,16 +31,9 @@ class Scene_Menu
      s3 = $data_system.words.equip
      s4 = "Status"
      s5 = "Quicksave"
-     s6 = "End Game"
-     s7=  "Diary"
-     
-   #if coda is in the party
-   if $game_party.actors[0] == $game_actors[12]
+     s6 = "Diary"
+     s7=  "End Game"
      @command_window = Window_Command.new(160, [s1, s2, s3, s4, s5, s6, s7])
-   else
-     @command_window = Window_Command.new(160, [s1, s2, s3, s4, s5, s6])
-   end
-   
      @command_window.index = @menu_index
      @command_window.x = 482
      @command_window.y = 0
@@ -59,7 +52,11 @@ class Scene_Menu
      if $game_system.save_disabled
         # Disable save
         @command_window.disable_item(4)
-     end
+      end
+      #if only allow diary if coda is there
+   if $game_party.actors[0] != $game_actors[12]
+    @command_window.disable_item(5)
+   end
      # Make play time window
      @playtime_window = Window_GoldTime.new
      @playtime_window.x = 483
@@ -182,18 +179,22 @@ class Scene_Menu
            $game_system.se_play($data_system.decision_se)
            # Switch to save screen
            $scene = Scene_Save.new
-        when 5   # end game
-           # Play decision SE
-           $game_system.se_play($data_system.decision_se)
-           # Switch to end game screen
-           $scene = Scene_End.new
-        when 6   # use cooking
+        when 5   # use diary
+             if $game_party.actors[0] != $game_actors[12]
+           # Play buzzer SE
+           $game_system.se_play($data_system.buzzer_se)
+           else
            # Play decision SE
            $game_system.se_play($data_system.decision_se)
            # exit back to map
            $scene = Scene_Map.new
            $game_temp.common_event_id = 34
-           #Scene_Diary.new #Scene_Craft.new 
+          end
+        when 6   # end game
+           # Play decision SE
+           $game_system.se_play($data_system.decision_se)
+           # Switch to end game screen
+           $scene = Scene_End.new
         end
         return
      end

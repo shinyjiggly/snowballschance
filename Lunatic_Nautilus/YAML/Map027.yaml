@@ -287,17 +287,32 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]While we will need water for cooking "
+          - "\\p[0]\\na[Coda]We will need water for cooking "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'later on, it''ll be a wiser idea to stick to puddles or '
+          - 'later on, but tread with caution when collecting '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - snow for water collection.
+          - water.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]Puddles are much safer to "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - collect from in that regard. Snow also works
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - in a pinch, but will need to be melted first.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -317,7 +332,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Collect water by facing it and pressing S!
+          - Collect water/snow by facing it and pressing S!
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1202,8 +1217,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 331
+    - 321
     - 333
-    - 0
     - 643
     - 644
     - 0
@@ -1266,7 +1281,7 @@ root: !ruby/object:RPG::Map
     - 451
     - 452
     - 331
-    - 325
+    - 333
     - 0
     - 0
     - 0
@@ -1286,7 +1301,7 @@ root: !ruby/object:RPG::Map
     - 459
     - 460
     - 0
-    - 332
+    - 0
     - 0
     - 0
     - 0

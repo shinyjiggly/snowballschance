@@ -352,9 +352,19 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Vern]Whoa, look at all the wood!"
+          - "\\p[1]\\na[Vern]Whoa, that's a lot of wood!"
           indent: 1
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'I wonder why someone "wood" '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - leave it here, ho ho...
+          indent: 1
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]Yep. we're gonna be seeing a lot of "
@@ -362,32 +372,27 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - that down here at the base.
+          - 'that down here at the base. This area '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]You know, this area used to have a "
+          - used to have a booming logging industry...
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\V\\p[0]\\na[Coda]But, It stoped being profitable for the "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - booming logging industry.
+          - 'corperation that ran the show, so they '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\V\\p[0]\\na[Coda]It stoped being profitable for the "
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'coorperation that ran the show so they packed up '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - for cheaper pastures.
+          - made like trees and left.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -422,7 +427,7 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Action/Dash button.
+          - Action button.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
