@@ -582,6 +582,18 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 250
         - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 247
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: scalesofjustice
+            pitch: 100
+          indent: 0
+          code: 241
+        - !ruby/object:RPG::EventCommand
           parameters:
           - 1
           - surprise
@@ -628,18 +640,6 @@ root: !ruby/object:RPG::Map
           - 0
           indent: 0
           code: 232
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 247
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 100
-            name: guitarnoodle_midi
-            pitch: 100
-          indent: 0
-          code: 241
         - !ruby/object:RPG::EventCommand
           parameters:
           - placeholder
@@ -716,12 +716,12 @@ root: !ruby/object:RPG::Map
           code: 655
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\v\\p[1]\\na[???]I'm not a monster! "
+          - "\\v\\p[1]\\na[???]I'm a human just like you, dammit! "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - I'm a human just like you, dammit!
+          - I'm not a monster!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -741,19 +741,14 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[???]Just because we're different "
+          - "\\p[1]\\na[???]I am not lesser just because I act "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'does not mean we are lesser! '
+          - 'differently! Get your heads out of your '
           indent: 0
           code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[1]\\na[???]Get your heads out of your "
-          indent: 0
-          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - asses and see who I really am!
@@ -771,19 +766,9 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[???]Dammit you, don't encourage them!"
+          - "\\p[1]\\na[???]Damn you, don't encourage them!"
           indent: 0
           code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'They''re just going to use that as ammunition to '
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - deny me my own humanity!
-          indent: 0
-          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - !ruby/object:Tone
@@ -832,16 +817,6 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - My ancestors were aliens.)
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0](I don't know what a glacia is, but I what"
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - do know is this person took us by suprise.)
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -901,6 +876,11 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 5
+          indent: 0
+          code: 242
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\v\\p[0]\\na[Coda]Hold on, don't I get a say in this?"
           indent: 0
           code: 101
@@ -941,11 +921,6 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 5
-          indent: 0
-          code: 242
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - "\\p[0]\\na[Coda]My name's Coda by the way. "
           indent: 0
           code: 101
@@ -969,6 +944,10 @@ root: !ruby/object:RPG::Map
           - A gamer on occasion too.
           indent: 0
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 248
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[4]\\na[Vern]And I'm Vern! "
@@ -1086,6 +1065,10 @@ root: !ruby/object:RPG::Map
           - "\\p[1]\\na[Frie]Nice to meet you."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 247
         - !ruby/object:RPG::EventCommand
           parameters:
           - !ruby/object:RPG::AudioFile
