@@ -1261,9 +1261,9 @@ class Game_Ally < Game_Character
   def update_movement_class_position
     # Branch based on actor's class position
     case $data_classes[$game_party.actors[@actor_index].class_id].position
-    when 0 ; move_toward_player if !in_range?(2)  # Front Position
-    when 1 ; move_toward_player if !in_range?(3)  # Middle Position
-    when 2 ; move_toward_player if !in_range?(4)  # Rear Position
+    when 0 ; move_toward_player if !in_range?(1)  # Front Position
+    when 1 ; move_toward_player if !in_range?(2)  # Middle Position
+    when 2 ; move_toward_player if !in_range?(3)  # Rear Position
     end
   end
   #--------------------------------------------------------------------------

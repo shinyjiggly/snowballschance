@@ -197,32 +197,66 @@ class Game_Character
     sx = @x - $game_player.x
     sy = @y - $game_player.y
     # If coordinates are equal
-    if sx == 0 and sy == 0
-      return
+    #if sx == 0 and sy == 0
+    #  return
+    #end
+    if sx > 0 
+      if@x-1 != nil
+        if $game_map.terrain_tag(@x-1 , @y) != 1
+          move_left
+        end
+      end
+    else
+      if sx < 0 
+       if@x+1 != nil
+		      if $game_map.terrain_tag(@x+1 , @y) != 1
+              move_right
+            end
+          end
+        end
     end
+    if not moving?
+      if sy > 0 
+      if@y-1 != nil
+        if $game_map.terrain_tag(@x , @y-1) != 1
+          move_up
+        end
+      end
+    else
+      if sy < 0 
+       if@y+1 != nil
+		      if $game_map.terrain_tag(@x, @y+1) != 1
+              move_down
+            end
+          end
+        end
+      end
+      
+    end
+    moved = 0
     # Get absolute value of difference
     abs_sx = sx.abs
     abs_sy = sy.abs
     # If horizontal and vertical distances are equal
-    if abs_sx == abs_sy
+    #if abs_sx == abs_sy
       # Increase one of them randomly by 1
-      rand(2) == 0 ? abs_sx += 1 : abs_sy += 1
-    end
+      #rand(2) == 0 ? abs_sx += 1 : abs_sy += 1
+    #end
     # If horizontal distance is longer
-    if abs_sx > abs_sy
+    #if abs_sx > abs_sy
       # Move towards player, prioritize left and right directions
-      sx > 0 ? move_left : move_right
-      if not moving? and sy != 0
-        sy > 0 ? move_up : move_down
-      end
+      #sx > 0 ? move_left : move_right
+      #if not moving? and sy != 0
+       # sy > 0 ? move_up : move_down
+      #end
     # If vertical distance is longer
-    else
+    #else
       # Move towards player, prioritize up and down directions
-      sy > 0 ? move_up : move_down
-      if not moving? and sx != 0
-        sx > 0 ? move_left : move_right
-      end
-    end
+      #sy > 0 ? move_up : move_down
+      #if not moving? and sx != 0
+        #sx > 0 ? move_left : move_right
+      #end
+    #end
   end
   #--------------------------------------------------------------------------
   # * Move away from Player

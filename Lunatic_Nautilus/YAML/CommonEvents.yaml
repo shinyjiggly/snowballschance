@@ -2494,6 +2494,15 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 30
+    - 30
+    - 1
+    - 0
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(1)
     indent: 0
     code: 355
@@ -2579,6 +2588,74 @@ root:
     code: 106
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 1
+    - 30
+    - 0
+    - 1
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[Topaz]Hey! Did someone"
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - push me over!?
+    indent: 1
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[3]\\na[Frie]Wasn't me."
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[2]\\na[Vern]W-well it wasn't me! I'm sorry..."
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(1)
     indent: 0
     code: 355
@@ -2616,9 +2693,8 @@ root:
     code: 250
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 8
+    - 12
+    - "$game_map.terrain_tag($game_player.x , $game_player.y+1) != 1"
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -2658,9 +2734,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 4
+    - 12
+    - "$game_map.terrain_tag($game_player.x-1 , $game_player.y)"
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -2700,9 +2775,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 6
+    - 12
+    - "$game_map.terrain_tag($game_player.x+1 , $game_player.y)"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -2742,9 +2816,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 2
+    - 12
+    - "$game_map.terrain_tag($game_player.x , $game_player.y-1)"
     indent: 3
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -2856,6 +2929,15 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 31
+    - 31
+    - 1
+    - 0
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(2)
     indent: 0
     code: 355
@@ -2941,6 +3023,46 @@ root:
     code: 106
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 1
+    - 31
+    - 0
+    - 1
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[2]\\na[Vern]Brrrrr! That is COLD! Good thing my fur "
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - keeps it all out, heh.
+    indent: 1
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[0]\\na[Coda]Need a hand?"
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(2)
     indent: 0
     code: 355
@@ -2978,9 +3100,8 @@ root:
     code: 250
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 8
+    - 12
+    - "$game_map.terrain_tag($game_player.x , $game_player.y+1) != 1"
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3020,9 +3141,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 4
+    - 12
+    - "$game_map.terrain_tag($game_player.x-1 , $game_player.y) != 1"
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3062,9 +3182,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 6
+    - 12
+    - "$game_map.terrain_tag($game_player.x+1 , $game_player.y) != 1"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3104,9 +3223,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 2
+    - 12
+    - "$game_map.terrain_tag($game_player.x , $game_player.y-1) != 1"
     indent: 3
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3218,6 +3336,15 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 32
+    - 32
+    - 1
+    - 0
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(3)
     indent: 0
     code: 355
@@ -3303,6 +3430,36 @@ root:
     code: 106
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 1
+    - 32
+    - 0
+    - 1
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[4]\\na[Frie]Ugh."
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(3)
     indent: 0
     code: 355
@@ -3340,9 +3497,8 @@ root:
     code: 250
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 8
+    - 12
+    - "$game_map.terrain_tag($game_player.x , $game_player.y+1) != 1"
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3382,9 +3538,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 4
+    - 12
+    - "$game_map.terrain_tag($game_player.x-1 , $game_player.y) != 1"
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3424,9 +3579,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 6
+    - 12
+    - "$game_map.terrain_tag($game_player.x+1 , $game_player.y) != 1"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -3466,9 +3620,8 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 6
-    - -1
-    - 2
+    - 12
+    - "$game_map.terrain_tag($game_player.x , $game_player.y-1) != 1"
     indent: 3
     code: 111
   - !ruby/object:RPG::EventCommand
