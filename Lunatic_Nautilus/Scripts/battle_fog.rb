@@ -39,11 +39,13 @@ class Scene_Battle
  
   alias tdks_battle_fog_init initialize
   def initialize(*args)
+    if $BTEST==false
     tdks_battle_fog_init(*args)
     tmp = $scene.spriteset.fog
     if tmp.bitmap!=nil
     @fog = tmp.bitmap.clone
     @fog_settings = [tmp.ox, tmp.oy, tmp.zoom_x, tmp.zoom_y, tmp.opacity, tmp.blend_type, tmp.tone.clone, tmp.color.clone, $game_map.fog_sx, $game_map.fog_sy]
+      end
     end
   end
 end

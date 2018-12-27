@@ -5,7 +5,7 @@
 # This script allows to set chance of advantages and disvantages (back attack,
 # surprised...) occur on the begin of the battle
 #==============================================================================
-
+=begin
 module Atoa
   # Do not remove these lines
   Advantage_Actions = {}
@@ -705,3 +705,4 @@ class Scene_Battle
     return false
   end
 end
+=end

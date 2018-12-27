@@ -1,4 +1,4 @@
----
+--- !ruby/object:Hash
 root:
 - 
 - !ruby/object:RPG::CommonEvent
@@ -6286,6 +6286,7 @@ root:
     parameters:
     - - Plain dish
       - Basic dish
+      - Special Dish
     - 0
     indent: 0
     code: 102
@@ -6598,6 +6599,57 @@ root:
     parameters: []
     indent: 1
     code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - Special Dish
+    indent: 0
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 12
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 5
+    indent: 2
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have a Calzone!
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
@@ -8727,12 +8779,17 @@ root:
     parameters: []
     indent: 0
     code: 0
-  trigger: 2
+  trigger: 0
   switch_id: 12
   id: 35
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: no voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'message.sound_audio = ''null'' '
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -8741,8 +8798,13 @@ root:
   switch_id: 1
   id: 36
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: coda voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'message.sound_audio = ''coda'' '
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -8751,8 +8813,13 @@ root:
   switch_id: 1
   id: 37
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: low voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'message.sound_audio = ''midlow'' '
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -8761,8 +8828,13 @@ root:
   switch_id: 1
   id: 38
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: frie voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'message.sound_audio = ''frie'' '
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -8771,8 +8843,13 @@ root:
   switch_id: 1
   id: 39
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: topaz voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'message.sound_audio = ''bip'' '
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

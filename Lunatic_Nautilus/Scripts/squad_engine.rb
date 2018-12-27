@@ -1746,6 +1746,7 @@ class Scene_Battle
   # * Remove actors flagged with the force_wait
   #--------------------------------------------------------------------------
   def remove_wait_actors
+    if $BTEST==false
     # Temporary holder array for force_wait members
     @wait_holder = []
     # Remove battle states
@@ -1758,6 +1759,7 @@ class Scene_Battle
       @wait_holder.push([i,actor])
       # Temporarily erase the actor from the party
       $game_party.actors.delete_at(i)
+    end
     end
   end
   #--------------------------------------------------------------------------

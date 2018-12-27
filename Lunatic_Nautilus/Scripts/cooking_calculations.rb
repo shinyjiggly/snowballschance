@@ -12,6 +12,7 @@ class Cookcalc
   [0,2] => 17,
   [0,3] => 19,
   [0,4] => 21,
+  [0,5] => 25,
   #poisoned
   [1,0] => 31,
   [1,1] => 32,
@@ -151,6 +152,8 @@ elsif @ingre== 3
   $game_party.lose_item(22, 1) #fish
 elsif @ingre== 4
   $game_party.lose_item(19, 1) #worm
+elsif @ingre== 5
+  $game_party.lose_item(12, 1) #calzone
 else
   p "what the hell did you put in your ingredience?"
   end
