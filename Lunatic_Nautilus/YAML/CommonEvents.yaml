@@ -1,4 +1,4 @@
---- !ruby/object:Hash
+---
 root:
 - 
 - !ruby/object:RPG::CommonEvent
@@ -2656,6 +2656,66 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 1
+    - 30
+    - 0
+    - 2
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[Topaz]This isn't funny!"
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 30
+    - 0
+    - 3
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[Topaz]AAAAA"
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(1)
     indent: 0
     code: 355
@@ -3063,6 +3123,66 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 1
+    - 31
+    - 0
+    - 2
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[2]\\na[Vern]I'm still good!"
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 31
+    - 0
+    - 3
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[2]\\na[Vern]Okay, this cold is starting to get old!"
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - MOVEROUTE_Member(2)
     indent: 0
     code: 355
@@ -3440,6 +3560,66 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - "\\p[4]\\na[Frie]Ugh."
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 32
+    - 0
+    - 2
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[4]\\na[Frie]Whoops."
+    indent: 1
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 32
+    - 0
+    - 3
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[4]\\na[Frie]Meant to do that."
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -8521,14 +8701,34 @@ root:
   switch_id: 1
   id: 34
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: stop moving
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &109 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 10
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 0
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *109
+    indent: 0
+    code: 509
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
     code: 0
-  trigger: 0
-  switch_id: 1
+  trigger: 2
+  switch_id: 12
   id: 35
 - !ruby/object:RPG::CommonEvent
   name: ''
