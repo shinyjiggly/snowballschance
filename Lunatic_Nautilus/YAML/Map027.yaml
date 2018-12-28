@@ -1,10 +1,10 @@
----
+--- !ruby/object:Hash
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events:
+  events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -315,6 +315,11 @@ root: !ruby/object:RPG::Map
           - but it'll need to be melted first.
           indent: 1
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'Note: Coda takes far more damage from falling into '

@@ -387,6 +387,11 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[0]\\na[Coda]I was kinda hoping to pick up some "
           indent: 1
           code: 101
@@ -397,9 +402,19 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 39
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[1]\\na[Frie]Wait, do you eat worms?"
           indent: 1
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]Uh, yeah. Sort of a traditional temporic "
@@ -417,9 +432,19 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 39
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[1]\\na[Frie]...That's hardcore as hell."
           indent: 1
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda](Me? Hardcore? Is my facade really "
@@ -535,6 +560,11 @@ root: !ruby/object:RPG::Map
           - check if the water is frozen first
           indent: 0
           code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - Would you like to fish?
@@ -2164,7 +2194,7 @@ root: !ruby/object:RPG::Map
         walk_anime: true
         move_speed: 3
         through: false
-      name: " "
+      name: fishing
       y: 9
       x: 5
       id: 2
@@ -2172,6 +2202,11 @@ root: !ruby/object:RPG::Map
       pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]Collect Worms?"
@@ -2190,6 +2225,16 @@ root: !ruby/object:RPG::Map
           - 'Yes'
           indent: 0
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]There's 4 of them! Score!"
+          indent: 1
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 19

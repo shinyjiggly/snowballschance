@@ -104,14 +104,6 @@ root: !ruby/object:RPG::Map
           code: 231
         - !ruby/object:RPG::EventCommand
           parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 80
-            name: Crackling_Fireplace
-            pitch: 100
-          indent: 0
-          code: 245
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 0
           - 73
           - 6
@@ -120,6 +112,10 @@ root: !ruby/object:RPG::Map
           - 0
           indent: 0
           code: 201
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 248
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -168,9 +164,19 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 36
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - Do you want to go to bed yet?
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(This will end the demo!)"
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - - 'Yes'
@@ -184,6 +190,61 @@ root: !ruby/object:RPG::Map
           - 'Yes'
           indent: 0
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          indent: 1
+          code: 242
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &1 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 16
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 1
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *1
+          indent: 1
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]Yaaawwnnn...\\."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Goodnight everyone!
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 20
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 17
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 42
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
@@ -418,6 +479,13 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 20
+          - 20
+          - 0
+          indent: 1
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 12
           - 3
           - 0
@@ -510,8 +578,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV004
-      y: 8
-      x: 8
+      y: 6
+      x: 9
       id: 4
   tileset_id: 12
   bgs: !ruby/object:RPG::AudioFile

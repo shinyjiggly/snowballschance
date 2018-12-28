@@ -580,6 +580,11 @@ root: !ruby/object:RPG::Map
           code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 36
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - Would you like to fish?
           indent: 0
           code: 101
@@ -1318,6 +1323,11 @@ root: !ruby/object:RPG::Map
           code: 224
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 36
+          indent: 2
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "...?!???!?!????"
           indent: 2
           code: 101
@@ -1744,6 +1754,11 @@ root: !ruby/object:RPG::Map
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
+          - boote
+          indent: 4
+          code: 118
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 1
           - 40
           indent: 4
@@ -1944,9 +1959,9 @@ root: !ruby/object:RPG::Map
           parameters:
           - 29
           - 29
+          - 1
           - 0
-          - 0
-          - 4
+          - 1
           indent: 4
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -1957,6 +1972,41 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 3
           code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 24
+          - 0
+          - 5
+          - 3
+          indent: 4
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - fish
+          indent: 5
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - boote
+          indent: 5
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 4
@@ -2199,7 +2249,7 @@ root: !ruby/object:RPG::Map
         walk_anime: true
         move_speed: 3
         through: false
-      name: " "
+      name: sparkle
       y: 4
       x: 5
       id: 2
@@ -2207,6 +2257,11 @@ root: !ruby/object:RPG::Map
       pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]Collect Worm?"
@@ -2225,6 +2280,11 @@ root: !ruby/object:RPG::Map
           - 'Yes'
           indent: 0
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]There's four of them!"

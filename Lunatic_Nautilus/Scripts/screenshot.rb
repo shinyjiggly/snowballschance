@@ -20,13 +20,14 @@ module Screen
 
   def shot(file = 'Screenshot_', typ = 2)
     
-    Audio.se_play('Audio/SE/phshmash', 100, 100)
+    Audio.se_play('Audio/SE/camera', 100, 100)
     
     typname = typ == 0 ? '.bmp' : typ == 1 ? '.jpg' : '.png'
     @file_index = 0
     @file_index += 1 while FileTest.exist?('Snapshots/' + file + @file_index.to_s + typname)
     file_name = 'Snapshots/' + file + @file_index.to_s + typname
     @screen.call(0,0,640,480,file_name,handel,typ)
+    
   end
 
   def handel

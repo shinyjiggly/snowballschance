@@ -35,7 +35,7 @@ class Window_Popup < Window_Base
     # Define shortcuts for displaying text
       when 0 then 'Quicksave file deleted! Remember to save again!'
       when 1 then 'New Diary Entry!'
-      when 2 then 'Acquired'
+      when 2 then 'Screenshot saved!'
     end
 #=============================================================================
 # END CUSTOMIZATION
