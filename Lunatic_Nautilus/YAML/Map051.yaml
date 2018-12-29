@@ -1,10 +1,10 @@
---- !ruby/object:Hash
+---
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: trialmountain
     pitch: 100
-  events: !ruby/object:Hash
+  events:
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -321,6 +321,11 @@ root: !ruby/object:RPG::Map
           - 1
           indent: 0
           code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\na[Coda]\\p[0]Welcome to the Tree Fields."

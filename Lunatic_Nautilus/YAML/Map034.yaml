@@ -1,10 +1,10 @@
---- !ruby/object:Hash
+---
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events: !ruby/object:Hash
+  events:
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -330,6 +330,11 @@ root: !ruby/object:RPG::Map
           code: 121
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[0]\\na[Coda]A fishing spot!"
           indent: 1
           code: 101
@@ -345,6 +350,11 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 38
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\v\\p[1]\\na[Vern]Are you kidding me? I've been "
           indent: 1
           code: 101
@@ -356,6 +366,11 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 24
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 40
           indent: 1
           code: 117
         - !ruby/object:RPG::EventCommand
@@ -380,6 +395,11 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 38
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[1]\\na[Vern]Aw, Pazzy, give me some slack here!"
           indent: 1
           code: 101
@@ -400,6 +420,11 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 40
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[1]\\na[Topaz]Fine, as long as you don't "
           indent: 1
           code: 101
@@ -408,6 +433,11 @@ root: !ruby/object:RPG::Map
           - force me to eat any of it. \v
           indent: 1
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]If you want to fish, you're gonna need "
@@ -1715,7 +1745,7 @@ root: !ruby/object:RPG::Map
           code: 224
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Yes! got it!
+          - Yes! Got it!
           indent: 3
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2282,7 +2312,7 @@ root: !ruby/object:RPG::Map
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 37
+          - 36
           indent: 1
           code: 117
         - !ruby/object:RPG::EventCommand
