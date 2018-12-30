@@ -28,6 +28,10 @@ module Screen
     file_name = 'Snapshots/' + file + @file_index.to_s + typname
     @screen.call(0,0,640,480,file_name,handel,typ)
     
+        #show special message
+#$game_temp.common_event_id = 45
+#get this bitch working
+
   end
 
   def handel

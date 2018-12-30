@@ -11,20 +11,6 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 1
-          - nightshadex2
-          - 0
-          - 0
-          - 0
-          - 0
-          - 100
-          - 100
-          - 0
-          - 0
-          indent: 0
-          code: 231
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 0
           - starsx2
           - 0
@@ -33,7 +19,7 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
-          - 50
+          - nightshadex2
           - 0
           - 0
           - 0
@@ -43,22 +29,37 @@ root: !ruby/object:RPG::Map
           - 255
           - 0
           indent: 0
-          code: 232
+          code: 231
         - !ruby/object:RPG::EventCommand
           parameters:
           - !ruby/object:Tone
-            red: 0.0
-            green: 0.0
-            blue: 0.0
-            gray: 0.0
-          - 120
+            red: 17.0
+            green: -51.0
+            blue: -119.0
+            gray: 85.0
+          - 1
           indent: 0
           code: 223
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - 150
           indent: 0
           code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\Name[Coda]\\P[6]...mom,\\. "
@@ -71,12 +72,17 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 43
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\Name[Mom]\\P[5]I'm going to read you "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'something special tonight.\. It''s called '
+          - 'that book your father sent.\. It''s called '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -86,7 +92,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Mom]\\P[5]I figured since you're a temporic, "
+          - "\\Name[Mom]\\P[5]He figured since you're a temporic, "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -96,7 +102,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - about your own people.
+          - 'about your own people or something like that. '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -112,14 +118,9 @@ root: !ruby/object:RPG::Map
           code: 104
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.show_tail = false
+          - 36
           indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - message.floating = false
-          indent: 0
-          code: 655
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'Once upon a time, the temporics, the '
@@ -162,14 +163,9 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.show_tail = true
+          - 37
           indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - message.floating = true
-          indent: 0
-          code: 655
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - \Name[Coda]\P[6]"tempority"?\. what's that?
@@ -177,37 +173,22 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\Name[Mom]\\P[5]uhhh...\\. You know how humans "
+          - 43
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\Name[Mom]\\P[5]Hell if I know, I'm just reading this. "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'always go on and on about their humanity?\. '
+          - Sounds like a made-up word.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - That thing that supposedly makes them special?
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\Name[Mom]\\P[5]Temporics have a similar concept "
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'they identify as their special thing.\. '
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - It's probably about the same.
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\Name[Coda]\\P[6]huh..."
+          - "\\Name[Coda]\\P[6]..."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -217,14 +198,9 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.show_tail = false
+          - 36
           indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - message.floating = false
-          indent: 0
-          code: 655
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'The temporics, for as long as they '
@@ -263,6 +239,21 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - The people of time treasured this.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'Jikan''s tempority took on a life of their '
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'own and even a new name. '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - They became known as 'Oren.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -307,22 +298,17 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'So Jikan''s Tempority led the adults '
+          - 'So ''Oren led the adults in a grand battle '
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'in a grand battle against Jikan. '
+          - 'against Jikan. They knew they would not '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'They knew they would not win against '
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'time itself, but they had to fight. '
+          - 'win against time itself, but they had to fight. '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -342,11 +328,6 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - ''
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 'Their children flew away in a great '
           indent: 0
           code: 101
@@ -362,11 +343,6 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - ''
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 'Some say that the temporics of old '
           indent: 0
           code: 101
@@ -377,14 +353,9 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.show_tail = true
+          - 37
           indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - message.floating = true
-          indent: 0
-          code: 655
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
@@ -450,6 +421,11 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 43
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\Name[Mom]\\P[5]I doubt it.\\. "
           indent: 0
           code: 101
@@ -494,14 +470,19 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'flowery high concept stuff.\. I probably picked '
+          - 'flowery high concept stuff. No wonder your father '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - something too hard for you to understand.
+          - couldn't raise you.
           indent: 0
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\Name[Coda]\\P[6]..."
@@ -538,6 +519,11 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 43
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\Name[Mom]\\P[5]I'm glad to hear.\\. "
           indent: 0
           code: 101
@@ -551,6 +537,11 @@ root: !ruby/object:RPG::Map
           - Goodnight,\. my dear.
           indent: 0
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\Name[Coda]\\P[6]Goodnight..."
@@ -659,6 +650,11 @@ root: !ruby/object:RPG::Map
           parameters:
           - 10
           indent: 0
+          code: 246
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
           code: 242
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -672,79 +668,74 @@ root: !ruby/object:RPG::Map
           code: 235
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.show_tail = false
-          indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - message.floating = false
-          indent: 0
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "...\\.it's been many years since then...\\. "
+          - "...Why do I keep thinking back to this?"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'My horns have since grown in,\. but I''m not '
+          - How many years ago did that even happen?
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - sure if I'm entirely grown up yet though...
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'I hope one day I''ll be able to escape this place, '
+          - 'At least I won''t have to live with her once I climb this '
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - and find a world of sunshine and happiness.\.
+          - 'mountain. I''ll be able to leave her and this freezing '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - My cooking will have to do until then.
+          - island behind.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.show_tail = true
+          - 'Maybe I can even try and reconnect with my father? '
           indent: 0
-          code: 355
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - message.floating = true
+          - 'As cruddy of a parent he was, at least he cared '
           indent: 0
-          code: 655
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 10
+          - about me.
           indent: 0
-          code: 106
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 0
-          - 23
-          - 8
-          - 6
-          - 2
-          - 0
+          - He gave me a gift I'll never forget.
           indent: 0
-          code: 201
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - !ruby/object:Tone
-            red: 0.0
-            green: 0.0
-            blue: 0.0
-            gray: 0.0
-          - 20
+          - The gift of curiosity. The gift of waunderlust.
           indent: 0
-          code: 223
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - The desire to expand my horizons.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'Tomorrow''s another day, and I plan on getting closer '
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - to that horizon.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 42
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -795,6 +786,35 @@ root: !ruby/object:RPG::Map
       pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 23
+          - 8
+          - 6
+          - 2
+          - 0
+          indent: 0
+          code: 201
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:Tone
+            red: 0.0
+            green: 0.0
+            blue: 0.0
+            gray: 0.0
+          - 20
+          indent: 0
+          code: 223
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 116
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -886,9 +906,9 @@ root: !ruby/object:RPG::Map
   tileset_id: 8
   bgs: !ruby/object:RPG::AudioFile
     volume: 30
-    name: oceanloop
-    pitch: 60
-  autoplay_bgm: true
+    name: Nature Ambiance-SoundBible1444637890
+    pitch: 130
+  autoplay_bgm: false
   data: !ruby/object:Table
     dim: 3
     zsize: 3
@@ -1795,7 +1815,7 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-  autoplay_bgs: false
+  autoplay_bgs: true
   height: 15
   encounter_step: 30
   width: 20

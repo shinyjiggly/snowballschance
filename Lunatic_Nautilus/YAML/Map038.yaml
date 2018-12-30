@@ -147,6 +147,61 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 36
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Cozio bus stop
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 678
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - Where are you going?
           indent: 0
           code: 101
@@ -249,10 +304,10 @@ root: !ruby/object:RPG::Map
           self_switch_ch: A
           switch1_id: 1
           switch1_valid: false
-          variable_value: 0
+          variable_value: 2
           self_switch_valid: false
-          variable_id: 1
-          variable_valid: false
+          variable_id: 2
+          variable_valid: true
           switch2_id: 1
         move_route: !ruby/object:RPG::MoveRoute
           list:
@@ -1431,12 +1486,12 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'That''s Vern and Topaz, my clients. '
+          - 'That''s Vern and Topaz, my two clients. '
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Topaz is an actor. they perform at the Iliana theatre.
+          - 'Topaz is an actor, they perform at the Iliana Theatre. '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1451,12 +1506,12 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'ever respected their nonbinary gender. '
+          - 'ever respected their gender. Being non-binary isn''t '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - No big deal to me.
+          - too much of a big deal to me.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1471,7 +1526,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - He seems pretty nice though.
+          - He seems pretty nice, though.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1489,6 +1544,26 @@ root: !ruby/object:RPG::Map
           - 20
           indent: 1
           code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &51 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 16
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 1
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *51
+          indent: 1
+          code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - "\\p[0]\\na[Coda]Welcome to Cozio! "
@@ -1513,6 +1588,21 @@ root: !ruby/object:RPG::Map
           - 0
           indent: 1
           code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]I think I drew a map in my diary somewhere... "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'It''s available from the menu. '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Gotta press X or ESC for that.
+          indent: 1
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1

@@ -41,7 +41,7 @@ module TSS
   #===========================================================================
   #Terrains[0] = ['001-System01', '002-System02', '003-System03']
   #Terrains[1] = ['fs_wood_hard1'] #water
-  Terrains[2] = ['shwee'] #ice
+  #Terrains[2] = ['shwee'] #ice
 
   #===========================================================================
   # If you would like to specifiy a volume and pitch, simply set the
