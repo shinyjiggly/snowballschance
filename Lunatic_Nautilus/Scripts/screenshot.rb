@@ -29,7 +29,9 @@ module Screen
     @screen.call(0,0,640,480,file_name,handel,typ)
     
         #show special message
-#$game_temp.common_event_id = 45
+    unless $scene.is_a?(Scene_Title) or $scene.is_a?(Scene_Splash)
+      $game_temp.common_event_id = 45
+    end
 #get this bitch working
 
   end

@@ -40,7 +40,7 @@
 #  - Please be sure to report any bugs/issues with the script. Enjoy!
 #
 #+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-
+=begin
 module Diary
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 #                         BEGIN CONFIGURATION
@@ -284,3 +284,4 @@ class Game_Party
     @diary = {}
   end
 end
+=end

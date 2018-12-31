@@ -1,6 +1,6 @@
 #--------------------------------------
 # check terrain tag in front of player
-# By shinyjiggly
+# By lavendersiren
 #-------------------------------------
 class Terrain_Bluh < Game_Map
 

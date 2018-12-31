@@ -53,6 +53,12 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
+    - -1
+    - 6
+    indent: 2
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 9
     - 1
     - 0
@@ -111,6 +117,12 @@ root:
     - 'Yes'
     indent: 2
     code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - 6
+    indent: 3
+    code: 207
   - !ruby/object:RPG::EventCommand
     parameters:
     - 9
@@ -1900,6 +1912,21 @@ root:
     indent: 2
     code: 355
   - !ruby/object:RPG::EventCommand
+    parameters:
+    - 37
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(I wonder if I could unfreeze it... "
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - I can use fire magic after all...)
+    indent: 2
+    code: 401
+  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
     code: 0
@@ -1953,6 +1980,11 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
+    - Water
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 12
     indent: 2
     code: 117
@@ -1983,6 +2015,11 @@ root:
     - 0
     indent: 2
     code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Ice
+    indent: 3
+    code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
     - -1
@@ -2054,6 +2091,11 @@ root:
     - 0
     indent: 3
     code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Puddle
+    indent: 4
+    code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
@@ -3121,6 +3163,11 @@ root:
     - keeps it all out, heh.
     indent: 1
     code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 37
+    indent: 1
+    code: 117
   - !ruby/object:RPG::EventCommand
     parameters:
     - "\\p[0]\\na[Coda]Need a hand?"
@@ -4341,7 +4388,7 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Collect Water?
+    - "\\p[0]Collect Water?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -4512,7 +4559,7 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Collect Water?
+    - "\\p[0]Collect Water?"
     indent: 4
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -4573,9 +4620,146 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 1
+    - 24
+    - 24
+    - 0
+    - 6
+    - -1
+    - 5
     indent: 5
-    code: 117
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if player is on stable ground
+    indent: 5
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 2
+    - 5
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[0]Would you like to thaw the ice?"
+    indent: 6
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - 'Yes'
+      - 'No'
+    - 2
+    indent: 6
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 'Yes'
+    indent: 6
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_actors[12].sp >= 1"
+    indent: 7
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    indent: 8
+    code: 312
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - false
+    indent: 8
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 8
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - 6
+    indent: 7
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 15
+    - 1
+    indent: 7
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 14
+    - 14
+    - 1
+    indent: 7
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.replace_tile(3,4,-1,true)"
+    indent: 7
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.replace_tile(224,225,-"
+    indent: 7
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1,false)
+    indent: 7
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 'No'
+    indent: 6
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 5
@@ -4668,7 +4852,7 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 'message.sound_audio = ''midlow'' '
+    - 'message.sound_audio = ''vern'' '
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
@@ -6623,6 +6807,11 @@ root:
     indent: 2
     code: 122
   - !ruby/object:RPG::EventCommand
+    parameters:
+    - no shroom
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
     code: 0
@@ -6913,6 +7102,11 @@ root:
     - No shrooms, skip
     indent: 2
     code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - no shroom
+    indent: 2
+    code: 118
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
@@ -8781,7 +8975,7 @@ root:
   switch_id: 1
   id: 34
 - !ruby/object:RPG::CommonEvent
-  name: stop moving
+  name: lock coda in place
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -8795,7 +8989,7 @@ root:
         parameters: []
         code: 0
       skippable: false
-      repeat: false
+      repeat: true
     indent: 0
     code: 209
   - !ruby/object:RPG::EventCommand
@@ -8841,11 +9035,11 @@ root:
   switch_id: 1
   id: 37
 - !ruby/object:RPG::CommonEvent
-  name: low voice
+  name: vern voice
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 'message.sound_audio = ''midlow'' '
+    - 'message.sound_audio = ''vern'' '
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
@@ -10304,27 +10498,482 @@ root:
     code: 104
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "~Credits~"
+    - "                   ~Credits~"
     indent: 0
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - A Snowball's chance
+    - '"A Snowball''s chance"'
     indent: 0
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - by Fallingstar Games
+    - A game by Fallingstar Games
     indent: 0
     code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
-    - add more credits here later
+    - Nyx Solomon
     indent: 0
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Thank you for playing our game!
+    - Niki "lavendersiren" Card
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - '"BisexualCommando" Rhesus'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Blaze "wertercatt" Marshall
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Art Team
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - lavendersiren
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Mintakablue
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - '"Crispy"'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Sound design
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Nearly every general sound effect
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: lavendersiren'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Crackling Fireplace
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Daniel Simion'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Nature Ambiance
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: nille'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Voice acting
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - lavendersiren - Coda, npc's, bip
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Nyx Solomon - Frie, Francis
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Rhesus - Topaz, Vern
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Music
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - lavendersiren
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Nyx Solomon
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "                --Scripts Used--"
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Atoa Custom Battle System '
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Victor Saint (Previously Atoa)'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - HP Sacrifice
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: LockeZ'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - RGSS Linker (Kernel)
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Audio (FmodEx)
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Nuri Yuri'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'LOOP_TABLE: GiraPrimal'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - FMOD Ex Audio
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Hiretsukan (Kevin Gadd)'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Enhanced by: RPG/Cowlol '
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(Firas Assad)"
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Super Simple Font Shadow v1.3 '
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: gaMefaCe'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Splash Script
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - By :rm-rf and Lambchops
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Battle fogs
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Thallion'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - FFVII Style Menu
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: FF12_Master'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Popup Window '
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Regi'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Anti Event Lag Script
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Near Fantastica'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Zer0 Advanced Title '
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: ForeverZer0'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Pausing with F12
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Zeriab'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Catergorized Items Menu
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: albertfish'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Replace Tile AddOn
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Wecoc'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Large Party
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Dargor'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - LAZY LADDER
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Anh Nguyen'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Multiple Message Windows
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Wachunga and Heretic'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Heretic's Lightning
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Heretic'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Transition Pack
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Temp Save
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Fantasist'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Path Finding
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Near Fantastica'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Enhanced Squad Movement
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: DerVVulfman and Near Fantastica'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Buy-Only and Sell-Only Shops '
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Autoscrolling Panoramas
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: RPG Advocate'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Faces on menu
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Klaudius 84'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Your Very Own Hud '
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Kiriashi'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Sprite_Shadow (Sprite_Ombre)
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Genzai Kawakami, dynamisme, '
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Rataime, and Boushy
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Screenshot Script v1 & screenshot.dll '
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Andreas21'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'Screenshot Script v2 '
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: cybersam and MauMau'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Diary array
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: lavendersiren and Marrend (and Jaiden)'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Cooking calculations
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'By: Theo and lavendersiren'
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Special thanks
+    indent: 0
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - twistedCaliber (SBARG creator)
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - timeTravlur (temporic stuff)
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Cyrus "c10h14n2" Lopez
+    indent: 0
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "...and you!"
     indent: 0
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -10383,6 +11032,11 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 2
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - popup(2, nil, 0)
     indent: 0
     code: 355
@@ -10398,7 +11052,7 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
-    - message.sound_audio = 'nyeh'
+    - message.sound_audio = 'francis'
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
@@ -10409,8 +11063,220 @@ root:
   switch_id: 1
   id: 46
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: level one swipey
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &94 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 10
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: true
+    indent: 0
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *94
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - levelcircle
+    - 0
+    - 0
+    - -640
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - levelone
+    - 0
+    - 0
+    - 640
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - leveltriangle
+    - 0
+    - 0
+    - 0
+    - 480
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 10
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 10
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 10
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 50
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 10
+    - 0
+    - 0
+    - 640
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 10
+    - 0
+    - 0
+    - -640
+    - 0
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 10
+    - 0
+    - 0
+    - 0
+    - -480
+    - 100
+    - 100
+    - 255
+    - 0
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 20
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    indent: 0
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    indent: 0
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    indent: 0
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &95 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 1
+        code: 15
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 0
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *95
+    indent: 0
+    code: 509
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

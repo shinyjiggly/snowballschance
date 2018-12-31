@@ -1,10 +1,10 @@
----
+--- !ruby/object:Hash
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events:
+  events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -342,12 +342,27 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Collect water/snow by facing it and pressing S!
+          - 'Collect water/snow by facing it '
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "(Another note: Coda will take cold damage from "
+          - and pressing S!
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(Collected snow can be melted in item menu)"
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(Another note: "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'Coda will take cold damage from '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand

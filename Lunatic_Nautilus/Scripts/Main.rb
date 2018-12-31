@@ -11,7 +11,7 @@ begin
   # Prepare for transition
   Graphics.freeze
   # Make scene object (title screen)
-  $scene = Scene_Title.new
+  $scene = Scene_Splash.new
   # Call main method as long as $scene is effective
   while $scene != nil
     $scene.main
