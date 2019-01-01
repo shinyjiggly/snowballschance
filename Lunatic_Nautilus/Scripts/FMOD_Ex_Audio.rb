@@ -716,6 +716,7 @@ module FMod
   #--------------------------------------------------------------------------
   # * Get Path of RTP Folder From Registry
   #-------------------------------------------------------------------------- 
+=begin
   def self.getRTPFolder
     if @rtp_folder
       return @rtp_folder
@@ -740,6 +741,7 @@ module FMod
     @rtp_folder += "\\" if @rtp_folder[-1].chr != "\\"
     return @rtp_folder
   end
+=end
   #--------------------------------------------------------------------------
   # * Return Proper File Name (With Extensions)
   #     name            : Name of the file
@@ -767,13 +769,13 @@ module FMod
     # See if file exists in game folder
     localname = self.checkExtensions(name, FModEx::FMOD_FILE_TYPES)
     # See if file exists in RTP
-    commonname = self.checkExtensions(getRTPFolder + name, FModEx::FMOD_FILE_TYPES)
+    #commonname = self.checkExtensions(getRTPFolder + name, FModEx::FMOD_FILE_TYPES)
     if FileTest.exist?(localname)
       return localname
     end
-    if FileTest.exist?(commonname)
-      return commonname
-    end
+    #if FileTest.exist?(commonname)
+    #  return commonname
+    #end
     # An invalid name was provided
     return name
   end

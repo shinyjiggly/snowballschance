@@ -105,13 +105,13 @@ class Scene_Splash
   #----------------------------------------------------------------------------
   def update
     # If input triggered
-=begin
+#=begin
     if Input.trigger?(Input::C) || Input.trigger?(Input::B)
       # Switch to Title
       Audio.bgm_fade(1000) if SSConfig::PlayMusic
       $scene = Scene_Title.new
     end
-=end
+#=end
     # Do Hide/Show images
     process_transition
   end
