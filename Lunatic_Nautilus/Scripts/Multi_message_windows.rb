@@ -173,14 +173,14 @@
   
   # defaults for speech text
   SPEECH_FONT_COLOR = "#FFFFFF"
-  SPEECH_FONT_NAME = "PlopDump"
+  SPEECH_FONT_NAME = "BPixelDouble"
   SPEECH_FONT_SIZE = 20
   
 
   
   # defaults for thought text
   THOUGHT_FONT_COLOR = "#EEEEEE"
-  THOUGHT_FONT_NAME = "PlopDump"
+  THOUGHT_FONT_NAME = "BPixelDouble"
   THOUGHT_FONT_SIZE = 20
 
   # note that you can use an array of fonts for SPEECH_FONT_NAME, etc.
@@ -257,7 +257,7 @@ class Game_Message
     
     # font details
     # overrides all defaults; leave nil to just use defaults (e.g. as above)
-    @font_name = "PlopDump"
+    @font_name = "BPixelDouble"
     @font_size = 20
     @font_color = nil
     
@@ -356,7 +356,7 @@ class Game_Message
  @name_box_y_offset = -10    #Choose the Y axis offset of the name bos. default= -10
  @name_box_width = 10           #Choose the width of the Name Box. default= 8  
  @name_box_height = 28        #Choose the height of the Name Box. default= 26
- @name_font_type = "PlopDump" #Choose the Font Name (Case Sensitive) for Name Box
+ @name_font_type = "BPixelDouble" #Choose the Font Name (Case Sensitive) for Name Box
  @name_font_size = 20            #Choose the deafault Font Size for Name Box text
  #@name_box_text_color= 3        #Choose the Text Color of the Name Box
  @name_box_skin = "mainskin"       #Choose the WindowSkin for the Name Box

@@ -146,7 +146,7 @@ class Window_Help < Window_Base
     if text != @text or align != @align
       self.contents.clear
       self.contents.font.color = normal_color
-      self.contents.font.name = "PlopDump"
+      self.contents.font.name = "BPixelDouble"
       self.contents.font.size = 20
       self.contents.draw_text(4, 0, self.width - 40, 32, text, align)
       #self.contents.draw_text(4, 0, self.width - 40, 32, text, align)
@@ -170,7 +170,7 @@ class Window_Help < Window_Base
       self.contents.clear
       self.contents.font.color = normal_color
       self.contents.font.size = 20
-      self.contents.font.name = "PlopDump"
+      self.contents.font.name = "BPixelDouble"
       self.contents.draw_text(4, 0, self.width - 40, 32, text, align)
       @text = text
       @align = align
@@ -405,7 +405,7 @@ class Window_NameCommand < Window_Base
     self.contents = Bitmap.new(width - 44, height - 32 ) 
     #self.contents = Bitmap.new(width - 44, height - 32 ) 
     #-32 #put the stuff up and right 32
-    self.contents.font.name = "PlopDump"
+    self.contents.font.name = "BPixelDouble"
     self.back_opacity = Base_Opacity #0
     #draw_actor_battle_face(actor, width-44, height-32, 255) #add the face
     self.z = 4000
