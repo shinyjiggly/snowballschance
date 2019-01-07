@@ -29,7 +29,7 @@ class Scene_Menu
      s1 = $data_system.words.item
      s2 = $data_system.words.skill
      s3 = $data_system.words.equip
-     s4 = "Status"
+     s4 = "Snackmaking" #"Status"
      s5 = "Quicksave"
      s6 = "Diary"
      s7=  "End Game"
@@ -55,7 +55,12 @@ class Scene_Menu
       end
       #if only allow diary if coda is there
    if $game_party.actors[0] != $game_actors[12]
+     @command_window.disable_item(3)
     @command_window.disable_item(5)
+  end
+  #if progress is lower than a certain level, disable snackmaking
+     if $game_variables[2]< 6
+     @command_window.disable_item(3)
    end
      # Make play time window
      @playtime_window = Window_GoldTime.new
@@ -162,12 +167,23 @@ class Scene_Menu
            @status_window.active = true
            @status_window.index = 0
         when 3   # status
+          if $game_party.actors[0] != $game_actors[12] || $game_variables[2]< 6
+            # Play buzzer SE
+           $game_system.se_play($data_system.buzzer_se)
+           
+         else
            # Play decision SE
            $game_system.se_play($data_system.decision_se)
+=begin           
            # Make status window active
            @command_window.active = false
            @status_window.active = true
            @status_window.index = 0
+=end
+           # exit back to map
+           $scene = Scene_Map.new
+           $game_temp.common_event_id = 53
+           end
         when 4   # save
            # If saving is forbidden
            if $game_system.save_disabled

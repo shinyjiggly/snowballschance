@@ -31,6 +31,11 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "$game_party.gain_item(16, 5)"
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "$game_party.gain_item(27, 20)"
           indent: 0
           code: 355

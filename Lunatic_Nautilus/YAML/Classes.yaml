@@ -100,11 +100,6 @@ root:
 - !ruby/object:RPG::Class
   name: Loner
   armor_set:
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
   - 7
   - 8
   - 13
@@ -127,7 +122,10 @@ root:
   - 31
   - 32
   - 33
-  learnings: []
+  learnings:
+  - !ruby/object:RPG::Class::Learning
+    level: 1
+    skill_id: 41
   weapon_set:
   - 3
   state_ranks: !ruby/object:Table
@@ -184,14 +182,9 @@ root:
   name: Actor
   armor_set:
   - 1
-  - 2
-  - 3
   - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 13
+  - 9
+  - 10
   - 14
   - 15
   - 16
@@ -267,10 +260,9 @@ root:
 - !ruby/object:RPG::Class
   name: Bodyguard
   armor_set:
+  - 2
   - 5
-  - 6
-  - 7
-  - 8
+  - 11
   - 16
   - 17
   - 18
@@ -347,10 +339,6 @@ root:
 - !ruby/object:RPG::Class
   name: Bear
   armor_set:
-  - 5
-  - 6
-  - 7
-  - 8
   - 17
   - 18
   - 19
@@ -882,6 +870,8 @@ root:
   name: Gastromancer
   armor_set:
   - 6
+  - 12
+  - 13
   - 16
   - 17
   - 18
@@ -899,18 +889,6 @@ root:
   - 32
   - 33
   learnings:
-  - !ruby/object:RPG::Class::Learning
-    level: 1
-    skill_id: 11
-  - !ruby/object:RPG::Class::Learning
-    level: 1
-    skill_id: 12
-  - !ruby/object:RPG::Class::Learning
-    level: 1
-    skill_id: 13
-  - !ruby/object:RPG::Class::Learning
-    level: 1
-    skill_id: 25
   - !ruby/object:RPG::Class::Learning
     level: 1
     skill_id: 27
