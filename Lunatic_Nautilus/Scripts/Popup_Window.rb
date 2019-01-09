@@ -22,7 +22,7 @@ class Window_Popup < Window_Base
 # START CUSTOMIZATION
 #=============================================================================
     self.back_opacity = 180                   # windowskin opacity
-    self.contents.font.name = "Verdana"       # font name
+    self.contents.font.name = $defaultfont      # font name
     self.contents.font.color = normal_color   # font color
     self.contents.font.size = 22              # font size
   end

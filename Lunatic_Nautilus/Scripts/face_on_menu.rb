@@ -17,11 +17,11 @@ def refresh
     draw_actor_facegraphic(actor, x - 65, y + 52)
     draw_actor_name(actor, x + 60, y + 8)
     draw_actor_class(actor, x + 60, y + 30)
-    #draw_actor_level(actor, x + 60, y + 22)
-    #draw_actor_exp(actor, x + 60, y + 51)
     draw_actor_state(actor, x + 235, y + 8 )
     draw_actor_hp(actor, x + 180, y + 25)
     draw_actor_sp(actor, x + 180, y + 46)
+        #draw_actor_level(actor, x + 60, y + 22)
+    #draw_actor_exp(actor, x + 60, y + 51)
     end
   end
   end

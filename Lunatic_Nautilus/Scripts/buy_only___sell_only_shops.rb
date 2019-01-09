@@ -42,7 +42,7 @@ class Window_ShopCommand < Window_Selectable
     @item_max = 3
     @column_max = 3
     @commands = ["Buy", "Sell", "Exit"]
-    self.contents.font.name = "BPixelDouble"
+    self.contents.font.name = $defaultfont
     self.contents.font.size = 20
     refresh
     self.index = 0

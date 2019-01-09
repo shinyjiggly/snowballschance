@@ -1,10 +1,10 @@
----
+--- !ruby/object:Hash
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: cozio2
     pitch: 100
-  events:
+  events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -427,7 +427,7 @@ root: !ruby/object:RPG::Map
           parameters:
           - 'You don''t have to worry about your party starving, '
           indent: 1
-          code: 401
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'but you''ll need ingredients to make a meal each '
@@ -435,49 +435,34 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - member likes for them to be happy.
+          - member would like for them to be happy
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'What does everyone like? Pay attention to what they '
+          - 'What does everyone like? '
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'say to figure it out! Plus, some ingredients are in plain '
+          - 'Pay attention to what they say to figure it out! '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'sight while others are less obvious. Investigate '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - potential hiding spots with the action button!
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'What does everyone like? Pay attention to what they '
+          - 'Some ingredients are in plain sight '
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - say to figure it out!
+          - 'while others are less obvious. '
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'Some ingredients are in plain sight while others are '
+          - Investigate with the action button!
           indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - hidden. Investigate potential hiding spots with S!
-          indent: 1
-          code: 401
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - A

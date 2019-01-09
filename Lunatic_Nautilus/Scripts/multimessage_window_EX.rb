@@ -328,7 +328,7 @@
   #----------------------------------------------------------------------------
   # this will used for message log
   MESSAGE_LOG_TEXT            = 'MESSAGE LOG'
-  MESSAGE_LOG_FONT            = [$defaultfonttype, "BPixelDouble", 30]
+  MESSAGE_LOG_FONT            = [$defaultfont, "PlopDump", 30]
   MESSAGE_LOG_WINDOWSKIN      = "mainskin.png" 
   MESSAGE_LOG_OPACITY         = 255
   #----------------------------------------------------------------------------
@@ -341,14 +341,14 @@
   
   # defaults for speech text
   SPEECH_FONT_COLOR = "#FFFFFF"
-  SPEECH_FONT_NAME = "BPixelDouble"
+  SPEECH_FONT_NAME = $defaultfont
   SPEECH_FONT_SIZE = 20
   
 
   
   # defaults for thought text
   THOUGHT_FONT_COLOR = "#EEEEEE"
-  THOUGHT_FONT_NAME = "BPixelDouble"
+  THOUGHT_FONT_NAME = $defaultfont
   THOUGHT_FONT_SIZE = 20
 
   # note that you can use an array of fonts for SPEECH_FONT_NAME, etc.
