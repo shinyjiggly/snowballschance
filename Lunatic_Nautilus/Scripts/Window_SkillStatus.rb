@@ -1,5 +1,5 @@
 #==============================================================================
-# ** Window_SkillStatus
+# ** Window_SkillStatus EDITED
 #------------------------------------------------------------------------------
 #  This window displays the skill user's status on the skill screen.
 #==============================================================================
@@ -23,7 +23,7 @@ class Window_SkillStatus < Window_Base
     self.contents.clear
     draw_actor_name(@actor, 4, 0)
     draw_actor_state(@actor, 140, 0)
-    draw_actor_hp(@actor, 284, 0)
-    draw_actor_sp(@actor, 460, 0)
+    draw_actor_hp(@actor, 284, 6)
+    draw_actor_sp(@actor, 460, 6)
   end
 end
