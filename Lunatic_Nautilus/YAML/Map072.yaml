@@ -987,6 +987,11 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 36
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[0]...nothing here."
           indent: 0
           code: 101
@@ -1030,8 +1035,64 @@ root: !ruby/object:RPG::Map
         through: false
       name: EV003
       y: 8
-      x: 7
+      x: 4
       id: 3
+    4: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]...nothing here."
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: true
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: kidcoda_bedx2
+          pattern: 0
+          tile_id: 0
+          direction: 4
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV004
+      y: 0
+      x: 4
+      id: 4
     5: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -1160,7 +1221,7 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV005
-      y: 11
+      y: 12
       x: 5
       id: 5
     6: !ruby/object:RPG::Event
@@ -1455,7 +1516,7 @@ root: !ruby/object:RPG::Map
     - 390
     - 390
     - 390
-    - 598
+    - 390
     - 598
     - 599
     - 606
@@ -1474,8 +1535,8 @@ root: !ruby/object:RPG::Map
     - 598
     - 598
     - 390
+    - 390
     - 591
-    - 606
     - 606
     - 607
     - 606
@@ -1494,8 +1555,8 @@ root: !ruby/object:RPG::Map
     - 606
     - 606
     - 589
+    - 390
     - 591
-    - 606
     - 606
     - 607
     - 614
@@ -1514,8 +1575,8 @@ root: !ruby/object:RPG::Map
     - 606
     - 606
     - 589
+    - 390
     - 591
-    - 614
     - 614
     - 390
     - 390
@@ -1774,28 +1835,28 @@ root: !ruby/object:RPG::Map
     - 0
     - 648
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 240
-    - 240
-    - 240
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
     - 138
     - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 240
+    - 240
+    - 240
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 113
+    - 132
     - 0
     - 0
     - 0
@@ -1814,8 +1875,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 140
-    - 0
+    - 136
+    - 134
     - 0
     - 615
     - 331
@@ -1833,13 +1894,13 @@ root: !ruby/object:RPG::Map
     - 643
     - 644
     - 615
-    - 0
-    - 0
-    - 0
-    - 524
-    - 0
-    - 0
+    - 669
     - 226
+    - 212
+    - 212
+    - 212
+    - 212
+    - 212
     - 193
     - 192
     - 194
@@ -1852,40 +1913,40 @@ root: !ruby/object:RPG::Map
     - 615
     - 651
     - 652
-    - 0
-    - 0
-    - 138
-    - 0
-    - 322
-    - 324
     - 226
+    - 212
     - 193
     - 192
     - 192
     - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
     - 194
-    - 212
     - 228
+    - 0
     - 0
     - 0
     - 480
     - 538
     - 659
     - 660
-    - 0
-    - 130
-    - 122
-    - 0
-    - 328
-    - 326
-    - 208
+    - 232
+    - 200
+    - 192
+    - 192
+    - 196
+    - 220
+    - 220
+    - 200
     - 192
     - 192
     - 192
     - 192
-    - 192
-    - 192
-    - 216
+    - 194
+    - 228
     - 0
     - 0
     - 556
@@ -1893,13 +1954,13 @@ root: !ruby/object:RPG::Map
     - 538
     - 0
     - 0
-    - 114
-    - 134
-    - 0
+    - 232
+    - 220
+    - 220
+    - 230
     - 0
     - 0
     - 208
-    - 192
     - 192
     - 192
     - 192
@@ -1913,13 +1974,13 @@ root: !ruby/object:RPG::Map
     - 546
     - 0
     - 0
-    - 140
+    - 142
+    - 0
+    - 556
     - 0
     - 0
     - 0
-    - 226
-    - 193
-    - 192
+    - 208
     - 192
     - 192
     - 192
@@ -1937,9 +1998,9 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 208
-    - 192
-    - 192
+    - 226
+    - 212
+    - 193
     - 192
     - 192
     - 192
@@ -2078,8 +2139,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 643
+    - 644
     - 0
     - 0
     - 0
@@ -2098,8 +2159,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 651
+    - 652
     - 0
     - 0
     - 0
@@ -2118,8 +2179,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
+    - 659
+    - 660
     - 0
     - 0
     - 0
@@ -2154,6 +2215,31 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 609
+    - 0
+    - 0
+    - 643
+    - 644
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 609
+    - 651
+    - 652
     - 0
     - 0
     - 0
@@ -2172,33 +2258,8 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 659
+    - 660
     - 0
     - 0
     - 0
