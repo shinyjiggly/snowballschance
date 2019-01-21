@@ -1996,6 +1996,11 @@ root: !ruby/object:RPG::Map
           code: 655
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 1
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 10
           - !ruby/object:RPG::MoveRoute
             list:
@@ -2150,6 +2155,16 @@ root: !ruby/object:RPG::Map
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "$game_self_switches[[33, 10, 'A']] = "
+          indent: 1
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'false'
+          indent: 1
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "$game_self_switches[[33, 10, 'B']] = "
           indent: 1
           code: 355
@@ -2158,6 +2173,11 @@ root: !ruby/object:RPG::Map
           - 'true'
           indent: 1
           code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          indent: 1
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
@@ -2281,6 +2301,11 @@ root: !ruby/object:RPG::Map
           - *98
           indent: 1
           code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          indent: 1
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 40

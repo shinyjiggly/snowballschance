@@ -2092,6 +2092,13 @@ root:
     code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 4
+    - 12
+    - 0
+    indent: 4
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
@@ -2117,23 +2124,95 @@ root:
         code: 0
       skippable: true
       repeat: false
-    indent: 4
+    indent: 5
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
     - *18
-    indent: 4
+    indent: 5
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
     - *19
-    indent: 4
+    indent: 5
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
     - *20
-    indent: 4
+    indent: 5
     code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &21 !ruby/object:RPG::MoveCommand
+        parameters:
+        - !ruby/object:RPG::AudioFile
+          volume: 5
+          name: shooom
+          pitch: 145
+        code: 44
+      - &22 !ruby/object:RPG::MoveCommand
+        parameters:
+        - frie_slidingx2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - &23 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 12
+      - &24 !ruby/object:RPG::MoveCommand
+        parameters:
+        - friex2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 5
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *21
+    indent: 5
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *22
+    indent: 5
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *23
+    indent: 5
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *24
+    indent: 5
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
     - 24
@@ -2270,24 +2349,24 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &21 !ruby/object:RPG::MoveCommand
+      - &25 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 15
           name: shwee
           pitch: 130
         code: 44
-      - &22 !ruby/object:RPG::MoveCommand
+      - &26 !ruby/object:RPG::MoveCommand
         parameters:
         - topaz_slidingx2
         - 0
         - 2
         - 0
         code: 41
-      - &23 !ruby/object:RPG::MoveCommand
+      - &27 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 12
-      - &24 !ruby/object:RPG::MoveCommand
+      - &28 !ruby/object:RPG::MoveCommand
         parameters:
         - topazx2
         - 0
@@ -2303,22 +2382,22 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *21
+    - *25
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *22
+    - *26
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *23
+    - *27
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *24
+    - *28
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -2397,24 +2476,24 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &25 !ruby/object:RPG::MoveCommand
+      - &29 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 15
           name: shwee
           pitch: 110
         code: 44
-      - &26 !ruby/object:RPG::MoveCommand
+      - &30 !ruby/object:RPG::MoveCommand
         parameters:
         - vern_slidingx2
         - 0
         - 2
         - 0
         code: 41
-      - &27 !ruby/object:RPG::MoveCommand
+      - &31 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 12
-      - &28 !ruby/object:RPG::MoveCommand
+      - &32 !ruby/object:RPG::MoveCommand
         parameters:
         - vernx2
         - 0
@@ -2430,22 +2509,22 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *25
+    - *29
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *26
+    - *30
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *27
+    - *31
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *28
+    - *32
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -2479,9 +2558,20 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 4
-    - 2
+    - 23
+    - 23
     - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -2524,24 +2614,24 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &29 !ruby/object:RPG::MoveCommand
+      - &33 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 5
           name: shooom
           pitch: 145
         code: 44
-      - &30 !ruby/object:RPG::MoveCommand
+      - &34 !ruby/object:RPG::MoveCommand
         parameters:
         - frie_slidingx2
         - 0
         - 2
         - 0
         code: 41
-      - &31 !ruby/object:RPG::MoveCommand
+      - &35 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 12
-      - &32 !ruby/object:RPG::MoveCommand
+      - &36 !ruby/object:RPG::MoveCommand
         parameters:
         - friex2
         - 0
@@ -2557,22 +2647,22 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *29
+    - *33
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *30
+    - *34
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *31
+    - *35
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *32
+    - *36
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -2646,21 +2736,21 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &33 !ruby/object:RPG::MoveCommand
+      - &37 !ruby/object:RPG::MoveCommand
         parameters:
         - ''
         - 0
         - 2
         - 0
         code: 41
-      - &34 !ruby/object:RPG::MoveCommand
+      - &38 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 80
           name: ksssshhh
           pitch: 75
         code: 44
-      - &35 !ruby/object:RPG::MoveCommand
+      - &39 !ruby/object:RPG::MoveCommand
         parameters:
         - 15
         code: 15
@@ -2673,17 +2763,17 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *33
+    - *37
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *34
+    - *38
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *35
+    - *39
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -2875,7 +2965,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &36 !ruby/object:RPG::MoveCommand
+      - &40 !ruby/object:RPG::MoveCommand
         parameters:
         - topazx2
         - 0
@@ -2891,7 +2981,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *36
+    - *40
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -2918,7 +3008,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &37 !ruby/object:RPG::MoveCommand
+      - &41 !ruby/object:RPG::MoveCommand
         parameters:
         - 0
         - 1
@@ -2932,7 +3022,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *37
+    - *41
     indent: 1
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -2959,7 +3049,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &38 !ruby/object:RPG::MoveCommand
+      - &42 !ruby/object:RPG::MoveCommand
         parameters:
         - 1
         - 0
@@ -2973,7 +3063,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *38
+    - *42
     indent: 2
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3000,7 +3090,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &39 !ruby/object:RPG::MoveCommand
+      - &43 !ruby/object:RPG::MoveCommand
         parameters:
         - -1
         - 0
@@ -3014,7 +3104,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *39
+    - *43
     indent: 3
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3041,7 +3131,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &40 !ruby/object:RPG::MoveCommand
+      - &44 !ruby/object:RPG::MoveCommand
         parameters:
         - 0
         - -1
@@ -3055,7 +3145,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *40
+    - *44
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3157,21 +3247,21 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &41 !ruby/object:RPG::MoveCommand
+      - &45 !ruby/object:RPG::MoveCommand
         parameters:
         - ''
         - 0
         - 2
         - 0
         code: 41
-      - &42 !ruby/object:RPG::MoveCommand
+      - &46 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 80
           name: ksssshhh
           pitch: 75
         code: 44
-      - &43 !ruby/object:RPG::MoveCommand
+      - &47 !ruby/object:RPG::MoveCommand
         parameters:
         - 15
         code: 15
@@ -3184,17 +3274,17 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *41
+    - *45
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *42
+    - *46
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *43
+    - *47
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3362,7 +3452,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &44 !ruby/object:RPG::MoveCommand
+      - &48 !ruby/object:RPG::MoveCommand
         parameters:
         - vernx2
         - 0
@@ -3378,7 +3468,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *44
+    - *48
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3405,7 +3495,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &45 !ruby/object:RPG::MoveCommand
+      - &49 !ruby/object:RPG::MoveCommand
         parameters:
         - 0
         - 1
@@ -3419,7 +3509,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *45
+    - *49
     indent: 1
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3446,7 +3536,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &46 !ruby/object:RPG::MoveCommand
+      - &50 !ruby/object:RPG::MoveCommand
         parameters:
         - 1
         - 0
@@ -3460,7 +3550,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *46
+    - *50
     indent: 2
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3487,7 +3577,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &47 !ruby/object:RPG::MoveCommand
+      - &51 !ruby/object:RPG::MoveCommand
         parameters:
         - -1
         - 0
@@ -3501,7 +3591,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *47
+    - *51
     indent: 3
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3528,7 +3618,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &48 !ruby/object:RPG::MoveCommand
+      - &52 !ruby/object:RPG::MoveCommand
         parameters:
         - 0
         - -1
@@ -3542,7 +3632,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *48
+    - *52
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3644,21 +3734,21 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &49 !ruby/object:RPG::MoveCommand
+      - &53 !ruby/object:RPG::MoveCommand
         parameters:
         - ''
         - 0
         - 2
         - 0
         code: 41
-      - &50 !ruby/object:RPG::MoveCommand
+      - &54 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 80
           name: ksssshhh
           pitch: 75
         code: 44
-      - &51 !ruby/object:RPG::MoveCommand
+      - &55 !ruby/object:RPG::MoveCommand
         parameters:
         - 15
         code: 15
@@ -3671,17 +3761,17 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *49
+    - *53
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *50
+    - *54
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *51
+    - *55
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3834,7 +3924,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &52 !ruby/object:RPG::MoveCommand
+      - &56 !ruby/object:RPG::MoveCommand
         parameters:
         - friex2
         - 0
@@ -3850,7 +3940,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *52
+    - *56
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3877,7 +3967,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &53 !ruby/object:RPG::MoveCommand
+      - &57 !ruby/object:RPG::MoveCommand
         parameters:
         - 0
         - 1
@@ -3891,7 +3981,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *53
+    - *57
     indent: 1
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3918,7 +4008,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &54 !ruby/object:RPG::MoveCommand
+      - &58 !ruby/object:RPG::MoveCommand
         parameters:
         - 1
         - 0
@@ -3932,7 +4022,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *54
+    - *58
     indent: 2
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -3959,7 +4049,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &55 !ruby/object:RPG::MoveCommand
+      - &59 !ruby/object:RPG::MoveCommand
         parameters:
         - -1
         - 0
@@ -3973,7 +4063,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *55
+    - *59
     indent: 3
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -4000,7 +4090,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &56 !ruby/object:RPG::MoveCommand
+      - &60 !ruby/object:RPG::MoveCommand
         parameters:
         - 0
         - -1
@@ -4014,7 +4104,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *56
+    - *60
     indent: 4
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -4294,7 +4384,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &57 !ruby/object:RPG::MoveCommand
+      - &61 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 21
       - !ruby/object:RPG::MoveCommand
@@ -4306,7 +4396,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *57
+    - *61
     indent: 1
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -4328,7 +4418,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &58 !ruby/object:RPG::MoveCommand
+      - &62 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 20
       - !ruby/object:RPG::MoveCommand
@@ -4340,7 +4430,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *58
+    - *62
     indent: 1
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -4841,29 +4931,55 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 'message.sound_audio = ''topaz'' '
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "$game_map.events[1].x="
+    - 1
+    - 23
+    - 0
+    - 2
+    - 1
     indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].x="
+    indent: 1
     code: 355
   - !ruby/object:RPG::EventCommand
     parameters:
     - "$game_system.allies[1].x"
-    indent: 0
+    indent: 1
     code: 655
   - !ruby/object:RPG::EventCommand
     parameters:
     - "$game_map.events[1].y="
-    indent: 0
+    indent: 1
     code: 655
   - !ruby/object:RPG::EventCommand
     parameters:
     - "$game_system.allies[1].y"
-    indent: 0
+    indent: 1
     code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
     - 2
@@ -4881,29 +4997,55 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 'message.sound_audio = ''vern'' '
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "$game_map.events[1].x="
+    - 1
+    - 23
+    - 0
+    - 3
+    - 1
     indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_map.events[1].x="
+    indent: 1
     code: 355
   - !ruby/object:RPG::EventCommand
     parameters:
     - "$game_system.allies[2].x"
-    indent: 0
+    indent: 1
     code: 655
   - !ruby/object:RPG::EventCommand
     parameters:
     - "$game_map.events[1].y="
-    indent: 0
+    indent: 1
     code: 655
   - !ruby/object:RPG::EventCommand
     parameters:
     - "$game_system.allies[2].y"
-    indent: 0
+    indent: 1
     code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
     - 2
@@ -4921,14 +5063,25 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 'message.sound_audio = ''frie'' '
     indent: 0
     code: 355
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 4
-    - 2
+    - 1
+    - 23
     - 0
+    - 4
+    - 1
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -5014,34 +5167,12 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &59 !ruby/object:RPG::MoveCommand
+      - &63 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 16
-      - &60 !ruby/object:RPG::MoveCommand
+      - &64 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 35
-      - &61 !ruby/object:RPG::MoveCommand
-        parameters:
-        - codasp1x2
-        - 0
-        - 2
-        - 0
-        code: 41
-      - &62 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 1
-        code: 15
-      - &63 !ruby/object:RPG::MoveCommand
-        parameters:
-        - codasp1x2
-        - 0
-        - 2
-        - 1
-        code: 41
-      - &64 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 1
-        code: 15
       - &65 !ruby/object:RPG::MoveCommand
         parameters:
         - codasp1x2
@@ -5088,12 +5219,34 @@ root:
         code: 15
       - &73 !ruby/object:RPG::MoveCommand
         parameters:
-        - snowballschancex2
+        - codasp1x2
         - 0
         - 2
         - 0
         code: 41
       - &74 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 1
+        code: 15
+      - &75 !ruby/object:RPG::MoveCommand
+        parameters:
+        - codasp1x2
+        - 0
+        - 2
+        - 1
+        code: 41
+      - &76 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 1
+        code: 15
+      - &77 !ruby/object:RPG::MoveCommand
+        parameters:
+        - snowballschancex2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - &78 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 36
       - !ruby/object:RPG::MoveCommand
@@ -5103,26 +5256,6 @@ root:
       repeat: false
     indent: 0
     code: 209
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *59
-    indent: 0
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *60
-    indent: 0
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *61
-    indent: 0
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *62
-    indent: 0
-    code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
     - *63
@@ -5181,6 +5314,26 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - *74
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *75
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *76
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *77
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *78
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -5585,37 +5738,15 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &75 !ruby/object:RPG::MoveCommand
+      - &79 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 16
-      - &76 !ruby/object:RPG::MoveCommand
-        parameters:
-        - coda_diex2
-        - 0
-        - 2
-        - 0
-        code: 41
-      - &77 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 4
-        code: 15
-      - &78 !ruby/object:RPG::MoveCommand
-        parameters:
-        - coda_diex2
-        - 0
-        - 2
-        - 1
-        code: 41
-      - &79 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 4
-        code: 15
       - &80 !ruby/object:RPG::MoveCommand
         parameters:
         - coda_diex2
         - 0
         - 2
-        - 2
+        - 0
         code: 41
       - &81 !ruby/object:RPG::MoveCommand
         parameters:
@@ -5626,9 +5757,31 @@ root:
         - coda_diex2
         - 0
         - 2
-        - 3
+        - 1
         code: 41
       - &83 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &84 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 2
+        code: 41
+      - &85 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &86 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 3
+        code: 41
+      - &87 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 80
@@ -5642,26 +5795,6 @@ root:
       repeat: false
     indent: 2
     code: 209
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *75
-    indent: 2
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *76
-    indent: 2
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *77
-    indent: 2
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *78
-    indent: 2
-    code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
     - *79
@@ -5685,6 +5818,26 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - *83
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *84
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *85
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *86
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *87
     indent: 2
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -5814,37 +5967,15 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &84 !ruby/object:RPG::MoveCommand
+      - &88 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 16
-      - &85 !ruby/object:RPG::MoveCommand
-        parameters:
-        - coda_diex2
-        - 0
-        - 2
-        - 0
-        code: 41
-      - &86 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 4
-        code: 15
-      - &87 !ruby/object:RPG::MoveCommand
-        parameters:
-        - coda_diex2
-        - 0
-        - 2
-        - 1
-        code: 41
-      - &88 !ruby/object:RPG::MoveCommand
-        parameters:
-        - 4
-        code: 15
       - &89 !ruby/object:RPG::MoveCommand
         parameters:
         - coda_diex2
         - 0
         - 2
-        - 2
+        - 0
         code: 41
       - &90 !ruby/object:RPG::MoveCommand
         parameters:
@@ -5855,9 +5986,31 @@ root:
         - coda_diex2
         - 0
         - 2
-        - 3
+        - 1
         code: 41
       - &92 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &93 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 2
+        code: 41
+      - &94 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 4
+        code: 15
+      - &95 !ruby/object:RPG::MoveCommand
+        parameters:
+        - coda_diex2
+        - 0
+        - 2
+        - 3
+        code: 41
+      - &96 !ruby/object:RPG::MoveCommand
         parameters:
         - !ruby/object:RPG::AudioFile
           volume: 80
@@ -5871,26 +6024,6 @@ root:
       repeat: false
     indent: 2
     code: 209
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *84
-    indent: 2
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *85
-    indent: 2
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *86
-    indent: 2
-    code: 509
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - *87
-    indent: 2
-    code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
     - *88
@@ -5914,6 +6047,26 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - *92
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *93
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *94
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *95
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *96
     indent: 2
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -9507,7 +9660,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &93 !ruby/object:RPG::MoveCommand
+      - &97 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 10
       - !ruby/object:RPG::MoveCommand
@@ -9519,7 +9672,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *93
+    - *97
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -11610,7 +11763,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &94 !ruby/object:RPG::MoveCommand
+      - &98 !ruby/object:RPG::MoveCommand
         parameters: []
         code: 10
       - !ruby/object:RPG::MoveCommand
@@ -11622,7 +11775,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *94
+    - *98
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -11801,7 +11954,7 @@ root:
     - -1
     - !ruby/object:RPG::MoveRoute
       list:
-      - &95 !ruby/object:RPG::MoveCommand
+      - &99 !ruby/object:RPG::MoveCommand
         parameters:
         - 1
         code: 15
@@ -11814,7 +11967,7 @@ root:
     code: 209
   - !ruby/object:RPG::EventCommand
     parameters:
-    - *95
+    - *99
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
@@ -12853,8 +13006,2827 @@ root:
   switch_id: 1
   id: 54
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: Windy
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 0
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 24
+    - 24
+    - 0
+    - 6
+    - -1
+    - 5
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Left-Down---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 1
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - -60
+    - 60
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &100 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &101 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 5
+      - &102 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *100
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *101
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *102
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &103 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &104 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 5
+      - &105 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *103
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *104
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *105
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &106 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &107 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 5
+      - &108 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *106
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *107
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *108
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &109 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &110 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 5
+      - &111 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *109
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *110
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *111
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Down---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 2
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - 0
+    - 60
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &112 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &113 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 1
+      - &114 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *112
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *113
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *114
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &115 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &116 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 1
+      - &117 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *115
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *116
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *117
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &118 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &119 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 1
+      - &120 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *118
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *119
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *120
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &121 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &122 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 1
+      - &123 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *121
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *122
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *123
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Right-Down---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 3
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - 60
+    - 60
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &124 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &125 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 6
+      - &126 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *124
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *125
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *126
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &127 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &128 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 6
+      - &129 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *127
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *128
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *129
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &130 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &131 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 6
+      - &132 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *130
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *131
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *132
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &133 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &134 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 6
+      - &135 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *133
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *134
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *135
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Left---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 4
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - -60
+    - 0
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &136 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &137 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 2
+      - &138 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *136
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *137
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *138
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &139 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &140 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 2
+      - &141 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *139
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *140
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *141
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &142 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &143 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 2
+      - &144 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *142
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *143
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *144
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &145 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &146 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 2
+      - &147 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *145
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *146
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *147
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Neutral---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 5
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 64
+    - 1
+    - 100
+    - 0
+    - 20
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Right---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 6
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - -60
+    - 0
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &148 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &149 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 3
+      - &150 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *148
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *149
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *150
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &151 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &152 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 3
+      - &153 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *151
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *152
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *153
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &154 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &155 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 3
+      - &156 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *154
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *155
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *156
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &157 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &158 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 3
+      - &159 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *157
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *158
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *159
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 7
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - -60
+    - -60
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &160 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &161 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 7
+      - &162 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *160
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *161
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *162
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &163 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &164 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 7
+      - &165 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *163
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *164
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *165
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &166 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &167 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 7
+      - &168 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *166
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *167
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *168
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &169 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &170 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 7
+      - &171 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *169
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *170
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *171
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Up---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 8
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - 0
+    - -60
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &172 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &173 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 4
+      - &174 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *172
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *173
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *174
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &175 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &176 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 4
+      - &177 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *175
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *176
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *177
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &178 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &179 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 4
+      - &180 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *178
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *179
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *180
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &181 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &182 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 4
+      - &183 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *181
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *182
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *183
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Upper-Right---"
+    indent: 0
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 41
+    - 0
+    - 9
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - snoooow
+    - 0
+    - 100
+    - 1
+    - 100
+    - 60
+    - -60
+    indent: 1
+    code: 204
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 24
+    - 0
+    - 6
+    - 5
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &184 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &185 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 8
+      - &186 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *184
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *185
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *186
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Topaz----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[1].x,$game_system.allies[1].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &187 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &188 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 8
+      - &189 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *187
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *188
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *189
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Vern----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[2].x,$game_system.allies[2].y)!=6"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &190 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &191 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 8
+      - &192 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *190
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *191
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *192
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "---Frie----"
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.terrain_tag($game_system.allies[3].x,$game_system.allies[3].y)!=6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if on snow
+    indent: 3
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &193 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 35
+      - &194 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 8
+      - &195 !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 36
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *193
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *194
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *195
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
