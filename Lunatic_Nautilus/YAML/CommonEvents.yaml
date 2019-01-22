@@ -1951,29 +1951,64 @@ root:
     code: 121
   - !ruby/object:RPG::EventCommand
     parameters:
-    - new_page("fieee2")
+    - 1
+    - 7
+    - 0
+    - 81
+    - 0
     indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[0]YEOWCH!"
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - new_page("icespikes")
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - new_page("fieee2")
+    indent: 3
     code: 355
   - !ruby/object:RPG::EventCommand
     parameters:
     - 37
-    indent: 2
+    indent: 3
     code: 117
   - !ruby/object:RPG::EventCommand
     parameters:
     - "\\p[0](I wonder if I could unfreeze it..."
-    indent: 2
+    indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
     - 'Maybe I should try that some time from the '
-    indent: 2
+    indent: 3
     code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
     - skills menu or by pressing S next to the ice...)
-    indent: 2
+    indent: 3
     code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
@@ -15835,8 +15870,254 @@ root:
   switch_id: 1
   id: 55
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: spikes
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_player.x && $game_map.events[event_id].y
+      ==$game_player.y"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Coda hits it
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 1
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 1
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 1
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 5
+    - true
+    indent: 1
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - A
+    - 0
+    indent: 1
+    code: 123
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_system.allies[1].x && $game_map.events[event_id].y
+      ==$game_system.allies[1].y"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if topaz is in the same spot as this event
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 1
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 1
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 1
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 4
+    - false
+    indent: 1
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - A
+    - 0
+    indent: 1
+    code: 123
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_system.allies[2].x && $game_map.events[event_id].y
+      ==$game_system.allies[2].y"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Vern----
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 1
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 1
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 1
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 3
+    - false
+    indent: 1
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - A
+    - 0
+    indent: 1
+    code: 123
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_system.allies[3].x && $game_map.events[event_id].y
+      ==$game_system.allies[3].y"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Frie----
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 2
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 2
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 2
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 1
+    - 0
+    - 4
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - A
+    - 0
+    indent: 2
+    code: 123
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -15845,8 +16126,348 @@ root:
   switch_id: 1
   id: 56
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: slopeblock
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_player.x && $game_map.events[event_id].y
+      ==$game_player.y"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Coda hits it
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 1
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 1
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 1
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &196 !ruby/object:RPG::MoveCommand
+        parameters:
+        - -1
+        - 0
+        code: 14
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 1
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *196
+    indent: 1
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - true
+    indent: 1
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_system.allies[1].x && $game_map.events[event_id].y
+      ==$game_system.allies[1].y"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - if topaz is in the same spot as this event
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 1
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 1
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 1
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(1)
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &197 !ruby/object:RPG::MoveCommand
+        parameters:
+        - -1
+        - 0
+        code: 14
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 1
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *197
+    indent: 1
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(1)
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 1
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_system.allies[2].x && $game_map.events[event_id].y
+      ==$game_system.allies[2].y"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Vern----
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 1
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 1
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 1
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(2)
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &198 !ruby/object:RPG::MoveCommand
+        parameters:
+        - -1
+        - 0
+        code: 14
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 1
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *198
+    indent: 1
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(2)
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 1
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 23
+    - 23
+    - 0
+    - 7
+    - 1
+    indent: 0
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 23
+    - 0
+    - 4
+    - 1
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_map.events[event_id].x ==$game_system.allies[3].x && $game_map.events[event_id].y
+      ==$game_system.allies[3].y"
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Frie----
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 16
+    - 16
+    - 0
+    indent: 2
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 5
+    - 5
+    indent: 2
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 2
+    indent: 2
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Member(3)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &199 !ruby/object:RPG::MoveCommand
+        parameters:
+        - -1
+        - 0
+        code: 14
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: true
+      repeat: false
+    indent: 2
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *199
+    indent: 2
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Member(3)
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 1
+    - 0
+    - 1
+    - false
+    indent: 2
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

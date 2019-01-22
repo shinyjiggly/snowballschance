@@ -1996,6 +1996,11 @@ root: !ruby/object:RPG::Map
           code: 655
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "$game_map.need_refresh = true"
+          indent: 1
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 1
           indent: 1
           code: 106
@@ -2161,6 +2166,11 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 'false'
+          indent: 1
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
           indent: 1
           code: 655
         - !ruby/object:RPG::EventCommand

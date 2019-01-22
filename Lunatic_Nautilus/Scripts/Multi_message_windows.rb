@@ -1241,7 +1241,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
       if x + self.width > 640 and 
          (!$game_system.message.allow_offscreen or $game_temp.in_battle)
         # right is no good either...
-        if y >= 0
+        if y >= 24 #EDIT
           # switch to top
           @location = 8
           vars = new_position(params)
