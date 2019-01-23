@@ -1626,22 +1626,27 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 5
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 40
           indent: 0
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[9]\\na[Topaz]Good morning, Coda."
+          - "\\p[9]\\na[Topaz]Good morning, Coda. Do not "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Do not worry about cooking breakfast,
+          - 'worry about cooking breakfast, for I have '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - I have taken the liberty of doing so earlier.
+          - already taken the liberty of doing so.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1666,7 +1671,7 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - I left a plate for you on the table.
+          - I left a bowl for you on the table.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1679,6 +1684,25 @@ root: !ruby/object:RPG::Map
           - "\\p[0]\\na[Coda]...Thank you."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Your friendship value with Topaz
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - has increased by 1!
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 35
+          - 35
+          - 1
+          - 0
+          - 1
+          indent: 0
+          code: 122
         - !ruby/object:RPG::EventCommand
           parameters:
           - 2
@@ -2556,6 +2580,11 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 5
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 9
           - !ruby/object:RPG::MoveRoute
             list:
@@ -2581,12 +2610,12 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[9]\\na[Topaz]Alright, now that we've all had "
+          - "\\p[9]\\na[Topaz]Now that we've all had breakfast, "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - breakfast, let's pack up and move out!
+          - it is time to move forward!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -2596,7 +2625,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[5]\\na[Vern]Already?"
+          - "\\p[5]\\na[Vern]Already...?"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2611,7 +2640,7 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - We have a mountain to climb after all!
+          - We have a mountain to climb, after all!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -2641,9 +2670,24 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\na[Coda]\\p[0]Uh, give me a moment first!"
+          - "\\na[Coda]\\p[0]Uh, just give me a moment first."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 38
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[5]\\na[Vern]It's not like it's going somewhere "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - anytime soon, after all... *yawn*
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - 36
@@ -2651,7 +2695,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - When you are ready to leave, Talk to Topaz.
+          - When you are ready to leave, talk to Topaz.
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2950,12 +2994,12 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[9]\\na[Topaz]Splendid. "
+          - "\\p[9]\\na[Topaz]Splendid.\\. "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Let us get this campsite packed up now!
+          - Now, let us get packed up!
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -2996,7 +3040,7 @@ root: !ruby/object:RPG::Map
           - 10
           - 7
           - 8
-          - 0
+          - 1
           indent: 1
           code: 201
         - !ruby/object:RPG::EventCommand
@@ -3014,6 +3058,36 @@ root: !ruby/object:RPG::Map
           - 'No'
           indent: 0
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\na[Coda]\\p[0]I'm... not ready yet."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 40
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[9]\\na[Topaz]What, is this a jest?"
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[9]\\na[Topaz]Go and do what you must! "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - I loathe to waste daylight while we still have it!
+          indent: 1
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
