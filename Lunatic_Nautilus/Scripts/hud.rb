@@ -10,15 +10,15 @@ class Window_YourHUD < Window_Base
     super(0, 400, 640, 100)
     self.opacity = 0
     self.contents = Bitmap.new(640 - 32, 100 - 32)
+    @counter=6
     refresh
   end
   
   def refresh
-    self.contents.clear
-    reset_variables
-    
 
   if $game_switches[12]==false #if not during a cutscene
+
+    
     if Input.trigger?(Input::X)
       if $game_switches[16] == true
       $game_switches[16] = false
@@ -27,10 +27,15 @@ class Window_YourHUD < Window_Base
       end
     end
   end
-  
+     if @counter > 5 #counter thingy
+    @counter=0 #then reset it and let stuff happen 
+    self.contents.clear
+    reset_variables   #wipe everything off
+      
     if $game_switches[16]==true and $game_switches[12]==false 
       #if bars are meant to be shown and it isn't a cutscene
-    return if !@actor
+      
+    return if !@actor #draw fucking everything
     for i in 0...$game_party.actors.size
     x = i *150
     y = 2
@@ -43,8 +48,10 @@ class Window_YourHUD < Window_Base
   self.opacity = 128
 else
    self.opacity = 0
-  end
-  
+ end
+else
+  @counter+=1
+ end #new 
 end
 
   def reset_variables
