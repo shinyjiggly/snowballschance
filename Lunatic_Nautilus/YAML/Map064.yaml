@@ -1,10 +1,10 @@
---- !ruby/object:Hash
+---
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events: !ruby/object:Hash
+  events:
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -402,20 +402,15 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 36
+          - 60
           indent: 0
           code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]...nothing here."
-          indent: 0
-          code: 101
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
           code: 0
         move_type: 0
-        direction_fix: true
+        direction_fix: false
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
@@ -439,10 +434,10 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: kidcoda_bedx2
+          character_name: ''
           pattern: 0
           tile_id: 0
-          direction: 4
+          direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
