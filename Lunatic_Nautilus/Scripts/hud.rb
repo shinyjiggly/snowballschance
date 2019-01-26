@@ -41,14 +41,22 @@ self.contents.font.name = $defaultfonttype
 @old_sp = []
 @old_exp = []
 @old_level = []
-for i in 0...$game_party.actors.size
-@actors.push($game_party.actors[i])
-@old_hp.push(@actors[i].hp)
-@old_sp.push(@actors[i].sp)
-@old_exp.push(@actors[i].now_exp)
-@old_level.push(@actors[i].level)
-end
+  for i in 0...$game_party.actors.size
+  @actors.push($game_party.actors[i])
+  @old_hp.push(@actors[i].hp)
+  @old_sp.push(@actors[i].sp)
+  @old_exp.push(@actors[i].now_exp)
+  @old_level.push(@actors[i].level)
+  end
 @old_gold = $game_party.gold
+
+if $game_switches[16]==true and $game_switches[12]==false 
+  self.visible=true
+else #new
+  self.visible=false
+  #erase everything
+end 
+
 refresh
 end
 #--------------------------------------------------------------------------
