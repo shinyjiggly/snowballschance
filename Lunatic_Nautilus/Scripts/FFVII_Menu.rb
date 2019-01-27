@@ -29,7 +29,13 @@ class Scene_Menu
      s1 = $data_system.words.item
      s2 = $data_system.words.skill
      s3 = $data_system.words.equip
+     
+    if $game_variables[2]< 6
+     s4 = "???"
+   else
      s4 = "Snackmaking" #"Status"
+   end
+   
      s5 = "Quicksave"
      s6 = "Diary"
      s7=  "End Game"

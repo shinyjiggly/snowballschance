@@ -5,7 +5,7 @@ root:
   hit_rate: 100
   hold_turn: 0
   eva: 0
-  name: KO
+  name: Down
   zero_hp: true
   atk_rate: 100
   minus_state_set:
@@ -24,6 +24,8 @@ root:
   - 14
   - 15
   - 16
+  - 17
+  - 18
   str_rate: 100
   battle_only: false
   slip_damage: false
@@ -252,15 +254,15 @@ root:
   hit_rate: 100
   hold_turn: 4
   eva: 0
-  name: Weaken
+  name: Sore Throat
   zero_hp: false
   atk_rate: 100
   minus_state_set: []
   str_rate: 50
-  battle_only: true
+  battle_only: false
   slip_damage: false
-  rating: 4
-  nonresistance: false
+  rating: 6
+  nonresistance: true
   int_rate: 100
   plus_state_set: []
   maxsp_rate: 100
@@ -400,11 +402,15 @@ root:
   name: Weak
   zero_hp: false
   atk_rate: 100
-  minus_state_set: []
+  minus_state_set:
+  - 15
+  - 16
+  - 17
+  - 18
   str_rate: 100
   battle_only: true
   slip_damage: false
-  rating: 3
+  rating: 4
   nonresistance: true
   int_rate: 100
   plus_state_set: []
@@ -429,11 +435,15 @@ root:
   name: Below Average
   zero_hp: false
   atk_rate: 100
-  minus_state_set: []
+  minus_state_set:
+  - 14
+  - 16
+  - 17
+  - 18
   str_rate: 100
   battle_only: true
   slip_damage: false
-  rating: 3
+  rating: 4
   nonresistance: true
   int_rate: 100
   plus_state_set: []
@@ -458,11 +468,15 @@ root:
   name: Decent
   zero_hp: false
   atk_rate: 100
-  minus_state_set: []
+  minus_state_set:
+  - 14
+  - 15
+  - 17
+  - 18
   str_rate: 100
   battle_only: true
   slip_damage: false
-  rating: 3
+  rating: 4
   nonresistance: true
   int_rate: 100
   plus_state_set: []
@@ -487,7 +501,11 @@ root:
   name: Great
   zero_hp: false
   atk_rate: 100
-  minus_state_set: []
+  minus_state_set:
+  - 14
+  - 15
+  - 16
+  - 18
   str_rate: 100
   battle_only: true
   slip_damage: false
@@ -516,7 +534,11 @@ root:
   name: Incredible
   zero_hp: false
   atk_rate: 100
-  minus_state_set: []
+  minus_state_set:
+  - 14
+  - 15
+  - 16
+  - 17
   str_rate: 100
   battle_only: true
   slip_damage: false
