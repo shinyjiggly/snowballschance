@@ -267,6 +267,50 @@ root: !ruby/object:RPG::Map
           code: 121
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 1
+          - 2
+          - 0
+          - 0
+          - 0
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          indent: 2
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Topaz]Since we're testing this bitch, "
+          indent: 2
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - let's get the show on the road!
+          indent: 2
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 0
+          - 1
+          indent: 2
+          code: 129
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - levelstart
+          indent: 2
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - -1
           - !ruby/object:RPG::MoveRoute
             list:
@@ -599,6 +643,11 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - levelstart
+          indent: 1
+          code: 118
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 5
           indent: 1
           code: 106
@@ -780,45 +829,110 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 39
+          - 54
           indent: 0
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\na[frie]Take me with you."
+          - "\\p[3]\\na[Medi] Let me give you some cooking supplies."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 2
-          - 0
-          - 1
-          indent: 0
-          code: 129
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 2
-          - 2
+          - 5
           - 0
           - 0
-          - 2
+          - 11
           indent: 0
-          code: 122
+          code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 36
+          - 8
+          - 0
+          - 0
+          - 11
           indent: 0
-          code: 117
+          code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Frie can freeze bodies of water!
+          - 9
+          - 0
+          - 0
+          - 11
           indent: 0
-          code: 101
+          code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - press S when at the edge to freeze it!
+          - 19
+          - 0
+          - 0
+          - 11
           indent: 0
-          code: 401
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 38
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 22
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 22
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 25
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 26
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 27
+          - 0
+          - 0
+          - 11
+          indent: 0
+          code: 126
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -848,7 +962,7 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: friex2
+          character_name: medi_walkingx2
           pattern: 0
           tile_id: 0
           direction: 2
@@ -870,7 +984,7 @@ root: !ruby/object:RPG::Map
           self_switch_ch: A
           switch1_id: 1
           switch1_valid: false
-          variable_value: 2
+          variable_value: 1
           self_switch_valid: false
           variable_id: 2
           variable_valid: true

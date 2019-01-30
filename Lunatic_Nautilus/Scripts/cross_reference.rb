@@ -235,7 +235,7 @@ module XRef
     when :switches, :variables
       data_sources(obj_type)[id]
     else
-      data_sources(obj_type)[id] ? data_sources(obj_type)[id].name : 'a'
+      #data_sources(obj_type)[id] ? data_sources(obj_type)[id].name : 'a'
     end
   end
  
