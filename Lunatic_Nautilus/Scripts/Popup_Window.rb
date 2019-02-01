@@ -122,7 +122,7 @@ class Interpreter
     $scene.popup_window.refresh_popup_text(text, item, value)
     $scene.popup_window.visible = true
     Audio.se_play('Audio\SE\doodah', 80, 100) 
-    $scene.popup_count = 80
+    $scene.popup_count = 50 #80
   end
 
 #--------------------------------------------------------------------------

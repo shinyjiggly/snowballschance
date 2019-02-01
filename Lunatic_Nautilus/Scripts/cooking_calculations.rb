@@ -24,7 +24,15 @@ class Cookcalc
   [2,1] => 26,
   [2,2] => 23,
   [2,3] => 24,
-  [2,4] => 27
+  [2,4] => 27,
+  #snacks
+  [4,5] => 40, #fourleaf compote
+  [5,5] => 39, #threeleaf compote
+  [1,6] => 42, #poison boiled shroom
+  [2,6] => 41, #boiled shroom
+  [3,6] => 45, #doubleboiled shroom
+  [0,7] => 44, #seared fish
+  [0,8] => 43  #boiled worm
   }
   
     FoodPrefhash = {
@@ -135,7 +143,47 @@ class Cookcalc
     @shroom=$game_variables[11]
     return ResultHash[[@shroom,@ingre]]
   end
+#--------------------------------------------------------
+# give me a  /  s  n  a  c  k    /
+#
+#--------------------
+    def self.gimmesnack
+  $game_party.gain_item(Cookcalc.armornum, 1)
+  #grab the values from up there and use it to get an item
   
+  #use the values up there to lose items
+  if @ingre == 0
+  #plain
+elsif @ingre== 5 #compote
+  $game_party.lose_item(8, 1) #lose the water here
+elsif @ingre== 6 #boiled shroom
+  $game_party.lose_item(8, 1) #lose the water here
+elsif @ingre== 7 #grilled fish
+  $game_party.lose_item(22, 1) #lose the fish
+elsif @ingre== 8 #boiled worm
+  $game_party.lose_item(19, 1) #lose the worm
+  $game_party.lose_item(8, 1) #lose the water here
+else
+  p "what the hell did you put in your ingredience?"
+  end
+ 
+  #remove component
+  if @shroom == 1
+  $game_party.lose_item(10, 1) #poison
+elsif @shroom== 2
+  $game_party.lose_item(26, 1) #yellow
+elsif @shroom== 3
+  $game_party.lose_item(42, 1) #double cooked
+elsif @shroom== 4
+  $game_party.lose_item(37, 1) #4 leaf
+elsif @shroom== 5
+  $game_party.lose_item(38, 1) #3 leaf
+else
+  #do nothing
+  end
+  
+end #end of snack
+#--------------------------------------------------------------
   def self.gimmearmor
   $game_party.gain_armor(Cookcalc.armornum, 1)
   #remove ingre and remove shroom
@@ -167,7 +215,7 @@ else
   #do nothing
   end
 $game_party.lose_item(27, 1) #meal kit is always used
-  end
+  end #end of meal stuff
 
   def self.newequip
   if $game_variables[9]<=0
