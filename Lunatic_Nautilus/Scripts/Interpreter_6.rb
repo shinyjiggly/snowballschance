@@ -146,6 +146,19 @@ class Interpreter
     iterate_actor(@parameters[0]) do |actor|
       # Change actor SP
       actor.sp += value
+      
+      if value < 0 and value.abs > actor.sp #if it's more than the sp available
+        #then save that extra in thing
+        thing = value.abs - actor.sp
+        #and subtract that amount from hp
+        actor.hp -= thing
+        #if it killed the actor, 
+        #check if they're the front party member (not added yet)
+        if actor.hp < 1 
+          actor.hp = 1
+        end
+      end
+      
     end
     # Continue
     return true
