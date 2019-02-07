@@ -19563,8 +19563,13 @@ root:
   switch_id: 1
   id: 61
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: vendy voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - message.sound_audio = 'vendy'
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
