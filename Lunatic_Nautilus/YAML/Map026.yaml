@@ -243,93 +243,6 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 412
         - !ruby/object:RPG::EventCommand
-          parameters:
-          - 2
-          - A
-          - 1
-          indent: 0
-          code: 111
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 16
-          - 16
-          - 1
-          indent: 1
-          code: 121
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 47
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 37
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\na[Coda]Alright, everyone. While we're on "
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'this mountain, I''m the one in charge. '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - Stay close and don't get into any trouble, got it?
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 24
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 40
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[1]\\na[Topaz]*grumble grumble*..."
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 8
-          - 8
-          - 0
-          - 0
-          - 1
-          indent: 1
-          code: 122
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - A
-          - 0
-          indent: 1
-          code: 123
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - new_page("trailstart")
-          indent: 1
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - $diary[1]="todo2"
-          indent: 1
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 412
-        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
           code: 0
@@ -552,6 +465,164 @@ root: !ruby/object:RPG::Map
       y: 6
       x: 7
       id: 2
+    3: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 16
+          - 16
+          - 1
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 47
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]Alright, everyone. While we're on "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'this mountain, I''m the one in charge. '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Stay close and don't get into any trouble, got it?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 40
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Topaz]*grumble grumble*..."
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 8
+          - 0
+          - 0
+          - 1
+          indent: 0
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - A
+          - 0
+          indent: 0
+          code: 123
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - new_page("trailstart")
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - $diary[1]="todo2"
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 3
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: true
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: intro
+      y: 9
+      x: 0
+      id: 3
   tileset_id: 7
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
