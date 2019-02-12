@@ -7,10 +7,10 @@ class Bluh
 $diary  = ["basicpaper"]
 
   
-$diary[0]="controlllsss"  
-$diary[1]="todo1"  
-$diary[2]="fuguedoodle"  
-$diary[3]="basicpaper"  
+$diary[0]= "frontcover"
+$diary[1]= "controlllsss" 
+$diary[2]="todo1" 
+$diary[3]="fuguedoodle"
 $diary[4]="basicpaper"   
 $diary[5]="basicpaper"  
 $diary[6]="basicpaper"   
@@ -36,9 +36,7 @@ $diary[6]="campfiresong"
 also use
 popup(1, nil, 0)
 
-question: how to fill in optional scenes?
--the rabbit
--meeting with the fishman
+
 =end
 
 end

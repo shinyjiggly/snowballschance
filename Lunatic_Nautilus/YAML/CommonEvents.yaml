@@ -1538,6 +1538,11 @@ root:
     code: 121
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 63
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - SHOW THE HUD HERE
     indent: 0
     code: 108
@@ -2975,6 +2980,11 @@ root:
     code: 121
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 63
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - !ruby/object:Color
       red: 153.0
       green: 204.0
@@ -3486,6 +3496,11 @@ root:
     code: 121
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 63
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - !ruby/object:Color
       red: 153.0
       green: 204.0
@@ -3971,6 +3986,11 @@ root:
     - 0
     indent: 0
     code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 63
+    indent: 0
+    code: 117
   - !ruby/object:RPG::EventCommand
     parameters:
     - !ruby/object:Color
@@ -20116,14 +20136,398 @@ root:
   switch_id: 1
   id: 62
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: HUD add-on
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_switches[16]==true and $game_switches[12]==false"
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 0
+    - 2
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 2
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    indent: 2
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - terrain 1
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 1
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain1"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain1
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - terrain 2
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 2
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain2"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain2
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - terrain 3
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 3
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain3"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - terrain 4
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 4
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain4"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain4
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 5
+    - 1
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 2
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    indent: 2
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    indent: 2
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 1
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    indent: 1
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    indent: 1
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
     code: 0
-  trigger: 0
-  switch_id: 1
+  trigger: 2
+  switch_id: 16
   id: 63
 - !ruby/object:RPG::CommonEvent
   name: ''
