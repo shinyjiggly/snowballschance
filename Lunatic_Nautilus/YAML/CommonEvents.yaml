@@ -1,4 +1,4 @@
----
+--- !ruby/object:Hash
 root:
 - 
 - !ruby/object:RPG::CommonEvent
@@ -15690,6 +15690,11 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 64
+    indent: 1
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 1
     - snoooow
     - 0
@@ -20945,8 +20950,169 @@ root:
   switch_id: 16
   id: 63
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: sprite resetter
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Actor(6)
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &215 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 255
+        code: 42
+      - &216 !ruby/object:RPG::MoveCommand
+        parameters:
+        - topazx2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 0
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *215
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *216
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Actor(6)
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - topazx2
+    - 0
+    - ''
+    - 0
+    indent: 0
+    code: 322
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Actor(2)
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &217 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 255
+        code: 42
+      - &218 !ruby/object:RPG::MoveCommand
+        parameters:
+        - friex2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 0
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *217
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *218
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Actor(2)
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - friex2
+    - 0
+    - ''
+    - 0
+    indent: 0
+    code: 322
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Actor(3)
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &219 !ruby/object:RPG::MoveCommand
+        parameters:
+        - 255
+        code: 42
+      - &220 !ruby/object:RPG::MoveCommand
+        parameters:
+        - vernx2
+        - 0
+        - 2
+        - 0
+        code: 41
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 0
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *219
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *220
+    indent: 0
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Actor(3)
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - vernx2
+    - 0
+    - ''
+    - 0
+    indent: 0
+    code: 322
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    indent: 0
+    code: 117
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

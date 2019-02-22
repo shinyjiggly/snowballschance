@@ -12,7 +12,7 @@
 
 
 module Screen
-  SnapShot_Key = Input::A # Q key
+  SnapShot_Key = $keyboard["snap"] #Input::A # Q key
   @screen = Win32API.new 'screenshot', 'Screenshot', %w(l l l l p l l), ''
   @readini = Win32API.new 'kernel32', 'GetPrivateProfileStringA', %w(p p p p l p), 'l'
   @findwindow = Win32API.new 'user32', 'FindWindowA', %w(p p), 'l'
@@ -50,7 +50,7 @@ module Input
     alias new_snop update
   end
   def self.update
-    if Input.trigger?(Screen::SnapShot_Key)
+    if Keyboard.check(Screen::SnapShot_Key) #Input.trigger
       Screen.shot #hahaha, GET IT?
     end
     new_snop
