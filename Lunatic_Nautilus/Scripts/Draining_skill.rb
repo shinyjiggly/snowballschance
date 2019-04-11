@@ -6,7 +6,7 @@
 # of HP and SP.
 # That way attacks and skills can absorb part of the damage caused
 #==============================================================================
-
+=begin
 module Atoa
   # Do not remove this line
   Drain_Action = {'Skill' => {}, 'Weapon' => {}, 'Item' => {}}
@@ -159,3 +159,4 @@ alias step4_part2_drain step4_part2
     end
   end
 end
+=end

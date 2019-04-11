@@ -5,7 +5,7 @@
 # This script allows you to create skills, weapons and items that cost HP
 # when used.
 #==============================================================================
-
+=begin
 module Atoa
   # Do not remove this line
   HP_Sacrifice_Action = {'Skill' => {}, 'Weapon' => {}, 'Item' => {}}
@@ -98,3 +98,4 @@ class Scene_Battle
     end
   end
 end
+=end

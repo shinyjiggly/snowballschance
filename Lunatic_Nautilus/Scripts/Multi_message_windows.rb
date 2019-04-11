@@ -1147,21 +1147,22 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
         end
         sprite = $scene.spriteset.enemy_sprites[@float_id]
       end
-      
+=begin
       if sprite.frame_height != nil #ATOA COMPATIBLE!!!!
         char_height = sprite.frame_height
         char_width = sprite.frame_width
         char_x = sprite.x
         char_y = sprite.y - char_height/2
-      else     
-=begin
+      else   
+=end
+
       if sprite.height != nil
         char_height = sprite.height
         char_width = sprite.width
         char_x = sprite.x
         char_y = sprite.y - char_height/2
       else
-=end
+
         # This prevents GAME CRASH Enemy doesnt exist
         return
       end

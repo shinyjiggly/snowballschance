@@ -48,6 +48,7 @@ def new_page(text)
     if $diary[i] == "basicpaper" 
      $diary[i] = text
      popup(1, nil, 0)
+     $game_temp.common_event_id = 34 #make the diary pop up
      break
    end
    i += 1
