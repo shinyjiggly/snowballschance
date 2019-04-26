@@ -9,7 +9,7 @@ alias font_fix_initialize initialize
 
 def initialize
 font_fix_initialize
-$defaultfont = "BPixelDouble" # Font
+$defaultfont =  ["BPixelDouble","PlopDump","Comic Sans MS"]# Font
 self.name = $defaultfont
 self.size = 20 # Size
 
