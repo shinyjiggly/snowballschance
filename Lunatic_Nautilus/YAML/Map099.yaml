@@ -2108,7 +2108,7 @@ root: !ruby/object:RPG::Map
           parameters:
           - !ruby/object:RPG::AudioFile
             volume: 100
-            name: momenttogether
+            name: intheforesttogether
             pitch: 100
           indent: 2
           code: 241
@@ -2239,6 +2239,11 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - new_page("friendship")
+          indent: 2
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 17
           indent: 2
           code: 117
@@ -2256,6 +2261,14 @@ root: !ruby/object:RPG::Map
           - 3
           indent: 2
           code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: forestofdeath_d
+            pitch: 100
+          indent: 2
+          code: 241
         - !ruby/object:RPG::EventCommand
           parameters:
           - 4
@@ -2392,7 +2405,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Francis]Let's see, "
+          - "\\v\\p[3]\\na[Francis]Let's see, "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2435,7 +2448,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Francis]I will need to retrieve that "
+          - "\\v\\p[3]\\na[Francis]I will need to retrieve that "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2445,7 +2458,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Francis]It's the house with that...vending "
+          - "\\v\\p[3]\\na[Francis]It's the house with that...vending "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2460,7 +2473,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Francis]See you there~"
+          - "\\v\\p[3]\\na[Francis]See you there~"
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -2517,12 +2530,17 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Francis]You might be able to find some under "
+          - "\\v\\p[3]\\na[Francis]You might be able to "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - the rocks around here. I'll be waiting...
+          - 'find someunder the rocks around here. '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - I'll be waiting...
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -3094,7 +3112,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 0
     - 476
     - 476
     - 476
@@ -3114,7 +3131,8 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 0
+    - 476
+    - 476
     - 476
     - 476
     - 476
@@ -3396,7 +3414,7 @@ root: !ruby/object:RPG::Map
     - 192
     - 192
     - 192
-    - 192
+    - 0
     - 139
     - 118
     - 97
