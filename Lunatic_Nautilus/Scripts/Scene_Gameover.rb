@@ -51,7 +51,8 @@ class Scene_Gameover
   #--------------------------------------------------------------------------
   def update
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Switch to title screen
       $scene = Scene_Title.new
     end

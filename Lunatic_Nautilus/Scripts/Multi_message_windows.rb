@@ -2077,7 +2077,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
     if @input_number_window != nil
       @input_number_window.update
       # Confirm
-      if Input.trigger?(Input::C)
+      if Keys.trigger?($keyboard["select"])
+        #Input.trigger?(Input::C)
         # Allows windows to be closed
         $game_temp.input_in_window = false
         # play sound effect
@@ -2105,7 +2106,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
         end
       # Cancel, if allowed
       # *NOTE* - use "number_cancelled?" to checks if Cancel Button was pushed
-      elsif Input.trigger?(Input::B) and 
+      elsif Keys.trigger?($keyboard["cancel"]) &&
+        #Input.trigger?(Input::B) and 
             $game_system.message.allow_cancel_numbers
         # play cancel sound effect
         $game_system.se_play($data_system.cancel_se)
@@ -2130,7 +2132,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
     # If message is being displayed
     if @contents_showing
       # Confirm or cancel finishes waiting for input or message
-      if Input.trigger?(Input::C) or Input.trigger?(Input::B)
+      if Keys.trigger?($keyboard["select"]) || Keys.trigger?($keyboard["cancel"])
+        #Input.trigger?(Input::C) or Input.trigger?(Input::B)
         if @wait_for_input
           @wait_for_input = false
           self.pause = false
@@ -2169,7 +2172,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
         self.pause = true unless !$game_system.message.show_pause
       end
       # Cancel
-      if Input.trigger?(Input::B)
+      if Keys.trigger?($keyboard["cancel"])
+        #Input.trigger?(Input::B)
         if $game_temp.choice_max > 0 and $game_temp.choice_cancel_type > 0
           # Allow ALL windows to be closed
           $game_temp.input_in_window = false
@@ -2190,7 +2194,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
         terminate_message 
       end
       # Confirm
-      if Input.trigger?(Input::C)
+      if Keys.trigger?($keyboard["select"])
+        #Input.trigger?(Input::C)
         # Allow ALL windows to be closed
         $game_temp.input_in_window = false
         # if choice is displayed in one of multiple windows        
@@ -3666,12 +3671,24 @@ end
     #--------------------------------------------------------------------------
     unless method_defined?(:update_player_movement)
       def update_player_movement
+      
+        if Keys.press?($keyboard["down"])
+         move_down
+      elsif Keys.press?($keyboard["left"])
+         move_left
+      elsif Keys.press?($keyboard["right"])
+         move_right
+      elsif Keys.press?($keyboard["up"])
+         move_up
+      end
+=begin
         case Input.dir4
         when 2 then move_down
         when 4 then move_left
         when 6 then move_right
         when 8 then move_up
         end
+=end
       end
     end
   end

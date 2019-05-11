@@ -4837,8 +4837,8 @@ root:
   list:
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 11
-    - 17
+    - 12
+    - Keys.press?($keyboard["turn_l"])
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -4876,8 +4876,8 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 11
-    - 18
+    - 12
+    - Keys.press?($keyboard["turn_r"])
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -4916,7 +4916,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "!$game_player.moving? && Input.trigger?(Input::Z)"
+    - '!$game_player.moving? && Keys.press?($keyboard["diary"])'
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -4939,8 +4939,8 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 11
-    - 14
+    - 12
+    - Keys.press?($keyboard["hud"])
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand

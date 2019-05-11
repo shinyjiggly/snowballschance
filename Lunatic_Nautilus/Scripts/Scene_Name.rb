@@ -43,7 +43,8 @@ class Scene_Name
     @edit_window.update
     @input_window.update
     # If B button was pressed
-    if Input.repeat?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.repeat?(Input::B)
       # If cursor position is at 0
       if @edit_window.index == 0
         return
@@ -55,7 +56,8 @@ class Scene_Name
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # If cursor position is at [OK]
       if @input_window.character == nil
         # If name is empty

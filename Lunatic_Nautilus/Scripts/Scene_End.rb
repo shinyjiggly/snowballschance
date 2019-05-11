@@ -49,7 +49,8 @@ class Scene_End
     # Update command window
     @command_window.update
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Switch to menu screen
@@ -57,7 +58,8 @@ class Scene_End
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Branch by command window cursor position
       case @command_window.index
       when 0  # to title

@@ -102,7 +102,8 @@ class Scene_Shop
   #--------------------------------------------------------------------------
   def update_command
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Switch to map screen
@@ -110,7 +111,8 @@ class Scene_Shop
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Branch by command window cursor position
       case @command_window.index
       when 0  # buy
@@ -148,7 +150,8 @@ class Scene_Shop
     # Set status window item
     @status_window.item = @buy_window.item
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Change windows to initial mode
@@ -163,7 +166,8 @@ class Scene_Shop
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Get item
       @item = @buy_window.item
       # If item is invalid, or price is higher than money possessed
@@ -205,7 +209,8 @@ class Scene_Shop
   #--------------------------------------------------------------------------
   def update_sell
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Change windows to initial mode
@@ -219,7 +224,8 @@ class Scene_Shop
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Get item
       @item = @sell_window.item
       # Set status window item
@@ -257,7 +263,8 @@ class Scene_Shop
   #--------------------------------------------------------------------------
   def update_number
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Set quantity input window to inactive / invisible
@@ -278,7 +285,8 @@ class Scene_Shop
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Play shop SE
       $game_system.se_play($data_system.shop_se)
       # Set quantity input window to inactive / invisible

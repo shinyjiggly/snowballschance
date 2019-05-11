@@ -211,6 +211,16 @@ class Game_Player < Game_Character
     unless moving? or $game_system.map_interpreter.running? or
            @move_route_forcing or $game_temp.message_window_showing
       # Move player in the direction the directional button is being pressed
+      if Keys.press?($keyboard["down"])
+         move_down
+      elsif Keys.press?($keyboard["left"])
+         move_left
+      elsif Keys.press?($keyboard["right"])
+         move_right
+      elsif Keys.press?($keyboard["up"])
+         move_up
+      end
+=begin
       case Input.dir4
       when 2
         move_down
@@ -221,6 +231,9 @@ class Game_Player < Game_Character
       when 8
         move_up
       end
+=end      
+      
+      
     end
     # Remember coordinates in local variables
     last_real_x = @real_x
@@ -268,7 +281,8 @@ class Game_Player < Game_Character
         end
       end
       # If C button was pressed
-      if Input.trigger?(Input::C)
+      if Keys.trigger?($keyboard["select"]) 
+        #Input.trigger?(Input::C)
         # Same position and front event determinant
         check_event_trigger_here([0])
         check_event_trigger_there([0,1,2])

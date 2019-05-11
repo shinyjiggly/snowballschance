@@ -773,7 +773,8 @@ class Window_ItemMenu < Window_Selectable
   #--------------------------------------------------------------------------
   def update
     if self.active and @item_max >= 0 and @index >= 0
-      if Input.trigger?(Input::UP) && @index <= 1
+      if Keys.trigger?($keyboard["up"]) && @index <= 1
+        #Input.trigger?(Input::UP)
         @index = -1
       end
     end
@@ -914,7 +915,8 @@ class Scene_Item
   #--------------------------------------------------------------------------
   def update_item
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Set category window active
       @item_window.active = false
       @item_window.cat_select(true)
@@ -924,7 +926,8 @@ class Scene_Item
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Get currently selected data on the item window
       @item = @item_window.item
       # If not a use item
@@ -977,7 +980,8 @@ class Scene_Item
       return
     end
     # If UP button was pressed
-    if Input.trigger?(Input::UP) && @item_window.index == -1
+    if Keys.trigger?($keyboard["up"]) && @item_window.index == -1
+      #Input.trigger?(Input::UP)
       # Set category window active
       @item_window.active = false
       @item_window.cat_select(true)
@@ -992,7 +996,8 @@ class Scene_Item
   #--------------------------------------------------------------------------
   def update_target
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # If unable to use because items ran out
@@ -1008,7 +1013,8 @@ class Scene_Item
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # If items are used up
       if $game_party.item_number(@item.id) == 0
         # Play buzzer SE
@@ -1071,11 +1077,13 @@ class Scene_Item
   def update_category
     @item_window.category(@category_window.index)
     @item_window.cat_select(true)
-    if Input.repeat? (Input::RIGHT) || Input.repeat? (Input::LEFT)
+    if Keys.repeat?($keyboard["right"])|| Keys.repeat?($keyboard["left"])
+      #Input.repeat? (Input::RIGHT) || Input.repeat? (Input::LEFT)
     @item_window.refresh
     end
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Switch to menu screen
@@ -1083,7 +1091,8 @@ class Scene_Item
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Get currently selected data on the item window
       @item = @category_window.index
       # Set item window active
@@ -1096,7 +1105,8 @@ class Scene_Item
       return
     end
     # If DOWN button was pressed
-    if Input.trigger?(Input::DOWN)
+    if Keys.trigger?($keyboard["down"])
+      #Input.trigger?(Input::DOWN)
       # Set item window active
       @item_window.active = true
       @item_window.index = 0

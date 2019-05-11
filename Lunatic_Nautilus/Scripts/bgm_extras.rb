@@ -136,7 +136,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
 ############################################################################
 #   REMOVED $game_system.play_bgm BECAUSE IT'S DONE AUTOMATICALLY
 #   WHEN ME IS DONE PLAYING

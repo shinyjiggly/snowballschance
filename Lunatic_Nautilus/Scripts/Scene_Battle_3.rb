@@ -108,7 +108,8 @@ class Scene_Battle
   #--------------------------------------------------------------------------
   def update_phase3_basic_command
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Go to command input for previous actor
@@ -116,7 +117,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Branch by actor command window cursor position
       case @actor_command_window.index
       when 0  # attack
@@ -162,7 +164,8 @@ class Scene_Battle
     # Update skill window
     @skill_window.update
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # End skill selection
@@ -170,7 +173,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Get currently selected data on the skill window
       @skill = @skill_window.skill
       # If it can't be used
@@ -212,7 +216,8 @@ class Scene_Battle
     # Update item window
     @item_window.update
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # End item selection
@@ -220,7 +225,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Get currently selected data on the item window
       @item = @item_window.item
       # If it can't be used
@@ -260,7 +266,8 @@ class Scene_Battle
     # Update enemy arrow
     @enemy_arrow.update
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # End enemy selection
@@ -268,7 +275,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Play decision SE
       $game_system.se_play($data_system.decision_se)
       # Set action
@@ -296,7 +304,8 @@ class Scene_Battle
     # Update actor arrow
     @actor_arrow.update
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # End actor selection
@@ -304,7 +313,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Play decision SE
       $game_system.se_play($data_system.decision_se)
       # Set action

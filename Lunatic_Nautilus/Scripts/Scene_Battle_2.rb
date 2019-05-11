@@ -58,7 +58,8 @@ class Scene_Battle
   #--------------------------------------------------------------------------
   def update_phase2
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Branch by party command window cursor position
       case @party_command_window.index
       when 0  # fight
@@ -213,7 +214,8 @@ class Scene_Battle
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Battle ends
       battle_end(0)
     end

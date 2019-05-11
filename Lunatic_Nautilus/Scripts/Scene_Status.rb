@@ -45,7 +45,8 @@ class Scene_Status
   #--------------------------------------------------------------------------
   def update
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Switch to menu screen
@@ -53,7 +54,8 @@ class Scene_Status
       return
     end
     # If R button was pressed
-    if Input.trigger?(Input::R)
+    if Keys.trigger?($keyboard["turn_r"]) or Keys.trigger?($keyboard["right"])
+      #Input.trigger?(Input::R)
       # Play cursor SE
       $game_system.se_play($data_system.cursor_se)
       # To next actor
@@ -64,7 +66,8 @@ class Scene_Status
       return
     end
     # If L button was pressed
-    if Input.trigger?(Input::L)
+    if Keys.trigger?($keyboard["turn_l"]) or Keys.trigger?($keyboard["left"])
+      #Input.trigger?(Input::L)
       # Play cursor SE
       $game_system.se_play($data_system.cursor_se)
       # To previous actor

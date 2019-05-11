@@ -106,7 +106,8 @@ class Scene_Splash
   def update
     # If input triggered
 #=begin
-    if Input.trigger?(Input::C) || Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["select"]) || Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::C) || Input.trigger?(Input::B)
       # Switch to Title
       Audio.bgm_fade(1000) if SSConfig::PlayMusic
       $scene = Scene_Title.new

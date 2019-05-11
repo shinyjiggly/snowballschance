@@ -71,7 +71,8 @@ class Scene_Debug
   #--------------------------------------------------------------------------
   def update_left
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Switch to map screen
@@ -79,7 +80,8 @@ class Scene_Debug
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Play decision SE
       $game_system.se_play($data_system.decision_se)
       # Display help
@@ -106,7 +108,8 @@ class Scene_Debug
   #--------------------------------------------------------------------------
   def update_right
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Activate left window
@@ -122,7 +125,8 @@ class Scene_Debug
     # If switch
     if @right_window.mode == 0
       # If C button was pressed
-      if Input.trigger?(Input::C)
+      if Keys.trigger?($keyboard["select"])
+        #Input.trigger?(Input::C)
         # Play decision SE
         $game_system.se_play($data_system.decision_se)
         # Reverse ON / OFF
@@ -134,7 +138,8 @@ class Scene_Debug
     # If variable
     if @right_window.mode == 1
       # If right button was pressed
-      if Input.repeat?(Input::RIGHT)
+      if Keys.repeat?($keyboard["right"])
+        #Input.repeat?(Input::RIGHT)
         # Play cursor SE
         $game_system.se_play($data_system.cursor_se)
         # Increase variables by 1
@@ -147,7 +152,8 @@ class Scene_Debug
         return
       end
       # If left button was pressed
-      if Input.repeat?(Input::LEFT)
+      if Keys.repeat?($keyboard["left"])
+        #Input.repeat?(Input::LEFT)
         # Play cursor SE
         $game_system.se_play($data_system.cursor_se)
         # Decrease variables by 1
@@ -160,7 +166,8 @@ class Scene_Debug
         return
       end
       # If R button was pressed
-      if Input.repeat?(Input::R)
+      if Keys.repeat?($keyboard["turn_r"])
+        #Input.repeat?(Input::R)
         # Play cursor SE
         $game_system.se_play($data_system.cursor_se)
         # Increase variables by 10
@@ -173,7 +180,8 @@ class Scene_Debug
         return
       end
       # If L button was pressed
-      if Input.repeat?(Input::L)
+      if Keys.repeat?($keyboard["turn_l"])
+        #Input.repeat?(Input::L)
         # Play cursor SE
         $game_system.se_play($data_system.cursor_se)
         # Decrease variables by 10

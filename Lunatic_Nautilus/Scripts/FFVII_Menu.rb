@@ -136,7 +136,8 @@ class Scene_Menu
   #--------------------------------------------------------------------------
   def update_command
      # If B button was pressed
-     if Input.trigger?(Input::B)
+     if Keys.trigger?($keyboard["cancel"])
+       #Input.trigger?(Input::B)
         # Play cancel SE
         $game_system.se_play($data_system.cancel_se)
         # Switch to map screen
@@ -144,7 +145,8 @@ class Scene_Menu
         return
      end
      # If C button was pressed
-     if Input.trigger?(Input::C)
+     if Keys.trigger?($keyboard["select"])
+       #Input.trigger?(Input::C)
         # If command other than save or end game, and party members = 0
         if $game_party.actors.size == 0 and @command_window.index < 4
            # Play buzzer SE
@@ -226,7 +228,8 @@ class Scene_Menu
   #--------------------------------------------------------------------------
   def update_status
      # If B button was pressed
-     if Input.trigger?(Input::B)
+     if Keys.trigger?($keyboard["cancel"])
+       #Input.trigger?(Input::B)
         # Play cancel SE
         $game_system.se_play($data_system.cancel_se)
         # Make command window active
@@ -236,7 +239,8 @@ class Scene_Menu
         return
      end
      # If C button was pressed
-     if Input.trigger?(Input::C)
+     if Keys.trigger?($keyboard["select"])
+       #Input.trigger?(Input::C)
         # Branch by command window cursor position
         case @command_window.index
         when 1   # skill

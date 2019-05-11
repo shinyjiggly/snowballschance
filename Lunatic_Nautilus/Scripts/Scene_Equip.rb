@@ -141,7 +141,8 @@ class Scene_Equip
   #--------------------------------------------------------------------------
   def update_right
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Switch to menu screen
@@ -149,7 +150,8 @@ class Scene_Equip
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # If equipment is fixed
       if @actor.equip_fix?(@right_window.index)
         # Play buzzer SE
@@ -165,7 +167,8 @@ class Scene_Equip
       return
     end
     # If R button was pressed
-    if Input.trigger?(Input::R)
+    if Keys.trigger?($keyboard["turn_r"]) or Keys.trigger?($keyboard["right"])
+      #Input.trigger?(Input::R)
       # Play cursor SE
       $game_system.se_play($data_system.cursor_se)
       # To next actor
@@ -176,7 +179,8 @@ class Scene_Equip
       return
     end
     # If L button was pressed
-    if Input.trigger?(Input::L)
+    if Keys.trigger?($keyboard["turn_l"]) or Keys.trigger?($keyboard["left"])
+      #Input.trigger?(Input::L)
       # Play cursor SE
       $game_system.se_play($data_system.cursor_se)
       # To previous actor
@@ -192,7 +196,8 @@ class Scene_Equip
   #--------------------------------------------------------------------------
   def update_item
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Play cancel SE
       $game_system.se_play($data_system.cancel_se)
       # Activate right window
@@ -202,7 +207,8 @@ class Scene_Equip
       return
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Play equip SE
       $game_system.se_play($data_system.equip_se)
       # Get currently selected data on the item window

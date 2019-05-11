@@ -60,14 +60,16 @@ class Scene_File
       i.update
     end
     # If C button was pressed
-    if Input.trigger?(Input::C)
+    if Keys.trigger?($keyboard["select"])
+      #Input.trigger?(Input::C)
       # Call method: on_decision (defined by the subclasses)
       on_decision(make_filename(@file_index))
       $game_temp.last_file_index = @file_index
       return
     end
     # If B button was pressed
-    if Input.trigger?(Input::B)
+    if Keys.trigger?($keyboard["cancel"])
+      #Input.trigger?(Input::B)
       # Call method: on_cancel (defined by the subclasses)
       on_cancel
       return
