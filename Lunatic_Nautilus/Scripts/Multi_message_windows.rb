@@ -284,7 +284,7 @@ class Game_Message
     # exit if distance from speaker is too great
     @dist_exit = false
     # distance player can be before window closes
-    @dist_max = 500
+    @dist_max = 99999
     
     # allow message windows to float off screen instead of flipping
     @allow_offscreen = false
@@ -1226,6 +1226,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
     flip = need_flip?(@float_id, @location, x, y, params)
     # check if any window locations need to be "flipped"
     # because of Window Location
+    
     if @location == 4 and
        ((x < 0 and 
        (not $game_system.message.allow_offscreen or $game_temp.in_battle)) or
@@ -1242,7 +1243,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
       if x + self.width > 640 and 
          (!$game_system.message.allow_offscreen or $game_temp.in_battle)
         # right is no good either...
-        if y >= 24 #EDIT
+        if y >= 24 #EDIT was 24
           # switch to top
           @location = 8
           vars = new_position(params)
@@ -1280,7 +1281,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
       if x < 0 and 
          (!$game_system.message.allow_offscreen or $game_temp.in_battle)
         # left is no good either...
-        if y >= 0
+        if y >= 50
           # switch to top
           @location = 8
           vars = new_position(params)
