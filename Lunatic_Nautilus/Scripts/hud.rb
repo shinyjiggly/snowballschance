@@ -41,6 +41,7 @@ self.contents.font.name = $defaultfonttype
 @old_sp = []
 @old_exp = []
 @old_level = []
+
   for i in 0...$game_party.actors.size
   @actors.push($game_party.actors[i])
   @old_hp.push(@actors[i].hp)
@@ -69,7 +70,7 @@ self.contents.font.color = normal_color
 bitmap = RPG::Cache.picture("hudback")
 self.contents.blt(0, 0, bitmap, Rect.new(0, 0, 640, 108))
 x = 32
-  for i in 0...@actors.size
+  for i in 0...[4,@actors.size].min
     y = 6
     draw_actor_name(@actors[i], x+58, -4)
     draw_actor_hp  (@actors[i], x, 15,width = 144)
@@ -94,13 +95,14 @@ end
 
   if @actors.size != $game_party.actors.size #if actor amount has changed
   @actors = []
+
     for i in 0...$game_party.actors.size #update the actor count
     @actors.push($game_party.actors[i])
     end
   refresh #then start drawing
   return
   end
-  for i in 0...@actors.size
+  for i in 0...[4,@actors.size].min
     if @old_hp[i] != @actors[i].hp or
     @old_sp[i] != @actors[i].sp or
     @old_exp[i] != @actors[i].now_exp or
