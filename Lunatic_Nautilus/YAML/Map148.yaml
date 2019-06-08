@@ -70,7 +70,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 1
+          - 140
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -140,7 +140,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 141
+          - 666
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -211,7 +211,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 1
+          - 149
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -281,7 +281,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 1
+          - 137
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -401,6 +401,334 @@ root: !ruby/object:RPG::Map
       y: 0
       x: 0
       id: 1
+    2: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 384
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 56
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 3
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 15
+          switch1_valid: true
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - 8
+            code: 15
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - icegrowx2
+            - 0
+            - 4
+            - 1
+            code: 41
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - 3
+            code: 15
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - icegrowx2
+            - 0
+            - 4
+            - 2
+            code: 41
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - 3
+            code: 15
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - icegrowx2
+            - 0
+            - 4
+            - 3
+            code: 41
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: false
+        trigger: 4
+        step_anime: false
+        move_frequency: 6
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: icegrowx2
+          pattern: 0
+          tile_id: 0
+          direction: 4
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: true
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 15
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: true
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: spikes
+      y: 8
+      x: 7
+      id: 2
+    3: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 384
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 56
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 3
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 15
+          switch1_valid: true
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - 8
+            code: 15
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - icegrowx2
+            - 0
+            - 4
+            - 1
+            code: 41
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - 3
+            code: 15
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - icegrowx2
+            - 0
+            - 4
+            - 2
+            code: 41
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - 3
+            code: 15
+          - !ruby/object:RPG::MoveCommand
+            parameters:
+            - icegrowx2
+            - 0
+            - 4
+            - 3
+            code: 41
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: false
+        trigger: 4
+        step_anime: false
+        move_frequency: 6
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: icegrowx2
+          pattern: 0
+          tile_id: 0
+          direction: 4
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: true
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 15
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: true
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: spikes
+      y: 9
+      x: 9
+      id: 3
   tileset_id: 13
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
@@ -471,552 +799,589 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 476
-    - 572
-    - 573
-    - 574
-    - 575
-    - 479
-    - 485
-    - 0
-    - 515
-    - 481
-    - 481
-    - 481
-    - 481
-    - 481
-    - 514
     - 473
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
     - 473
-    - 475
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 479
-    - 485
-    - 515
-    - 481
-    - 482
-    - 489
-    - 489
-    - 489
-    - 489
-    - 489
-    - 480
-    - 481
-    - 514
-    - 483
-    - 478
-    - 0
-    - 0
-    - 425
-    - 426
-    - 0
-    - 477
-    - 515
-    - 482
-    - 489
-    - 490
-    - 497
-    - 497
-    - 497
-    - 497
-    - 497
-    - 488
-    - 489
-    - 480
-    - 514
-    - 475
-    - 0
-    - 0
-    - 0
-    - 0
-    - 479
-    - 485
-    - 474
-    - 490
-    - 497
-    - 498
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
     - 473
-    - 0
-    - 0
-    - 0
-    - 0
-    - 496
-    - 497
-    - 488
-    - 472
-    - 475
-    - 0
-    - 0
-    - 0
-    - 0
-    - 477
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
     - 473
-    - 474
-    - 498
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
     - 473
-    - 0
-    - 130
-    - 116
-    - 132
-    - 0
-    - 0
-    - 0
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
     - 473
-    - 496
-    - 506
-    - 475
-    - 0
-    - 0
-    - 0
-    - 0
-    - 477
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
     - 473
-    - 474
-    - 388
-    - 0
-    - 139
-    - 105
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 473
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 212
+    - 212
+    - 212
+    - 193
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 194
+    - 228
+    - 112
     - 96
     - 98
     - 132
     - 0
-    - 389
     - 0
-    - 472
-    - 473
-    - 475
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 216
+    - 112
+    - 96
+    - 100
+    - 134
     - 0
     - 0
-    - 478
-    - 0
-    - 471
-    - 469
-    - 507
-    - 465
-    - 466
-    - 0
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 216
     - 136
     - 104
-    - 96
-    - 98
-    - 132
-    - 0
-    - 464
-    - 506
-    - 473
-    - 475
+    - 120
     - 0
     - 0
-    - 483
-    - 478
+    - 0
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 194
+    - 228
+    - 136
+    - 134
+    - 0
+    - 0
+    - 0
+    - 116
+    - 116
+    - 117
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 194
+    - 212
+    - 212
+    - 228
+    - 407
+    - 0
+    - 124
+    - 124
+    - 134
+    - 232
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 194
+    - 212
+    - 228
+    - 0
+    - 0
+    - 0
+    - 0
+    - 232
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 194
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 232
+    - 220
+    - 220
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 468
+    - 468
+    - 550
+    - 551
+    - 0
+    - 0
+    - 0
+    - 0
+    - 232
+    - 220
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 0
+    - 0
+    - 558
+    - 559
+    - 468
+    - 469
+    - 0
+    - 0
+    - 0
+    - 0
+    - 232
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 0
+    - 0
+    - 566
+    - 567
     - 0
     - 471
     - 468
+    - 468
     - 469
-    - 474
     - 0
     - 0
-    - 136
-    - 104
-    - 100
-    - 134
-    - 473
-    - 472
-    - 473
-    - 0
-    - 483
-    - 478
-    - 0
-    - 473
-    - 483
-    - 478
+    - 232
+    - 220
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
     - 0
     - 0
-    - 477
-    - 507
-    - 466
-    - 0
-    - 473
-    - 136
-    - 134
-    - 0
-    - 0
-    - 472
+    - 574
+    - 575
     - 0
     - 0
     - 0
-    - 475
-    - 0
-    - 514
-    - 473
-    - 483
-    - 478
     - 0
     - 471
-    - 469
-    - 474
+    - 491
+    - 0
+    - 0
+    - 0
+    - 232
+    - 200
+    - 192
+    - 192
+    - 192
+    - 192
+    - 192
+    - 0
+    - 399
     - 0
     - 0
     - 0
     - 0
     - 0
-    - 464
-    - 506
     - 0
     - 0
     - 0
-    - 483
-    - 478
-    - 480
-    - 514
-    - 473
-    - 483
-    - 478
     - 0
-    - 471
-    - 507
-    - 465
-    - 466
+    - 407
     - 0
-    - 138
     - 0
-    - 472
+    - 232
+    - 220
+    - 220
+    - 200
+    - 192
+    - 192
     - 0
     - 0
     - 0
     - 0
     - 0
-    - 483
-    - 488
-    - 480
-    - 481
-    - 514
-    - 483
-    - 484
-    - 478
-    - 477
-    - 473
-    - 474
-    - 0
-    - 113
-    - 132
-    - 472
     - 0
     - 0
     - 0
     - 0
-    - 0
-    - 473
-    - 496
-    - 488
-    - 489
-    - 480
-    - 481
-    - 514
-    - 483
-    - 485
-    - 473
-    - 507
-    - 0
-    - 112
-    - 120
-    - 0
-    - 473
-    - 473
-    - 473
-    - 473
-    - 0
-    - 473
-    - 0
-    - 496
-    - 497
-    - 488
-    - 489
-    - 480
-    - 514
-    - 473
-    - 473
-    - 473
-    - 130
-    - 97
-    - 120
-    - 515
-    - 481
-    - 481
-    - 481
-    - 481
-    - 514
-    - 473
+    - 467
+    - 491
     - 0
     - 0
     - 0
-    - 496
-    - 497
-    - 488
-    - 472
-    - 473
-    - 473
-    - 515
-    - 112
-    - 96
-    - 120
-    - 482
-    - 489
-    - 489
-    - 489
-    - 489
-    - 480
-    - 481
-    - 409
+    - 0
+    - 391
+    - 0
+    - 232
+    - 200
+    - 192
     - 0
     - 0
     - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 467
+    - 470
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 232
+    - 200
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 192
+    - 192
+    - 192
+    - 216
+    - 0
+    - 0
+    - 547
+    - 548
+    - 549
+    - 192
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 192
+    - 192
+    - 216
+    - 0
+    - 0
+    - 555
+    - 556
+    - 557
+    - 192
     - 0
     - 0
     - 0
@@ -1029,11 +1394,65 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 192
+    - 194
+    - 228
     - 0
     - 563
     - 564
     - 565
-    - 419
+    - 192
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 192
+    - 192
+    - 194
+    - 228
+    - 571
+    - 572
+    - 573
+    - 220
+    - 220
+    - 220
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 387
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 192
+    - 192
+    - 194
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 386
+    - 0
     - 0
     - 0
     - 0
@@ -1050,18 +1469,18 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 571
-    - 572
-    - 573
-    - 411
-    - 412
     - 0
     - 0
     - 0
     - 0
     - 0
     - 0
-    - 427
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 540
     - 541
     - 542
@@ -1072,27 +1491,64 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 548
+    - 549
+    - 550
     - 532
+    - 533
+    - 534
     - 0
     - 0
     - 0
     - 0
     - 0
     - 0
-    - 435
     - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 556
+    - 557
+    - 558
+    - 540
+    - 541
+    - 542
+    - 543
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 564
+    - 565
     - 547
     - 548
     - 549
     - 550
     - 551
     - 0
-    - 412
-    - 0
-    - 0
-    - 0
-    - 0
-    - 540
     - 0
     - 0
     - 0
@@ -1101,6 +1557,12 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 572
+    - 573
     - 555
     - 556
     - 557
@@ -1108,11 +1570,11 @@ root: !ruby/object:RPG::Map
     - 559
     - 0
     - 0
-    - 464
     - 0
     - 0
-    - 547
-    - 548
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -1131,10 +1593,10 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 555
-    - 556
     - 0
-    - 438
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
@@ -1151,8 +1613,6 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 563
-    - 564
     - 0
     - 0
     - 0
@@ -1168,16 +1628,9 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 532
-    - 533
-    - 534
-    - 571
-    - 572
     - 0
     - 0
     - 0
-    - 428
-    - 429
     - 0
     - 0
     - 0
@@ -1186,131 +1639,6 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 540
-    - 541
-    - 542
-    - 543
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 432
-    - 433
-    - 434
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 547
-    - 548
-    - 549
-    - 550
-    - 551
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 440
-    - 441
-    - 442
-    - 469
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 555
-    - 556
-    - 557
-    - 558
-    - 559
-    - 0
-    - 0
-    - 0
-    - 553
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 563
-    - 564
-    - 565
-    - 566
-    - 567
-    - 0
-    - 0
-    - 560
-    - 561
-    - 562
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 466
-    - 0
-    - 464
-    - 506
-    - 571
-    - 572
-    - 573
-    - 574
-    - 575
-    - 0
-    - 543
-    - 568
-    - 569
-    - 570
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 474
-    - 0
-    - 472
-    - 0
-    - 532
-    - 533
-    - 534
-    - 0
-    - 0
-    - 0
-    - 551
-    - 576
-    - 577
-    - 578
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 515
-    - 482
-    - 0
-    - 480
-    - 0
-    - 540
-    - 541
-    - 542
-    - 543
     - 0
     - 0
   autoplay_bgs: false
