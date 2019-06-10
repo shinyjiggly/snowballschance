@@ -15,4 +15,6 @@ $keyboard  =
 "hud" => Keys::A, #HUD
 "gather" => Keys::S, #gather
 "diary" => Keys::D, #diary
-"snap" => Keys::SHIFT} #screenshot
+"snap" => Keys::MENU, #screenshot
+"strafe" => Keys::SHIFT #strafing
+} 
