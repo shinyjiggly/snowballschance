@@ -3,12 +3,12 @@
 # by: Anh Nguyen
 #==============================================================================
 # When you go up and down ladders, your character will always be facing up.
- 
+ #place this under pixel movement!
 module Ladder
   #Terrain tags using as ladder tags
   LADDER_TERRAINS = [5]
   #Maps using ladder tags
-  LADDER_MAPS = [1,25,30,87]
+  LADDER_MAPS = [1,25,30,87,20]
 end
  
 #==============================================================================

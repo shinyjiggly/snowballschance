@@ -211,6 +211,7 @@ class Game_Player < Game_Character
     unless moving? or $game_system.map_interpreter.running? or
            @move_route_forcing or $game_temp.message_window_showing
       # Move player in the direction the directional button is being pressed
+     
       if Keys.press?($keyboard["down"])
          move_down
       elsif Keys.press?($keyboard["left"])
@@ -219,7 +220,8 @@ class Game_Player < Game_Character
          move_right
       elsif Keys.press?($keyboard["up"])
          move_up
-      end
+       end
+
 =begin
       case Input.dir4
       when 2

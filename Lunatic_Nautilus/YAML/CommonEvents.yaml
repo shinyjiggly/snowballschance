@@ -1390,6 +1390,11 @@ root:
     indent: 0
     code: 509
   - !ruby/object:RPG::EventCommand
+    parameters:
+    - 20
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
     code: 0
@@ -2537,6 +2542,11 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
+    - "-------------------------"
+    indent: 4
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 1
     - 24
     - 0
@@ -2551,6 +2561,11 @@ root:
     code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
+    - usable_moving?
+    indent: 5
+    code: 408
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 12
     - "$game_player.moving?"
     indent: 5
@@ -2562,11 +2577,6 @@ root:
     indent: 6
     code: 207
   - !ruby/object:RPG::EventCommand
-    parameters:
-    - 6
-    indent: 6
-    code: 106
-  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 6
     code: 0
@@ -2574,6 +2584,11 @@ root:
     parameters: []
     indent: 5
     code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    indent: 5
+    code: 106
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 5
@@ -5091,6 +5106,11 @@ root:
 - !ruby/object:RPG::CommonEvent
   name: Gathering
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - rotatingg
+    indent: 0
+    code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
