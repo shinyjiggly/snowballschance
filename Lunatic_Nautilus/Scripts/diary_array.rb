@@ -1,12 +1,25 @@
 #diary arrayyyyyy
-#thank you Marrend and Jaiden
+#thank you Marrend and Jaiden, Delsin and Psy_wombats too
 
-class Bluh
-
-
+class Diary
+=begin  
+#fix this shit!
+def initialize 
+  if FileTest.exist?("diary#{i+1}.txt")
+      file = File.open("diary#{i+1}.txt") 
+      #checks for diary file and opens it,
+      #reminder to bind it to the fucking savefile number somehow!
+          i=0
+          while i < file.length
+            #then do some while loop shit to unpack all those 
+            #strings out of that file into the array
+            i++ #iterator
+            end
+  else
+            #if all else fails, just give em a fresh diary
+=end  
 $diary  = ["basicpaper"]
 
-  
 $diary[0]= "frontcover"
 $diary[1]= "controlllsss" 
 $diary[2]="todo1" 
@@ -26,36 +39,8 @@ $diary[15]="basicpaper"
 $diary[16]="basicpaper"  
 $diary[17]="basicpaper"  
 $diary[18]="basicpaper"  
-$diary[19]="basicpaper"  
-
-=begin
-places where diary entries are changed:
--night 1
-$diary[6]="campfiresong"  
-
-also use
-popup(1, nil, 0)
-
-
-=end
-
-end
-
-class Interpreter
-def new_page(text)
-  i = 0
-  while i < $diary.size
-    if $diary[i] == "basicpaper" 
-     $diary[i] = text
-     popup(1, nil, 0)
-     #set the jumppage here
-     $game_variables[52]=i
-     $game_temp.common_event_id = 34 #make the diary pop up
-     break
-   end
-   i += 1
-   $game_variables[10]+=1
-  end
+$diary[19]="basicpaper"
 end
 #class end
-end
+#end #stick these ends in for the thing after uncommenting it
+#end
