@@ -156,13 +156,16 @@ class Cookcalc
   #plain
 elsif @ingre== 5 #compote
   $game_party.lose_item(8, 1) #lose the water here
+  $game_party.gain_item(16,1) #gain bottle here
 elsif @ingre== 6 #boiled shroom
   $game_party.lose_item(8, 1) #lose the water here
+  $game_party.gain_item(16,1) #gain bottle here
 elsif @ingre== 7 #grilled fish
   $game_party.lose_item(22, 1) #lose the fish
 elsif @ingre== 8 #boiled worm
   $game_party.lose_item(19, 1) #lose the worm
   $game_party.lose_item(8, 1) #lose the water here
+  $game_party.gain_item(16,1) #gain bottle here
 else
   p "what the hell did you put in your ingredience?"
   end
