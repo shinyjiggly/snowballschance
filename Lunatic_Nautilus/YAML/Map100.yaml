@@ -37,6 +37,13 @@ root: !ruby/object:RPG::Map
           code: 121
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 22
+          - 22
+          - 0
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 2
           indent: 0
           code: 106
@@ -212,12 +219,29 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
+          - !ruby/object:Color
+            red: 255.0
+            green: 255.0
+            blue: 255.0
+            alpha: 255.0
+          - 5
+          indent: 0
+          code: 224
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 22
+          - 22
+          - 1
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 37
           indent: 0
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...an artichoke? \\."
+          - "\\p[0]\\na[Coda]...An artichoke? \\."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -247,7 +271,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...it isn't?"
+          - "\\p[0]\\na[Coda]...It isn't?"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -284,14 +308,6 @@ root: !ruby/object:RPG::Map
           code: 121
         - !ruby/object:RPG::EventCommand
           parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 100
-            name: ''
-            pitch: 100
-          indent: 0
-          code: 241
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 5
           indent: 0
           code: 106
@@ -302,7 +318,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...\\.oh."
+          - "\\p[0]\\na[Coda]...\\.Oh."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand

@@ -720,8 +720,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV003
-      y: 2
-      x: 12
+      y: 3
+      x: 14
       id: 3
     4: !ruby/object:RPG::Event
       pages:
@@ -1062,32 +1062,17 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 37
-          indent: 0
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\na[Coda]IHey, anyone else hungry "
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - right about now?
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 25
           indent: 0
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Vern]Are you kidding? "
+          - "\\p[1]\\na[Vern]Is anyone else hungry? "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - I could eat an entire meat locker!
+          - I could eat an entire meat locker right now!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1152,7 +1137,7 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]That tri-leaf berry over there "
+          - "\\p[0]\\na[Coda]That berry over there "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1177,7 +1162,7 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'the menu to make some snacks to be '
+          - 'the menu to make snacks to be '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1187,27 +1172,32 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'These snacks can be used to restore '
+          - 'These snacks can be consumed from ''Items'' on the '
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - health and spoons while on the road!
+          - 'Esc menu, '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'Remember that restoration amounts '
+          - and can restore health and spoons while on the road!
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'Remember that different party members have '
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'depend upon food preferences, so feed '
+          - 'different tastes, so ration your snacks wisely to get '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - your party snacks according to their tastes.
+          - the most out of your hard work!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
