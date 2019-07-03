@@ -107,7 +107,13 @@ class Game_Screen
     end
     if @flash_duration >= 1
       d = @flash_duration
-      @flash_color.alpha = @flash_color.alpha * (d - 1) / d
+      
+      if $game_switches[4]==false #if you want flash
+        @flash_color.alpha = @flash_color.alpha * (d - 1) / d
+        else
+        @flash_color.alpha = 0
+      end
+      
       @flash_duration -= 1
     end
     if @shake_duration >= 1 or @shake != 0

@@ -260,7 +260,7 @@ class Interpreter
   #--------------------------------------------------------------------------
   def command_224
     # Start flash
-    $game_screen.start_flash(@parameters[0], @parameters[1] * 2)
+    $game_screen.start_flash(@parameters[0], @parameters[1] * 2) 
     # Continue
     return true
   end
