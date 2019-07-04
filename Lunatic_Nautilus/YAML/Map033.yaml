@@ -1011,12 +1011,14 @@ root: !ruby/object:RPG::Map
           code: 207
         - !ruby/object:RPG::EventCommand
           parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 50
-            name: hikingintro2
-            pitch: 100
+          - Audio.bgm_play('Audio/BGM/' +
           indent: 0
-          code: 241
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "'hikingintro2',0,100,0,true)"
+          indent: 0
+          code: 655
         - !ruby/object:RPG::EventCommand
           parameters:
           - 10
