@@ -990,10 +990,6 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 247
-        - !ruby/object:RPG::EventCommand
           parameters:
           - !ruby/object:Tone
             red: -34.0
@@ -1011,12 +1007,12 @@ root: !ruby/object:RPG::Map
           code: 207
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Audio.bgm_play('Audio/BGM/' +
+          - bgm = ::FmodEx.bgm_sound
           indent: 0
           code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "'hikingintro2',0,100,0,true)"
+          - bgm.set_volume(25) unless bgm.nil?
           indent: 0
           code: 655
         - !ruby/object:RPG::EventCommand
@@ -1097,10 +1093,6 @@ root: !ruby/object:RPG::Map
           - 10
           indent: 1
           code: 223
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 248
         - !ruby/object:RPG::EventCommand
           parameters:
           - -1
