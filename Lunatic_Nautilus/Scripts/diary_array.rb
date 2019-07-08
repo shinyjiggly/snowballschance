@@ -2,22 +2,7 @@
 #thank you Marrend and Jaiden, Delsin and Psy_wombats too
 
 class Diary
-=begin  
-#fix this shit!
-def initialize 
-  if FileTest.exist?("diary#{i+1}.txt")
-      file = File.open("diary#{i+1}.txt") 
-      #checks for diary file and opens it,
-      #reminder to bind it to the fucking savefile number somehow!
-          i=0
-          while i < file.length
-            #then do some while loop shit to unpack all those 
-            #strings out of that file into the array
-            i++ #iterator
-            end
-  else
-            #if all else fails, just give em a fresh diary
-=end  
+
 $diary  = ["basicpaper"]
 
 $diary[0]= "frontcover"
@@ -41,6 +26,3 @@ $diary[17]="basicpaper"
 $diary[18]="basicpaper"  
 $diary[19]="basicpaper"
 end
-#class end
-#end #stick these ends in for the thing after uncommenting it
-#end
