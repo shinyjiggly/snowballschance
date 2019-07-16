@@ -4,6 +4,8 @@ Dynamic Footprints - version 1.0 (2005-11-07)
 ============
 by Wachunga
 
+>Put this before Transition pack!!
+
 0.95 - original release
 1.0 - fixed a small bug with directional footprints and
 updated the compatibility list
