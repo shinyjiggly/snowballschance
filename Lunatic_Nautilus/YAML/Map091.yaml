@@ -1701,22 +1701,22 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Vending machine??]Boots! "
+          - "\\p[3]\\na[Vending machine??]BOOTS! "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Give me your boots!
+          - GIVE ME YOUR BOOTS!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Vending machine??]Something about boots... "
+          - "\\p[3]\\na[Vending machine??]BOOTS... "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - They're just so... boot-y...
+          - THEY'RE JUST SO... BOOT-Y...
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1741,12 +1741,17 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[3]\\na[Vending machine??]If you have any to spare, "
+          - "\\p[3]\\na[Vending machine??]IF YOU HAVE ANY TO "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - give them to meeeeeeeeeeeee...
+          - SPARE,
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - GIVE THEM TO MEEEEEE...
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -1781,6 +1786,24 @@ root: !ruby/object:RPG::Map
           - I CAN SENSE THEM.
           indent: 0
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 53
+          - 53
+          - 0
+          - 0
+          - 5
+          indent: 0
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 54
+          - 54
+          - 0
+          - 0
+          - 5
+          indent: 0
+          code: 122
         - !ruby/object:RPG::EventCommand
           parameters:
           - A
@@ -1873,6 +1896,11 @@ root: !ruby/object:RPG::Map
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 62
+          indent: 2
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[3]\\na[Vending machine??]EXCELLENT."
           indent: 2
           code: 101
@@ -1881,6 +1909,16 @@ root: !ruby/object:RPG::Map
           - PLEASE BROWSE MY WARES.
           indent: 2
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 2
+          code: 118
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 2
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
           - - Finn's Chips
@@ -1896,6 +1934,182 @@ root: !ruby/object:RPG::Map
           indent: 2
           code: 402
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - assess stock
+          indent: 3
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 53
+          - 0
+          - 0
+          - 3
+          indent: 3
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Trade one Boot for a bag of Finn's Chips?
+          indent: 4
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 4
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 4
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 62
+          indent: 5
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[3]\\na[Vending machine??]THANK YOU FOR YOUR "
+          indent: 5
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - PURCHASE.
+          indent: 5
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - HAVE A NICE BOOT!
+          indent: 5
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 14
+          indent: 5
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 43
+          - 43
+          - 1
+          - 0
+          - 2
+          indent: 6
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 6
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 14
+          - 0
+          - 0
+          - 1
+          indent: 6
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 43
+          - 43
+          - 0
+          - 0
+          - 3
+          indent: 6
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 6
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          - 1
+          - 0
+          - 1
+          indent: 5
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 53
+          - 53
+          - 2
+          - 0
+          - 1
+          indent: 5
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 5
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 4
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 5
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 62
+          indent: 4
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[3]\\na[Vending machine??]SOLD OUT."
+          indent: 4
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 4
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 412
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 3
           code: 0
@@ -1905,6 +2119,182 @@ root: !ruby/object:RPG::Map
           - Kale Chips
           indent: 2
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 54
+          - 0
+          - 0
+          - 3
+          indent: 3
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 36
+          indent: 4
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Trade one Boot for a bag of Kale Chips?
+          indent: 4
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 4
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 4
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 62
+          indent: 5
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[3]\\na[Vending machine??]THANK YOU FOR YOUR "
+          indent: 5
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - PURCHASE.
+          indent: 5
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - HAVE A NICE BOOT!
+          indent: 5
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 31
+          indent: 5
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 44
+          - 44
+          - 1
+          - 0
+          - 2
+          indent: 6
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 6
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 31
+          - 0
+          - 0
+          - 1
+          indent: 6
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 44
+          - 44
+          - 0
+          - 0
+          - 3
+          indent: 6
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 6
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          - 1
+          - 0
+          - 1
+          indent: 5
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 54
+          - 54
+          - 2
+          - 0
+          - 1
+          indent: 5
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 5
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 4
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 5
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 5
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 62
+          indent: 4
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[3]\\na[Vending machine??]SOLD OUT."
+          indent: 4
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - shoppin
+          indent: 4
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 3
@@ -1933,6 +2323,21 @@ root: !ruby/object:RPG::Map
           - 'No'
           indent: 1
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 62
+          indent: 2
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[3]\\na[Vending machine??]GIVE ME YOUR BOOTS. "
+          indent: 2
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - I CAN STILL SENSE THEM.
+          indent: 2
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 2
