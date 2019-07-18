@@ -70,7 +70,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 148
+          - 159
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -140,7 +140,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 156
+          - 1
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -211,7 +211,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 152
+          - 666
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -281,7 +281,7 @@ root: !ruby/object:RPG::Map
           - 7
           - 0
           - 0
-          - 138
+          - 158
           indent: 2
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -489,8 +489,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: true
       name: bear trap
-      y: 12
-      x: 7
+      y: 8
+      x: 10
       id: 2
     3: !ruby/object:RPG::Event
       pages:
@@ -580,7 +580,7 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: true
       name: bear trap
-      y: 4
+      y: 11
       x: 17
       id: 3
     4: !ruby/object:RPG::Event
@@ -671,8 +671,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: true
       name: bear trap
-      y: 11
-      x: 13
+      y: 2
+      x: 15
       id: 4
     5: !ruby/object:RPG::Event
       pages:
@@ -680,119 +680,9 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 12
-          - "$game_self_switches[[155, 4, 'A']] == false"
+          - 78
           indent: 0
-          code: 111
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 6
-          - -1
-          - 2
-          indent: 1
-          code: 111
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 8
-          - 6
-          indent: 2
-          code: 111
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - Disarm trap with a stick?
-          indent: 3
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - - 'Yes'
-            - 'No'
-          - 2
-          indent: 3
-          code: 102
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 'Yes'
-          indent: 3
-          code: 402
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 6
-          - 1
-          - 0
-          - 1
-          indent: 4
-          code: 126
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "$game_self_switches[[155, 4, 'A']] = "
-          indent: 4
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'true'
-          indent: 4
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "$game_map.need_refresh = true"
-          indent: 4
-          code: 655
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 4
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 1
-          - 'No'
-          indent: 3
-          code: 402
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 4
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 3
-          code: 404
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 3
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 2
-          code: 411
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - You don't have any sticks to disarm this with!
-          indent: 3
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 3
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 2
-          code: 412
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 2
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 412
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 412
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -802,10 +692,50 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 1
+          switch1_id: 15
           switch1_valid: false
           variable_value: 0
           self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: false
+        trigger: 4
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: moarobjectsx2
+          pattern: 3
+          tile_id: 0
+          direction: 4
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: true
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 15
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: true
           variable_id: 1
           variable_valid: false
           switch2_id: 1
@@ -822,18 +752,18 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: ''
-          pattern: 0
-          tile_id: 384
+          character_name: moarobjectsx2
+          pattern: 3
+          tile_id: 0
           direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
         move_speed: 3
-        through: false
-      name: EV005
-      y: 10
-      x: 13
+        through: true
+      name: bear trap
+      y: 9
+      x: 4
       id: 5
     6: !ruby/object:RPG::Event
       pages:
@@ -842,14 +772,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 4, 'A']] == false"
+          - "$game_self_switches[[160, 5, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 4
+          - 2
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -886,7 +816,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 4, 'A']] = "
+          - "$game_self_switches[[160, 5, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -993,8 +923,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV006
-      y: 11
-      x: 14
+      y: 8
+      x: 4
       id: 6
     7: !ruby/object:RPG::Event
       pages:
@@ -1003,7 +933,7 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 4, 'A']] == false"
+          - "$game_self_switches[[160, 5, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -1047,7 +977,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 4, 'A']] = "
+          - "$game_self_switches[[160, 5, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -1154,8 +1084,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV007
-      y: 12
-      x: 13
+      y: 10
+      x: 4
       id: 7
     8: !ruby/object:RPG::Event
       pages:
@@ -1164,7 +1094,7 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 4, 'A']] == false"
+          - "$game_self_switches[[160, 5, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -1208,7 +1138,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 4, 'A']] = "
+          - "$game_self_switches[[160, 5, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -1315,8 +1245,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV008
-      y: 11
-      x: 12
+      y: 9
+      x: 3
       id: 8
     9: !ruby/object:RPG::Event
       pages:
@@ -1325,14 +1255,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 2, 'A']] == false"
+          - "$game_self_switches[[160, 5, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 8
+          - 4
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -1369,7 +1299,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 2, 'A']] = "
+          - "$game_self_switches[[160, 5, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -1476,8 +1406,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV009
-      y: 13
-      x: 7
+      y: 9
+      x: 5
       id: 9
     10: !ruby/object:RPG::Event
       pages:
@@ -1486,14 +1416,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 3, 'A']] == false"
+          - "$game_self_switches[[160, 2, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 8
+          - 4
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -1530,7 +1460,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 3, 'A']] = "
+          - "$game_self_switches[[160, 2, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -1637,8 +1567,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV010
-      y: 5
-      x: 17
+      y: 8
+      x: 11
       id: 10
     11: !ruby/object:RPG::Event
       pages:
@@ -1647,7 +1577,7 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 2, 'A']] == false"
+          - "$game_self_switches[[160, 2, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -1691,7 +1621,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 2, 'A']] = "
+          - "$game_self_switches[[160, 2, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -1798,8 +1728,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV011
-      y: 11
-      x: 7
+      y: 7
+      x: 10
       id: 11
     12: !ruby/object:RPG::Event
       pages:
@@ -1808,14 +1738,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 2, 'A']] == false"
+          - "$game_self_switches[[160, 2, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 4
+          - 6
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -1852,7 +1782,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 2, 'A']] = "
+          - "$game_self_switches[[160, 2, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -1959,8 +1889,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV012
-      y: 12
-      x: 8
+      y: 8
+      x: 9
       id: 12
     13: !ruby/object:RPG::Event
       pages:
@@ -1969,14 +1899,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 2, 'A']] == false"
+          - "$game_self_switches[[160, 2, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 6
+          - 8
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -2013,7 +1943,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 2, 'A']] = "
+          - "$game_self_switches[[160, 2, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -2120,8 +2050,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV013
-      y: 12
-      x: 6
+      y: 9
+      x: 10
       id: 13
     14: !ruby/object:RPG::Event
       pages:
@@ -2130,14 +2060,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 3, 'A']] == false"
+          - "$game_self_switches[[160, 3, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 6
+          - 8
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -2174,7 +2104,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 3, 'A']] = "
+          - "$game_self_switches[[160, 3, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -2281,8 +2211,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV014
-      y: 4
-      x: 16
+      y: 12
+      x: 17
       id: 14
     15: !ruby/object:RPG::Event
       pages:
@@ -2291,7 +2221,7 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 3, 'A']] == false"
+          - "$game_self_switches[[160, 3, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -2335,7 +2265,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 3, 'A']] = "
+          - "$game_self_switches[[160, 3, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -2442,7 +2372,7 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV015
-      y: 3
+      y: 10
       x: 17
       id: 15
     16: !ruby/object:RPG::Event
@@ -2452,14 +2382,14 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 12
-          - "$game_self_switches[[155, 3, 'A']] == false"
+          - "$game_self_switches[[160, 3, 'A']] == false"
           indent: 0
           code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
           - -1
-          - 4
+          - 6
           indent: 1
           code: 111
         - !ruby/object:RPG::EventCommand
@@ -2496,7 +2426,7 @@ root: !ruby/object:RPG::Map
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "$game_self_switches[[155, 3, 'A']] = "
+          - "$game_self_switches[[160, 3, 'A']] = "
           indent: 4
           code: 355
         - !ruby/object:RPG::EventCommand
@@ -2603,13 +2533,128 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV016
-      y: 4
-      x: 18
+      y: 11
+      x: 16
       id: 16
     17: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - "$game_self_switches[[160, 3, 'A']] == false"
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - -1
+          - 4
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 6
+          indent: 2
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Disarm trap with a stick?
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 3
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 1
+          - 0
+          - 1
+          indent: 4
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_self_switches[[160, 3, 'A']] = "
+          indent: 4
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'true'
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - You don't have any sticks to disarm this with!
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -2619,7 +2664,7 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 15
+          switch1_id: 1
           switch1_valid: false
           variable_value: 0
           self_switch_valid: false
@@ -2639,18 +2684,18 @@ root: !ruby/object:RPG::Map
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: moarobjectsx2
-          pattern: 3
-          tile_id: 0
+          character_name: ''
+          pattern: 0
+          tile_id: 384
           direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
         move_speed: 3
-        through: true
-      name: bear trap
-      y: 5
-      x: 7
+        through: false
+      name: EV017
+      y: 11
+      x: 18
       id: 17
     18: !ruby/object:RPG::Event
       pages:
@@ -2658,51 +2703,111 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 36
+          - 12
+          - "$game_self_switches[[160, 4, 'A']] == false"
           indent: 0
-          code: 117
+          code: 111
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]Collect Stick?"
-          indent: 0
+          - 6
+          - -1
+          - 6
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 6
+          indent: 2
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Disarm trap with a stick?
+          indent: 3
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - - 'Yes'
             - 'No'
           - 2
-          indent: 0
+          indent: 3
           code: 102
         - !ruby/object:RPG::EventCommand
           parameters:
           - 0
           - 'Yes'
-          indent: 0
+          indent: 3
           code: 402
         - !ruby/object:RPG::EventCommand
           parameters:
           - 6
-          - 0
+          - 1
           - 0
           - 1
-          indent: 1
+          indent: 4
           code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
-          - A
-          - 0
-          indent: 1
-          code: 123
+          - "$game_self_switches[[160, 4, 'A']] = "
+          indent: 4
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'true'
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
+          indent: 4
+          code: 655
         - !ruby/object:RPG::EventCommand
           parameters: []
-          indent: 1
+          indent: 4
           code: 0
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
           - 'No'
-          indent: 0
+          indent: 3
           code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - You don't have any sticks to disarm this with!
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
@@ -2710,7 +2815,7 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
-          code: 404
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -2742,15 +2847,136 @@ root: !ruby/object:RPG::Map
           opacity: 255
           character_name: ''
           pattern: 0
-          tile_id: 438
+          tile_id: 384
           direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
         move_speed: 3
         through: false
+      name: EV018
+      y: 2
+      x: 16
+      id: 18
+    19: !ruby/object:RPG::Event
+      pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - "$game_self_switches[[160, 4, 'A']] == false"
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - -1
+          - 4
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 6
+          indent: 2
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Disarm trap with a stick?
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 3
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 1
+          - 0
+          - 1
+          indent: 4
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_self_switches[[160, 4, 'A']] = "
+          indent: 4
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'true'
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - You don't have any sticks to disarm this with!
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -2763,7 +2989,7 @@ root: !ruby/object:RPG::Map
           switch1_id: 1
           switch1_valid: false
           variable_value: 0
-          self_switch_valid: true
+          self_switch_valid: false
           variable_id: 1
           variable_valid: false
           switch2_id: 1
@@ -2782,17 +3008,339 @@ root: !ruby/object:RPG::Map
           opacity: 255
           character_name: ''
           pattern: 0
-          tile_id: 0
+          tile_id: 384
           direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
         move_speed: 3
         through: false
-      name: EV018
-      y: 4
-      x: 6
-      id: 18
+      name: EV019
+      y: 2
+      x: 14
+      id: 19
+    20: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - "$game_self_switches[[160, 4, 'A']] == false"
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - -1
+          - 2
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 6
+          indent: 2
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Disarm trap with a stick?
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 3
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 1
+          - 0
+          - 1
+          indent: 4
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_self_switches[[160, 4, 'A']] = "
+          indent: 4
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'true'
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - You don't have any sticks to disarm this with!
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 384
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV020
+      y: 1
+      x: 15
+      id: 20
+    21: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - "$game_self_switches[[160, 4, 'A']] == false"
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - -1
+          - 8
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 6
+          indent: 2
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Disarm trap with a stick?
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+          - 2
+          indent: 3
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 'Yes'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 1
+          - 0
+          - 1
+          indent: 4
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_self_switches[[160, 4, 'A']] = "
+          indent: 4
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'true'
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
+          indent: 4
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 'No'
+          indent: 3
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 4
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - You don't have any sticks to disarm this with!
+          indent: 3
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 384
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV021
+      y: 3
+      x: 15
+      id: 21
   tileset_id: 13
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
@@ -2810,7 +3358,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2819,7 +3366,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2836,18 +3382,15 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2871,15 +3414,12 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2902,7 +3442,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2912,7 +3451,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2930,7 +3468,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2973,7 +3510,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -2999,7 +3535,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -3011,7 +3546,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -3022,12 +3556,10 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -3057,7 +3589,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -3074,7 +3605,6 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
-    - 473
     - 476
     - 476
     - 476
@@ -3105,17 +3635,117 @@ root: !ruby/object:RPG::Map
     - 476
     - 476
     - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 476
+    - 409
+    - 518
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 519
     - 467
     - 470
     - 0
+    - 540
+    - 541
+    - 542
+    - 543
+    - 0
+    - 409
+    - 0
+    - 0
+    - 407
+    - 0
+    - 401
+    - 0
+    - 473
+    - 417
+    - 0
+    - 495
+    - 527
+    - 475
+    - 0
+    - 547
+    - 548
+    - 549
+    - 550
+    - 551
+    - 0
+    - 417
+    - 0
+    - 0
+    - 0
+    - 473
+    - 409
+    - 0
+    - 0
+    - 425
+    - 426
+    - 519
+    - 467
+    - 470
+    - 473
+    - 555
+    - 556
+    - 557
+    - 558
+    - 559
+    - 424
+    - 425
+    - 426
+    - 473
+    - 0
+    - 0
+    - 419
+    - 0
+    - 0
+    - 0
+    - 495
+    - 527
+    - 475
+    - 0
+    - 0
+    - 563
+    - 564
+    - 565
+    - 566
+    - 567
+    - 473
+    - 0
+    - 0
+    - 0
+    - 0
+    - 424
+    - 425
+    - 426
+    - 0
+    - 526
+    - 527
+    - 0
+    - 483
+    - 478
+    - 473
+    - 571
+    - 572
+    - 573
+    - 574
+    - 575
+    - 0
+    - 473
     - 0
     - 0
     - 0
@@ -3123,74 +3753,462 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 232
-    - 200
+    - 0
+    - 130
+    - 116
+    - 132
+    - 475
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 473
+    - 0
+    - 130
+    - 116
+    - 101
+    - 124
+    - 121
+    - 483
+    - 484
+    - 478
+    - 0
+    - 0
+    - 405
+    - 130
+    - 132
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 130
+    - 97
+    - 124
+    - 134
+    - 501
+    - 113
+    - 132
+    - 0
+    - 483
+    - 484
+    - 499
+    - 0
+    - 136
+    - 106
+    - 132
+    - 0
+    - 0
+    - 0
+    - 130
+    - 116
+    - 101
+    - 124
+    - 479
+    - 484
+    - 485
+    - 136
+    - 126
+    - 118
+    - 132
+    - 0
+    - 473
+    - 0
+    - 0
+    - 136
+    - 134
+    - 0
+    - 130
+    - 116
+    - 101
+    - 124
+    - 134
+    - 0
+    - 485
+    - 0
+    - 0
+    - 473
+    - 0
+    - 136
+    - 126
+    - 141
+    - 0
+    - 473
+    - 0
+    - 0
+    - 473
+    - 0
+    - 136
+    - 124
+    - 134
+    - 0
+    - 473
+    - 0
+    - 0
+    - 473
+    - 0
+    - 0
+    - 0
+    - 0
+    - 479
+    - 484
+    - 484
+    - 484
+    - 478
+    - 473
+    - 0
+    - 0
     - 0
     - 405
     - 0
     - 0
     - 0
-    - 0
-    - 467
-    - 468
-    - 470
+    - 473
     - 0
     - 0
-    - 405
+    - 0
+    - 479
+    - 484
+    - 484
+    - 485
+    - 0
+    - 0
+    - 0
+    - 483
+    - 484
+    - 484
+    - 478
+    - 0
+    - 0
+    - 0
+    - 473
+    - 0
+    - 0
+    - 479
+    - 484
+    - 484
+    - 485
+    - 0
+    - 0
+    - 556
+    - 557
+    - 558
+    - 510
+    - 511
+    - 0
+    - 0
+    - 483
+    - 478
+    - 0
+    - 0
+    - 0
+    - 473
+    - 0
+    - 485
+    - 0
+    - 0
+    - 0
+    - 0
+    - 509
+    - 564
+    - 565
+    - 566
+    - 567
+    - 487
+    - 511
+    - 0
+    - 0
+    - 483
+    - 484
+    - 484
+    - 478
+    - 0
+    - 0
+    - 0
+    - 509
+    - 510
+    - 510
+    - 510
+    - 486
+    - 572
+    - 573
+    - 574
+    - 575
+    - 518
+    - 487
+    - 510
+    - 510
+    - 510
+    - 511
+    - 0
+    - 483
+    - 484
+    - 484
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 391
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 399
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 532
+    - 533
+    - 534
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 540
+    - 541
+    - 542
+    - 543
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 547
+    - 548
+    - 549
+    - 550
+    - 551
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 555
+    - 556
+    - 557
+    - 558
+    - 559
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 563
+    - 564
+    - 565
+    - 566
+    - 567
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 571
+    - 572
+    - 573
+    - 574
+    - 575
+    - 0
+    - 0
+    - 0
+    - 0
+    - 391
+    - 0
+    - 0
+    - 0
+    - 0
+    - 532
+    - 533
+    - 534
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 553
     - 0
     - 0
-    - 142
+    - 540
+    - 541
+    - 542
+    - 543
     - 0
-    - 138
-    - 232
     - 0
     - 0
     - 0
-    - 142
     - 0
-    - 467
-    - 470
     - 0
-    - 397
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
     - 560
     - 561
     - 562
-    - 0
-    - 405
-    - 130
-    - 99
-    - 132
-    - 0
-    - 0
-    - 138
-    - 0
-    - 0
-    - 475
+    - 547
+    - 548
+    - 549
+    - 550
+    - 551
     - 0
     - 0
     - 0
-    - 405
+    - 553
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 568
     - 569
     - 570
+    - 555
     - 0
+    - 553
     - 0
-    - 112
-    - 96
-    - 120
+    - 559
     - 0
+    - 397
+    - 560
+    - 561
+    - 562
     - 0
-    - 128
-    - 0
-    - 467
-    - 470
     - 0
     - 0
     - 0
@@ -3200,450 +4218,16 @@ root: !ruby/object:RPG::Map
     - 576
     - 577
     - 578
-    - 391
-    - 0
-    - 136
-    - 104
-    - 98
-    - 566
-    - 567
-    - 113
-    - 132
-    - 475
-    - 0
-    - 0
-    - 0
-    - 0
-    - 467
-    - 468
-    - 468
-    - 468
-    - 469
-    - 0
-    - 0
-    - 0
-    - 0
-    - 112
-    - 96
-    - 574
-    - 575
-    - 136
-    - 121
-    - 475
-    - 0
-    - 130
-    - 132
-    - 492
-    - 470
-    - 0
-    - 555
-    - 0
-    - 471
-    - 468
-    - 468
-    - 469
-    - 0
-    - 136
-    - 124
-    - 549
-    - 550
-    - 551
-    - 128
-    - 508
-    - 0
-    - 136
-    - 106
-    - 132
-    - 0
-    - 0
     - 563
-    - 564
-    - 565
-    - 566
-    - 567
-    - 471
-    - 468
-    - 469
-    - 0
-    - 557
-    - 558
-    - 559
-    - 113
-    - 117
-    - 141
-    - 516
-    - 114
-    - 134
-    - 0
-    - 0
-    - 571
-    - 572
-    - 573
-    - 574
-    - 575
-    - 0
-    - 405
-    - 471
-    - 468
-    - 565
-    - 566
-    - 567
-    - 136
-    - 134
-    - 467
-    - 470
-    - 140
-    - 555
-    - 556
-    - 557
-    - 558
-    - 559
-    - 0
-    - 420
-    - 422
-    - 423
-    - 0
-    - 0
-    - 407
-    - 573
-    - 574
-    - 575
-    - 0
-    - 467
-    - 470
-    - 0
-    - 0
-    - 563
-    - 564
-    - 565
-    - 566
+    - 560
+    - 561
+    - 562
     - 567
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 475
-    - 0
-    - 405
-    - 0
-    - 571
-    - 572
-    - 573
-    - 574
-    - 575
-    - 0
-    - 0
-    - 467
-    - 468
-    - 468
-    - 469
-    - 0
-    - 0
-    - 0
-    - 405
-    - 0
-    - 475
-    - 0
-    - 0
-    - 399
-    - 0
-    - 0
-    - 0
-    - 130
-    - 132
-    - 0
-    - 467
-    - 470
-    - 0
-    - 0
-    - 471
-    - 468
-    - 0
-    - 0
-    - 0
-    - 407
-    - 483
-    - 478
-    - 0
-    - 0
-    - 0
-    - 0
-    - 131
-    - 125
-    - 134
-    - 467
-    - 470
-    - 548
-    - 549
-    - 550
-    - 551
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 483
-    - 478
-    - 0
-    - 0
-    - 130
-    - 122
-    - 467
-    - 468
-    - 470
-    - 555
-    - 556
-    - 557
-    - 558
-    - 559
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 534
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 542
-    - 543
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 550
-    - 551
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 532
-    - 533
-    - 534
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 558
-    - 559
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 540
-    - 541
-    - 542
-    - 543
-    - 0
-    - 0
-    - 0
-    - 0
-    - 533
-    - 534
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 547
-    - 548
-    - 549
-    - 550
-    - 551
-    - 0
-    - 0
-    - 405
-    - 0
-    - 541
-    - 542
-    - 543
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 532
-    - 533
-    - 534
-    - 556
-    - 557
-    - 558
-    - 559
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 540
-    - 541
-    - 542
-    - 543
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 547
-    - 548
-    - 549
-    - 550
-    - 551
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 532
-    - 533
-    - 534
-    - 0
+    - 568
+    - 569
+    - 570
     - 0
     - 553
     - 0
@@ -3651,58 +4235,22 @@ root: !ruby/object:RPG::Map
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 540
-    - 541
-    - 542
-    - 543
-    - 0
-    - 561
-    - 562
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 584
+    - 585
+    - 586
+    - 571
+    - 568
     - 569
     - 570
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 576
+    - 577
+    - 578
+    - 560
+    - 561
+    - 562
     - 0
     - 0
   autoplay_bgs: false
