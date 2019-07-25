@@ -31,3 +31,5 @@ case $game_player.direction
   end
   
 end
+
+
