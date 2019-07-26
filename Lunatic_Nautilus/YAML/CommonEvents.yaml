@@ -6171,6 +6171,116 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 4
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 7
+    - 0
+    indent: 5
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 36
+    indent: 6
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[0]Would you like to gather some pine needles?"
+    indent: 6
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "(Will inflict damage)"
+    indent: 6
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - 'Yes'
+      - 'No'
+    - 2
+    indent: 6
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 'Yes'
+    indent: 6
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 13
+    - 0
+    - 0
+    - 1
+    indent: 7
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    - 5
+    - 5
+    indent: 7
+    code: 225
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:Color
+      red: 255.0
+      green: 153.0
+      blue: 153.0
+      alpha: 187.0
+    - 5
+    indent: 7
+    code: 224
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 1
+    - 0
+    - 2
+    - false
+    indent: 7
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 5
+    indent: 7
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 'No'
+    indent: 6
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 7
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 6
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
@@ -18603,9 +18713,9 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - - Berry Compote
-      - Boiled Shroom
+      - Boiled Shrooms
       - Fish Fry
-      - Boiled Worm
+      - Other Boiled Things
     - 5
     indent: 0
     code: 102
@@ -18678,7 +18788,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 1
-    - Boiled Shroom
+    - Boiled Shrooms
     indent: 0
     code: 402
   - !ruby/object:RPG::EventCommand
@@ -18835,38 +18945,83 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 3
-    - Boiled Worm
+    - Other Boiled Things
     indent: 0
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
     - 8
-    - 8
+    - 13
     indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - oh worm
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Boiled Worm
+      - Pine Tea
+    - 5
+    indent: 1
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Boiled Worm
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - oh worm
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 8
+    indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
     - 8
     - 19
-    indent: 2
+    indent: 3
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
     - Boil a Worm?
-    indent: 3
+    indent: 4
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
     - - 'Yes'
       - 'No'
     - 2
-    indent: 3
+    indent: 4
     code: 102
   - !ruby/object:RPG::EventCommand
     parameters:
     - 0
     - 'Yes'
-    indent: 3
+    indent: 4
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -18875,7 +19030,7 @@ root:
     - 0
     - 0
     - 0
-    indent: 4
+    indent: 5
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
@@ -18884,23 +19039,49 @@ root:
     - 0
     - 0
     - 8
-    indent: 4
+    indent: 5
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
     - cut to the chase
-    indent: 4
+    indent: 5
     code: 119
   - !ruby/object:RPG::EventCommand
     parameters: []
-    indent: 4
+    indent: 5
     code: 0
   - !ruby/object:RPG::EventCommand
     parameters:
     - 1
     - 'No'
-    indent: 3
+    indent: 4
     code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 5
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have any Earthworms!
+    indent: 4
+    code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
     - main cooking crap
@@ -18913,7 +19094,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 3
-    code: 404
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 3
@@ -18924,7 +19105,135 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - You don't have any Earthworms!
+    - no water
+    indent: 3
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Pine Tea
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 13
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 8
+    - 8
+    indent: 3
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Boil some Pine Tea?
+    indent: 4
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - 'Yes'
+      - 'No'
+    - 2
+    indent: 4
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 'Yes'
+    indent: 4
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 10
+    - 10
+    - 0
+    - 0
+    - 9
+    indent: 5
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 11
+    - 11
+    - 0
+    - 0
+    - 0
+    indent: 5
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - cut to the chase
+    indent: 5
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 'No'
+    indent: 4
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - main cooking crap
+    indent: 5
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 5
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - no water
+    indent: 4
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 4
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - You don't have any Pine Needles!
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -18947,10 +19256,10 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
-    code: 411
+    code: 403
   - !ruby/object:RPG::EventCommand
     parameters:
-    - no water
+    - main cooking crap
     indent: 2
     code: 119
   - !ruby/object:RPG::EventCommand
@@ -18960,7 +19269,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
-    code: 412
+    code: 404
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
@@ -29354,8 +29663,18 @@ root:
   switch_id: 1
   id: 78
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: raw needles
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 36
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Prepare your Pine Needles first!
+    indent: 0
+    code: 101
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -29364,8 +29683,392 @@ root:
   switch_id: 1
   id: 79
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: Pine Tea
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 36
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 0
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Topaz
+      - Vern
+      - Frie
+      - Yourself
+    - 5
+    indent: 1
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Topaz
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - topaaa
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_actors[6].maxsp-$game_actors[6].sp >= 7"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - MOVEROUTE_Actor(6)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - !ruby/object:RPG::MoveRoute
+      list:
+      - &449 !ruby/object:RPG::MoveCommand
+        parameters:
+        - "@animation_id = 47"
+        code: 45
+      - !ruby/object:RPG::MoveCommand
+        parameters: []
+        code: 0
+      skippable: false
+      repeat: false
+    indent: 3
+    code: 209
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - *449
+    indent: 3
+    code: 509
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - END_MOVEROUTE_Actor(6)
+    indent: 3
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 6
+    - 0
+    - 0
+    - 10
+    indent: 3
+    code: 312
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 1
+    - 9
+    indent: 3
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 37
+    - 37
+    - 1
+    - 0
+    - 1
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 47
+    - 1
+    - 0
+    - 1
+    indent: 3
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 24
+    indent: 3
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[Topaz]I'm afraid I do not have any "
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - more room remaining for your fragrant Pine Tea.
+    indent: 3
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Vern
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - vererer
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 25
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[Vern]I think I'll pass on drinking "
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 'pine needle juice. '
+    indent: 2
+    code: 401
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - Frie
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 26
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[1]\\na[Frie]I don't like fish."
+    indent: 2
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - Yourself
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - youuu
+    indent: 2
+    code: 118
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - "$game_actors[12].maxsp-$game_actors[12].sp >= 6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - -1
+    - 47
+    indent: 3
+    code: 207
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - 0
+    - 0
+    - 6
+    - false
+    indent: 3
+    code: 311
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 40
+    - 40
+    - 1
+    - 0
+    - 1
+    indent: 3
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 47
+    - 1
+    - 0
+    - 1
+    indent: 3
+    code: 126
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 1
+    - 9
+    indent: 3
+    code: 313
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 37
+    indent: 3
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\p[0]\\na[Coda](I think I've had enough tea for now.)"
+    indent: 3
+    code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 403
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 411
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - - Topaz
+      - Vern
+      - yourself
+      - actually no
+    - 4
+    indent: 1
+    code: 102
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - Topaz
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - topaaa
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - Vern
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - vererer
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - yourself
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - youuu
+    indent: 2
+    code: 119
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - actually no
+    indent: 1
+    code: 402
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 115
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 404
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

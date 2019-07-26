@@ -32,7 +32,8 @@ class Cookcalc
   [2,6] => 41, #boiled shroom
   [3,6] => 45, #doubleboiled shroom
   [0,7] => 44, #seared fish
-  [0,8] => 43  #boiled worm
+  [0,8] => 43,  #boiled worm
+  [0,9] => 47  #pine tea
   }
   
     FoodPrefhash = {
@@ -166,7 +167,11 @@ elsif @ingre== 8 #boiled worm
   $game_party.lose_item(19, 1) #lose the worm
   $game_party.lose_item(8, 1) #lose the water here
   $game_party.gain_item(16,1) #gain bottle here
-else
+elsif @ingre== 9 #pine tea
+  $game_party.lose_item(13, 1) #lose the worm
+  $game_party.lose_item(8, 1) #lose the water here
+  $game_party.gain_item(16,1) #gain bottle here
+  else
   p "what the hell did you put in your ingredience?"
   end
  
