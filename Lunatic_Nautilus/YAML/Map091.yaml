@@ -1449,9 +1449,44 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: porttownshopping
+            pitch: 100
+          indent: 2
+          code: 241
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - shoppin
           indent: 2
           code: 118
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 8
+          - 18
+          indent: 2
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - no boots
+          indent: 3
+          code: 119
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 3
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters:
           - 36
@@ -1525,6 +1560,11 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - chip bag processing
+          indent: 5
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 8
           - 14
           indent: 5
@@ -1571,6 +1611,11 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 5
           code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - remove teh boot
+          indent: 5
+          code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
           - 18
@@ -1893,6 +1938,41 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 411
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - no boots
+          indent: 1
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - no boots
+          indent: 1
+          code: 118
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]...We don't have any more "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - boots to give.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 62
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[3]\\na[Vending machine??]I WILL BE WAITING."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
           code: 0
@@ -1900,6 +1980,14 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 0
           code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: forestofdeath_d
+            pitch: 100
+          indent: 0
+          code: 241
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0

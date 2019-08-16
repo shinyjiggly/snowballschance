@@ -1,10 +1,10 @@
----
+--- !ruby/object:Hash
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events:
+  events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -120,6 +120,213 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 0
           code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - How much health do you want to have to work with?
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 100 HP (Standard)
+            - 200 HP (Standard)
+            - 50 HP (Challenge!)
+            - 400 HP (Relax mode)
+          - 2
+          indent: 0
+          code: 102
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 100 HP (Standard)
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 57
+          - 57
+          - 0
+          - 0
+          - 0
+          indent: 1
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 200 HP (Standard)
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 57
+          - 57
+          - 0
+          - 0
+          - 1
+          indent: 1
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 0
+          - 0
+          - 0
+          - 100
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 3
+          - 0
+          - 0
+          - 0
+          - 100
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 0
+          - 0
+          - 0
+          - 100
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 0
+          - 0
+          - 0
+          - 100
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 50 HP (Challenge!)
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 57
+          - 57
+          - 0
+          - 0
+          - -1
+          indent: 1
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 0
+          - 1
+          - 0
+          - 50
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 3
+          - 0
+          - 1
+          - 0
+          - 50
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 0
+          - 1
+          - 0
+          - 50
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 0
+          - 1
+          - 0
+          - 50
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 3
+          - 400 HP (Relax mode)
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 57
+          - 57
+          - 0
+          - 0
+          - 2
+          indent: 1
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 0
+          - 0
+          - 0
+          - 300
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 3
+          - 0
+          - 0
+          - 0
+          - 300
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 6
+          - 0
+          - 0
+          - 0
+          - 300
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 0
+          - 0
+          - 0
+          - 300
+          indent: 1
+          code: 317
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          indent: 0
+          code: 314
         - !ruby/object:RPG::EventCommand
           parameters:
           - "-----now without further ado, let's begin.------"
