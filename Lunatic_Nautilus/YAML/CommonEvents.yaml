@@ -13068,12 +13068,12 @@ root:
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\na[Topaz]...Need I remind you of my "
+    - "\\na[Topaz]...What is this!? "
     indent: 7
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - dietary restraints?
+    - Did you poison my meal?!
     indent: 7
     code: 401
   - !ruby/object:RPG::EventCommand
@@ -14842,7 +14842,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[2].hp < 25"
+    - "$game_actors[2].hp < ($game_actors[2].maxhp * 25)/100"
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -14865,7 +14865,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[2].hp < 50"
+    - "$game_actors[2].hp < ($game_actors[2].maxhp * 5)/100"
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -14884,7 +14884,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[2].hp < 75"
+    - "$game_actors[2].hp < ($game_actors[2].maxhp * 75)/100"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -15195,7 +15195,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[3].hp < 25"
+    - "$game_actors[3].hp < ($game_actors[3].maxhp * 25)/100"
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -15218,7 +15218,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[3].hp < 50"
+    - "$game_actors[3].hp < ($game_actors[3].maxhp * 5)/100"
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -15237,7 +15237,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[3].hp < 75"
+    - "$game_actors[3].hp < ($game_actors[3].maxhp * 75)/100"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -15548,7 +15548,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[6].hp < 25"
+    - "$game_actors[6].hp < ($game_actors[6].maxhp * 25)/100"
     indent: 0
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -15571,7 +15571,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[6].hp < 50"
+    - "$game_actors[6].hp < ($game_actors[6].maxhp * 5)/100"
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -15590,7 +15590,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[6].hp < 75"
+    - "$game_actors[6].hp < ($game_actors[6].maxhp * 75)/100"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -25348,6 +25348,183 @@ root:
     - 22
     - 0
     - 5
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain5"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain5
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 6
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain6"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain6
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 7
+    - 0
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 12
+    - $game_screen.pictures[15].name!="terrain7"
+    indent: 2
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - terrain7
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 0
+    - 255
+    - 0
+    indent: 3
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 15
+    - 3
+    - 1
+    - 0
+    - 450
+    - 0
+    - 200
+    - 200
+    - 255
+    - 0
+    indent: 3
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 3
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 22
+    - 0
+    - 8
     - 1
     indent: 1
     code: 111

@@ -3315,11 +3315,16 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - 41
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
           code: 0
         move_type: 0
-        direction_fix: false
+        direction_fix: true
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
@@ -3338,12 +3343,12 @@ root: !ruby/object:RPG::Map
           skippable: false
           repeat: true
         trigger: 0
-        step_anime: false
+        step_anime: true
         move_frequency: 3
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: ''
+          character_name: coda_raccoonx2
           pattern: 0
           tile_id: 0
           direction: 2
