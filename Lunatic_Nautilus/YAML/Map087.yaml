@@ -382,6 +382,11 @@ root: !ruby/object:RPG::Map
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "$game_system.autoscroll_x_speed=0"
+          indent: 2
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 6
           - 6
           - 0

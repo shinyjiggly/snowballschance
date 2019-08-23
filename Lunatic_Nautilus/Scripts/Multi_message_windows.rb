@@ -352,9 +352,11 @@ class Game_Message
   attr_accessor :name_box_text_color
   
     #name box stuff
+    # go to name_sprite_position insterad, 
+    #this is probably obsolete
  @name_box_x_offset = 0       #Choose the X axis offset of the name bos. default= 0
  @name_box_y_offset = -10    #Choose the Y axis offset of the name bos. default= -10
- @name_box_width = 10           #Choose the width of the Name Box. default= 8  
+ @name_box_width = 30           #Choose the width of the Name Box. default= 8  
  @name_box_height = 28        #Choose the height of the Name Box. default= 26
  @name_font_type = $defaultfont #Choose the Font Name (Case Sensitive) for Name Box
  @name_font_size = 20            #Choose the deafault Font Size for Name Box text
@@ -739,37 +741,18 @@ class Window_Message < Window_Selectable
     name_text = $1
     @text.sub!(/\\[Nn][Aa]\[(.*?)\]/) { "" }
   end
-#=begin  
 if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
   #old style compatibility
     name_window_set = true
     name_text = $1
     @text.sub!(/\\[Nn][Aa][Mm][Ee]\[(.*?)\]/) { "" }
   end
-#=end
     if name_window_set
-      #color= $game_system.message.name_box_text_color
-=begin 
-#(old stuff, isn't mmw compatible)
-    
-    off_x =  $game_system.message.name_box_x_offset
-    off_y =  $game_system.message.name_box_y_offset
-    space = 2
-    x = self.x + off_x - space / 2
-    y = self.y + off_y - space / 2
-    w = self.contents.text_size(name_text).width + 10 + space
-    #$message.name_box_width + space
-    h = 28 + space #$message.name_box_height + space
-    @name_window_frame = Window_Frame.new(x, y, w, h)
-    @name_window_frame.z = self.z + 1
-    x = self.x + off_x + 4
-    y = self.y + off_y
-    @name_window_text  = Air_Text.new(x, y, name_text, color)
-=end
     create_name_sprite(name_text) if name_text != ''
     #@name_window_text.z = self.z + 2
   end
-#=end      
+#=end
+
       # display icon of item, weapon, armor or skill
       @text.gsub!(/\\[Ii]\[([IiWwAaSs][0-9]+)\]/) { "\013[#{$1}]" }
       # display name of enemy, item, weapon, armor or skill
@@ -1215,7 +1198,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
       end
       # record coords of character's center
       char_x = char.screen_x
-      char_y = char.screen_y - char_height/2
+      char_y = char.screen_y - char_height/2 -16 #added the minus 16
     end
     params = [char_height, char_width, char_x, char_y]
     # position window and message tail
@@ -1870,29 +1853,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
       end
       create_face_sprite(face) if face != ''   
       return 0
-    end
-=begin    
-    if c == "\029" || c == "\030" #if case 29 or 30
-      if c == "\029" 
-        @text.sub!(/\[([0-9]+),([0-9]+)\]/, '') #replace [number,number] with ''
-        name = $game_actors[$1.to_i].name.dup #put the actor name in the name var
-        face = case $1.to_i
-        when 1 then sprintf("Coda-%02d", $2.to_i)
-        when 2 then sprintf("Topaz-%02d", $2.to_i)
-        when 3 then sprintf("Vern-%02d", $2.to_i)
-        when 4 then sprintf("Frie-%02d", $2.to_i)
-        when 5 then sprintf("Arctos-%02d", $2.to_i)
-        end
-      elsif c == "\030"
-        @text.sub!(/\[(.+?)(?:(\d+))?\]/,'')
-        name = $1.to_s
-      end
-      color= $game_system.message.name_box_text_color
-      #Air_Text.new(@x, @y, name, color) #air text sux and doesnt fix it
-      create_name_sprite(name) if name != ''
-      create_face_sprite(face) 
-    end
-=end        
+    end      
         # if \F* (Foot Forward Animation On "Other" Foot)
         if c == "\022" and @float_id
           speaker = (@float_id > 0) ? $game_map.events[@float_id] : $game_player
@@ -1969,8 +1930,9 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
       self.y = 16
     else
       case $game_system.message_position
+      #this is for untargetted positioned windows
       when 0  # up
-        self.y = 16
+        self.y = 20
       when 1  # middle
         self.y = 160
       when 2  # down
@@ -2379,26 +2341,20 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
   #--------------------------------------------------------------------------
   def create_name_sprite(name='')
     terminate_name_sprite
-    bitmap = Bitmap.new(name.length*10, 32)
+    boxcolor = Color.new(160, 20, 20)
+    bitmap = Bitmap.new(name.length*10+20, 32)
+    
+    boxcolor.alpha=100
+    bitmap.fill_rect(-10, 2, name.length*15, 15, boxcolor )
+    boxcolor.alpha=150
+    bitmap.fill_rect(-10, 2, name.length*10, 15, boxcolor ) 
+    boxcolor.alpha=200
+    bitmap.fill_rect(-10, 2, name.length*5, 15, boxcolor ) 
+    #draw a box here
     bitmap.font = self.contents.font
-    #bitmap.font.size += 4
     bitmap.font.color = text_color(6) #yellow. it's yellow.
-      (0...2).each {|i|
-        #bitmap.draw_text(-i, i, name.length*10, 32, name)
-        #bitmap.draw_text(i, -i, name.length*10, 32, name)
-        bitmap.draw_text(-i, -i, name.length*10, 32, name)
-        #bitmap.draw_text(i, i, name.length*10, 32, name)  
-        }
-=begin
-#weird outline
-    bitmap.font.color = self.contents.font.color
-      (0...1).each {|i|
-        bitmap.draw_text(-i, i, name.length*10, 32, name)
-        bitmap.draw_text(i, -i, name.length*10, 32, name)
-        bitmap.draw_text(-i, -i, name.length*10, 32, name)
-        bitmap.draw_text(i, i, name.length*10, 32, name)   
-        }
-=end
+    bitmap.draw_text(2, 0, name.length*10, 32, name)
+
     @name_sprite = Sprite.new
     @name_sprite.bitmap = bitmap
     name_sprite_position
@@ -2425,8 +2381,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
   #--------------------------------------------------------------------------
   def name_sprite_position
     return if !@name_sprite || @name_sprite.disposed?
-    @name_sprite.y = self.y - 15
-    @name_sprite.x = self.x + 10
+    @name_sprite.y = self.y - 6
+    @name_sprite.x = self.x - 11 #find the max width
     @name_sprite.z = self.z + 101
   end
   #--------------------------------------------------------------------------
