@@ -15,6 +15,6 @@ $keyboard  =
 "hud" => Keys::A, #HUD
 "gather" => Keys::S, #gather
 "diary" => Keys::D, #diary
-"snap" => Keys::MENU, #screenshot
+"snap" => Keys::MENU, #screenshot (was previously menu/Alt)
 "strafe" => Keys::SHIFT #strafing
 } 
