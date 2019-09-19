@@ -2341,8 +2341,8 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
   #--------------------------------------------------------------------------
   def create_name_sprite(name='')
     terminate_name_sprite
-    boxcolor = Color.new(160, 20, 20)
-    bitmap = Bitmap.new(name.length*10+20, 32)
+    boxcolor = Color.new(160, 20, 20) #this is what color the box is gonna be
+    bitmap = Bitmap.new(name.length*10+20, 32) #sets the box size to big enough
     
     boxcolor.alpha=100
     bitmap.fill_rect(-10, 2, name.length*15, 15, boxcolor )
@@ -2382,7 +2382,7 @@ if (/\\[Nn][Aa][Mm][Ee]\[(.+?)\]/.match(@text)) != nil
   def name_sprite_position
     return if !@name_sprite || @name_sprite.disposed?
     @name_sprite.y = self.y - 6
-    @name_sprite.x = self.x - 11 #find the max width
+    @name_sprite.x = self.x + 8 #find the max width
     @name_sprite.z = self.z + 101
   end
   #--------------------------------------------------------------------------
