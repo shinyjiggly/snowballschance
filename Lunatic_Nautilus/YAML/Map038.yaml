@@ -1595,7 +1595,7 @@ root: !ruby/object:RPG::Map
           code: 122
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]I think I drew a map in my diary somewhere... "
+          - "\\p[0](I think I drew a map in my diary somewhere... "
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -1605,9 +1605,14 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Gotta press X or ESC for that.
+          - Gotta press X or ESC for that.)
           indent: 1
           code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - new_page("verntopaz")
+          indent: 1
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1

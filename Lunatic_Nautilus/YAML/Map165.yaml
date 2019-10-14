@@ -5103,14 +5103,14 @@ root: !ruby/object:RPG::Map
             list:
             - &15 !ruby/object:RPG::MoveCommand
               parameters:
-              - topazx2
+              - topazsp4x2
               - 0
+              - 4
               - 2
-              - 0
               code: 41
             - &16 !ruby/object:RPG::MoveCommand
               parameters: []
-              code: 16
+              code: 17
             - !ruby/object:RPG::MoveCommand
               parameters: []
               code: 0
@@ -5512,7 +5512,7 @@ root: !ruby/object:RPG::Map
           parameters:
           - new_page("supplieslist")
           indent: 0
-          code: 355
+          code: 655
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -6223,15 +6223,15 @@ root: !ruby/object:RPG::Map
           - !ruby/object:RPG::MoveRoute
             list:
             - &50 !ruby/object:RPG::MoveCommand
-              parameters: []
-              code: 34
-            - &51 !ruby/object:RPG::MoveCommand
               parameters:
-              - topazx2
+              - topazsp4x2
               - 0
+              - 4
               - 2
-              - 0
               code: 41
+            - &51 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 17
             - !ruby/object:RPG::MoveCommand
               parameters: []
               code: 0
@@ -6662,7 +6662,7 @@ root: !ruby/object:RPG::Map
           parameters:
           - new_page("supplieslist")
           indent: 0
-          code: 355
+          code: 655
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -7081,9 +7081,14 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda](...>:O! Friend!)"
+          - "\\p[0]\\na[Coda](I... I did it! "
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Frie considers me a friend!!)
+          indent: 0
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - 36
@@ -7206,6 +7211,38 @@ root: !ruby/object:RPG::Map
           - 20
           indent: 0
           code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &71 !ruby/object:RPG::MoveCommand
+              parameters:
+              - topazsp4x2
+              - 0
+              - 4
+              - 2
+              code: 41
+            - &72 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 17
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 0
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *71
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *72
+          indent: 0
+          code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - 40
@@ -7333,9 +7370,14 @@ root: !ruby/object:RPG::Map
           code: 108
         - !ruby/object:RPG::EventCommand
           parameters:
-          - new_page("supplieslist")
+          - new_page("friedash")
           indent: 0
           code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - new_page("supplieslist")
+          indent: 0
+          code: 655
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0

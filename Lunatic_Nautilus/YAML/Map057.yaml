@@ -485,7 +485,12 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - you can also use my skill from the Skills menu.
+          - 'you can also use my skill from the '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\c[6]Skills menu\\c[0]."
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand

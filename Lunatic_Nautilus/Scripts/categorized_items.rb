@@ -83,7 +83,7 @@ module CIM_Config
   
   # This value determines if there is equipment categories.
   # Default value: true
-  EQUIPMENT = true
+  EQUIPMENT = false
   
   # This value determines if the equipment is displayed as a single
   # category.
@@ -109,7 +109,7 @@ module CIM_Config
   # For example, if there are 5 categories and the number is set to 7
   # an error will occur.
   # Default Value: 2
-  ALL_ITEMS_POSITION = 6
+  ALL_ITEMS_POSITION = 2
   
   # This value determines if the unhighlighted category icons are translucent
   # or opaque.

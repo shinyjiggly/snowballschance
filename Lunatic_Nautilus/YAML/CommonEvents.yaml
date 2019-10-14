@@ -8270,22 +8270,17 @@ root:
     code: 509
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[6]\\na[Coda]...You've been alone for that long? "
+    - "\\p[6]\\na[Coda](Darn... sounds like she's had it rough "
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 'That''s... terrible... '
+    - 'in the past. I wonder if I can be a good enough '
     indent: 2
     code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
-    - "\\p[6]\\na[Coda](She deserves better than solitude. "
-    indent: 2
-    code: 101
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - I want to be there for her.)
+    - friend for her...)
     indent: 2
     code: 401
   - !ruby/object:RPG::EventCommand
@@ -9134,7 +9129,7 @@ root:
     code: 101
   - !ruby/object:RPG::EventCommand
     parameters:
-    - new_page("fishman")
+    - new_page("hotfish2")
     indent: 1
     code: 355
   - !ruby/object:RPG::EventCommand
@@ -10444,9 +10439,19 @@ root:
     code: 231
   - !ruby/object:RPG::EventCommand
     parameters:
-    - What will you make for Arctos?
+    - 37
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\na[Coda]What should I make for the bear...\\. "
     indent: 2
     code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Arctos, was it? (Still kinda freaking out here.)
+    indent: 2
+    code: 401
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
@@ -10518,7 +10523,7 @@ root:
     code: 117
   - !ruby/object:RPG::EventCommand
     parameters:
-    - What will you make for Frie?
+    - "\\na[Coda]Hmm... What should I make for Frie..."
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -10652,7 +10657,12 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - What will you make for Vern?
+    - 37
+    indent: 5
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\na[Coda]What should I make for Vern..."
     indent: 5
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -10739,7 +10749,12 @@ root:
     code: 231
   - !ruby/object:RPG::EventCommand
     parameters:
-    - What will you make for Topaz?
+    - 37
+    indent: 5
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\na[Coda]What should I make for Topaz..."
     indent: 5
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -10813,7 +10828,12 @@ root:
     code: 231
   - !ruby/object:RPG::EventCommand
     parameters:
-    - What will you make for yourself?
+    - 37
+    indent: 6
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\na[Coda]What am I in the mood to eat tonight..."
     indent: 6
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -10940,6 +10960,11 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 44
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - - Plain Dish
       - Basic Dish
       - Special Dish
@@ -10954,7 +10979,12 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Will you cook the Plain Dish?
+    - 37
+    indent: 1
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\na[Coda]Should I cook the Plain Dish?"
     indent: 1
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11033,6 +11063,11 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 44
+    indent: 1
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - - Spicy Dish
       - Meaty Dish
       - Fishy Dish
@@ -11053,13 +11088,18 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 37
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 8
     - 25
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Will you cook the Spicy Dish?
+    - "\\na[Coda]Shoild I cook the Spicy Dish?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11122,7 +11162,7 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - You don't have any Chili Powder!
+    - "\\na[Coda]...I don't have any Chili Powder!"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11155,13 +11195,18 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 37
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 8
     - 21
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Will you cook the Meaty Dish?
+    - "\\na[Coda]Should I cook the Meaty Dish?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11224,7 +11269,7 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - You don't have any Raw Meat!
+    - "\\na[Coda]Wait, I don't have any Raw Meat!"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11257,13 +11302,18 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 37
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 8
     - 22
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Will you cook the Fishy Dish?
+    - "\\na[Coda]Shoild I cook the Fishy Dish?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11326,9 +11376,14 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - You don't have any Raw Fish!
+    - "\\na[Coda]...I don't have any Raw Fish?"
     indent: 3
     code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - Could have sworn we caught some earlier...
+    indent: 3
+    code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
     - med dish
@@ -11359,13 +11414,18 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 37
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 8
     - 19
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Will you cook the Worm Bake?
+    - "\\na[Coda]Should I cook the Worm Bake?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11428,7 +11488,7 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - You don't have any Earthworms!
+    - "\\na[Coda]Darn it, I don't have any Earthworms!"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11477,13 +11537,18 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 37
+    indent: 1
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 8
     - 12
     indent: 1
     code: 111
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Will you cook the Special Dish?
+    - "\\na[Coda]Should I cook the Special Dish?"
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11546,9 +11611,14 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - You don't have a Calzone!
+    - "\\na[Coda]Wait, I don't have the "
     indent: 2
     code: 101
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "\\c[6]Special Ingredient\\c[0] to make it with!"
+    indent: 2
+    code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
     - main cooking crap
@@ -11577,6 +11647,11 @@ root:
     code: 118
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 37
+    indent: 0
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 8
     - 26
     indent: 0
@@ -11594,7 +11669,7 @@ root:
     code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Would you like to add a mushroom?
+    - "\\na[Coda]Hm... should I add a mushroom?"
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11673,7 +11748,7 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Add Yellow Mushroom?
+    - "\\na[Coda]Should I add a Yellow Mushroom?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11733,7 +11808,7 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Don't add a mushroom?
+    - "\\na[Coda]Should I skip adding a mushroom?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11804,7 +11879,7 @@ root:
     code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Would you like to add a mushroom?
+    - "\\na[Coda]Hm... should I add a mushroom?"
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11822,7 +11897,7 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Add Yellow Mushroom?
+    - "\\na[Coda]Should I add a Yellow Mushroom?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11882,7 +11957,7 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Don't add a mushroom?
+    - "\\na[Coda]Should I skip adding a mushroom?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11967,7 +12042,7 @@ root:
     code: 108
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Would you like to add a mushroom?
+    - "\\na[Coda]Hm... should I add a mushroom?"
     indent: 2
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -11985,7 +12060,7 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Add Green Mushroom?
+    - "\\na[Coda]Should I add a Green Mushroom?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -12045,7 +12120,7 @@ root:
     code: 402
   - !ruby/object:RPG::EventCommand
     parameters:
-    - Don't add a mushroom?
+    - "\\na[Coda]Should I skip adding a mushroom?"
     indent: 3
     code: 101
   - !ruby/object:RPG::EventCommand
@@ -12177,6 +12252,11 @@ root:
       pitch: 100
     indent: 0
     code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 44
+    indent: 0
+    code: 117
   - !ruby/object:RPG::EventCommand
     parameters:
     - Meal made!
@@ -12608,7 +12688,7 @@ root:
     parameters:
     - 33
     - 33
-    - 0
+    - 1
     - 0
     - 1
     indent: 7
@@ -13441,9 +13521,9 @@ root:
     parameters:
     - 35
     - 35
-    - 2
+    - 1
     - 0
-    - 2
+    - 4
     indent: 11
     code: 122
   - !ruby/object:RPG::EventCommand
@@ -17431,7 +17511,7 @@ root:
     code: 401
   - !ruby/object:RPG::EventCommand
     parameters:
-    - yellow mushrooms are always the best!
+    - "\\c[6]yellow mushrooms are always the best\\c[0]!"
     indent: 1
     code: 401
   - !ruby/object:RPG::EventCommand
@@ -25471,6 +25551,11 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
+    - terrain 5 (wooden boards and ladders)
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - 1
     - 22
     - 0
@@ -29038,7 +29123,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[6].maxsp-$game_actors[6].sp >= 10"
+    - "$game_actors[6].maxhp-$game_actors[6].hp >= 5"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -29100,7 +29185,7 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 41
+    - 45
     - 1
     - 0
     - 1
@@ -29164,7 +29249,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[3].maxsp-$game_actors[3].sp >= 7"
+    - "$game_actors[3].maxhp-$game_actors[3].hp >= 7"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -29226,7 +29311,7 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 41
+    - 45
     - 1
     - 0
     - 1
@@ -29280,7 +29365,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[2].maxsp-$game_actors[2].sp >= 5"
+    - "$game_actors[2].maxhp-$game_actors[2].hp >= 5"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -29342,7 +29427,7 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 41
+    - 45
     - 1
     - 0
     - 1
@@ -29396,7 +29481,7 @@ root:
   - !ruby/object:RPG::EventCommand
     parameters:
     - 12
-    - "$game_actors[12].maxsp-$game_actors[12].sp >= 10"
+    - "$game_actors[12].maxhp-$game_actors[12].hp >= 10"
     indent: 2
     code: 111
   - !ruby/object:RPG::EventCommand
@@ -29433,7 +29518,7 @@ root:
     code: 122
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 41
+    - 45
     - 1
     - 0
     - 1
