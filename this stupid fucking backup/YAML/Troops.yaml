@@ -1,0 +1,636 @@
+--- !ruby/object:Hash
+root:
+- 
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - hey, check this out!
+      indent: 0
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - a= $game_party.actors[1]
+      indent: 0
+      code: 355
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "$scene.battler_custom_move(a,222,111)"
+      indent: 0
+      code: 655
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - woohoo!
+      indent: 0
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - a= $game_party.actors[1]
+      indent: 0
+      code: 355
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "$scene.battler_reset_position(a)"
+      indent: 0
+      code: 655
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: true
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: Endless Mermaid
+  id: 1
+  members:
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 160
+    enemy_id: 1
+    x: 520
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 160
+    enemy_id: 1
+    x: 144
+    immortal: false
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 4
+      - 0
+      - 0
+      - 9999
+      indent: 0
+      code: 312
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 4
+      - 1
+      - 0
+      - 300
+      indent: 0
+      code: 312
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: true
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: Natsiya Soldier*5
+  id: 2
+  members:
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 208
+    enemy_id: 2
+    x: 88
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 256
+    enemy_id: 2
+    x: 152
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 296
+    enemy_id: 2
+    x: 96
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 208
+    enemy_id: 2
+    x: 224
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 288
+    enemy_id: 2
+    x: 224
+    immortal: false
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-deudlieness: quite a bit"
+      indent: 0
+      code: 108
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-5 bullets per turn, high power, low accuracy"
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-2 turns to kill"
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-shots each 20% accuracy"
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-2-3 turns to die"
+      indent: 0
+      code: 108
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-not very good at dodging"
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-perefer to take cover"
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "-they act like tanks but they fucking suck at it. "
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - they're also cowards.
+      indent: 0
+      code: 408
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 0
+      - 7
+      - 1
+      indent: 0
+      code: 111
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\p[a]Coda:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - what do you want?!?!?
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\p[1]Soldier:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - I want you to die, Mr. Bond.
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 5
+      - 5
+      - 5
+      indent: 1
+      code: 225
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\p[a]Coda:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - THAT'S MISS BOND TO YOU, BUCKO!
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\v\\p[b]Renzo:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - Let's show that fool who they're messing with.
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 1
+      code: 0
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 411
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\p[a]Jello:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - I'M NOT READY FOR THIS....
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 5
+      - 5
+      - 5
+      indent: 1
+      code: 225
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\p[a]Jello:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - I'M NOT READY FOR THIS!!!!
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\+\\v\\p[b]Renzo:"
+      indent: 1
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - Let's show that fool who they're-\!
+      indent: 1
+      code: 401
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 1
+      code: 0
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 412
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: true
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: Natsiya Soldier
+  id: 3
+  members:
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 232
+    enemy_id: 2
+    x: 176
+    immortal: false
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\Name[Dolph]Enough!"
+      indent: 0
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - !ruby/object:Tone
+        red: -255.0
+        green: -255.0
+        blue: -255.0
+        gray: 0.0
+      - 20
+      indent: 0
+      code: 223
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 20
+      indent: 0
+      code: 106
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 340
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 20
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: true
+    span: 0
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\Name[Dolph]Enough!"
+      indent: 0
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - !ruby/object:Tone
+        red: -255.0
+        green: -255.0
+        blue: -255.0
+        gray: 0.0
+      - 20
+      indent: 0
+      code: 223
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 20
+      indent: 0
+      code: 106
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 340
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 3
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: true
+      actor_hp: 20
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: Masked Man...?
+  id: 4
+  members:
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 216
+    enemy_id: 3
+    x: 552
+    immortal: true
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - "\\p[f]\\c[5]You shall all die now."
+      indent: 0
+      code: 101
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 0
+      - -1
+      - 21
+      indent: 0
+      code: 337
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 29
+      indent: 0
+      code: 106
+    - !ruby/object:RPG::EventCommand
+      parameters:
+      - 0
+      - -1
+      - 0
+      - 9999
+      indent: 0
+      code: 338
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: true
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: test battle
+  id: 5
+  members:
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 304
+    enemy_id: 4
+    x: 91
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 304
+    enemy_id: 4
+    x: 157
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 232
+    enemy_id: 4
+    x: 144
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 264
+    enemy_id: 4
+    x: 248
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 272
+    enemy_id: 4
+    x: 96
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 176
+    enemy_id: 4
+    x: 112
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 208
+    enemy_id: 4
+    x: 72
+    immortal: false
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 248
+    enemy_id: 4
+    x: 120
+    immortal: false
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: Gust
+  id: 6
+  members:
+  - !ruby/object:RPG::Troop::Member
+    hidden: false
+    y: 272
+    enemy_id: 7
+    x: 160
+    immortal: false
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: ''
+  id: 7
+  members: []
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: ''
+  id: 8
+  members: []
+- !ruby/object:RPG::Troop
+  pages:
+  - !ruby/object:RPG::Troop::Page
+    list:
+    - !ruby/object:RPG::EventCommand
+      parameters: []
+      indent: 0
+      code: 0
+    condition: !ruby/object:RPG::Troop::Page::Condition
+      actor_id: 1
+      turn_a: 0
+      turn_valid: false
+      enemy_hp: 50
+      switch_valid: false
+      switch_id: 1
+      enemy_index: 0
+      actor_valid: false
+      actor_hp: 50
+      turn_b: 0
+      enemy_valid: false
+    span: 0
+  name: ''
+  id: 9
+  members: []
