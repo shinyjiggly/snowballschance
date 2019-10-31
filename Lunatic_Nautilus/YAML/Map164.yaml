@@ -2266,6 +2266,21 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "$game_self_switches[[164, 6, 'B']] = "
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'true'
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "$game_map.need_refresh = true"
+          indent: 0
+          code: 655
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 33
           - 33
           - 0

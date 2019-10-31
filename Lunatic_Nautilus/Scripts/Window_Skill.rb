@@ -72,7 +72,7 @@ class Window_Skill < Window_Selectable
     opacity = self.contents.font.color == normal_color ? 255 : 128
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
     self.contents.draw_text(x + 28, y, 204, 32, skill.name, 0)
-    self.contents.draw_text(x + 232, y, 48, 32, skill.sp_cost.to_s, 2)
+    #self.contents.draw_text(x + 232, y, 48, 32, skill.sp_cost.to_s, 2)
   end
   #--------------------------------------------------------------------------
   # * Help Text Update
