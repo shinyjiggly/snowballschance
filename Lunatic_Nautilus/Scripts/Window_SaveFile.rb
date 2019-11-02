@@ -43,7 +43,7 @@ class Window_SaveFile < Window_Base
     self.contents.clear
     # Draw file number
     self.contents.font.color = normal_color
-    name = "File#{@file_index + 1}"
+    name = "File #{@file_index + 1}"
     self.contents.draw_text(4, 0, 600, 32, name)
     @name_width = contents.text_size(name).width
     # If save file exists
