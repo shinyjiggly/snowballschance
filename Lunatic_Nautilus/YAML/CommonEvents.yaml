@@ -31605,8 +31605,13 @@ root:
   switch_id: 1
   id: 91
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: Finn voice
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - message.sound_audio = 'finn'
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
