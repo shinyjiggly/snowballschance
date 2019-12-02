@@ -67,16 +67,18 @@ class Window_Base < Window
       flag = false
     end
     # Draw HP
+    self.contents.font.size = 16
     self.contents.font.color = actor.hp == 0 ? knockout_color :
       actor.hp <= actor.maxhp / 4 ? crisis_color : normal_color
     self.contents.draw_text(hp_x, y, 48, 32, actor.hp.to_s, 2)
     # Draw MaxHP
     if flag
       self.contents.font.color = normal_color
-      #self.contents.draw_text(hp_x + 48, y, 12, 32, "/", 1)
-      #self.contents.draw_text(hp_x + 60, y, 48, 32, actor.maxhp.to_s)
+      self.contents.draw_text(hp_x + 48, y, 12, 32, "/", 1)
+      self.contents.draw_text(hp_x + 60, y, 48, 32, actor.maxhp.to_s)
       #(hp_x + 60, y, 48, 32, actor.maxhp.to_s)
     end
+    self.contents.font.size = $defaultfontsize
   end
   
     #--------------------------------------------------------------------------
@@ -99,15 +101,17 @@ class Window_Base < Window
       flag = false
     end
     # Draw SP
+    self.contents.font.size = 16
     self.contents.font.color = actor.sp == 0 ? knockout_color :
       actor.sp <= actor.maxsp / 4 ? crisis_color : normal_color
     self.contents.draw_text(sp_x-16, y, 48, 32, actor.sp.to_s, 2)
     # Draw MaxSP
     if flag
       self.contents.font.color = normal_color
-      #self.contents.draw_text(sp_x + 48, y, 12, 32, "/", 1)
-      #self.contents.draw_text(sp_x + 60, y, 48, 32, actor.maxsp.to_s)
+      self.contents.draw_text(sp_x + 38, y, 12, 32, "/", 1)#48
+      self.contents.draw_text(sp_x + 50, y, 48, 32, actor.maxsp.to_s)
     end
+    self.contents.font.size = $defaultfontsize
   end
   
   alias draw_actor_hp_bar draw_actor_hp
@@ -196,7 +200,7 @@ class Window_Base < Window
 
       draw_actor_sp_bar(actor, x, y, width) 
     end
-    end
+  end
   #--------------------------------------------------------------------------
   alias draw_actor_exp_bar draw_actor_exp
   def draw_actor_exp(actor, x, y)
