@@ -3372,17 +3372,51 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[25]\\na[Finn]Hello my lovelies."
+          - "\\p[25]\\na[Ducky]Hello my lovelies."
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[25]\\n[Finn]sdlknslfnsld "
+          - 0
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &98 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 20
+            - &99 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 2
+              code: 15
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: true
+          indent: 0
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *98
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *99
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[25]\\na[Ducky]sdlknslfnsld "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
           - fjnsogjsogjsolgjelrjgeorgdjgjod
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - sddfsgsgdfgdfgdfhdhdghdghfghf
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -3410,18 +3444,18 @@ root: !ruby/object:RPG::Map
           repeat: true
         trigger: 0
         step_anime: false
-        move_frequency: 3
+        move_frequency: 6
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
-          character_name: dolph_walkingx2
+          character_name: duckyx2
           pattern: 0
           tile_id: 0
           direction: 2
           blend_type: 0
           character_hue: 0
         walk_anime: true
-        move_speed: 3
+        move_speed: 6
         through: false
       name: EV025
       y: 19
