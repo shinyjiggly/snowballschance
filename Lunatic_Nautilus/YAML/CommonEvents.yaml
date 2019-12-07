@@ -10982,6 +10982,11 @@ root:
     code: 235
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 96
+    indent: 6
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - I guess we're done here?
     indent: 6
     code: 108
@@ -32803,8 +32808,33 @@ root:
   switch_id: 1
   id: 95
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: unequipped food shredder
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - i=15
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - while i <= 37
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_party.lose_armor(i, 10)"
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - i+= 1
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - end
+    indent: 0
+    code: 655
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
