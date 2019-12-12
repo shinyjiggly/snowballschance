@@ -294,18 +294,26 @@ class Game_Character
     end
   end
   #--------------------------------------------------------------------------
-  # * 1 Step Forward
+  # * 1 Step Forward #EDIT!! (this does absolutely jack shit)
   #--------------------------------------------------------------------------
   def move_forward
     case @direction
+    #when 1
+      #move_lower_left(false)
     when 2
       move_down(false)
+    #when 3
+      #move_lower_right(false)
     when 4
       move_left(false)
     when 6
       move_right(false)
+    #when 7
+      #move_upper_left(false)
     when 8
       move_up(false)
+    #when 9
+      #move_upper_right(false)
     end
   end
   #--------------------------------------------------------------------------

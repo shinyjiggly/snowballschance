@@ -197,6 +197,25 @@ root: !ruby/object:RPG::Map
           code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 0
+          indent: 0
+          code: 208
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 23
+          - 23
+          - 0
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 12
+          - 0
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 2
           - 2
           - 0
@@ -204,6 +223,16 @@ root: !ruby/object:RPG::Map
           - 3
           indent: 0
           code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 21
+          - 0
+          - 0
+          - 0
+          - 1
+          indent: 0
+          code: 201
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -246,23 +275,9 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 0
+          - "$game_map.need_refresh = true"
           indent: 0
-          code: 208
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 23
-          - 23
-          - 0
-          indent: 0
-          code: 121
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 12
-          - 12
-          - 0
-          indent: 0
-          code: 121
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
           - stuff
@@ -1541,6 +1556,11 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[7]\\na[Coda]...Glad to hear the feedback."
           indent: 0
           code: 101
@@ -1906,6 +1926,11 @@ root: !ruby/object:RPG::Map
       - !ruby/object:RPG::Event::Page
         list:
         - !ruby/object:RPG::EventCommand
+          parameters:
+          - o
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
           code: 0
@@ -2084,6 +2109,11 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - o
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 40
           indent: 0
           code: 117
@@ -2217,6 +2247,11 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - o
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 36
           indent: 0
           code: 117
@@ -2335,6 +2370,11 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - o
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 38
           indent: 0
           code: 117
@@ -2446,6 +2486,11 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - o
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 39
           indent: 0
           code: 117
@@ -2550,6 +2595,11 @@ root: !ruby/object:RPG::Map
       pages:
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - o
+          indent: 0
+          code: 108
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
