@@ -1,10 +1,10 @@
---- !ruby/object:Hash
+---
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events: !ruby/object:Hash
+  events:
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -449,17 +449,22 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Frie]So you know how you can use your "
+          - "\\p[1]\\na[Frie]You know how when your emotions"
           indent: 1
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'rage to make fire appear? That''s your Flame Aura, '
+          - run high, you can conjure fire?
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - anger and passion made manifest.
+          - "\\p[1]\\na[Frie]That's the power of Flame Aura -"
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - a manifestation of your passion and fury.
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -474,7 +479,7 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "(...Am I really that angry? Or passionate?)"
+          - "(Am I really that angry? Or passionate...?)"
           indent: 1
           code: 401
         - !ruby/object:RPG::EventCommand

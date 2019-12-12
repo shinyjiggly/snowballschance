@@ -1,10 +1,269 @@
---- !ruby/object:Hash
+---
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events: !ruby/object:Hash
+  events:
+    5: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 21
+          - 0
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]You know, it's cool finally being able "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'to use my Flame Aura for something... '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - constructive for once.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]Any time I try to use it at work, my "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - boss's wife always gets on my case for
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - '"having an attitude".'
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(Coda holds a fist close and cringes.)"
+          indent: 1
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(the campfire flares up slightly.)"
+          indent: 1
+          code: 408
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 26
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Frie]I feel you."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - People always look at me weird for being icy,
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - ridicule me for the sin of being different.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(frie closes eyes)"
+          indent: 1
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]\\na[Coda]You know what? "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'They''re jerks for treating you like that. '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - If I ever see 'em, they'll regret their actions.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Topaz]The untrained eye seldom becomes"
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - an expert on the psyche's inner machinations.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 26
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Frie]...Tch."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "(topaz closes eyes)"
+          indent: 1
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[1]\\na[Topaz] Thusly, it falls upon us"
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'to offer guidance to each other when the world '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - rejects the power we hold.
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - A
+          - 0
+          indent: 1
+          code: 123
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 116
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: false
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 0
+          self_switch_valid: true
+          variable_id: 1
+          variable_valid: false
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV005
+      y: 0
+      x: 1
+      id: 5
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -649,265 +908,6 @@ root: !ruby/object:RPG::Map
       y: 10
       x: 3
       id: 4
-    5: !ruby/object:RPG::Event
-      pages:
-      - !ruby/object:RPG::Event::Page
-        list:
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 0
-          - 21
-          - 0
-          indent: 0
-          code: 111
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 37
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\na[Coda]...You know, it's cool finally being able "
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'to use my Flame Aura for something... '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - constructive for once.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\na[Coda]Any time I try to use it at work, my "
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - boss's wife always gets on my case for
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - '"having an attitude".'
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "(Coda holds a fist close and cringes.)"
-          indent: 1
-          code: 108
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "(the campfire flares up slightly.)"
-          indent: 1
-          code: 408
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 26
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[1]\\na[Frie]I feel you,"
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - with all the weird looks I get for being icy,
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - while I was mocked for being anything else.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "(frie closes eyes)"
-          indent: 1
-          code: 108
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 37
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[0]\\na[Coda]You know what? "
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'They''re jerks for treating you like that. '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - Tell me where they are and they'll regret their actions.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 24
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[1]\\na[Topaz]The layperson seldom becomes"
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - an expert on the psyche's inner machinations.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 26
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[1]\\na[Frie]...Tch."
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "(topaz closes eyes)"
-          indent: 1
-          code: 108
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 24
-          indent: 1
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\p[1]\\na[Topaz] It falls upon us, unfortunately, "
-          indent: 1
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'to offer guidance to each other when the world '
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - rejects the power we hold.
-          indent: 1
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - A
-          - 0
-          indent: 1
-          code: 123
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 411
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 1
-          code: 0
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 412
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 116
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 0
-        move_type: 0
-        direction_fix: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          switch2_valid: false
-          self_switch_ch: A
-          switch1_id: 1
-          switch1_valid: false
-          variable_value: 0
-          self_switch_valid: false
-          variable_id: 1
-          variable_valid: false
-          switch2_id: 1
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            parameters: []
-            code: 0
-          skippable: false
-          repeat: true
-        trigger: 0
-        step_anime: false
-        move_frequency: 3
-        always_on_top: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          opacity: 255
-          character_name: ''
-          pattern: 0
-          tile_id: 0
-          direction: 2
-          blend_type: 0
-          character_hue: 0
-        walk_anime: true
-        move_speed: 3
-        through: false
-      - !ruby/object:RPG::Event::Page
-        list:
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 0
-        move_type: 0
-        direction_fix: false
-        condition: !ruby/object:RPG::Event::Page::Condition
-          switch2_valid: false
-          self_switch_ch: A
-          switch1_id: 1
-          switch1_valid: false
-          variable_value: 0
-          self_switch_valid: true
-          variable_id: 1
-          variable_valid: false
-          switch2_id: 1
-        move_route: !ruby/object:RPG::MoveRoute
-          list:
-          - !ruby/object:RPG::MoveCommand
-            parameters: []
-            code: 0
-          skippable: false
-          repeat: true
-        trigger: 0
-        step_anime: false
-        move_frequency: 3
-        always_on_top: false
-        graphic: !ruby/object:RPG::Event::Page::Graphic
-          opacity: 255
-          character_name: ''
-          pattern: 0
-          tile_id: 0
-          direction: 2
-          blend_type: 0
-          character_hue: 0
-        walk_anime: true
-        move_speed: 3
-        through: false
-      name: EV005
-      y: 0
-      x: 1
-      id: 5
   tileset_id: 13
   bgs: !ruby/object:RPG::AudioFile
     volume: 80
