@@ -12433,6 +12433,27 @@ root:
     indent: 2
     code: 108
   - !ruby/object:RPG::EventCommand
+    parameters:
+    - !ruby/object:RPG::AudioFile
+      volume: 80
+      name: crystals
+      pitch: 100
+    indent: 2
+    code: 250
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 81
+    indent: 2
+    code: 117
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 0
+    - 0
+    - 0
+    - 100
+    indent: 2
+    code: 312
+  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 2
     code: 115
@@ -14075,12 +14096,7 @@ root:
     code: 411
   - !ruby/object:RPG::EventCommand
     parameters:
-    - 81
-    indent: 7
-    code: 117
-  - !ruby/object:RPG::EventCommand
-    parameters:
-    - I guess we're done here?
+    - it's impossible to get here
     indent: 7
     code: 108
   - !ruby/object:RPG::EventCommand
@@ -30216,6 +30232,161 @@ root:
     indent: 1
     code: 655
   - !ruby/object:RPG::EventCommand
+    parameters:
+    - 1
+    - 1
+    - 0
+    - 4
+    - 2
+    - 3
+    indent: 1
+    code: 122
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp = "
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].base_maxsp"
+    indent: 1
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 5
+    - 14
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp = "
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp/2.round"
+    indent: 2
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 5
+    - 15
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp = "
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp/3*2.round"
+    indent: 2
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 5
+    - 16
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "----"
+    indent: 2
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 5
+    - 17
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp = "
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp/4*5.round"
+    indent: 2
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 2
+    - 5
+    - 18
+    indent: 1
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp = "
+    indent: 2
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].maxsp/2*3.round"
+    indent: 2
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 2
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[2].sp = "
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_variables[1]"
+    indent: 1
+    code: 655
+  - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 1
     code: 0
@@ -30275,6 +30446,131 @@ root:
     code: 412
   - !ruby/object:RPG::EventCommand
     parameters:
+    - 4
+    - 12
+    - 5
+    - 14
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp = "
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp/2.round"
+    indent: 1
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 12
+    - 5
+    - 15
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp = "
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp/3*2.round"
+    indent: 1
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 12
+    - 5
+    - 16
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - no modifications
+    indent: 1
+    code: 108
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 12
+    - 5
+    - 17
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp = "
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp/4*5.round"
+    indent: 1
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 12
+    - 5
+    - 18
+    indent: 0
+    code: 111
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp = "
+    indent: 1
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "$game_actors[12].maxsp/2*3.round"
+    indent: 1
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 1
+    code: 0
+  - !ruby/object:RPG::EventCommand
+    parameters: []
+    indent: 0
+    code: 412
+  - !ruby/object:RPG::EventCommand
+    parameters:
     - "$game_actors[12].sp = "
     indent: 0
     code: 355
@@ -30287,7 +30583,7 @@ root:
     parameters:
     - "$game_map.need_refresh = true"
     indent: 0
-    code: 655
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
