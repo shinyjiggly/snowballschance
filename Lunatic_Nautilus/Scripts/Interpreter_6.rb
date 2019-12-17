@@ -144,8 +144,6 @@ class Interpreter
     value = operate_value(@parameters[1], @parameters[2], @parameters[3])
     # Process with iterator
     iterate_actor(@parameters[0]) do |actor|
-      # Change actor SP
-      actor.sp += value
       
       if value < 0 and value.abs > actor.sp #if it's more than the sp available
         #then save that extra in thing
@@ -158,6 +156,9 @@ class Interpreter
           actor.hp = 1
         end
       end
+      
+      # Change actor SP
+      actor.sp += value
       
     end
     # Continue
