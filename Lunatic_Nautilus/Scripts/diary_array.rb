@@ -6,7 +6,7 @@ class Diary
 $diary  = ["basicpaper"]
 
 $diary[0]= "frontcover"
-$diary[1]= "controlllsss" 
+$diary[1]= "thankyou" 
 $diary[2]="todo1" 
 $diary[3]="fuguedoodle"
 $diary[4]="basicpaper"   

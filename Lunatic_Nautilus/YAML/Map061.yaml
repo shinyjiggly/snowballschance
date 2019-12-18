@@ -1854,7 +1854,7 @@ root: !ruby/object:RPG::Map
               code: 44
             - &72 !ruby/object:RPG::MoveCommand
               parameters:
-              - 5
+              - -4
               - 0
               code: 14
             - !ruby/object:RPG::MoveCommand
@@ -2584,16 +2584,6 @@ root: !ruby/object:RPG::Map
           code: 122
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Your friendship value with Topaz has increased by 1!
-          indent: 5
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - But your friendship with Vern has decreased by 1...
-          indent: 5
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - 1
           - !ruby/object:RPG::MoveRoute
             list:
@@ -2609,7 +2599,7 @@ root: !ruby/object:RPG::Map
               code: 44
             - &107 !ruby/object:RPG::MoveCommand
               parameters:
-              - 5
+              - -4
               - 0
               code: 14
             - !ruby/object:RPG::MoveCommand
@@ -2634,6 +2624,16 @@ root: !ruby/object:RPG::Map
           - *107
           indent: 5
           code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Your friendship value with Topaz has increased by 1!
+          indent: 5
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - But your friendship with Vern has decreased by 1...
+          indent: 5
+          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 5
@@ -3929,7 +3929,7 @@ root: !ruby/object:RPG::Map
         through: false
       name: codaaa
       y: 10
-      x: 5
+      x: 6
       id: 8
     9: !ruby/object:RPG::Event
       pages:

@@ -1,10 +1,10 @@
----
+--- !ruby/object:Hash
 root: !ruby/object:RPG::Map
   bgm: !ruby/object:RPG::AudioFile
     volume: 100
     name: ''
     pitch: 100
-  events:
+  events: !ruby/object:Hash
     1: !ruby/object:RPG::Event
       pages:
       - !ruby/object:RPG::Event::Page
@@ -432,7 +432,7 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'I know very well how to avoid water, '
+          - I know very well how to avoid water
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -447,7 +447,7 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Topaz]...Are you seriously"
+          - "\\p[1]\\na[Topaz]Are you seriously"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
@@ -462,17 +462,12 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Vern]Well, think about it."
+          - "\\p[1]\\na[Vern]Well, let's just say some things"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - If a programmer had to design our movements,
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - it would be very hard to do.
+          - take more practice than you'd think.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -482,14 +477,9 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda]...Huh, I never thought "
+          - "\\p[0]\\na[Coda]I'll... take your word for it."
           indent: 0
           code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - about it that way.
-          indent: 0
-          code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
           - 24
@@ -527,17 +517,12 @@ root: !ruby/object:RPG::Map
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[0]\\na[Coda](By tracking this and going one "
+          - "\\p[0]\\na[Coda](Moving carefully one step at a time"
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'step at a time near danger, can I use this to our '
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - advantage?)
+          - sounds like a good plan near hazards like this.)
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
