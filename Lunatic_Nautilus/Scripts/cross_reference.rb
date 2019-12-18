@@ -15,7 +15,7 @@
 # Do not repost this script.  Link back to original thread only:
 # https://forums.rpgmakerweb.com/index.php?threads/cross-reference-script-xp.94371/
 #==============================================================================
- 
+=begin 
  
 module XRef
   VAREXP = /\\v\[(\d+)\]/i
@@ -1312,3 +1312,4 @@ class Scene_Map
     $scene = Scene_F9.new
   end
 end
+=end
