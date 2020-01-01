@@ -50,7 +50,7 @@ module Input
     alias new_snop update
   end
   def self.update
-    if Keys.press?(Screen::SnapShot_Key) && Keys.repeat?(Screen::SnapShot_Key)==false
+    if Keys.trigger?(Screen::SnapShot_Key) 
       #Input.trigger, Keyboard.check
       Screen.shot #hahaha, GET IT?
     end
