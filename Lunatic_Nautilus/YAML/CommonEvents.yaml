@@ -35166,8 +35166,57 @@ root:
   switch_id: 1
   id: 99
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: initialize floaties
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - floatyball1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 0
+    - 1
+    indent: 0
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - floatyball2
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 0
+    - 1
+    indent: 0
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - floatyball3
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 0
+    - 1
+    indent: 0
+    code: 231
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 40
+    - 40
+    - 0
+    indent: 0
+    code: 121
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
@@ -35176,18 +35225,252 @@ root:
   switch_id: 1
   id: 100
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: modify floaties
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - aaa=$game_screen.pictures
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - a=rand(80)+30
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - b=0
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - x=rand(50)-50
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - y=rand(50)-50
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - c=100
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - d=100
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - e=rand(254)
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - f=1
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - aaa[2].move(a,b,x,y,c,d,e,f)
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "@wait_count = rand(10)+10"
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - aaa=$game_screen.pictures
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - a=rand(80)+30
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - b=0
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - x=rand(50)-50
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - y=rand(50)-50
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - c=100
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - d=100
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - e=rand(254)
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - f=1
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - aaa[3].move(a,b,x,y,c,d,e,f)
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "@wait_count = rand(10)+10"
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - aaa=$game_screen.pictures
+    indent: 0
+    code: 355
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - a=rand(80)+30
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - b=0
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - x=rand(50)-50
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - y=rand(50)-50
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - c=100
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - d=100
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - e=rand(254)
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - f=1
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - aaa[4].move(a,b,x,y,c,d,e,f)
+    indent: 0
+    code: 655
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - "@wait_count = rand(10)+10"
+    indent: 0
+    code: 355
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0
     code: 0
-  trigger: 0
-  switch_id: 1
+  trigger: 2
+  switch_id: 40
   id: 101
 - !ruby/object:RPG::CommonEvent
-  name: ''
+  name: turn off floaties
   list:
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 40
+    - 40
+    - 1
+    indent: 0
+    code: 121
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    - 20
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 0
+    - 1
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    - 20
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 0
+    - 1
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    - 20
+    - 0
+    - 0
+    - 0
+    - 0
+    - 100
+    - 100
+    - 0
+    - 1
+    indent: 0
+    code: 232
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 20
+    indent: 0
+    code: 106
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 2
+    indent: 0
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 3
+    indent: 0
+    code: 235
+  - !ruby/object:RPG::EventCommand
+    parameters:
+    - 4
+    indent: 0
+    code: 235
   - !ruby/object:RPG::EventCommand
     parameters: []
     indent: 0

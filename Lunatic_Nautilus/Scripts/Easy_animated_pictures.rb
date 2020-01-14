@@ -144,4 +144,3 @@ if @animated==true
 
   end
 end
-
