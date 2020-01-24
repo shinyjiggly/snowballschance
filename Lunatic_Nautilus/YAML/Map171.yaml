@@ -284,11 +284,6 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "(This will roll the credits and end the game!)"
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - - 'Yes'
             - 'No'
           - 2
@@ -421,18 +416,35 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 17
+          - 103
           indent: 1
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 20
+          - "--------------------"
           indent: 1
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - C
+          - 0
+          indent: 1
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 17
+          indent: 2
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 20
+          indent: 2
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 0
-          indent: 1
+          indent: 2
           code: 208
         - !ruby/object:RPG::EventCommand
           parameters:
@@ -442,13 +454,21 @@ root: !ruby/object:RPG::Map
             blue: -255.0
             gray: 0.0
           - 1
-          indent: 1
+          indent: 2
           code: 223
         - !ruby/object:RPG::EventCommand
           parameters:
           - 42
-          indent: 1
+          indent: 2
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 2
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
