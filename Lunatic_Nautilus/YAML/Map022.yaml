@@ -485,6 +485,11 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
+          - message.skippable = false
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\Na[Mom]\\P[1]Codetta! I just have to tell you about my "
           indent: 0
           code: 101
@@ -951,6 +956,11 @@ root: !ruby/object:RPG::Map
           - "\\P[0]...Mom, please."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - message.skippable = true
+          indent: 0
+          code: 355
         - !ruby/object:RPG::EventCommand
           parameters:
           - 104

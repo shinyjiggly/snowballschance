@@ -1809,9 +1809,33 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 9
+          - 120
           indent: 0
-          code: 117
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 5
+          - 5
+          indent: 0
+          code: 225
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - popup(4, nil, 0)
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - TOO LATE
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          - 24
+          - 1
+          indent: 0
+          code: 121
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -1821,7 +1845,7 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 1
+          switch1_id: 24
           switch1_valid: true
           variable_value: 0
           self_switch_valid: false
@@ -1851,8 +1875,8 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV020
-      y: 20
-      x: 2
+      y: 19
+      x: 9
       id: 20
     21: !ruby/object:RPG::Event
       pages:
@@ -3386,53 +3410,82 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[25]\\na[Ducky]Hello my lovelies."
+          - "\\p[25]\\na[Ducky]fuck you now we do battle."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 24
+          - 24
+          - 0
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - - 'Yes'
+            - 'No'
+            - what??
+            - aaaaaaaaaaaaaa?!?!?!?!?!?
+          - 5
+          indent: 0
+          code: 102
         - !ruby/object:RPG::EventCommand
           parameters:
           - 0
-          - !ruby/object:RPG::MoveRoute
-            list:
-            - &98 !ruby/object:RPG::MoveCommand
-              parameters: []
-              code: 20
-            - &99 !ruby/object:RPG::MoveCommand
-              parameters:
-              - 2
-              code: 15
-            - !ruby/object:RPG::MoveCommand
-              parameters: []
-              code: 0
-            skippable: false
-            repeat: true
+          - 'Yes'
           indent: 0
-          code: 209
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *98
+          - 1
+          - 'No'
           indent: 0
-          code: 509
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *99
+          - 2
+          - what??
           indent: 0
-          code: 509
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
         - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[25]\\na[Ducky]sdlknslfnsld "
+          - 3
+          - aaaaaaaaaaaaaa?!?!?!?!?!?
+          indent: 0
+          code: 402
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 403
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 404
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[25]\\na[Ducky]a."
           indent: 0
           code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - fjnsogjsogjsolgjelrjgeorgdjgjod
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - sddfsgsgdfgdfgdfhdhdghdghfghf
-          indent: 0
-          code: 401
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0

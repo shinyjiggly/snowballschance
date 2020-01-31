@@ -36,6 +36,8 @@ class Window_Popup < Window_Base
       when 0 then 'Quicksave file deleted! Remember to save again!'
       when 1 then 'New Diary Entry!'
       when 2 then 'Screenshot saved!'
+      when 3 then 'Nothing Happened.'
+      when 4 then 'Hurry up!!'
     end
 #=============================================================================
 # END CUSTOMIZATION
