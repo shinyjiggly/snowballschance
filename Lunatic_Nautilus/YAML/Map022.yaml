@@ -188,32 +188,37 @@ root: !ruby/object:RPG::Map
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'My name is...\.\.\. '
+          - I have a confession to make.
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - Do I even have a name?
+          - My name isn't actually Coda.\.
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - It's Codetta.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'The name I have, it''s just a loaner from a '
+          - I'm not a gastromancer trailguide either.
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - family member I've never met.
+          - That's just a made-up title.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'Everyone calls me by that name at least. '
+          - 'As much as I wish I was somebody else, '
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - It's the one they expect me to respond to.
+          - 'I can''t escape my situation so easily. '
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -343,27 +348,12 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'Don''t get me wrong, I''m not horribly off by any '
+          - 'Why did I do it? I''m not horribly off by any '
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - stretch. I have a solid job and roof under my head.
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - What more could anyone ask for, in this economy?\.
-          indent: 0
-          code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - A little recognition maybe?\. Perhaps some friends?\.
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "...something more?"
+          - stretch. I had a solid job and roof under my head.
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -463,39 +453,23 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 210
-        - !ruby/object:RPG::EventCommand
           parameters:
-          - 12
-          - 12
-          - 0
-          indent: 0
-          code: 121
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 10
-          indent: 0
-          code: 106
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 104
-          indent: 0
-          code: 117
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - message.skippable = false
-          indent: 0
-          code: 355
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - "\\Na[Mom]\\P[1]Codetta! I just have to tell you about my "
+          - But what good is stability if it leads to stagnation?\.
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - time at work last night!
+          - What good is security if it leads to feeling trapped?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "...Is it really worth it to be safe if the source "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - of your safety slowly destroys you?
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -595,23 +569,39 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 210
+        - !ruby/object:RPG::EventCommand
           parameters:
-          - "\\p[1]\\na[Mom]There were two guys that really "
+          - 12
+          - 12
+          - 0
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 104
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - message.skippable = false
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\Na[Mom]\\P[1]Codetta! I just have to tell you about my "
           indent: 0
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 'wanted to see the basketball game, but the jukebox '
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'was on, so they couldn''t hear anything due to the '
-          indent: 0
-          code: 401
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 'way the speaker system was wired. '
+          - time at work last night!
           indent: 0
           code: 401
         - !ruby/object:RPG::EventCommand
@@ -712,6 +702,122 @@ root: !ruby/object:RPG::Map
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
+          - "\\p[1]\\na[Mom]There were two guys that really "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'wanted to see the basketball game, but the jukebox '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'was on, so they couldn''t hear anything due to the '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'way the speaker system was wired. '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &36 !ruby/object:RPG::MoveCommand
+              parameters:
+              - putonmahshoesx2
+              - 0
+              - 2
+              - 1
+              code: 41
+            - &37 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 10
+              code: 15
+            - &38 !ruby/object:RPG::MoveCommand
+              parameters:
+              - putonmahshoesx2
+              - 0
+              - 2
+              - 0
+              code: 41
+            - &39 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 10
+              code: 15
+            - &40 !ruby/object:RPG::MoveCommand
+              parameters:
+              - putonmahshoesx2
+              - 0
+              - 2
+              - 1
+              code: 41
+            - &41 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 5
+              code: 15
+            - &42 !ruby/object:RPG::MoveCommand
+              parameters:
+              - putonmahshoesx2
+              - 0
+              - 2
+              - 0
+              code: 41
+            - &43 !ruby/object:RPG::MoveCommand
+              parameters:
+              - 5
+              code: 15
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 0
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *36
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *37
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *38
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *39
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *40
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *41
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *42
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *43
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - "\\p[1]\\na[Mom]I kept having to field these complaints "
           indent: 0
           code: 101
@@ -735,7 +841,7 @@ root: !ruby/object:RPG::Map
           - 2
           - !ruby/object:RPG::MoveRoute
             list:
-            - &36 !ruby/object:RPG::MoveCommand
+            - &44 !ruby/object:RPG::MoveCommand
               parameters:
               - putonmahshoesx2
               - 0
@@ -751,7 +857,7 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *36
+          - *44
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -774,7 +880,7 @@ root: !ruby/object:RPG::Map
           - 2
           - !ruby/object:RPG::MoveRoute
             list:
-            - &37 !ruby/object:RPG::MoveCommand
+            - &45 !ruby/object:RPG::MoveCommand
               parameters:
               - putonmahshoesx2
               - 0
@@ -790,7 +896,7 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *37
+          - *45
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -828,19 +934,19 @@ root: !ruby/object:RPG::Map
           - 2
           - !ruby/object:RPG::MoveRoute
             list:
-            - &38 !ruby/object:RPG::MoveCommand
+            - &46 !ruby/object:RPG::MoveCommand
               parameters:
               - !ruby/object:RPG::AudioFile
                 volume: 80
                 name: boingthing
                 pitch: 85
               code: 44
-            - &39 !ruby/object:RPG::MoveCommand
+            - &47 !ruby/object:RPG::MoveCommand
               parameters:
               - 0
               - 0
               code: 14
-            - &40 !ruby/object:RPG::MoveCommand
+            - &48 !ruby/object:RPG::MoveCommand
               parameters:
               - pastcodax2
               - 0
@@ -856,17 +962,17 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *38
+          - *46
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *39
+          - *47
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *40
+          - *48
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -879,10 +985,10 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &41 !ruby/object:RPG::MoveCommand
+            - &49 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 18
-            - &42 !ruby/object:RPG::MoveCommand
+            - &50 !ruby/object:RPG::MoveCommand
               parameters:
               - pastcodax2
               - 0
@@ -898,12 +1004,12 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *41
+          - *49
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *42
+          - *50
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -931,7 +1037,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &43 !ruby/object:RPG::MoveCommand
+            - &51 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 16
             - !ruby/object:RPG::MoveCommand
@@ -943,7 +1049,7 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *43
+          - *51
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -1001,10 +1107,10 @@ root: !ruby/object:RPG::Map
           - 1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &44 !ruby/object:RPG::MoveCommand
+            - &52 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 16
-            - &45 !ruby/object:RPG::MoveCommand
+            - &53 !ruby/object:RPG::MoveCommand
               parameters:
               - 4
               code: 15
@@ -1017,12 +1123,12 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *44
+          - *52
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *45
+          - *53
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
