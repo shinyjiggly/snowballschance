@@ -258,7 +258,7 @@ root: !ruby/object:RPG::Map
           repeat: true
         trigger: 0
         step_anime: false
-        move_frequency: 3
+        move_frequency: 4
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
           opacity: 255
@@ -281,9 +281,19 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 1
+          indent: 0
+          code: 242
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 17
           indent: 0
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 0
@@ -296,9 +306,210 @@ root: !ruby/object:RPG::Map
           code: 201
         - !ruby/object:RPG::EventCommand
           parameters:
+          - !ruby/object:Tone
+            red: 0.0
+            green: 0.0
+            blue: 0.0
+            gray: 136.0
+          - 0
+          indent: 0
+          code: 223
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 255
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 18
           indent: 0
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 2
+          - 0
+          - 16
+          - 2
+          indent: 0
+          code: 111
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 100
+          - 0
+          indent: 1
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 200
+          - 0
+          indent: 1
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 100
+          - 0
+          indent: 1
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 200
+          - 0
+          indent: 1
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 100
+          - 0
+          indent: 1
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: kitchendawn
+            pitch: 100
+          indent: 1
+          code: 241
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: meow1
+            pitch: 90
+          indent: 1
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0](...)"
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0](...I need to get Charcoal's cat food. "
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'It should be in... what''s that room called '
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - again? The one with the coffee pot in it...)
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 2
+          - 0
+          - 0
+          - 17
+          indent: 1
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - popup(3, nil, 0)
+          indent: 1
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 412
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -338,7 +549,7 @@ root: !ruby/object:RPG::Map
         move_speed: 3
         through: false
       name: EV003
-      y: 9
+      y: 10
       x: 15
       id: 3
   tileset_id: 7
@@ -483,8 +694,8 @@ root: !ruby/object:RPG::Map
     - 390
     - 390
     - 390
-    - 390
-    - 390
+    - 545
+    - 545
     - 390
     - 390
     - 390
@@ -505,10 +716,10 @@ root: !ruby/object:RPG::Map
     - 390
     - 545
     - 545
-    - 545
-    - 545
-    - 545
-    - 545
+    - 390
+    - 390
+    - 390
+    - 390
     - 390
     - 390
     - 390
@@ -526,11 +737,11 @@ root: !ruby/object:RPG::Map
     - 585
     - 585
     - 545
-    - 545
-    - 545
-    - 545
-    - 545
-    - 545
+    - 390
+    - 390
+    - 390
+    - 390
+    - 390
     - 390
     - 390
     - 390
@@ -548,9 +759,9 @@ root: !ruby/object:RPG::Map
     - 585
     - 585
     - 545
-    - 545
-    - 545
-    - 545
+    - 390
+    - 390
+    - 390
     - 545
     - 390
     - 390
