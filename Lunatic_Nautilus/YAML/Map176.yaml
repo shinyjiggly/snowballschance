@@ -91,14 +91,24 @@ root: !ruby/object:RPG::Map
         list:
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 17
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 0
           - 175
           - 18
           - 8
           - 4
-          - 0
+          - 1
           indent: 0
           code: 201
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 18
+          indent: 0
+          code: 117
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
@@ -181,8 +191,8 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 0
           code: 0
-        move_type: 3
-        direction_fix: false
+        move_type: 0
+        direction_fix: true
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
@@ -204,7 +214,7 @@ root: !ruby/object:RPG::Map
           skippable: false
           repeat: true
         trigger: 0
-        step_anime: false
+        step_anime: true
         move_frequency: 5
         always_on_top: false
         graphic: !ruby/object:RPG::Event::Page::Graphic
@@ -215,7 +225,7 @@ root: !ruby/object:RPG::Map
           direction: 8
           blend_type: 0
           character_hue: 0
-        walk_anime: true
+        walk_anime: false
         move_speed: 5
         through: false
       - !ruby/object:RPG::Event::Page
