@@ -76,6 +76,11 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
+          indent: 2
+          code: 235
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
           - 7
           - 5
           - 6
@@ -533,6 +538,14 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 1
           code: 210
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: doorclose
+            pitch: 100
+          indent: 1
+          code: 250
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
@@ -1132,6 +1145,14 @@ root: !ruby/object:RPG::Map
           parameters: []
           indent: 1
           code: 210
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: doorclose
+            pitch: 100
+          indent: 1
+          code: 250
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
