@@ -508,6 +508,14 @@ root: !ruby/object:RPG::Map
           code: 101
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 49
+          - 1
+          - 0
+          - 1
+          indent: 1
+          code: 126
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 43
           indent: 1
           code: 117
@@ -531,14 +539,6 @@ root: !ruby/object:RPG::Map
           - "\\p[0]..."
           indent: 1
           code: 101
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - 49
-          - 1
-          - 0
-          - 1
-          indent: 1
-          code: 126
         - !ruby/object:RPG::EventCommand
           parameters:
           - 2
@@ -584,6 +584,32 @@ root: !ruby/object:RPG::Map
           - 18
           indent: 1
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: doorclose
+            pitch: 100
+          indent: 1
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 1
+          code: 0
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 411
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 1
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0](I need a food tray first.)"
+          indent: 1
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 1
@@ -632,6 +658,16 @@ root: !ruby/object:RPG::Map
         through: false
       - !ruby/object:RPG::Event::Page
         list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0](I already delivered this one.)"
+          indent: 0
+          code: 101
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0
