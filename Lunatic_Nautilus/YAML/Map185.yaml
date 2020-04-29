@@ -2237,9 +2237,28 @@ root: !ruby/object:RPG::Map
           code: 201
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 10
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &61 !ruby/object:RPG::MoveCommand
+              parameters:
+              - pastcoda3x2
+              - 0
+              - 2
+              - 0
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
           indent: 2
-          code: 117
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *61
+          indent: 2
+          code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
           - 1
