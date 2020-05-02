@@ -53,7 +53,20 @@ root: !ruby/object:RPG::Map
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 20
+          - Audio.me_fade(2000)
+          indent: 0
+          code: 355
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: ''
+            pitch: 100
+          indent: 0
+          code: 241
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
           indent: 0
           code: 106
         - !ruby/object:RPG::EventCommand
@@ -96,6 +109,14 @@ root: !ruby/object:RPG::Map
           code: 232
         - !ruby/object:RPG::EventCommand
           parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: codathemeempty
+            pitch: 100
+          indent: 0
+          code: 241
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 120
           indent: 0
           code: 106
@@ -104,6 +125,11 @@ root: !ruby/object:RPG::Map
           - "..."
           indent: 0
           code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 120
+          indent: 0
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 17
@@ -116,6 +142,11 @@ root: !ruby/object:RPG::Map
           code: 235
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 5
+          indent: 0
+          code: 242
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - faucet noises
           indent: 0
           code: 108
@@ -126,12 +157,93 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: faucet_turnon
+            pitch: 100
+          indent: 0
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 15
+            name: runningfaucetloop
+            pitch: 100
+          indent: 0
+          code: 245
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 50
+            name: runningfaucetloop
+            pitch: 100
+          indent: 0
+          code: 245
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 75
+            name: runningfaucetloop
+            pitch: 100
+          indent: 0
+          code: 245
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: runningfaucetloop
+            pitch: 100
+          indent: 0
+          code: 245
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 50
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 18
           indent: 0
           code: 117
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 10
+          - 20
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: ''
+            pitch: 100
+          indent: 0
+          code: 245
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: faucet_turnoff
+            pitch: 100
+          indent: 0
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 50
           indent: 0
           code: 106
         - !ruby/object:RPG::EventCommand
@@ -244,6 +356,150 @@ root: !ruby/object:RPG::Map
           - 18
           indent: 0
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Okay, what was I doing again?"
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Oh yeah, long list of chores.\\."
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Back to the kitchen...
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &11 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 1
+            - &12 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 3
+            - &13 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 3
+            - &14 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 3
+            - &15 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 3
+            - &16 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 3
+            - &17 !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 3
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 0
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *11
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *12
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *13
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *14
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *15
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *16
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *17
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 210
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 17
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 2
+          - 0
+          - 0
+          - 38
+          indent: 0
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 0
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 5
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 100
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 179
+          - 0
+          - 9
+          - 6
+          - 1
+          indent: 0
+          code: 201
         - !ruby/object:RPG::EventCommand
           parameters: []
           indent: 0

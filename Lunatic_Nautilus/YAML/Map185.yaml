@@ -468,6 +468,21 @@ root: !ruby/object:RPG::Map
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 20
+          indent: 1
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0](...the client must be from off-island."
+          indent: 1
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - I've lost all hope in spring ever arriving.)
+          indent: 1
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 18
           indent: 1
           code: 117
@@ -2152,22 +2167,6 @@ root: !ruby/object:RPG::Map
           code: 225
         - !ruby/object:RPG::EventCommand
           parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 80
-            name: ouu
-            pitch: 85
-          indent: 2
-          code: 250
-        - !ruby/object:RPG::EventCommand
-          parameters:
-          - !ruby/object:RPG::AudioFile
-            volume: 80
-            name: tenk
-            pitch: 50
-          indent: 2
-          code: 250
-        - !ruby/object:RPG::EventCommand
-          parameters:
           - -1
           - !ruby/object:RPG::MoveRoute
             list:
@@ -2188,6 +2187,51 @@ root: !ruby/object:RPG::Map
         - !ruby/object:RPG::EventCommand
           parameters:
           - *60
+          indent: 2
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          indent: 2
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: ouu
+            pitch: 85
+          indent: 2
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 80
+            name: tenk
+            pitch: 50
+          indent: 2
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &61 !ruby/object:RPG::MoveCommand
+              parameters:
+              - pastcoda_spx2
+              - 0
+              - 2
+              - 1
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 2
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *61
           indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -2240,7 +2284,7 @@ root: !ruby/object:RPG::Map
           - -1
           - !ruby/object:RPG::MoveRoute
             list:
-            - &61 !ruby/object:RPG::MoveCommand
+            - &62 !ruby/object:RPG::MoveCommand
               parameters:
               - pastcoda3x2
               - 0
@@ -2256,7 +2300,7 @@ root: !ruby/object:RPG::Map
           code: 209
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *61
+          - *62
           indent: 2
           code: 509
         - !ruby/object:RPG::EventCommand
@@ -2273,6 +2317,11 @@ root: !ruby/object:RPG::Map
           - 0
           indent: 2
           code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 20
+          indent: 2
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 18
