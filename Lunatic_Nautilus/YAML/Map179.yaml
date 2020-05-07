@@ -5771,8 +5771,8 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
-          switch1_id: 1
-          switch1_valid: false
+          switch1_id: 12
+          switch1_valid: true
           variable_value: 44
           self_switch_valid: false
           variable_id: 2
@@ -5952,14 +5952,20 @@ root: !ruby/object:RPG::Map
           indent: 0
           code: 509
         - !ruby/object:RPG::EventCommand
-          parameters: []
+          parameters:
+          - 160
           indent: 0
-          code: 210
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 17
           indent: 0
           code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          indent: 0
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 2
@@ -5971,6 +5977,11 @@ root: !ruby/object:RPG::Map
           code: 122
         - !ruby/object:RPG::EventCommand
           parameters:
+          - 5
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
           - 18
           indent: 0
           code: 117
@@ -5980,34 +5991,27 @@ root: !ruby/object:RPG::Map
           - !ruby/object:RPG::MoveRoute
             list:
             - &94 !ruby/object:RPG::MoveCommand
-              parameters:
-              - pastcoda4x2
-              - 0
-              - 2
-              - 0
-              code: 41
+              parameters: []
+              code: 1
             - &95 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 1
             - &96 !ruby/object:RPG::MoveCommand
               parameters: []
-              code: 1
+              code: 5
             - &97 !ruby/object:RPG::MoveCommand
               parameters: []
-              code: 5
+              code: 2
             - &98 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 2
             - &99 !ruby/object:RPG::MoveCommand
               parameters: []
-              code: 2
+              code: 5
             - &100 !ruby/object:RPG::MoveCommand
               parameters: []
-              code: 5
-            - &101 !ruby/object:RPG::MoveCommand
-              parameters: []
               code: 1
-            - &102 !ruby/object:RPG::MoveCommand
+            - &101 !ruby/object:RPG::MoveCommand
               parameters: []
               code: 1
             - !ruby/object:RPG::MoveCommand
@@ -6059,13 +6063,9 @@ root: !ruby/object:RPG::Map
           code: 509
         - !ruby/object:RPG::EventCommand
           parameters:
-          - *102
+          - 65
           indent: 0
-          code: 509
-        - !ruby/object:RPG::EventCommand
-          parameters: []
-          indent: 0
-          code: 210
+          code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
           - 0
@@ -6085,9 +6085,445 @@ root: !ruby/object:RPG::Map
         condition: !ruby/object:RPG::Event::Page::Condition
           switch2_valid: false
           self_switch_ch: A
+          switch1_id: 12
+          switch1_valid: true
+          variable_value: 47
+          self_switch_valid: false
+          variable_id: 2
+          variable_valid: true
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 3
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 0
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 20
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Tonight, Fugue has been tasked with "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'rescuing a traveller lost in a cave. '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: paperflip
+            pitch: 100
+          indent: 0
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - fuguestory1
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - 0
+          - 22
+          - 200
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 20
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]With their trusty hoebladed "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'polearm and firey spirit, they embark '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - into the unknown.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: paperflip
+            pitch: 100
+          indent: 0
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - fuguestory2
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - 0
+          - 22
+          - 200
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]This cave is not a place one "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'should tread blindly into. Its dangers '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - are numerous and best be avoided.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Fugue cannot let fears get in the "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'way of their mission. Their client is '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - depending on them.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: paperflip
+            pitch: 100
+          indent: 0
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - fuguestory3
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - 0
+          - 22
+          - 200
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Such courage can only go so far. "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'In the face of true danger, confidence '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - can soon turn to hubris.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: paperflip
+            pitch: 100
+          indent: 0
+          code: 250
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - fuguestory4
+          - 0
+          - 0
+          - -100
+          - 22
+          - 0
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 5
+          - 10
+          - 0
+          - 0
+          - 0
+          - 22
+          - 200
+          - 200
+          - 255
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 10
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Is it worth being brave if you "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - risk your own life for others?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'What if your efforts '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 75
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[4]\\na[The Boss]Ho ho ho! "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - How is Miss Diamondback dong?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "!"
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - coda puts their drawings away
+          indent: 0
+          code: 408
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - The boss walks into the room
+          indent: 0
+          code: 108
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Doing alright, I guess."
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Enjoying my noodles.
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 75
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[4]\\na[The Boss]Just alright? "
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 'What about fantastic? '
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - Spectacular? Amazing?
+          indent: 0
+          code: 401
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 37
+          indent: 0
+          code: 117
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - "\\p[0]Don't wanna overstate, you know."
+          indent: 0
+          code: 101
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
           switch1_id: 1
           switch1_valid: false
-          variable_value: 47
+          variable_value: 51
           self_switch_valid: false
           variable_id: 2
           variable_valid: true
@@ -6352,7 +6788,7 @@ root: !ruby/object:RPG::Map
           - 2
           - 0
           - 0
-          - 41
+          - 50
           indent: 1
           code: 122
         - !ruby/object:RPG::EventCommand
@@ -6584,6 +7020,46 @@ root: !ruby/object:RPG::Map
         walk_anime: true
         move_speed: 3
         through: false
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 12
+          switch1_valid: true
+          variable_value: 48
+          self_switch_valid: false
+          variable_id: 2
+          variable_valid: true
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: true
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: pastcoda4x2
+          pattern: 0
+          tile_id: 0
+          direction: 6
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
       name: cutscene coda
       y: 6
       x: 6
@@ -6639,6 +7115,52 @@ root: !ruby/object:RPG::Map
       y: 3
       x: 5
       id: 23
+    24: !ruby/object:RPG::Event
+      pages:
+      - !ruby/object:RPG::Event::Page
+        list:
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 0
+        move_type: 0
+        direction_fix: false
+        condition: !ruby/object:RPG::Event::Page::Condition
+          switch2_valid: false
+          self_switch_ch: A
+          switch1_id: 1
+          switch1_valid: false
+          variable_value: 51
+          self_switch_valid: false
+          variable_id: 2
+          variable_valid: true
+          switch2_id: 1
+        move_route: !ruby/object:RPG::MoveRoute
+          list:
+          - !ruby/object:RPG::MoveCommand
+            parameters: []
+            code: 0
+          skippable: false
+          repeat: true
+        trigger: 0
+        step_anime: false
+        move_frequency: 3
+        always_on_top: false
+        graphic: !ruby/object:RPG::Event::Page::Graphic
+          opacity: 255
+          character_name: ''
+          pattern: 0
+          tile_id: 533
+          direction: 2
+          blend_type: 0
+          character_hue: 0
+        walk_anime: true
+        move_speed: 3
+        through: false
+      name: EV024
+      y: 8
+      x: 14
+      id: 24
   tileset_id: 8
   bgs: !ruby/object:RPG::AudioFile
     volume: 80

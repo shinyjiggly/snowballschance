@@ -161,7 +161,7 @@
 
   # filenames of tail and windowskin used for thought balloons
   FILENAME_THOUGHT_TAIL = "dottail.png"
-  FILENAME_THOUGHT_WINDOWSKIN = "mainskin.png" 
+  FILENAME_THOUGHT_WINDOWSKIN = "paperskinx2.png" 
   
   #----------------------------------------------------------------------------
   # Fonts
@@ -179,7 +179,7 @@
 
   
   # defaults for thought text
-  THOUGHT_FONT_COLOR = "#EEEEEE"
+  THOUGHT_FONT_COLOR = "#000000"
   THOUGHT_FONT_NAME = $defaultfont
   THOUGHT_FONT_SIZE = 20
 

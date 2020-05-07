@@ -650,7 +650,7 @@ root: !ruby/object:RPG::Map
           code: 210
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 10
+          - 20
           indent: 0
           code: 106
         - !ruby/object:RPG::EventCommand
@@ -720,39 +720,206 @@ root: !ruby/object:RPG::Map
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          - !ruby/object:Tone
+            red: 85.0
+            green: 85.0
+            blue: 85.0
+            gray: 0.0
+          - 30
           indent: 0
-          code: 101
+          code: 223
         - !ruby/object:RPG::EventCommand
           parameters:
-          - aaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAA
+          - 1
+          - lensglare
+          - 0
+          - 0
+          - 0
+          - 0
+          - 83
+          - 86
+          - 0
+          - 0
           indent: 0
-          code: 401
+          code: 231
         - !ruby/object:RPG::EventCommand
           parameters:
-          - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          - 1
+          - 30
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 200
+          - 0
           indent: 0
-          code: 401
+          code: 232
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 10
+          - 30
           indent: 0
           code: 106
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 5
+          - 1
+          - 30
+          - 0
+          - 0
+          - 25
+          - 23
+          - 100
+          - 100
+          - 150
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:Tone
+            red: 50.0
+            green: 50.0
+            blue: 50.0
+            gray: 0.0
+          - 30
+          indent: 0
+          code: 223
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 30
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - 30
+          - 0
+          - 0
+          - 51
+          - 36
+          - 89
+          - 89
+          - 0
+          - 0
+          indent: 0
+          code: 232
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 70
+          indent: 0
+          code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 7
           indent: 0
           code: 242
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 17
+          - !ruby/object:Tone
+            red: -255.0
+            green: -255.0
+            blue: -255.0
+            gray: 0.0
+          - 100
           indent: 0
-          code: 117
+          code: 223
         - !ruby/object:RPG::EventCommand
           parameters:
-          - 50
+          - 150
           indent: 0
           code: 106
+        - !ruby/object:RPG::EventCommand
+          parameters: []
+          indent: 0
+          code: 221
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:Tone
+            red: 0.0
+            green: 0.0
+            blue: 0.0
+            gray: 0.0
+          - 10
+          indent: 0
+          code: 223
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 12
+          - 12
+          - 1
+          indent: 0
+          code: 121
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 2
+          - 2
+          - 0
+          - 0
+          - 51
+          indent: 0
+          code: 122
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 0
+          - 179
+          - 14
+          - 9
+          - 8
+          - 1
+          indent: 0
+          code: 201
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          indent: 0
+          code: 208
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - -1
+          - !ruby/object:RPG::MoveRoute
+            list:
+            - &31 !ruby/object:RPG::MoveCommand
+              parameters:
+              - pastcoda_spx2
+              - 0
+              - 8
+              - 0
+              code: 41
+            - !ruby/object:RPG::MoveCommand
+              parameters: []
+              code: 0
+            skippable: false
+            repeat: false
+          indent: 0
+          code: 209
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - *31
+          indent: 0
+          code: 509
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - 1
+          - kitchenlight
+          - 0
+          - 0
+          - 0
+          - 0
+          - 100
+          - 100
+          - 100
+          - 0
+          indent: 0
+          code: 231
+        - !ruby/object:RPG::EventCommand
+          parameters:
+          - !ruby/object:RPG::AudioFile
+            volume: 100
+            name: kitchenday
+            pitch: 100
+          indent: 0
+          code: 241
         - !ruby/object:RPG::EventCommand
           parameters:
           - 18
